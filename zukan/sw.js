@@ -1,7 +1,7 @@
 /* 狛犬図鑑 service worker
    アプリ本体は先に保存。data/ は新しいものを優先（通信できないときは保存分）。
    写真と地図タイルは見たものから保存する。データを差し替えたら CACHE の番号を上げる。 */
-var CACHE = 'komainu-v24';
+var CACHE = 'komainu-v25';
 var CORE = [
   './', 'index.html', 'style.css', 'app.js', 'maplibre-gl.css', 'manifest.webmanifest',
   'data/site.json', 'data/taxonomy.json', 'data/shrines.json',
@@ -13,7 +13,7 @@ self.addEventListener('install', function (e) {
 });
 self.addEventListener('activate', function (e) {
   e.waitUntil(caches.keys().then(function (keys) {
-    return Promise.all(keys.filter(function (k) { return k !== CACHE; }).map(function (k) { return caches.delete(k); }));
+    return Promise.all(keys.filter(function (k) { return k.indexOf('komainu-v') === 0 && k !== CACHE; })  /* 同じ住所の別アプリの保存は消さない */.map(function (k) { return caches.delete(k); }));
   }).then(function () { return self.clients.claim(); }));
 });
 

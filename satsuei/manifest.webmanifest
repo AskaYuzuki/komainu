@@ -1,0 +1,16 @@
+{
+ "name": "狛犬撮影",
+ "short_name": "狛犬撮影",
+ "description": "狛犬・狐など神社の像の撮る画角を順番に案内し、写真を受信箱へ送るアプリ。",
+ "lang": "ja",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#eceee9",
+ "theme_color": "#f7f8f5",
+ "icons": [
+  { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+  { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+  { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+ ]
+}

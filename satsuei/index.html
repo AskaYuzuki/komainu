@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>狛犬撮影</title>
+<meta name="description" content="狛犬・狐など神社の像の撮る画角を順番に案内し、写真を受信箱へ送るアプリ。">
+<meta name="theme-color" content="#f7f8f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b2320" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="狛犬撮影">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--BODY-->
+<div class="app">
+  <header class="top">
+    <div class="brand"><h1>狛犬撮影</h1><small id="brand-sub">撮る画角を順番に案内します</small></div>
+    <div id="art-slot"></div>
+    <button type="button" class="icon-btn" data-act="open-settings" aria-label="設定"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2.2"/><circle cx="8" cy="17" r="2.2"/></svg></button>
+  </header>
+  <div class="sample-band" id="demo-band" hidden><b>見本</b>claude.ai の中では位置情報が使えないため、見本の位置（筑波山神社の付近）で動いています。写真は送信しません。</div>
+  <button type="button" class="status-band" id="status-band" data-tab="send"></button>
+  <main>
+    <section class="view" id="view-home"></section>
+    <section class="view" id="view-guide" hidden></section>
+    <section class="view" id="view-kansou" hidden></section>
+    <section class="view" id="view-send" hidden></section>
+    <section class="view" id="view-settings" hidden></section>
+  </main>
+  <nav class="tabs" aria-label="画面の切り替え">
+    <button type="button" data-tab="shoot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3v10H4z"/><circle cx="12" cy="13.2" r="3.4"/></svg>撮影</button>
+    <button type="button" data-tab="kansou"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M5 19.5l1-4L15.5 6a2 2 0 0 1 2.8 2.8L8.8 18.3z"/><path d="M13.8 7.7l2.6 2.6"/></svg>感想</button>
+    <button type="button" data-tab="send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 15V4.5M7.5 9L12 4.5 16.5 9"/><path d="M4.5 14.5v5h15v-5"/></svg>送信</button>
+  </nav>
+</div>
+<div id="overlay" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<!--/BODY-->
+<script src="app.js"></script>
+</body>
+</html>

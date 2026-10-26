@@ -1,0 +1,1883 @@
+[
+ {
+  "id": "tsukubasan",
+  "name": "筑波山神社",
+  "kana": "つくばさんじんじゃ",
+  "prefecture": "茨城県",
+  "city": "つくば市",
+  "lat": 36.2236,
+  "lng": 140.1063,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 552,
+   "items": [
+    {
+     "type": "area",
+     "x": 0,
+     "y": 0,
+     "w": 300,
+     "h": 222,
+     "label": "男体山 山頂（御本殿）"
+    },
+    {
+     "type": "sando",
+     "points": [
+      [
+       228.0,
+       215.2
+      ],
+      [
+       196.8,
+       164.5
+      ],
+      [
+       137.0,
+       129.4
+      ],
+      [
+       103.2,
+       98.2
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 51.2,
+     "y": 58.2,
+     "w": 62.4,
+     "h": 25.3,
+     "label": "御本殿"
+    },
+    {
+     "type": "building",
+     "x": 170.2,
+     "y": 60.0,
+     "w": 22,
+     "h": 14,
+     "label": "筑波山測候所跡"
+    },
+    {
+     "type": "spot",
+     "x": 224.0,
+     "y": 102.0,
+     "w": 8,
+     "h": 8,
+     "label": "連歌岳・常陸山手形"
+    },
+    {
+     "type": "spot",
+     "x": 68.0,
+     "y": 133.2,
+     "w": 8,
+     "h": 8,
+     "label": "立身石",
+     "labelSide": "left"
+    },
+    {
+     "type": "building",
+     "x": 222.2,
+     "y": 141.9,
+     "w": 22,
+     "h": 14,
+     "label": "筑波山頂駅"
+    },
+    {
+     "type": "tree",
+     "x": 64.0,
+     "y": 172.1,
+     "w": 16,
+     "h": 16,
+     "label": "御海"
+    },
+    {
+     "type": "gap",
+     "x": 0,
+     "y": 226,
+     "w": 300,
+     "h": 26,
+     "label": "山頂と拝殿は離れています（間は省略）"
+    },
+    {
+     "type": "area",
+     "x": 0,
+     "y": 256,
+     "w": 300,
+     "h": 296,
+     "label": "中腹（拝殿のあたり）"
+    },
+    {
+     "type": "sando",
+     "points": [
+      [
+       173.2,
+       536.0
+      ],
+      [
+       173.2,
+       498.8
+      ],
+      [
+       173.2,
+       416.3
+      ],
+      [
+       173.2,
+       368.4
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "torii",
+     "x": 17.0,
+     "y": 517.7,
+     "w": 26,
+     "h": 10,
+     "label": "大鳥居"
+    },
+    {
+     "type": "torii",
+     "x": 160.2,
+     "y": 496.4,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    },
+    {
+     "type": "gate",
+     "x": 158.2,
+     "y": 459.7,
+     "w": 30,
+     "h": 9,
+     "label": "神橋",
+     "labelSide": "right"
+    },
+    {
+     "type": "tree",
+     "x": 133.0,
+     "y": 429.6,
+     "w": 16,
+     "h": 16,
+     "label": "夫婦杉",
+     "labelSide": "left"
+    },
+    {
+     "type": "gate",
+     "x": 158.2,
+     "y": 411.8,
+     "w": 30,
+     "h": 9,
+     "label": "随神門",
+     "labelSide": "left"
+    },
+    {
+     "type": "tree",
+     "x": 208.0,
+     "y": 403.0,
+     "w": 16,
+     "h": 16,
+     "label": "大杉",
+     "labelSide": "right"
+    },
+    {
+     "type": "massha",
+     "x": 104.0,
+     "y": 377.4,
+     "w": 20,
+     "h": 14,
+     "label": "厳島神社"
+    },
+    {
+     "type": "chozuya",
+     "x": 199.0,
+     "y": 360.4,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "haiden",
+     "x": 137.2,
+     "y": 324.5,
+     "w": 72.0,
+     "h": 23.9,
+     "label": "拝殿"
+    },
+    {
+     "type": "building",
+     "x": 79.0,
+     "y": 329.5,
+     "w": 22,
+     "h": 14,
+     "label": "社務所"
+    },
+    {
+     "type": "massha",
+     "x": 236.0,
+     "y": 324.2,
+     "w": 20,
+     "h": 14,
+     "label": "春日・日枝神社"
+    },
+    {
+     "type": "massha",
+     "x": 86.0,
+     "y": 289.6,
+     "w": 20,
+     "h": 14,
+     "label": "出世稲荷神社",
+     "labelSide": "right"
+    },
+    {
+     "type": "north",
+     "x": 286,
+     "y": 4,
+     "w": 0,
+     "h": 0,
+     "label": "北"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "tsukubasan-1",
+    "no": 1,
+    "label": "拝殿前",
+    "animal": "komainu",
+    "pos": {
+     "x": 173.2,
+     "y": 365.8
+    },
+    "regionalTypes": [
+     "edo"
+    ],
+    "pose": "kamae",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "拝殿の前の左右、溶岩を積んだ築山の上に置かれた一対。向かって右が玉を持つ阿形、左が吽形。",
+    "sources": [
+     {
+      "title": "つくばぷれす",
+      "url": "http://www.tsukubapress.com/mttshrine.html"
+     },
+     {
+      "title": "山音",
+      "url": "https://yamaon.ojaru.jp/koma1ibaraki.htm"
+     }
+    ],
+    "asukaNote": "関東ではめずらしい構え型の狛犬。とてもかわいらしいデザインです。\nこんなに躍動感のある狛犬も珍しいと思います。\nいちばんの特徴は、なんといってもおしりの形。ぷりけつ♡\n阿形の子はよくしゃべります。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/tsukubasan-1-01.jpg?v=3eae791f",
+      "kind": "art",
+      "cover": true,
+      "title": "筑波山神社"
+     },
+     {
+      "src": "images/tsukubasan-1-03.jpg?v=63e020e8",
+      "kind": "art",
+      "title": "筑波山神社"
+     },
+     {
+      "src": "images/tsukubasan-1-06.jpg?v=2f46b115",
+      "kind": "art",
+      "title": "筑波山神社"
+     },
+     {
+      "src": "images/tsukubasan-1-02.jpg?v=ddc256a3",
+      "kind": "record",
+      "side": "阿",
+      "caption": "玉を持つ阿形"
+     },
+     {
+      "src": "images/tsukubasan-1-04.jpg?v=8132bea5",
+      "kind": "record",
+      "side": "吽",
+      "caption": "高く上げた吽形のお尻"
+     },
+     {
+      "src": "images/tsukubasan-1-05.jpg?v=63f35d44",
+      "kind": "record",
+      "caption": "拝殿を背にした姿"
+     },
+     {
+      "src": "images/tsukubasan-1-09.jpg?v=e88ac219",
+      "kind": "record",
+      "caption": "拝殿の前、溶岩の築山の上"
+     },
+     {
+      "src": "images/tsukubasan-1-r1.jpg?v=8ba72356",
+      "kind": "record",
+      "caption": "拝殿と狛犬の位置"
+     },
+     {
+      "src": "images/tsukubasan-1-r2.jpg?v=51c3fb9f",
+      "kind": "record",
+      "caption": "正面から"
+     },
+     {
+      "src": "images/tsukubasan-1-r3.jpg?v=75f9f328",
+      "kind": "record",
+      "caption": "苔むした築山と体の線"
+     },
+     {
+      "src": "images/tsukubasan-1-a01.jpg?v=183a8b88",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a02.jpg?v=1b0e719a",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a03.jpg?v=0a4aadc4",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a04.jpg?v=e2669817",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a05.jpg?v=35ddab8a",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a06.jpg?v=1a3a1c2c",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a07.jpg?v=ebdf2868",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a08.jpg?v=954e6c86",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a09.jpg?v=0ceeda87",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a10.jpg?v=2cf7cd24",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a11.jpg?v=45d84a3f",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a12.jpg?v=f937354e",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a13.jpg?v=0ffa3a0a",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a14.jpg?v=c97502a3",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a15.jpg?v=f421bf44",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a16.jpg?v=0708d325",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a17.jpg?v=a2d22c67",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a18.jpg?v=42ae0d1f",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a19.jpg?v=18c4ee18",
+      "kind": "record"
+     },
+     {
+      "src": "images/tsukubasan-1-a20.jpg?v=ff03d9fd",
+      "kind": "record"
+     }
+    ],
+    "thumb": "images/thumbs/tsukubasan-1.jpg?v=e20987c5"
+   },
+   {
+    "id": "tsukubasan-2",
+    "no": 2,
+    "label": "男体山本殿",
+    "animal": "komainu",
+    "pos": {
+     "x": 113.6,
+     "y": 92.3
+    },
+    "regionalTypes": [
+     "shishigashira"
+    ],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "男体山山頂の御本殿の右前、賽銭箱の横にいる高さ30cmほどの石の狛犬。吽形はなく、阿形の1体だけが置かれている。台座の正面に「奉」の字。",
+    "sources": [
+     {
+      "title": "つくばぷれす",
+      "url": "http://www.tsukubapress.com/mttshrine.html"
+     },
+     {
+      "title": "山音",
+      "url": "https://yamaon.ojaru.jp/koma1ibaraki.htm"
+     }
+    ],
+    "asukaNote": "30cmほどの小さな立像で、吽形がなく、1体だけでぽつんと佇んでいるので少し物悲しい。\nかなり古い時代のものなのか、形が崩れかけていますが、なんとも味わい深い、印象に残る狛犬さんです。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/tsukubasan-2-01.jpg?v=ed12a036",
+      "kind": "art",
+      "cover": true,
+      "title": "筑波山神社 男体山本殿"
+     },
+     {
+      "src": "images/tsukubasan-2-03.jpg?v=d247c808",
+      "kind": "art",
+      "title": "筑波山神社 男体山本殿"
+     },
+     {
+      "src": "images/tsukubasan-2-02.jpg?v=bf5ae782",
+      "kind": "record",
+      "icon": true,
+      "side": "阿",
+      "caption": "正面から"
+     },
+     {
+      "src": "images/tsukubasan-2-04.jpg?v=439033b9",
+      "kind": "record",
+      "caption": "賽銭箱の横に"
+     },
+     {
+      "src": "images/tsukubasan-2-05.jpg?v=69c4649b",
+      "kind": "record",
+      "caption": "御本殿と狛犬の位置"
+     },
+     {
+      "src": "images/tsukubasan-2-r1.jpg?v=908ea3bd",
+      "kind": "record",
+      "caption": "御本殿の右前"
+     },
+     {
+      "src": "images/tsukubasan-2-a01.jpg?v=d9cbff63",
+      "kind": "record"
+     }
+    ],
+    "geo": {
+     "lat": 36.2256,
+     "lng": 140.1006,
+     "name": "男体山本殿（山頂）",
+     "approx": true
+    },
+    "thumb": "images/thumbs/tsukubasan-2.jpg?v=eff7d65f"
+   }
+  ]
+ },
+ {
+  "id": "katori",
+  "name": "香取神宮",
+  "kana": "かとりじんぐう",
+  "prefecture": "千葉県",
+  "city": "香取市",
+  "lat": 35.8862,
+  "lng": 140.5274,
+  "geoApprox": true,
+  "visited": "2026年10月19日",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 275,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       93.0,
+       262.9
+      ],
+      [
+       120.0,
+       206.0
+      ],
+      [
+       147.0,
+       168.0
+      ],
+      [
+       138.0,
+       135.5
+      ],
+      [
+       156.0,
+       84.0
+      ],
+      [
+       138.0,
+       43.4
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 99.0,
+     "y": 4.1,
+     "w": 48.0,
+     "h": 19.0,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 102.0,
+     "y": 31.2,
+     "w": 60.0,
+     "h": 19.0,
+     "label": "拝殿"
+    },
+    {
+     "type": "tree",
+     "x": 70.0,
+     "y": 27.2,
+     "w": 16,
+     "h": 16,
+     "label": "三本杉",
+     "labelSide": "left"
+    },
+    {
+     "type": "tree",
+     "x": 178.0,
+     "y": 51.6,
+     "w": 16,
+     "h": 16,
+     "label": "御神木",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 223.0,
+     "y": 14.7,
+     "w": 22,
+     "h": 14,
+     "label": "宝物館"
+    },
+    {
+     "type": "massha",
+     "x": 242.0,
+     "y": 79.7,
+     "w": 20,
+     "h": 14,
+     "label": "神楽殿"
+    },
+    {
+     "type": "gate",
+     "x": 141.0,
+     "y": 79.5,
+     "w": 30,
+     "h": 9,
+     "label": "楼門",
+     "labelSide": "left"
+    },
+    {
+     "type": "chozuya",
+     "x": 79.0,
+     "y": 100.4,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "left"
+    },
+    {
+     "type": "gate",
+     "x": 123.0,
+     "y": 131.0,
+     "w": 30,
+     "h": 9,
+     "label": "総門",
+     "labelSide": "left"
+    },
+    {
+     "type": "torii",
+     "x": 134.0,
+     "y": 163.0,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    },
+    {
+     "type": "spot",
+     "x": 32.0,
+     "y": 191.1,
+     "w": 8,
+     "h": 8,
+     "label": "要石"
+    },
+    {
+     "type": "north",
+     "x": 290,
+     "y": 0,
+     "w": 0,
+     "h": 0,
+     "label": "北"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "katori-1",
+    "no": 1,
+    "label": "楼門の裏",
+    "animal": "komainu",
+    "pos": {
+     "x": 186.0,
+     "y": 89.4
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "wood",
+    "sculptor": "佐藤朝山（のちの佐藤玄々）とされる",
+    "sculptorId": "sato-chozan",
+    "year": {
+     "wareki": "昭和9年",
+     "seireki": 1934
+    },
+    "donor": "帝国在郷軍人会千葉支部",
+    "history": "材料は、香取神宮の境内から出た神代杉。昭和9年(1934年)の春に、帝国在郷軍人会の千葉支部が納めたものです。\n彫ったのは、のちに佐藤玄々と名を改めた彫刻家・佐藤朝山と伝えられています。\n石では出せない、木ならではの細やかな彫りの跡にも目を留めてみてください。",
+    "sources": [
+     {
+      "title": "神社ファン「楼門｜香取神宮」",
+      "url": "https://jinjafan.jp/1200121/spots/743/"
+     }
+    ],
+    "asukaNote": "木製の狛犬というだけでもめずらしいのだけど、屋外にあるというのはもっとめずらしいかも。\nお利口さんでお行儀が良い感じが伝わってきますね。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/katori-1-01.jpg?v=c99a71ee",
+      "kind": "art",
+      "cover": true,
+      "title": "香取神宮"
+     },
+     {
+      "src": "images/katori-1-02.jpg?v=526af04d",
+      "kind": "art",
+      "title": "香取神宮"
+     }
+    ],
+    "thumb": "images/thumbs/katori-1.jpg?v=21eeba9f"
+   }
+  ]
+ },
+ {
+  "id": "togakushi",
+  "name": "戸隠神社",
+  "kana": "とがくしじんじゃ",
+  "prefecture": "長野県",
+  "city": "長野市",
+  "lat": 36.7518,
+  "lng": 138.0596,
+  "geoApprox": true,
+  "visited": "2026年10月13日",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 275,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       150.0,
+       262.9
+      ],
+      [
+       150.0,
+       168.0
+      ],
+      [
+       150.0,
+       86.7
+      ],
+      [
+       138.0,
+       65.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "torii",
+     "x": 137.0,
+     "y": 238.9,
+     "w": 26,
+     "h": 10,
+     "label": "奥社入口・大鳥居"
+    },
+    {
+     "type": "gate",
+     "x": 135.0,
+     "y": 174.4,
+     "w": 30,
+     "h": 9,
+     "label": "随神門",
+     "labelSide": "right"
+    },
+    {
+     "type": "tree",
+     "x": 106.0,
+     "y": 127.5,
+     "w": 16,
+     "h": 16,
+     "label": "奥社杉並木",
+     "labelSide": "left"
+    },
+    {
+     "type": "tree",
+     "x": 178.0,
+     "y": 127.5,
+     "w": 16,
+     "h": 16,
+     "label": ""
+    },
+    {
+     "type": "massha",
+     "x": 80.0,
+     "y": 41.8,
+     "w": 20,
+     "h": 14,
+     "label": "九頭龍社"
+    },
+    {
+     "type": "haiden",
+     "x": 153.0,
+     "y": 21.7,
+     "w": 66.0,
+     "h": 21.7,
+     "label": "奥社"
+    },
+    {
+     "type": "north",
+     "x": 290,
+     "y": 0,
+     "w": 0,
+     "h": 0,
+     "label": "北"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "togakushi-1",
+    "no": 1,
+    "label": "奥社・九頭龍社の石段前",
+    "animal": "komainu",
+    "pos": {
+     "x": 150.0,
+     "y": 86.7
+    },
+    "regionalTypes": [],
+    "pose": "kamae",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "奥社と九頭龍社へ向かう石段の前にいる、苔むした石の狛犬。角も生えていて、勇猛果敢に今にも飛びかかってきそうな勢いを感じます。\n\nお尻を上げたこの「構え型」は出雲地方でよく見られる形ですが、それが戸隠で見られるというのはけっこうめずらしい。\n\n構え型の狛犬があるときは注意が必要で、大切ななにかを封じているというサインのことが多いので。\n\nここでは、土着の神であった九頭龍大神を鎮めたという伝承が残っているので、この神様が出てこないよう見張っているのかもしれません。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/togakushi-1-01.jpg?v=f5624b4f",
+      "kind": "art",
+      "cover": true,
+      "title": "戸隠神社 奥社・九頭龍社"
+     },
+     {
+      "src": "images/togakushi-1-03.jpg?v=41d8ad6e",
+      "kind": "art",
+      "title": "戸隠神社 奥社・九頭龍社"
+     },
+     {
+      "src": "images/togakushi-1-04.jpg?v=85d0a8d5",
+      "kind": "art",
+      "title": "戸隠神社 奥社・九頭龍社"
+     },
+     {
+      "src": "images/togakushi-1-02.jpg?v=9a5c78ed",
+      "kind": "record",
+      "caption": "角と大きな尾"
+     }
+    ],
+    "thumb": "images/thumbs/togakushi-1.jpg?v=307e2f9c"
+   }
+  ]
+ },
+ {
+  "id": "togakushi-chusha",
+  "name": "戸隠神社 中社",
+  "kana": "とがくしじんじゃ ちゅうしゃ",
+  "prefecture": "長野県",
+  "city": "長野市",
+  "lat": 36.6966,
+  "lng": 138.088,
+  "geoApprox": true,
+  "visited": "2026年10月14日",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 275,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       150.0,
+       262.9
+      ],
+      [
+       150.0,
+       178.9
+      ],
+      [
+       150.0,
+       81.3
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "torii",
+     "x": 137.0,
+     "y": 217.2,
+     "w": 26,
+     "h": 10,
+     "label": "大鳥居"
+    },
+    {
+     "type": "tree",
+     "x": 208.0,
+     "y": 208.8,
+     "w": 16,
+     "h": 16,
+     "label": "三本杉",
+     "labelSide": "right"
+    },
+    {
+     "type": "chozuya",
+     "x": 199.0,
+     "y": 154.6,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "tree",
+     "x": 82.0,
+     "y": 116.7,
+     "w": 16,
+     "h": 16,
+     "label": "御神木",
+     "labelSide": "left"
+    },
+    {
+     "type": "torii",
+     "x": 35.0,
+     "y": 76.3,
+     "w": 26,
+     "h": 10,
+     "label": "西鳥居"
+    },
+    {
+     "type": "haiden",
+     "x": 111.0,
+     "y": 31.2,
+     "w": 78.0,
+     "h": 24.4,
+     "label": "中社 拝殿"
+    },
+    {
+     "type": "building",
+     "x": 55.0,
+     "y": 25.5,
+     "w": 22,
+     "h": 14,
+     "label": "社務所"
+    },
+    {
+     "type": "massha",
+     "x": 230.0,
+     "y": 74.3,
+     "w": 20,
+     "h": 14,
+     "label": "青龍殿"
+    },
+    {
+     "type": "tree",
+     "x": 238.0,
+     "y": 19.1,
+     "w": 16,
+     "h": 16,
+     "label": "さざれ滝",
+     "labelSide": "left"
+    },
+    {
+     "type": "north",
+     "x": 290,
+     "y": 0,
+     "w": 0,
+     "h": 0,
+     "label": "北"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "chusha-1",
+    "no": 1,
+    "label": "拝殿へ上る石段の下",
+    "animal": "komainu",
+    "pos": {
+     "x": 150.0,
+     "y": 130.1
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "身体に対して頭が大きめの狛犬像。\n遠くから見るとアンバランスに見えるけど、真下で見ると、来るものを試すかのような圧力を感じる造りになっているのが面白い。遠近法をうまく使っているんですね。\n目がギョロっとしていて、威厳のある佇まいです。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/chusha-1-01.jpg?v=82033887",
+      "kind": "art",
+      "cover": true,
+      "side": "阿",
+      "title": "戸隠神社 中社"
+     },
+     {
+      "src": "images/chusha-1-03.jpg?v=c63facd1",
+      "kind": "art",
+      "icon": true,
+      "side": "吽",
+      "title": "戸隠神社 中社"
+     },
+     {
+      "src": "images/chusha-1-04.jpg?v=cb9fbb84",
+      "kind": "art",
+      "side": "吽",
+      "title": "戸隠神社 中社"
+     },
+     {
+      "src": "images/chusha-1-05.jpg?v=260a4a4f",
+      "kind": "art",
+      "side": "阿",
+      "title": "戸隠神社 中社"
+     },
+     {
+      "src": "images/chusha-1-02.jpg?v=77cc5f17",
+      "kind": "record",
+      "side": "阿",
+      "caption": "石段を背にした阿形"
+     },
+     {
+      "src": "images/chusha-1-06.jpg?v=f6c4710b",
+      "kind": "record",
+      "side": "吽",
+      "caption": "高い台座と石段"
+     },
+     {
+      "src": "images/chusha-1-r1.jpg?v=02915a74",
+      "kind": "record",
+      "side": "阿",
+      "caption": "大きな頭と前脚"
+     },
+     {
+      "src": "images/chusha-1-r2.jpg?v=5777b667",
+      "kind": "record",
+      "side": "阿",
+      "caption": "横から"
+     },
+     {
+      "src": "images/chusha-1-r3.jpg?v=c679442f",
+      "kind": "record",
+      "side": "吽",
+      "caption": "台座と石段の位置"
+     },
+     {
+      "src": "images/chusha-1-r4.jpg?v=8ad0107a",
+      "kind": "record",
+      "caption": "真下から見上げた顔"
+     },
+     {
+      "src": "images/chusha-1-a01.jpg?v=e2e934ec",
+      "kind": "record"
+     }
+    ],
+    "thumb": "images/thumbs/chusha-1.jpg?v=e812287f"
+   }
+  ]
+ },
+ {
+  "id": "hotaka",
+  "name": "穂高神社",
+  "kana": "ほたかじんじゃ",
+  "prefecture": "長野県",
+  "city": "安曇野市",
+  "lat": 36.3393,
+  "lng": 137.8857,
+  "geoApprox": true,
+  "visited": "2026年10月14日",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 275,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       141.0,
+       262.9
+      ],
+      [
+       141.0,
+       195.1
+      ],
+      [
+       141.0,
+       140.9
+      ],
+      [
+       144.0,
+       103.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 111.0,
+     "y": 25.7,
+     "w": 66.0,
+     "h": 24.4,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 99.0,
+     "y": 67.8,
+     "w": 90.0,
+     "h": 21.7,
+     "label": "拝殿"
+    },
+    {
+     "type": "tree",
+     "x": 82.0,
+     "y": 24.5,
+     "w": 16,
+     "h": 16,
+     "label": "御神木",
+     "labelSide": "left"
+    },
+    {
+     "type": "building",
+     "x": 235.0,
+     "y": 36.4,
+     "w": 22,
+     "h": 14,
+     "label": "御船会館"
+    },
+    {
+     "type": "tree",
+     "x": 82.0,
+     "y": 111.2,
+     "w": 16,
+     "h": 16,
+     "label": "孝養杉",
+     "labelSide": "left"
+    },
+    {
+     "type": "torii",
+     "x": 128.0,
+     "y": 146.8,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居・神楽殿",
+     "labelSide": "left"
+    },
+    {
+     "type": "building",
+     "x": 55.0,
+     "y": 182.7,
+     "w": 22,
+     "h": 14,
+     "label": "参集殿・社務所"
+    },
+    {
+     "type": "torii",
+     "x": 128.0,
+     "y": 222.6,
+     "w": 26,
+     "h": 10,
+     "label": "大鳥居"
+    },
+    {
+     "type": "tree",
+     "x": 34.0,
+     "y": 73.3,
+     "w": 16,
+     "h": 16,
+     "label": "池"
+    },
+    {
+     "type": "massha",
+     "x": 206.0,
+     "y": 115.0,
+     "w": 20,
+     "h": 14,
+     "label": "若宮社",
+     "labelSide": "right"
+    },
+    {
+     "type": "north",
+     "x": 290,
+     "y": 0,
+     "w": 0,
+     "h": 0,
+     "label": "北",
+     "deg": 90
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "hotaka-1",
+    "no": 1,
+    "label": "拝殿前の左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 144.0,
+     "y": 105.7
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "かなりムキムキマッチョな狛犬さん。\n両手足もがっしりしていて威風堂々としています。\n\n阿形の子はけっこうライオンっぽさがありますよね。\n吽形の子はなんかアニメっぽいというか。ちゃんとがっしりと立派な角というか……もはや頭頂部が山のように盛り上がってますね。\n\nなんかユーモラスな狛犬さんたちでした。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hotaka-1-01.jpg?v=5779179e",
+      "kind": "art",
+      "cover": true,
+      "side": "阿",
+      "title": "穂高神社"
+     },
+     {
+      "src": "images/hotaka-1-02.jpg?v=a74f6c9e",
+      "kind": "art",
+      "side": "吽",
+      "title": "穂高神社"
+     }
+    ],
+    "thumb": "images/thumbs/hotaka-1.jpg?v=e2bc19d7"
+   },
+   {
+    "id": "hotaka-2",
+    "no": 2,
+    "label": "若宮社の前",
+    "animal": "komainu",
+    "pos": {
+     "x": 197.4,
+     "y": 123.3
+    },
+    "regionalTypes": [
+     "edo"
+    ],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "明和6年",
+     "seireki": 1769
+    },
+    "donor": "飯嶋喜左衛門(井口郡有)",
+    "history": "江戸時代の明和6年(1769年)、穂高の生まれで江戸の幕府御用商人となった飯嶋喜左衛門が納めた一対です。拝殿の随身像と同じときに奉納され、江戸で彫られたあと、手車に乗せて穂高まで運ばれたと伝わります。\n年代の刻まれた参道の狛犬としては、安曇野市でいちばん古いもの。姿かたちは当時の江戸の狛犬らしさを見せながら、阿形と吽形を別々の獣として彫り分けるという、古い時代の作法も受け継いでいます。",
+    "sources": [
+     {
+      "title": "若宮社の案内板",
+      "url": ""
+     }
+    ],
+    "asukaNote": "40〜50cmほどのわりと小さめの造り。\n\n巻き毛の阿形に対して、直毛の吽形。\nこれ！すごくめずらしいんですよね！\n\n昔、阿形が獅子、吽形が狛犬としっかり造り分けられていた頃の名残を汲む狛犬って、今となっては見つけるのが本当に難しくなりました。なので、この子たちを見つけたときは興奮したー！\n\n角の部分はえぐり取られています。\n狛犬は神域を邪氣や敵から守る、強い力を持った守護聖獣。\n日中戦争から太平洋戦争にかけての時代に、戦地へ向かう兵士本人や、その家族が「敵の弾に当たりませんように」「生きて帰ってこられますように」と願いを込め、狛犬の角や、目や鼻を、鑿(のみ)で削り、その石のかけらや粉をお守り袋に入れ、戦地へ持っていったという話が全国にあり、ここもその流れでけずりとられたのかもしれません。\n\nこの子たちもよく喋ります。かわいい♡",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hotaka-2-02.jpg?v=d6d3ee80",
+      "kind": "art",
+      "cover": true,
+      "icon": true,
+      "side": "吽",
+      "title": "穂高神社 若宮社"
+     },
+     {
+      "src": "images/hotaka-2-01.jpg?v=86dec9b7",
+      "kind": "art",
+      "side": "阿",
+      "title": "穂高神社 若宮社"
+     },
+     {
+      "src": "images/hotaka-2-05.jpg?v=3c0758e2",
+      "kind": "art",
+      "side": "阿",
+      "title": "穂高神社 若宮社"
+     },
+     {
+      "src": "images/hotaka-2-06.jpg?v=5fb31c74",
+      "kind": "art",
+      "side": "吽",
+      "title": "穂高神社 若宮社"
+     },
+     {
+      "src": "images/hotaka-2-03.jpg?v=63156484",
+      "kind": "record",
+      "side": "阿",
+      "caption": "巻き毛のたてがみ"
+     },
+     {
+      "src": "images/hotaka-2-04.jpg?v=6cca5b5c",
+      "kind": "record",
+      "side": "吽",
+      "caption": "直毛のたてがみと角の跡"
+     },
+     {
+      "src": "images/hotaka-2-07.jpg?v=8366dc4a",
+      "kind": "record",
+      "side": "吽",
+      "caption": "吽形の尾"
+     },
+     {
+      "src": "images/hotaka-2-08.jpg?v=45843cae",
+      "kind": "record",
+      "side": "阿",
+      "caption": "阿形の尾"
+     },
+     {
+      "src": "images/hotaka-2-a01.jpg?v=17c536ce",
+      "kind": "record",
+      "caption": "若宮社の狛犬の案内板"
+     },
+     {
+      "src": "images/hotaka-2-a02.jpg?v=3f3fb678",
+      "kind": "record",
+      "caption": "若宮社の案内板"
+     }
+    ],
+    "thumb": "images/thumbs/hotaka-2.jpg?v=0f3a72b1"
+   }
+  ]
+ },
+ {
+  "id": "suwa-maemiya",
+  "name": "諏訪大社 上社前宮",
+  "kana": "すわたいしゃ かみしゃまえみや",
+  "prefecture": "長野県",
+  "city": "茅野市",
+  "lat": 35.9895,
+  "lng": 138.146,
+  "geoApprox": true,
+  "visited": "2026年10月15日",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 275,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       110.4,
+       271.0
+      ],
+      [
+       110.4,
+       198.1
+      ],
+      [
+       110.4,
+       133.3
+      ],
+      [
+       110.4,
+       107.3
+      ],
+      [
+       120.0,
+       50.9
+      ],
+      [
+       121.5,
+       33.9
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 82.5,
+     "y": 14.4,
+     "w": 78.0,
+     "h": 19.0,
+     "label": "前宮本殿"
+    },
+    {
+     "type": "spot",
+     "x": 62.0,
+     "y": 24.2,
+     "w": 8,
+     "h": 8,
+     "label": "二之御柱",
+     "labelSide": "left"
+    },
+    {
+     "type": "spot",
+     "x": 170.0,
+     "y": 24.2,
+     "w": 8,
+     "h": 8,
+     "label": "一之御柱",
+     "labelSide": "right"
+    },
+    {
+     "type": "tree",
+     "x": 51.1,
+     "y": 45.7,
+     "w": 16,
+     "h": 16,
+     "label": "水眼の清流",
+     "labelSide": "left"
+    },
+    {
+     "type": "building",
+     "x": 64.0,
+     "y": 111.7,
+     "w": 22,
+     "h": 14,
+     "label": "十間廊"
+    },
+    {
+     "type": "massha",
+     "x": 136.1,
+     "y": 108.7,
+     "w": 20,
+     "h": 14,
+     "label": "内御玉殿",
+     "labelSide": "right"
+    },
+    {
+     "type": "massha",
+     "x": 191.3,
+     "y": 88.9,
+     "w": 20,
+     "h": 14,
+     "label": "鶏冠社",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 97.4,
+     "y": 128.3,
+     "w": 26,
+     "h": 10,
+     "label": "神原の鳥居"
+    },
+    {
+     "type": "chozuya",
+     "x": 40.3,
+     "y": 144.3,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "left"
+    },
+    {
+     "type": "building",
+     "x": 158.8,
+     "y": 142.6,
+     "w": 22,
+     "h": 14,
+     "label": "社務所"
+    },
+    {
+     "type": "massha",
+     "x": 176.0,
+     "y": 209.8,
+     "w": 20,
+     "h": 14,
+     "label": "溝上社",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 97.4,
+     "y": 193.1,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    },
+    {
+     "type": "north",
+     "x": 290,
+     "y": 0,
+     "w": 0,
+     "h": 0,
+     "label": "北"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "suwa-1",
+    "no": 1,
+    "label": "神原の鳥居の手前・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 110.4,
+     "y": 150.4
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "granite",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "平成15年5月",
+     "seireki": 2003
+    },
+    "donor": "株式会社三平(東京)の会長・社長",
+    "history": "諏訪大社の四つのお宮のうち、狛犬が石で造られているのはこの前宮だけ。本宮・春宮・秋宮の狛犬は、どれも青銅製です。\n前宮には古くから狛犬が置かれていませんでした。この一対は平成15年(2003年)5月、東京の株式会社三平の会長と社長の名前で納められた、まだ新しいものです。\n向かって右の阿形には角がなく、耳は垂れています。向かって左の吽形には頭のてっぺんに一本の角があり、耳がぴんと立っています。口を開けた獅子と、角を持つ狛犬とを彫り分けた、古い形を思わせる造りです。\n新しいぶん摩耗や苔が少なく、彫りの線がくっきり見えます。",
+    "sources": [
+     {
+      "title": "ブログ『上社 Kamisha』",
+      "url": "https://kamisha.exblog.jp/9671254/"
+     }
+    ],
+    "asukaNote": "目がギョロッとしているのに、どこかユーモラスな雰囲気。手足ががっしりしています。\n\n吽形だけ「角」が生えていて、耳をピンと立てています。\n\n2003年に寄贈されたとのことで、まだまだ真新しい。それまでは狛犬がいなかったというのも驚きです。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/suwa-1-01.jpg?v=f60b676b",
+      "kind": "art",
+      "cover": true,
+      "title": "諏訪大社 上社前宮"
+     },
+     {
+      "src": "images/suwa-1-02.jpg?v=62b544b6",
+      "kind": "art",
+      "icon": true,
+      "title": "諏訪大社 上社前宮"
+     },
+     {
+      "src": "images/suwa-1-03.jpg?v=62f9f6e4",
+      "kind": "record"
+     },
+     {
+      "src": "images/suwa-1-04.jpg?v=3147de1c",
+      "kind": "record"
+     },
+     {
+      "src": "images/suwa-1-05.jpg?v=2efc8be9",
+      "kind": "record"
+     }
+    ],
+    "thumb": "images/thumbs/suwa-1.jpg?v=da30c0cf"
+   }
+  ]
+ },
+ {
+  "id": "suwa-honmiya",
+  "name": "諏訪大社 上社本宮",
+  "kana": "すわたいしゃ かみしゃほんみや",
+  "prefecture": "長野県",
+  "city": "諏訪市",
+  "lat": 35.9983,
+  "lng": 138.1192,
+  "geoApprox": true,
+  "visited": "2026年10月15日",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 275,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       186.6,
+       271.0
+      ],
+      [
+       186.6,
+       233.1
+      ],
+      [
+       113.4,
+       233.1
+      ],
+      [
+       113.4,
+       168.6
+      ],
+      [
+       113.4,
+       149.3
+      ],
+      [
+       144.6,
+       149.3
+      ],
+      [
+       14.7,
+       149.3
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "haiden",
+     "x": 70.5,
+     "y": 42.8,
+     "w": 42.0,
+     "h": 65.0,
+     "label": "幣拝殿"
+    },
+    {
+     "type": "tree",
+     "x": 16.0,
+     "y": 64.4,
+     "w": 16,
+     "h": 16,
+     "label": "神居",
+     "labelSide": "left"
+    },
+    {
+     "type": "building",
+     "x": 136.0,
+     "y": 68.3,
+     "w": 22,
+     "h": 14,
+     "label": "拝所",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 193.0,
+     "y": 23.1,
+     "w": 22,
+     "h": 14,
+     "label": "宝物殿"
+    },
+    {
+     "type": "gate",
+     "x": -1.5,
+     "y": 141.3,
+     "w": 30,
+     "h": 9,
+     "label": "御門"
+    },
+    {
+     "type": "massha",
+     "x": 119.9,
+     "y": 174.8,
+     "w": 20,
+     "h": 14,
+     "label": "天流水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 100.6,
+     "y": 212.8,
+     "w": 22,
+     "h": 14,
+     "label": "神楽殿",
+     "labelSide": "left"
+    },
+    {
+     "type": "chozuya",
+     "x": 217.0,
+     "y": 187.1,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 261.7,
+     "y": 152.6,
+     "w": 22,
+     "h": 14,
+     "label": "社務所",
+     "labelSide": "left"
+    },
+    {
+     "type": "torii",
+     "x": 173.6,
+     "y": 228.1,
+     "w": 26,
+     "h": 10,
+     "label": "大鳥居(北参道)"
+    },
+    {
+     "type": "spot",
+     "x": 62.0,
+     "y": 128.8,
+     "w": 8,
+     "h": 8,
+     "label": "布橋",
+     "labelSide": "right"
+    },
+    {
+     "type": "north",
+     "x": 290,
+     "y": 0,
+     "w": 0,
+     "h": 0,
+     "label": "北",
+     "deg": 155
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "honmiya-1",
+    "no": 1,
+    "label": "北参道の大鳥居をくぐってすぐの両脇",
+    "animal": "komainu",
+    "pos": {
+     "x": 192.0,
+     "y": 214.1
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "bronze",
+    "sculptor": "清水多嘉示",
+    "sculptorId": "shimizu-takashi",
+    "year": null,
+    "donor": "",
+    "history": "諏訪郡原村に生まれた彫刻家・清水多嘉示(1897〜1981)による青銅の一対です。清水は日本芸術院会員で、文化功労者にも選ばれた近代彫刻の作家。下社秋宮の狛犬も手がけています。\n昔ながらの石の狛犬とはちがい、太くたくましい前足や、流れるように表された尻尾に、近代彫刻ならではの造形が見られます。",
+    "sources": [
+     {
+      "title": "八ヶ岳美術館「清水多嘉示の彫刻を探そう！」",
+      "url": "https://yatsubi.com/shimizu/look.php"
+     },
+     {
+      "title": "Wikipedia「清水多嘉示」",
+      "url": "https://ja.wikipedia.org/wiki/%E6%B8%85%E6%B0%B4%E5%A4%9A%E5%98%89%E7%A4%BA"
+     }
+    ],
+    "asukaNote": "高い位置にあるから、なかなかじっくり観察しづらいんだけど笑\n\nよく見ると、阿形はたてがみが巻き毛になってる。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/honmiya-1-01.jpg?v=3201e1a5",
+      "kind": "art",
+      "cover": true,
+      "icon": true,
+      "side": "阿",
+      "title": "諏訪大社 上社本宮"
+     },
+     {
+      "src": "images/honmiya-1-02.jpg?v=db072c6f",
+      "kind": "art",
+      "side": "吽",
+      "title": "諏訪大社 上社本宮"
+     },
+     {
+      "src": "images/honmiya-1-03.jpg?v=7829d51e",
+      "kind": "record",
+      "side": "吽"
+     }
+    ],
+    "thumb": "images/thumbs/honmiya-1.jpg?v=676e02ce"
+   }
+  ]
+ },
+ {
+  "id": "moriya",
+  "name": "物部守屋神社（守屋神社）",
+  "kana": "もののべもりやじんじゃ",
+  "prefecture": "長野県",
+  "city": "伊那市",
+  "lat": 35.9325,
+  "lng": 138.112,
+  "geoApprox": true,
+  "visited": "2026年10月15日",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 275,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       150.0,
+       271.0
+      ],
+      [
+       150.0,
+       238.5
+      ],
+      [
+       150.0,
+       168.0
+      ],
+      [
+       150.0,
+       122.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "torii",
+     "x": 137.0,
+     "y": 233.5,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    },
+    {
+     "type": "haiden",
+     "x": 99.0,
+     "y": 84.0,
+     "w": 102.0,
+     "h": 37.9,
+     "label": "拝殿"
+    },
+    {
+     "type": "honden",
+     "x": 120.0,
+     "y": 27.1,
+     "w": 60.0,
+     "h": 27.1,
+     "label": "本殿"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "moriya-1",
+    "no": 1,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 150.0,
+     "y": 151.8
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "長野県神社庁での名前は「守屋社」、入口の表記は「守屋神社」。\n拝殿前のこの一対は、大きく独創的な作風で、明治時代の終わりごろの作とみられています。\nじつは一度盗まれたことがあり、数年後に神社の脇に置かれているのが見つかって、拝殿のそばに戻されました。そのあいだに新しい狛犬が造られていたため、いまは鳥居の前に新しい一対、拝殿の前に戻ってきた古い一対がいます。\n本殿の覆屋の中には、江戸時代中期ごろにさかのぼるとみられる古い狛犬も納められています。",
+    "sources": [
+     {
+      "title": "ブログ「zizou03」守屋神社",
+      "url": "http://zizou03.blog.fc2.com/blog-entry-1094.html"
+     },
+     {
+      "title": "note「盗まれた狛犬 物部氏のゆかり？信州高遠「守屋神社」」つきふね",
+      "url": "https://note.com/nori504/n/n96e0740355e8"
+     }
+    ],
+    "asukaNote": "目がくりっとしていて、とても愛嬌のある顔立ち。\nフォルムもわりと丸みがかっていて、全体的に愛らしい造り。\n尻尾もくりくりにカールしています。\n\nなんといっても目立つのが、腕のフォルム。筋肉質であることを示したかったのだろうけど、赤ちゃんの腕のような、ちぎりパンのような腕がなんともかわいらしい。\n\n胸のところに、毛並みなのかな？ 謎の文様があったのが気になりました。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/moriya-1-01.jpg?v=b6b52ae0",
+      "kind": "art",
+      "cover": true,
+      "icon": true,
+      "side": "阿",
+      "title": "物部守屋神社（守屋神社）"
+     },
+     {
+      "src": "images/moriya-1-02.jpg?v=603406b2",
+      "kind": "art",
+      "side": "吽",
+      "title": "物部守屋神社（守屋神社）"
+     },
+     {
+      "src": "images/moriya-1-03.jpg?v=157249f0",
+      "kind": "art",
+      "side": "阿",
+      "title": "物部守屋神社（守屋神社）"
+     },
+     {
+      "src": "images/moriya-1-04.jpg?v=bae99c7d",
+      "kind": "art",
+      "side": "吽",
+      "title": "物部守屋神社（守屋神社）"
+     },
+     {
+      "src": "images/moriya-1-05.jpg?v=234f47de",
+      "kind": "record",
+      "caption": "謎の胸の模様"
+     },
+     {
+      "src": "images/moriya-1-06.jpg?v=566300a3",
+      "kind": "record",
+      "side": "阿"
+     },
+     {
+      "src": "images/moriya-1-07.jpg?v=4028e8da",
+      "kind": "record",
+      "side": "吽"
+     },
+     {
+      "src": "images/moriya-1-08.jpg?v=6bb967bc",
+      "kind": "record",
+      "side": "吽"
+     }
+    ],
+    "thumb": "images/thumbs/moriya-1.jpg?v=6753dea0"
+   }
+  ]
+ }
+]

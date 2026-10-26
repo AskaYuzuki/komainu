@@ -9,7 +9,7 @@
 'use strict';
 (function () {
   var DEMO = !!window.KOMAINU_DEMO;
-  var VERSION = '3.0.0';
+  var VERSION = '3.1.0';
   var OVERPASS = 'https://overpass-api.de/api/interpreter';
   var RADIUS = 500;
   var MAX_EDGE = 2400, JPEG_Q = 0.85;
@@ -350,10 +350,7 @@
   // 対の場所は必須（写真はとばせる）
   function needPlace(c) {
     if (c.mode !== 'step' || c.pair === 0 || stepsOf(c.pair)[c.step] !== 'place') return false;
-    var p = pairOf(c.pair);
-    if (p && p.place) return false;
-    toast('場所だけ選んでください（写真はとばせます）');
-    return true;
+    return false;  // あすかさん 10/27：場所も「とばす」でとばせるようにする（あとで③が写真から決める）
   }
   function goNext() {
     var c = S.session.cursor, list = stepsOf(c.pair);
@@ -387,6 +384,7 @@
     if (!f || !S.session) return;
     if (d.act === 'art' || d.act === 'art-replace') { onArtCapture(f, d); return; }
     var pair = +d.pair, shot = d.shot, now = new Date().toISOString(), loc = freshFix();
+    if (f.lastModified && Date.now() - f.lastModified > 60000) now = new Date(f.lastModified).toISOString();  // カメラアプリで撮った写真はその時刻
     var prom;
     if (d.act === 'replace') {
       prom = dbGet('photos', d.id).then(function (old) {
@@ -493,6 +491,25 @@
       stopWatch(); S.session = null; S.photos = []; S.shootView = 'home'; S.here.status = 'idle'; S.confirmDiscard = false;
       toast('撮影をやめました'); render(); refreshCounts();
     });
+  }
+  // 撮影の記録を消す（撮影中・中断中・撮りおえたもの）。この端末の写真と送信待ちを消す。受信箱に届いた写真は消えない
+  function deleteSession(id) {
+    return Promise.all([dbAll('photos'), dbAll('outbox')]).then(function (r) {
+      var jobs = r[0].filter(function (p) { return p.sessionId === id; }).map(function (p) { return dbDel('photos', p.id); });
+      r[1].filter(function (o) { return o.id === 'f_' + id || (o.payload && o.payload.session && o.payload.session.sessionId === id); })
+        .forEach(function (o) { jobs.push(dbDel('outbox', o.id)); });
+      jobs.push(dbDel('sessions', id));
+      if (S.session && S.session.id === id) {
+        jobs.push(kvSet('current', null));
+        stopWatch(); S.session = null; S.photos = []; S.shootView = 'home'; S.here.status = 'idle';
+      }
+      return Promise.all(jobs);
+    }).then(function () { S.confirmSess = null; toast('撮影の記録を消しました'); render(); refreshCounts(); });
+  }
+  function sessDeleteHTML(id, name) {
+    if (S.confirmSess !== id) return '<button type="button" class="link-btn" data-act="ask-del-sess" data-id="' + esc(id) + '">この記録を削除する</button>';
+    return '<div class="confirm"><p class="prose">「' + esc(name) + '」の撮影の記録と写真を、この端末から消します。送信待ちの写真も送られなくなります。受信箱にすでに届いた写真は消えません。</p>' +
+      '<div class="row"><button type="button" class="btn danger" data-act="del-sess" data-id="' + esc(id) + '">削除する</button><button type="button" class="btn ghost" data-act="cancel-del-sess">やめる</button></div></div>';
   }
   // 対の場所が決まっていない対（写真があるもの）を探す
   function pairWithoutPlace() {
@@ -700,7 +717,7 @@
   function renderArtBtn() {
     var w = $('#art-slot'); if (!w) return;
     if (S.session) {
-      w.innerHTML = '<label class="art-btn">' + ICON_ART + '<span>作品として撮る</span><input class="vh" type="file" accept="image/*" capture="environment" data-act="art"></label>';
+      w.innerHTML = '<label class="art-btn">' + ICON_ART + '<span>作品として撮る</span><input class="vh" type="file" accept="image/*" data-act="art"></label>';
     } else {
       w.innerHTML = '<button type="button" class="art-btn off" data-act="art-nosession">' + ICON_ART + '<span>作品として撮る</span></button>';
     }
@@ -746,6 +763,7 @@
         '<div class="sub">' + esc(s.date) + '・写真 ' + S.photos.length + '枚' + (art ? '（作品 ' + art + '枚）' : '') + '・' + esc(where) + 'から</div></div>' +
         '<button type="button" class="btn primary big wide" data-act="resume">' + ICON_CAM + '続きを撮る</button>' +
         '<button type="button" class="btn wide" data-act="to-finish">この神社の撮影をおえる</button>' +
+        sessDeleteHTML(s.id, s.shrine.name || '神社名はあとで調べます') +
         '</div>';
       return;
     }
@@ -857,6 +875,11 @@
   }
 
   /* ---------- 撮影の案内 ---------- */
+  // capture を付けない入力：iPhone では「写真ライブラリ／写真を撮る／ファイルを選択」が出る。
+  // 標準のカメラアプリ（広角・望遠・ポートレートなど）で撮った写真を選べる
+  function libraryLabel(cls, html, act, pair, shot) {
+    return '<label class="' + cls + '">' + html + '<input class="vh" type="file" accept="image/*" data-act="' + act + '" data-pair="' + pair + '" data-shot="' + shot + '"></label>';
+  }
   function captureLabel(cls, html, act, pair, shot, id) {
     return '<label class="' + cls + '">' + html + '<input class="vh" type="file" accept="image/*" capture="environment" data-act="' + act + '" data-pair="' + pair + '" data-shot="' + shot + '"' + (id ? ' data-id="' + id + '"' : '') + '></label>';
   }
@@ -911,15 +934,17 @@
     var actions;
     if (!list.length) {
       actions = captureLabel('btn primary big wide', ICON_CAM + '撮影する', 'shoot', pair, key) +
+        libraryLabel('btn wide', 'カメラアプリで撮った写真を選ぶ', 'shoot', pair, key) +
         '<div class="row"><button type="button" class="btn ghost" data-act="prev"' + (pair === 0 && step === 0 ? ' disabled' : '') + '>戻る</button><button type="button" class="btn ghost" data-act="skip">とばす</button></div>';
     } else {
       actions = '<button type="button" class="btn primary big wide" data-act="next">次へ</button>' +
         '<div class="row"><button type="button" class="btn ghost" data-act="prev"' + (pair === 0 && step === 0 ? ' disabled' : '') + '>戻る</button>' +
-        captureLabel('btn', esc(sh.more || 'もう1枚'), 'more', pair, key) + '</div>';
+        captureLabel('btn', esc(sh.more || 'もう1枚'), 'more', pair, key) + '</div>' +
+        libraryLabel('btn ghost wide', 'カメラアプリで撮った写真を選ぶ', 'more', pair, key);
     }
     return progressHTML(pair, step) +
       '<div class="guide-body">' +
-      '<div class="stepno"><span class="k">' + label + '</span>' + (key === 'place' ? '<span class="tag must">場所を選ぶのは必須</span>' : '') + (sh.isText ? '<span class="tag">文字</span>' : '') + '</div>' +
+      '<div class="stepno"><span class="k">' + label + '</span>' + (sh.isText ? '<span class="tag">文字</span>' : '') + '</div>' +
       '<div class="diagram">' + fig(sh.fig, sh.figSide || sh.side, !!sh.single) + '</div>' +
       '<h2 class="h2">' + esc(sh.title) + '</h2>' +
       '<p class="instr">' + esc(sh.text) + '</p>' +
@@ -1090,7 +1115,7 @@
         (sessions.length ? '<ul class="sess">' + sessions.map(function (s) {
           var x = byS[s.id] || { n: 0, sent: 0, wait: 0 };
           var nm = s.shrine && s.shrine.name ? s.shrine.name : (s.location ? '位置のみ（' + s.location.lat.toFixed(4) + ', ' + s.location.lon.toFixed(4) + '）' : '名前なし');
-          return '<li><span class="nm">' + esc(nm) + (s.demo ? '<span class="sample-tag">見本</span>' : '') + '</span><span class="sub">' + esc(s.date) + '・' + s.pairs.length + '対・写真 ' + x.n + '枚（送信済み ' + x.sent + '・送信待ち ' + x.wait + '）' + (s.status === 'shooting' ? '・撮影中' : '') + '</span></li>';
+          return '<li><span class="nm">' + esc(nm) + (s.demo ? '<span class="sample-tag">見本</span>' : '') + '</span><span class="sub">' + esc(s.date) + '・' + s.pairs.length + '対・写真 ' + x.n + '枚（送信済み ' + x.sent + '・送信待ち ' + x.wait + '）' + (s.status === 'shooting' ? '・撮影中' : '') + '</span>' + sessDeleteHTML(s.id, nm) + '</li>';
         }).join('') + '</ul>' : '<p class="meta">まだ撮影の記録はありません。</p>') +
         '</div>';
     });
@@ -1411,7 +1436,7 @@
       case 'skip': skipStep(); break;
       case 'new-pair': newPair(); saveSession(); renderGuide(true); break;
       case 'to-finish': {
-        var np = pairWithoutPlace();
+        var np = null;  // 場所が無い対があっても止めない
         if (np) { S.session.cursor = { pair: np.no, step: 0, mode: 'step' }; saveSession(); S.shootView = 'guide'; render(); toast('対' + np.no + 'の場所を選んでください'); break; }
         S.confirmDiscard = false;
         S.session.cursor = { pair: S.session.cursor.pair, step: 0, mode: 'finish' }; saveSession(); S.shootView = 'guide'; render(); $('#view-guide').scrollTop = 0; break;
@@ -1431,6 +1456,9 @@
       case 'single-side': { var ps2 = pairOf(S.session.cursor.pair); if (ps2) applyPairKind(ps2, 'side', t.dataset.v); break; }
       case 'pump': S.sendError = ''; pump(); break;
       case 'ask-delete': S.confirmDelete = true; renderSend(); break;
+      case 'ask-del-sess': S.confirmSess = t.dataset.id; render(); break;
+      case 'cancel-del-sess': S.confirmSess = null; render(); break;
+      case 'del-sess': deleteSession(t.dataset.id); break;
       case 'cancel-delete': S.confirmDelete = false; renderSend(); break;
       case 'delete-sent':
         dbAll('photos').then(function (all) {

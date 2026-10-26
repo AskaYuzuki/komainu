@@ -2,7 +2,7 @@
    アプリ本体は先に保存して、電波がなくても起動できるようにする。
    受け取り口（script.google.com）と神社の検索（overpass-api.de）は保存しない。
    中身を差し替えたら CACHE の番号を上げる。 */
-var CACHE = 'satsuei-v6';
+var CACHE = 'satsuei-v7';
 var CORE = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 

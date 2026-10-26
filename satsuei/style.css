@@ -60,6 +60,8 @@ img { max-width: 100%; display: block; }
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .app { height: 100%; display: grid; grid-template-rows: auto auto auto 1fr auto; grid-template-columns: minmax(0, 1fr); }
+/* 見本の帯（#demo-band）は本番では hidden で消えるので、行の位置を決めておく（消えると main が高さ0になっていた） */
+.app > .top { grid-row: 1; } .app > #demo-band { grid-row: 2; } .app > #status-band { grid-row: 3; } .app > main { grid-row: 4; } .app > .tabs { grid-row: 5; }
 
 .top {
   display: flex; align-items: center; gap: 12px;

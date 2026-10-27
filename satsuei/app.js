@@ -40,12 +40,12 @@
     zenkei: { group: 'shrine', label: '鳥居からの全景', title: '鳥居から社殿の方向', text: '鳥居の手前に立ち、参道と社殿が一緒に入るように引いて撮ります。', fig: 'zenkei' },
     place: { group: 'pair', label: '対の場所', title: 'この対がいる場所', text: '下から場所を選び、鳥居や社殿が一緒に入るように引いて1枚撮ります。', tip: '後で「どの像か」を見分けるための写真です。位置も一緒に記録します。', fig: 'place' },
     a_front: { group: 'pair', side: 'a', label: '阿形 正面', title: '向かって右（阿形）の正面', text: '口を開けている方です。正面に立ち、台座の上の全身が入るように撮ります。', fig: 'front' },
-    a_diag45: { group: 'pair', side: 'a', label: '阿形 斜め45度', title: '阿形を斜め前45度から', text: '正面と真横のあいだ（斜め前45度）に立ち、顔と体の向きが両方分かるように全身を撮ります。', tip: '図鑑の詳しいページで大きく出す写真です。台座の上まで入れます。', fig: 'diag' },
+    a_diag45: { group: 'pair', side: 'a', label: '阿形 斜め45度', title: '阿形を左前から斜め45度で', text: '阿形の左前方（参道の側）、正面と真横のあいだに立ち、狛犬に向かって撮ります。顔と体の向きが両方分かるように全身を入れます。', tip: '図鑑の詳しいページで大きく出す写真です。台座の上まで入れます。', fig: 'diag' },
     a_side: { group: 'pair', side: 'a', label: '阿形 真横', title: '阿形を真横から', text: '真横に回り、全身を撮ります。お尻を上げているか、前脚を踏ん張っているかが分かるように。', tip: '撮れれば、構え型・尻上げかどうかを見分けるのに役立ちます。', fig: 'side' },
     a_face: { group: 'pair', side: 'a', label: '阿形 顔', title: '阿形の顔のアップ', text: '顔に寄って撮ります。口元と歯の彫り方、目・鼻・耳の形が分かるように。', tip: '少し下から撮ると、口の中と歯が写ります。', fig: 'face' },
     a_tail: { group: 'pair', side: 'a', label: '阿形 尾', title: '阿形の尾のアップ', text: '後ろに回り、尾の形が分かるように寄って撮ります。', tip: '尾の形（団扇・ろうそく・巻き毛など）は様式を見分けるいちばんの手がかりです。', fig: 'tail' },
     u_front: { group: 'pair', side: 'u', label: '吽形 正面', title: '向かって左（吽形）の正面', text: '口を閉じている方です。正面に立ち、台座の上の全身が入るように撮ります。', fig: 'front' },
-    u_diag45: { group: 'pair', side: 'u', label: '吽形 斜め45度', title: '吽形を斜め前45度から', text: '正面と真横のあいだ（斜め前45度）に立ち、顔と体の向きが両方分かるように全身を撮ります。', tip: '図鑑の詳しいページで大きく出す写真です。台座の上まで入れます。', fig: 'diag' },
+    u_diag45: { group: 'pair', side: 'u', label: '吽形 斜め45度', title: '吽形を右前から斜め45度で', text: '吽形の右前方（参道の側）、正面と真横のあいだに立ち、狛犬に向かって撮ります。顔と体の向きが両方分かるように全身を入れます。', tip: '図鑑の詳しいページで大きく出す写真です。台座の上まで入れます。', fig: 'diag' },
     u_side: { group: 'pair', side: 'u', label: '吽形 真横', title: '吽形を真横から', text: '真横に回り、全身を撮ります。お尻を上げているか、前脚を踏ん張っているかが分かるように。', tip: '撮れれば、構え型・尻上げかどうかを見分けるのに役立ちます。', fig: 'side' },
     u_face: { group: 'pair', side: 'u', label: '吽形 顔', title: '吽形の顔のアップ', text: '顔に寄って撮ります。口元と歯の彫り方、目・鼻・耳の形が分かるように。', tip: '角があるときは角も入れます。', fig: 'face' },
     u_tail: { group: 'pair', side: 'u', label: '吽形 尾', title: '吽形の尾のアップ', text: '後ろに回り、尾の形が分かるように寄って撮ります。', tip: '尾の形（団扇・ろうそく・巻き毛など）は様式を見分けるいちばんの手がかりです。', fig: 'tail' },
@@ -962,7 +962,7 @@
       case 'base_right': cam = { x: Math.min(228, T.x + 48), y: T.y + 2 }; target = { x: T.x + 14, y: T.y + 2 }; baseOn = true; kOn = false; both = true; camLbl = '右'; break;
       case 'base_back': cam = { x: T.x, y: T.y - 46 }; target = { x: T.x, y: T.y - 12 }; baseOn = true; kOn = false; both = true; camLbl = '後ろ'; break;
       // 斜め前45度：正面と、外側の真横のあいだ
-      case 'diag': cam = { x: T.x + (side === 'u' ? -40 : 40), y: T.y + 46 }; target = { x: T.x, y: T.y + 4 }; camLbl = '斜め45度'; break;
+      case 'diag': cam = { x: T.x + (side === 'u' ? 40 : -40), y: T.y + 46 };  /* 阿形は左前方から、吽形は右前方から（参道の側から狛犬に向かって） */ target = { x: T.x, y: T.y + 4 }; camLbl = '斜め45度'; break;
       case 'place': cam = { x: 120, y: 178 }; target = { x: 120, y: 40 }; half = 40; camLbl = '引いて'; both = true; break;
       case 'zenkei': cam = { x: 120, y: 178 }; target = { x: 120, y: 14 }; half = 24; camLbl = '鳥居の手前'; kOn = false; break;
       case 'board': break;
@@ -989,7 +989,7 @@
       if (cam.y > H - 20) { ly = cam.y - 12; lx = cam.x + 34; anchor = 'start'; if (kind === 'place' || kind === 'zenkei') { lx = cam.x + 14; ly = cam.y + 4; } }
       if (cam.y < 60) { ly = cam.y - 11; }
       if (kind === 'side') { ly = cam.y + 22; lx = cam.x; anchor = side === 'u' ? 'start' : 'end'; lx = side === 'u' ? 4 : 236; }
-      if (kind === 'diag') { ly = cam.y + 22; anchor = side === 'u' ? 'start' : 'end'; lx = side === 'u' ? 4 : 236; }
+      if (kind === 'diag') { ly = cam.y - 14; anchor = side === 'u' ? 'start' : 'end'; lx = cam.x + (side === 'u' ? 12 : -12); }
       if (kind === 'board') { ly = cam.y - 14; lx = cam.x + 4; anchor = 'start'; }
       g += '<text class="d-cam-lbl" x="' + lx + '" y="' + ly + '" text-anchor="' + anchor + '">' + camLbl + '</text>';
     }

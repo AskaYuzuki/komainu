@@ -1,0 +1,379 @@
+/**
+ * 狛犬撮影アプリの受け取り口（Google Apps Script）
+ *
+ * ・撮影アプリから届いた写真を、Drive「狛犬プロジェクト/受信箱」の中に
+ *   「YYYY-MM-DD_神社名」（名前が分からないときは「YYYY-MM-DD_緯度_経度」）のフォルダを作って保存する
+ * ・同じフォルダに metadata.json を置き、写真が届くたびに追記する
+ * ・感想待ち.json（狛犬プロジェクト直下）を撮影アプリに渡し、感想を 感想.json に追記する
+ * ・投稿待ち.json（狛犬プロジェクト直下）を撮影アプリに渡し、その画像を base64 で返す。
+ *   iPhone で投稿したら 投稿済み.json に追記する（PC と二重に投稿しないため）
+ *
+ * 第2版（2026-10-26）：写真の kind（record／art）と title を metadata.json に記録（schema komainu-inbox/2）。GET type=posts・type=postimage、POST type=posted を追加。
+ * 第3版（2026-10-27）：対ごとの生き物 animal（狛犬・狐・牛・蛙など。図鑑の taxonomy.json の animals の id）と、
+ *   1体だけの対 single:true・残る1体の side（a／u／unknown）を pairs と photos[].pair に記録（schema komainu-inbox/3）。
+ * 第4版（2026-10-27）：POST type=delphoto（写真の取り消し：Drive のファイルをゴミ箱へ・metadata.json から外す）。対ごとの感想 kansou・kansouAt を pairs に記録（schema komainu-inbox/4）。斜め45度は a_diag45／u_diag45。
+ * 書き換えるのは下の AIKOTOBA（合言葉）の1か所だけ。
+ */
+
+const AIKOTOBA = 'ここに合言葉を書く';
+
+const INBOX_FOLDER_ID = '1bxMFm7Dz2S1gIn9SSRSVE6jqxPt4VDlE';   // 狛犬プロジェクト/受信箱
+const PROJECT_FOLDER_ID = '1mHbcV-89A6wTQTfvpLjMcpUKuaZXfQeF'; // 狛犬プロジェクト
+const MACHI_FILE = '感想待ち.json';
+const KANSOU_FILE = '感想.json';
+const META_FILE = 'metadata.json';
+const POSTS_FILE = '投稿待ち.json';
+const POSTED_FILE = '投稿済み.json';
+const INBOX_SCHEMA = 'komainu-inbox/4';
+// 図鑑（taxonomy.json の animals）の id。ここにない値は other にする。送られてこなければ komainu
+const ANIMAL_IDS = ['komainu', 'fox', 'ushi', 'saru', 'usagi', 'okami', 'shika', 'inoshishi', 'kaeru', 'ryu', 'kame', 'hebi', 'tori', 'nezumi', 'tora', 'other'];
+
+/* ---------- 入口 ---------- */
+
+function doPost(e) {
+  let body;
+  try {
+    body = JSON.parse(e.postData.contents);
+  } catch (err) {
+    return out_({ ok: false, error: 'bad_json' });
+  }
+  if (!body || body.passphrase !== AIKOTOBA || AIKOTOBA === 'ここに合言葉を書く') {
+    return out_({ ok: false, error: 'wrong_passphrase' });
+  }
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(30000);
+  } catch (err) {
+    return out_({ ok: false, error: 'busy' });
+  }
+  try {
+    if (body.type === 'photo') return out_(savePhoto_(body.photo));
+    if (body.type === 'session') return out_(saveSession_(body.session));
+    if (body.type === 'kansou') return out_(saveKansou_(body.kansou));
+    if (body.type === 'posted') return out_(savePosted_(body.posted));
+    if (body.type === 'delphoto') return out_(delPhoto_(body.delphoto));
+    return out_({ ok: false, error: 'unknown_type' });
+  } catch (err) {
+    return out_({ ok: false, error: 'server_error', detail: String(err) });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function doGet(e) {
+  const q = (e && e.parameter) || {};
+  if (q.passphrase !== AIKOTOBA || AIKOTOBA === 'ここに合言葉を書く') {
+    return out_({ ok: false, error: 'wrong_passphrase' });
+  }
+  if (q.type === 'ping') {
+    const inbox = DriveApp.getFolderById(INBOX_FOLDER_ID);
+    return out_({ ok: true, inbox: inbox.getName(), time: new Date().toISOString() });
+  }
+  if (q.type === 'pending') {
+    const project = DriveApp.getFolderById(PROJECT_FOLDER_ID);
+    const machi = readJson_(project, MACHI_FILE, null).data || { schema: 'komainu-kansou-machi/1', updatedAt: null, items: [] };
+    const kansou = readJson_(project, KANSOU_FILE, null).data || { items: [] };
+    const answered = {};
+    (kansou.items || []).forEach(function (k) { answered[k.itemId] = true; });
+    return out_({ ok: true, data: machi, answered: Object.keys(answered) });
+  }
+  if (q.type === 'posts') {
+    const project = DriveApp.getFolderById(PROJECT_FOLDER_ID);
+    const posts = readJson_(project, POSTS_FILE, null).data || { schema: 'komainu-toukou-machi/1', updatedAt: null, items: [] };
+    const posted = readJson_(project, POSTED_FILE, null).data || { items: [] };
+    return out_({ ok: true, data: posts, posted: posted.items || [] });
+  }
+  if (q.type === 'postimage') {
+    // 投稿待ち.json に載っているファイルIDだけを返す（ほかの Drive のファイルは返さない）
+    const id = String(q.id || '');
+    const project = DriveApp.getFolderById(PROJECT_FOLDER_ID);
+    const posts = readJson_(project, POSTS_FILE, null).data || { items: [] };
+    const listed = id && (posts.items || []).some(function (it) {
+      return (it.images || []).some(function (im) { return im && im.fileId === id; });
+    });
+    if (!listed) return out_({ ok: false, error: 'not_listed' });
+    const f = DriveApp.getFileById(id);
+    const b = f.getBlob();
+    return out_({ ok: true, id: id, name: f.getName(), mime: b.getContentType() || 'image/jpeg', data: Utilities.base64Encode(b.getBytes()) });
+  }
+  return out_({ ok: false, error: 'unknown_type' });
+}
+
+/* ---------- 写真 ---------- */
+
+function savePhoto_(p) {
+  if (!p || !p.id || !p.sessionId || !p.data) return { ok: false, error: 'bad_photo' };
+  const folder = sessionFolder_(p);
+  const ref = readJson_(folder, META_FILE, null);
+  const meta = ref.data || newMeta_(p, folder);
+  mergeSession_(meta, p);
+
+  const fname = fileName_(p);
+  const blob = Utilities.newBlob(Utilities.base64Decode(p.data), 'image/jpeg', fname);
+
+  // 同じIDは上書き（古いファイルはゴミ箱へ）
+  const idx = meta.photos.findIndex(function (x) { return x.id === p.id; });
+  if (idx >= 0 && meta.photos[idx].fileId) {
+    try { DriveApp.getFileById(meta.photos[idx].fileId).setTrashed(true); } catch (err) { /* すでに無い */ }
+  }
+  const file = folder.createFile(blob);
+  const rec = {
+    id: p.id,
+    file: fname,
+    fileId: file.getId(),
+    pair: pairRec_(p.pair),
+    shot: p.shot || {},
+    kind: kindOf_(p),
+    title: kindOf_(p) === 'art' ? String(p.title || '') : '',
+    takenAt: p.takenAt || null,
+    takenLocation: p.takenLocation || null,
+    width: p.width || null,
+    height: p.height || null,
+    receivedAt: new Date().toISOString()
+  };
+  if (idx >= 0) meta.photos[idx] = rec; else meta.photos.push(rec);
+  meta.photos.sort(function (a, b) { return String(a.takenAt).localeCompare(String(b.takenAt)); });
+
+  const pair = p.pair || {};
+  if (pair.no > 0) {
+    const prev = meta.pairs[String(pair.no)];
+    const pr = pairRec_(pair);
+    // 写真に付いてきた感想が空なら、先に届いた感想を消さない（撮影の終わり（session）の感想がいちばん新しい）
+    if (!pr.kansou && prev && prev.kansou) { pr.kansou = prev.kansou; pr.kansouAt = prev.kansouAt || null; }
+    meta.pairs[String(pair.no)] = pr;
+  }
+  recount_(meta);
+  meta.schema = INBOX_SCHEMA;
+  meta.updatedAt = new Date().toISOString();
+  writeJson_(folder, META_FILE, ref.file, meta);
+  return { ok: true, id: p.id, file: fname, folder: folder.getName() };
+}
+
+/* ---------- 写真の取り消し ---------- */
+
+// 撮影アプリで取り消した写真を、Drive のゴミ箱に入れて metadata.json から外す。
+// 見つからない（まだ届いていない・もう消した）ときもエラーにせず ok を返す
+function delPhoto_(d) {
+  if (!d || !d.id || !d.sessionId) return { ok: false, error: 'bad_delphoto' };
+  const id = String(d.id);
+  const folderId = PropertiesService.getScriptProperties().getProperty('f_' + d.sessionId);
+  if (!folderId) return { ok: true, id: id, removed: false };
+  let folder;
+  try {
+    folder = DriveApp.getFolderById(folderId);
+  } catch (err) {
+    return { ok: true, id: id, removed: false };
+  }
+  const ref = readJson_(folder, META_FILE, null);
+  const meta = ref.data;
+  if (!meta || !meta.photos) return { ok: true, id: id, removed: false };
+  const idx = meta.photos.findIndex(function (x) { return x.id === id; });
+  if (idx < 0) return { ok: true, id: id, removed: false };
+  const rec = meta.photos[idx];
+  if (rec.fileId) {
+    try { DriveApp.getFileById(rec.fileId).setTrashed(true); } catch (err) { /* すでに無い */ }
+  }
+  meta.photos.splice(idx, 1);
+  meta.removed = meta.removed || [];
+  meta.removed.push({ id: id, file: rec.file || '', fileId: rec.fileId || '', removedAt: new Date().toISOString(), requestedAt: d.requestedAt || null });
+  recount_(meta);
+  meta.schema = INBOX_SCHEMA;
+  meta.updatedAt = new Date().toISOString();
+  writeJson_(folder, META_FILE, ref.file, meta);
+  return { ok: true, id: id, removed: true, folder: folder.getName() };
+}
+
+function recount_(meta) {
+  meta.photoCount = meta.photos.length;
+  meta.artCount = meta.photos.filter(function (x) { return x.kind === 'art'; }).length;
+}
+
+/* ---------- 撮影の終わり ---------- */
+
+function saveSession_(s) {
+  if (!s || !s.sessionId) return { ok: false, error: 'bad_session' };
+  const folder = sessionFolder_(s);
+  const ref = readJson_(folder, META_FILE, null);
+  const meta = ref.data || newMeta_(s, folder);
+  mergeSession_(meta, s);
+  (s.pairs || []).forEach(function (pr) {
+    meta.pairs[String(pr.no)] = pairRec_(pr);
+  });
+  meta.skipped = s.skipped || [];
+  meta.expectedPhotoCount = s.photoCount || null;
+  meta.expectedArtCount = s.artCount || 0;
+  meta.schema = INBOX_SCHEMA;
+  meta.finishedAt = s.finishedAt || new Date().toISOString();
+  meta.status = 'complete';
+  meta.updatedAt = new Date().toISOString();
+  writeJson_(folder, META_FILE, ref.file, meta);
+  return { ok: true, id: s.sessionId, folder: folder.getName() };
+}
+
+/* ---------- 感想 ---------- */
+
+function saveKansou_(k) {
+  if (!k || !k.id || !k.itemId) return { ok: false, error: 'bad_kansou' };
+  const project = DriveApp.getFolderById(PROJECT_FOLDER_ID);
+  const ref = readJson_(project, KANSOU_FILE, null);
+  const data = ref.data || { schema: 'komainu-kansou/1', items: [] };
+  k.receivedAt = new Date().toISOString();
+  const idx = data.items.findIndex(function (x) { return x.id === k.id; });
+  if (idx >= 0) data.items[idx] = k; else data.items.push(k);
+  data.updatedAt = k.receivedAt;
+  writeJson_(project, KANSOU_FILE, ref.file, data);
+  return { ok: true, id: k.id };
+}
+
+/* ---------- 投稿済み（二重投稿を防ぐ） ---------- */
+
+function savePosted_(p) {
+  if (!p || !p.itemId || (p.via !== 'iphone' && p.via !== 'pc')) return { ok: false, error: 'bad_posted' };
+  const project = DriveApp.getFolderById(PROJECT_FOLDER_ID);
+  const ref = readJson_(project, POSTED_FILE, null);
+  const data = ref.data || { schema: 'komainu-toukou-zumi/1', items: [] };
+  const now = new Date().toISOString();
+  const prev = data.items.find(function (x) { return x.itemId === p.itemId; });
+  // すでに投稿済みなら追記しない。先に記録された方を返す
+  if (prev) return { ok: true, id: p.id || prev.id, already: true, posted: prev };
+  const rec = {
+    id: p.id || ('t' + Date.now()), itemId: String(p.itemId), via: p.via,
+    postedAt: p.postedAt || now, receivedAt: now, appVersion: p.appVersion || ''
+  };
+  data.items.push(rec);
+  data.updatedAt = now;
+  writeJson_(project, POSTED_FILE, ref.file, data);
+  return { ok: true, id: rec.id, posted: rec };
+}
+
+/* ---------- フォルダとファイル ---------- */
+
+function folderName_(s) {
+  const date = s.date || Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyy-MM-dd');
+  const shrine = s.shrine || {};
+  let tail = shrine.name;
+  if (!tail) {
+    const loc = s.location || s.takenLocation;
+    tail = loc ? (Number(loc.lat).toFixed(5) + '_' + Number(loc.lon).toFixed(5)) : '場所不明';
+  }
+  return (date + '_' + tail).replace(/[\/\\:*?"<>|]/g, '_');
+}
+
+// 同じ撮影（sessionId）は同じフォルダにまとめる。同じ日・同じ神社名のフォルダがあればそこへ入れる
+function sessionFolder_(s) {
+  const props = PropertiesService.getScriptProperties();
+  const key = 'f_' + s.sessionId;
+  const want = folderName_(s);
+  const inbox = DriveApp.getFolderById(INBOX_FOLDER_ID);
+  let folder = null;
+  const id = props.getProperty(key);
+  if (id) {
+    try {
+      folder = DriveApp.getFolderById(id);
+      if (folder.isTrashed()) folder = null;
+    } catch (err) {
+      folder = null;
+    }
+  }
+  if (!folder) {
+    const it = inbox.getFoldersByName(want);
+    folder = it.hasNext() ? it.next() : inbox.createFolder(want);
+    props.setProperty(key, folder.getId());
+  } else if (s.shrine && s.shrine.name && folder.getName() !== want) {
+    // 位置だけで作ったフォルダに、あとから神社名が分かったら名前を付け直す
+    if (!inbox.getFoldersByName(want).hasNext()) folder.setName(want);
+  }
+  return folder;
+}
+
+function newMeta_(s, folder) {
+  return {
+    schema: INBOX_SCHEMA,
+    folderName: folder.getName(),
+    sessionIds: [],
+    date: s.date || null,
+    shrine: s.shrine || { name: '', source: 'pending' },
+    candidates: s.candidates || [],
+    location: s.location || null,
+    startedAt: s.startedAt || null,
+    finishedAt: null,
+    status: 'receiving',
+    pairs: {},
+    photos: [],
+    photoCount: 0,
+    createdAt: new Date().toISOString(),
+    updatedAt: null
+  };
+}
+
+function mergeSession_(meta, s) {
+  if (meta.sessionIds.indexOf(s.sessionId) < 0) meta.sessionIds.push(s.sessionId);
+  const sh = s.shrine || {};
+  // 名前の分かった情報を優先して上書き
+  if (sh.name && (!meta.shrine || !meta.shrine.name || sh.source !== 'pending')) meta.shrine = sh;
+  if (s.candidates && s.candidates.length) meta.candidates = s.candidates;
+  if (!meta.location && s.location) meta.location = s.location;
+  if (!meta.startedAt && s.startedAt) meta.startedAt = s.startedAt;
+  if (!meta.date && s.date) meta.date = s.date;
+}
+
+// 対の記録をそろえる。animal は省略時 komainu。single でないときの side は null。kansou は対ごとの感想（第4版）
+function pairRec_(pr) {
+  pr = pr || {};
+  const no = Number(pr.no) || 0;
+  if (!no) return { no: 0 };
+  const single = pr.single === true;
+  const animal = ANIMAL_IDS.indexOf(pr.animal) >= 0 ? pr.animal : (pr.animal ? 'other' : 'komainu');
+  return {
+    no: no, place: pr.place || '', placeLabel: pr.placeLabel || '', location: pr.location || null,
+    animal: animal, single: single,
+    side: single ? ((pr.side === 'a' || pr.side === 'u') ? pr.side : 'unknown') : null,
+    kansou: String(pr.kansou || '').trim(), kansouAt: pr.kansouAt || null
+  };
+}
+
+function kindOf_(p) {
+  return (p && (p.kind === 'art' || (p.shot && p.shot.key === 'art'))) ? 'art' : 'record';
+}
+
+// 例：01_a_side_1_ab12.jpg／作品は 01_art_1_ab12.jpg（00 は神社全体）
+function fileName_(p) {
+  const pair = (p.pair && p.pair.no) || 0;
+  const shot = kindOf_(p) === 'art' ? 'art' : ((p.shot && p.shot.key) || 'photo');
+  const seq = (p.shot && p.shot.seq) || 1;
+  const tail = String(p.id).slice(-4);
+  return (pair < 10 ? '0' : '') + pair + '_' + shot + '_' + seq + '_' + tail + '.jpg';
+}
+
+function readJson_(folder, name, fallback) {
+  const it = folder.getFilesByName(name);
+  if (!it.hasNext()) return { file: null, data: fallback };
+  const f = it.next();
+  try {
+    return { file: f, data: JSON.parse(f.getBlob().getDataAsString('UTF-8')) };
+  } catch (err) {
+    return { file: f, data: fallback };
+  }
+}
+
+function writeJson_(folder, name, file, data) {
+  const text = JSON.stringify(data, null, 2);
+  if (file) file.setContent(text);
+  else folder.createFile(name, text, 'application/json');
+}
+
+function out_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ---------- 確認用（エディタで一度だけ実行してよい） ---------- */
+
+// 受信箱と狛犬プロジェクトのフォルダに書き込めるかを確かめる。結果は「実行ログ」に出る
+function checkSetup() {
+  const inbox = DriveApp.getFolderById(INBOX_FOLDER_ID);
+  const project = DriveApp.getFolderById(PROJECT_FOLDER_ID);
+  const f = inbox.createFile('書き込みテスト.txt', 'テスト');
+  f.setTrashed(true);
+  Logger.log('受信箱：' + inbox.getName() + '／プロジェクト：' + project.getName() + '／書き込みできました');
+  if (AIKOTOBA === 'ここに合言葉を書く') Logger.log('※ AIKOTOBA の行（上から16行目あたり）の合言葉がまだ書き換えられていません');
+}

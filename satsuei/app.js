@@ -405,6 +405,7 @@
     if (d.act === 'art' || d.act === 'art-replace') { onArtCapture(f, d); return; }
     var pair = +d.pair, shot = d.shot, now = new Date().toISOString(), loc = freshFix();
     if (f.lastModified && Date.now() - f.lastModified > 60000) now = new Date(f.lastModified).toISOString();  // カメラアプリで撮った写真はその時刻
+    if (f.lastModified && Date.now() - f.lastModified > 600000) loc = null;  // 10分より前に撮った写真は、今いる場所が撮った場所とは限らないので位置を付けない
     var prom;
     if (d.act === 'replace') {
       prom = dbGet('photos', d.id).then(function (old) {
@@ -436,6 +437,8 @@
   // 撮った直後に保存（hold=true の間は送らない）→ 作品名と紐づけ先を決めるシートを出す
   function onArtCapture(f, d) {
     var now = new Date().toISOString(), loc = freshFix();
+    if (f.lastModified && Date.now() - f.lastModified > 60000) now = new Date(f.lastModified).toISOString();
+    if (f.lastModified && Date.now() - f.lastModified > 600000) loc = null;  // 前に撮った写真には今の位置を付けない
     var prom;
     if (d.act === 'art-replace' && d.id) {
       prom = dbGet('photos', d.id).then(function (old) {

@@ -398,3 +398,15 @@ mark { background: none; color: var(--accent-ink); font-weight: 700; }
 .map-card .h3 .sub { font-size: 12px; color: var(--muted); font-weight: 400; }
 /* 見本の帯が消えても本文の行がずれないよう、行を固定する */
 .app > .top { grid-row: 1; } .app > .sample-band { grid-row: 2; } .app > main { grid-row: 3; } .app > .tabs { grid-row: 4; }
+
+/* 来歴の段落ごとの根拠（出典／口伝による／現地で確認） */
+.lore-key { margin: 12px 0 0; font-size: 12px; color: var(--muted); line-height: 1.7; }
+.lore { margin-top: 12px; }
+.lore .prose { white-space: pre-line; }
+.lore .basis { margin: 4px 0 0; font-size: 12px; color: var(--muted); line-height: 1.7; }
+.lore .basis a { color: var(--accent-ink); }
+.bt { display: inline-block; margin-right: 6px; padding: 0 7px; border-radius: 999px; font-size: 11px; line-height: 18px; font-weight: 700; border: 1px solid var(--accent-ink); color: var(--accent-ink); }
+.bt.kuden { border-color: var(--muted); color: var(--muted); border-style: dashed; }
+.bt.site { border-color: var(--accent-ink); background: var(--accent-ink); color: var(--surface); }
+.lore .ref { font-size: 12px; }
+dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }

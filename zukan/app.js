@@ -600,15 +600,32 @@
 
     // 来歴：分かる項目だけ
     var facts = '';
-    if (has(k.sculptor)) facts += '<dt>作者</dt><dd>' + (has(k.sculptorId) ? '<button type="button" data-bysculptor="' + esc(k.sculptorId) + '">' + esc(k.sculptor) + '</button>' : esc(k.sculptor)) + '</dd>';
-    var yt = yearText(k.year); if (yt) facts += '<dt>奉納年</dt><dd>' + esc(yt) + '</dd>';
-    if (has(k.donor)) facts += '<dt>奉納者</dt><dd>' + esc(k.donor) + '</dd>';
+    var fb = k.factBasis || {}, kd = function (f) { return fb[f] === 'kuden' ? ' <span class="bt kuden">口伝</span>' : ''; };
+    if (has(k.sculptor)) facts += '<dt>作者</dt><dd>' + (has(k.sculptorId) ? '<button type="button" data-bysculptor="' + esc(k.sculptorId) + '">' + esc(k.sculptor) + '</button>' : esc(k.sculptor)) + kd('sculptor') + '</dd>';
+    var yt = yearText(k.year); if (yt) facts += '<dt>奉納年</dt><dd>' + esc(yt) + kd('year') + '</dd>';
+    if (has(k.donor)) facts += '<dt>奉納者</dt><dd>' + esc(k.donor) + kd('donor') + '</dd>';
     var srcs = (Array.isArray(k.sources) ? k.sources : []).filter(function (x) { return x && (has(x.title) || has(x.url)); });
     var srcHtml = srcs.length ? '<p class="sources">出典：' + srcs.map(function (x) {
       var t = esc(has(x.title) ? x.title : x.url);
       return has(x.url) && /^https?:\/\//.test(x.url) ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + t + '</a>' : t;
     }).join('、') + '</p>' : '';
-    var hist = (facts ? '<dl class="facts">' + facts + '</dl>' : '') + (has(k.history) ? '<p class="prose">' + esc(k.history) + '</p>' : '') + srcHtml;
+    // 来歴（lore）：段落ごとに「出典」「口伝による」「現地で確認」を付ける（あすかさん 10/27：確証のない話も載せ、見分けられるように）
+    function refLinks(rs) {
+      return (rs || []).filter(function (x) { return x && (has(x.title) || has(x.url)); }).map(function (x) {
+        var t = esc(has(x.title) ? x.title : x.url);
+        return has(x.url) && /^https?:\/\//.test(x.url) ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + t + '</a>' : t;
+      }).join('、');
+    }
+    var lore = Array.isArray(k.lore) ? k.lore.filter(function (x) { return x && has(x.text); }) : [];
+    var loreHtml = lore.map(function (x) {
+      var b = '', r = refLinks(x.refs);
+      if (x.basis === 'source') b = '<span class="bt">出典</span>' + (r || '');
+      else if (x.basis === 'kuden') b = '<span class="bt kuden">口伝による</span>' + (r ? '<span class="ref">もとにした話：' + r + '</span>' : '');
+      else if (x.basis === 'site') b = '<span class="bt site">現地で確認</span>';
+      return '<div class="lore"><p class="prose">' + esc(x.text) + '</p>' + (b ? '<p class="basis">' + b + '</p>' : '') + '</div>';
+    }).join('');
+    if (lore.length) loreHtml = '<p class="lore-key">「出典」は案内板・銘・公式の資料など確かなもの、「口伝による」は言い伝えやネットの情報など確かめられていない話です。</p>' + loreHtml;
+    var hist = (facts ? '<dl class="facts">' + facts + '</dl>' : '') + (lore.length ? loreHtml : (has(k.history) ? '<p class="prose">' + esc(k.history) + '</p>' : '') + srcHtml);
 
     // 分類：登録されている項目だけ（空は出さない）
     var tagPairs = (isKomainu(k) ? [] : [['animal', 'animals', animalId(k)]]).concat(rawStyles(k).map(function (id) { return ['regionalType', 'regionalTypes', id]; }))

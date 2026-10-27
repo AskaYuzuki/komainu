@@ -335,3 +335,37 @@ details.cap p { white-space: pre-wrap; font-size: 13px; color: var(--muted); mar
 /* 第3版：対の場所の画面の「生き物」「数」「残っている1体」 */
 .kind-field { margin-top: 6px; }
 .kind-field .chips { margin-top: 2px; }
+
+/* ---------- 第4版 ---------- */
+/* 写真の「取り消す」と確かめの一言 */
+.thumb .cap { font-size: 11px; color: var(--muted); line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.thumb.asking { width: 132px; }
+.pconfirm { display: flex; flex-direction: column; gap: 6px; padding: 8px; border: 1px solid var(--bad); border-radius: var(--r-s); background: var(--surface); }
+.pconfirm span { font-size: 12px; line-height: 1.5; color: var(--bad); }
+.pconfirm .btn { min-height: 36px; font-size: 13px; padding: 0 10px; }
+.art-body .pconfirm { flex-direction: row; flex-wrap: wrap; align-items: center; }
+.art-body .pconfirm span { flex-basis: 100%; font-size: 13px; }
+.art-body .pconfirm .btn { flex: 1; min-height: 44px; }
+.steplist .art-row { display: flex; align-items: center; gap: 4px; }
+.steplist .art-row > button[data-act="art-open"] { flex: 1; min-width: 0; }
+.steplist .art-row .link-btn { flex: none; font-size: 13px; white-space: nowrap; }
+.steplist .art-li .pconfirm { margin: 0 0 10px; flex-direction: row; flex-wrap: wrap; align-items: center; }
+.steplist .art-li .pconfirm span { flex-basis: 100%; }
+.steplist .art-li .pconfirm .btn { flex: 1; }
+
+/* 対ごとの感想と、マイク（音声入力） */
+.pk-list { display: flex; flex-direction: column; gap: 12px; }
+.label-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0; }
+.label-row label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mic-btn {
+  display: inline-flex; align-items: center; gap: 4px; flex: none; min-height: 36px; padding: 0 12px 0 8px;
+  border-radius: 999px; border: 1px solid var(--accent-ink); background: transparent; color: var(--accent-ink);
+  font-size: 13px; font-weight: 700; line-height: 1.2; cursor: pointer; white-space: nowrap;
+}
+.mic-btn svg { width: 18px; height: 18px; flex: none; }
+.mic-btn.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.mic-btn.on svg { animation: blink 1.2s ease-in-out infinite; }
+.mic-live { margin: 0; font-size: 12px; line-height: 1.5; color: var(--accent-ink); }
+.mic-note { font-size: 11px; }
+.pk textarea { min-height: 84px; }
+@media (prefers-reduced-motion: reduce) { .mic-btn.on svg { animation: none; } }

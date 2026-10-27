@@ -5,11 +5,15 @@
    感想の画面：受け取り口から「感想待ち」を読み、感想と判断を送る。「投稿待ち」に載った項目は iPhone から Instagram へ渡す。
    対ごとに「生き物」（狛犬・狐・牛・蛙など。図鑑の taxonomy.json の animals）と「一対／1体だけ」を選ぶ。
    1体だけのときは片方の手順を飛ばし、残る1体が阿形・吽形・不明のどれかを記録する（第3版）。
+   第4版：写真を1枚ずつ取り消せる（送信済みなら受け取り口に delphoto を送る）。写真は「送信する」を押したときにまとめて送る
+   （設定の「撮ったらすぐ送る」で第3版と同じ自動送信にもできる。感想・取り消し・投稿済みの知らせは自動で送る）。
+   対ごとの感想（pairs[n].kansou）を対のおわりと撮影のおわりで書ける。阿形・吽形の斜め45度（a_diag45・u_diag45）を通常の手順に入れた。
+   感想の欄は音声入力（SpeechRecognition）ができる。
    window.KOMAINU_DEMO が true のときは見本の位置で動き、送信しない（claude.ai の Artifact 用）。 */
 'use strict';
 (function () {
   var DEMO = !!window.KOMAINU_DEMO;
-  var VERSION = '3.1.0';
+  var VERSION = '4.0.0';
   var OVERPASS = 'https://overpass-api.de/api/interpreter';
   var RADIUS = 500;
   var MAX_EDGE = 2400, JPEG_Q = 0.85;
@@ -36,10 +40,12 @@
     zenkei: { group: 'shrine', label: '鳥居からの全景', title: '鳥居から社殿の方向', text: '鳥居の手前に立ち、参道と社殿が一緒に入るように引いて撮ります。', fig: 'zenkei' },
     place: { group: 'pair', label: '対の場所', title: 'この対がいる場所', text: '下から場所を選び、鳥居や社殿が一緒に入るように引いて1枚撮ります。', tip: '後で「どの像か」を見分けるための写真です。位置も一緒に記録します。', fig: 'place' },
     a_front: { group: 'pair', side: 'a', label: '阿形 正面', title: '向かって右（阿形）の正面', text: '口を開けている方です。正面に立ち、台座の上の全身が入るように撮ります。', fig: 'front' },
+    a_diag45: { group: 'pair', side: 'a', label: '阿形 斜め45度', title: '阿形を斜め前45度から', text: '正面と真横のあいだ（斜め前45度）に立ち、顔と体の向きが両方分かるように全身を撮ります。', tip: '図鑑の詳しいページで大きく出す写真です。台座の上まで入れます。', fig: 'diag' },
     a_side: { group: 'pair', side: 'a', label: '阿形 真横', title: '阿形を真横から', text: '真横に回り、全身を撮ります。お尻を上げているか、前脚を踏ん張っているかが分かるように。', tip: '撮れれば、構え型・尻上げかどうかを見分けるのに役立ちます。', fig: 'side' },
     a_face: { group: 'pair', side: 'a', label: '阿形 顔', title: '阿形の顔のアップ', text: '顔に寄って撮ります。口元と歯の彫り方、目・鼻・耳の形が分かるように。', tip: '少し下から撮ると、口の中と歯が写ります。', fig: 'face' },
     a_tail: { group: 'pair', side: 'a', label: '阿形 尾', title: '阿形の尾のアップ', text: '後ろに回り、尾の形が分かるように寄って撮ります。', tip: '尾の形（団扇・ろうそく・巻き毛など）は様式を見分けるいちばんの手がかりです。', fig: 'tail' },
     u_front: { group: 'pair', side: 'u', label: '吽形 正面', title: '向かって左（吽形）の正面', text: '口を閉じている方です。正面に立ち、台座の上の全身が入るように撮ります。', fig: 'front' },
+    u_diag45: { group: 'pair', side: 'u', label: '吽形 斜め45度', title: '吽形を斜め前45度から', text: '正面と真横のあいだ（斜め前45度）に立ち、顔と体の向きが両方分かるように全身を撮ります。', tip: '図鑑の詳しいページで大きく出す写真です。台座の上まで入れます。', fig: 'diag' },
     u_side: { group: 'pair', side: 'u', label: '吽形 真横', title: '吽形を真横から', text: '真横に回り、全身を撮ります。お尻を上げているか、前脚を踏ん張っているかが分かるように。', tip: '撮れれば、構え型・尻上げかどうかを見分けるのに役立ちます。', fig: 'side' },
     u_face: { group: 'pair', side: 'u', label: '吽形 顔', title: '吽形の顔のアップ', text: '顔に寄って撮ります。口元と歯の彫り方、目・鼻・耳の形が分かるように。', tip: '角があるときは角も入れます。', fig: 'face' },
     u_tail: { group: 'pair', side: 'u', label: '吽形 尾', title: '吽形の尾のアップ', text: '後ろに回り、尾の形が分かるように寄って撮ります。', tip: '尾の形（団扇・ろうそく・巻き毛など）は様式を見分けるいちばんの手がかりです。', fig: 'tail' },
@@ -51,13 +57,15 @@
     board: { group: 'opt', label: '案内板・由緒書き', title: '案内板・由緒書き', text: '神社の由緒書きや、像の説明板があれば撮ります。', tip: '年代や作者が書いてあることがあります。' },
     stone: { group: 'opt', label: '石の表面', title: '石の表面のアップ', text: '素材を見分けるため、石の表面に寄って撮ります。', tip: '雨のあとは色が変わるので、乾いた所を選びます。' },
     pair_both: { group: 'opt', label: '一対が並ぶ写真', title: '阿形と吽形を一緒に', text: '参道の中ほどから、阿形と吽形が一緒に入るように撮ります。' },
-    diag45: { group: 'opt', label: '斜め45度', title: '斜め前45度から', text: '斜め前から全身を撮ります。阿形・吽形それぞれ1枚ずつ「もう1枚」で。' },
+    /* 第3版までの任意の手順。第4版では a_diag45・u_diag45 に分けた。古い記録の写真を表示するためだけに残す */
+    diag45: { group: 'opt', label: '斜め45度（前の版）', title: '斜め前45度から', text: '前の版で撮った斜め45度の写真です。' },
     other: { group: 'opt', label: 'その他', title: 'その他', text: '玉・子ども（子獅子など）・欠けた所など、気になった所を撮ります。' },
     art: { group: 'art', label: '作品', title: '作品写真', text: '' }
   };
   var SHRINE_STEPS = ['keidai_map', 'zenkei'];
-  var PAIR_STEPS = ['place', 'a_front', 'a_side', 'a_face', 'a_tail', 'u_front', 'u_side', 'u_face', 'u_tail', 'base_front', 'base_left', 'base_right', 'base_back', '__opt'];
-  var OPT_SHOTS = ['pair_both', 'diag45', 'body_text', 'board', 'stone', 'other'];
+  var PAIR_STEPS = ['place', 'a_front', 'a_diag45', 'a_side', 'a_face', 'a_tail', 'u_front', 'u_diag45', 'u_side', 'u_face', 'u_tail', 'base_front', 'base_left', 'base_right', 'base_back', '__opt'];
+  var OPT_SHOTS = ['pair_both', 'body_text', 'board', 'stone', 'other'];
+  var LEGACY_OPT = ['diag45'];  // 前の版の任意の画角（写真があるときだけ出す）
 
   /* ---------- 小道具 ---------- */
   function $(s, r) { return (r || document).querySelector(s); }
@@ -143,14 +151,19 @@
   var S = {
     tab: 'shoot',
     shootView: 'home',     // home | guide | settings
-    settings: { url: '', pass: '' },
+    settings: { url: '', pass: '', autoSend: false },  // autoSend：撮ったらすぐ送る（初期値は送らない）
     session: null,         // 撮影中の神社
     photos: [],            // 撮影中の神社の写真
     here: { status: 'idle', pos: null, cands: [], sel: 0, manual: '', error: '' },
     lastFix: null,
     watchId: null,
-    counts: { wait: 0, sent: 0, onDevice: 0, kwait: 0 },
+    counts: { wait: 0, sent: 0, onDevice: 0, kwait: 0, swait: 0, dwait: 0 },
     sending: false,
+    sendingId: null,       // いま送っている写真のID
+    pendingAll: false,     // 送信中に「送信する」が押された
+    cancelled: {},         // 取り消した写真のID
+    confirmPhoto: null,    // 「取り消しますか？」を出している写真のID
+    done: null,            // 撮影をおえたあとの画面：{ s: 撮影の記録, photos: [] }
     sendError: '',
     sheet: false,
     kansou: { data: null, loading: false, error: '', fetchedAt: null, answered: {} },
@@ -255,12 +268,17 @@
   function stepsOfPair(p) {
     if (!p || !p.single) return PAIR_STEPS;
     var x = singlePrefix(p);
-    return ['place', x + '_front', x + '_side', x + '_face', x + '_tail', 'base_front', 'base_left', 'base_right', 'base_back', '__opt'];
+    return ['place', x + '_front', x + '_diag45', x + '_side', x + '_face', x + '_tail', 'base_front', 'base_left', 'base_right', 'base_back', '__opt'];
   }
   function stepsOf(pair) { return pair === 0 ? SHRINE_STEPS : stepsOfPair(pairOf(pair)); }
   function animalOf(p) { return (p && p.animal) || 'komainu'; }
   function animalName(id) { var a = ANIMALS.find(function (x) { return x.id === id; }); return a ? a.name : 'その他'; }
-  function optShotsOf(p) { return p && p.single ? OPT_SHOTS.filter(function (k) { return k !== 'pair_both'; }) : OPT_SHOTS; }
+  function optShotsOf(p) {
+    var list = p && p.single ? OPT_SHOTS.filter(function (k) { return k !== 'pair_both'; }) : OPT_SHOTS;
+    // 前の版の「斜め45度」に写真がある対だけ、そのタイルも出す（古い記録を壊さない）
+    var legacy = p ? LEGACY_OPT.filter(function (k) { return photosOf(p.no, k).length; }) : [];
+    return list.concat(legacy);
+  }
   /* 対ごとの見出し（例：対2・狐・1体・拝殿前）。狛犬の一対のときは第2版と同じ「対1・拝殿前」 */
   function pairTitle(p) {
     if (!p) return '';
@@ -272,11 +290,13 @@
     if (!p) return { no: no || 0, place: '', placeLabel: '', location: null };
     var single = !!p.single;
     return { no: p.no, place: p.place || '', placeLabel: placeLabel(p), location: p.location || null,
-      animal: animalOf(p), single: single, side: single ? (p.side === 'a' || p.side === 'u' ? p.side : 'unknown') : null };
+      animal: animalOf(p), single: single, side: single ? (p.side === 'a' || p.side === 'u' ? p.side : 'unknown') : null,
+      kansou: (p.kansou || '').trim(), kansouAt: p.kansouAt || null };
   }
   /* 画角の説明。1体だけの対では、阿形・吽形の決め打ちを外した文言にする */
   var SINGLE_TEXT = {
     _front: { label: '正面', title: '正面', text: '正面に立ち、台座の上の全身が入るように撮ります。' },
+    _diag45: { label: '斜め45度', title: '斜め前45度から', text: '正面と真横のあいだ（斜め前45度）に立ち、顔と体の向きが両方分かるように全身を撮ります。' },
     _side: { label: '真横', title: '真横から', text: '真横に回り、全身を撮ります。お尻を上げているか、前脚を踏ん張っているかが分かるように。' },
     _face: { label: '顔', title: '顔のアップ', text: '顔に寄って撮ります。口元と歯の彫り方、目・鼻・耳の形が分かるように。' },
     _tail: { label: '尾', title: '尾のアップ', text: '後ろに回り、尾の形が分かるように寄って撮ります。' }
@@ -454,13 +474,41 @@
       return loadSessionPhotos();
     }).then(function () { if (S.shootView === 'guide' && S.tab === 'shoot') renderGuide(); else render(); refreshCounts(); pump(); });
   }
-  function deleteArt() {
-    var p = S.photos.find(function (x) { return x.id === S.artId; });
-    if (!p || p.sent) return;
-    dbDel('photos', p.id).then(function () {
-      S.artId = null; S.artDraft = null; renderOverlay(); toast('作品写真を消しました');
-      return loadSessionPhotos();
-    }).then(function () { render(); refreshCounts(); });
+  /* 写真を1枚取り消す。未送信なら端末から消すだけ。送信済み（または送っている最中）なら、
+     受け取り口へ「取り消し」（type=delphoto）を送信待ちに入れる。電波がなければあとで送る */
+  function wasSent(p) { return !!(p && (p.sent || p.sentAt || p.remote || S.sendingId === p.id)); }
+  function cancelPhoto(id) {
+    var now = new Date().toISOString();
+    return dbGet('photos', id).then(function (rec) {
+      rec = rec || S.photos.find(function (x) { return x.id === id; });
+      if (!rec) return null;
+      var remote = wasSent(rec);
+      S.cancelled[id] = true;
+      var jobs = [dbDel('photos', id)];
+      if (remote && !DEMO) {
+        jobs.push(dbPut('outbox', { id: 'd_' + id, kind: 'delphoto', photoId: id, createdAt: now, sent: false,
+          payload: { type: 'delphoto', delphoto: { sessionId: rec.sessionId, id: id, requestedAt: now, appVersion: VERSION } } }));
+      }
+      return Promise.all(jobs).then(function () { return { remote: remote, art: rec.kind === 'art' }; });
+    }).then(function (r) {
+      S.confirmPhoto = null;
+      if (S.artId === id) { S.artId = null; S.artDraft = null; }
+      if (!r) { render(); return; }
+      toast(r.remote ? (DEMO ? '写真を取り消しました（見本なので受信箱には送りません）' : '写真を取り消しました。受信箱からも消します') : '写真を取り消しました');
+      return loadSessionPhotos().then(function () {
+        if (S.done) return loadDone(S.done.s.id);
+      }).then(function () { render(); refreshCounts(); if (r.remote) pump(); });
+    }).catch(function () { toast('取り消せませんでした。もう一度押してください'); });
+  }
+  function deleteArt() { if (S.artId) cancelPhoto(S.artId); }
+  /* 「取り消す」と確かめの一言（サムネイル・作品写真のシート・手順の一覧で使う） */
+  function cancelBtnHTML(p, cls) {
+    if (S.confirmPhoto === p.id) {
+      return '<div class="pconfirm"><span>' + (wasSent(p) ? '受信箱からも取り消しますか？' : '取り消しますか？') + '</span>' +
+        '<button type="button" class="btn danger" data-act="del-photo" data-id="' + esc(p.id) + '">取り消す</button>' +
+        '<button type="button" class="btn ghost" data-act="cancel-del-photo">やめる</button></div>';
+    }
+    return '<button type="button" class="' + (cls || 'btn ghost') + '" data-act="ask-del-photo" data-id="' + esc(p.id) + '">取り消す</button>';
   }
   function closeArt() {
     // 閉じたときも保存扱い（撮った写真を失わない）
@@ -471,6 +519,7 @@
   function finishSession() {
     var s = S.session;
     if (!S.photos.length) { toast('1枚以上撮ると、おえられます'); return; }
+    clearTimeout(pkTimer); pkDirty = {}; micStop();  // 感想は下の saveSession で一緒に保存する
     s.status = 'done'; s.finishedAt = new Date().toISOString();
     s.artCount = S.photos.filter(function (p) { return p.kind === 'art'; }).length;
     s.emptyPairs = s.pairs.filter(function (p) { return !photosInPair(p.no).length; }).map(function (p) { return p.no; });
@@ -479,10 +528,48 @@
       payload: { type: 'session', session: sessionInfo(s, S.photos.length) }
     };
     Promise.all([saveSession(), dbPut('outbox', msg), kvSet('current', null)]).then(function () {
-      stopWatch(); S.session = null; S.photos = []; S.shootView = 'home'; S.here.status = 'idle';
-      toast(DEMO ? '撮影をおえました（見本なので送信はしません）' : '撮影をおえました。写真は順に送ります');
-      render(); refreshCounts(); pump();
+      stopWatch(); S.session = null; S.photos = []; S.here.status = 'idle';
+      return loadDone(s.id);
+    }).then(function () {
+      S.shootView = 'done';
+      toast(DEMO ? '撮影をおえました（見本なので送信はしません）' : S.settings.autoSend ? '撮影をおえました。写真は順に送ります' : '撮影をおえました。「送信する」を押すと送ります');
+      render(); $('#view-done').scrollTop = 0; refreshCounts(); pump();
     });
+  }
+  /* 撮影をおえたあとの画面のための読み込み */
+  function loadDone(id) {
+    return Promise.all([dbGet('sessions', id), dbAll('photos'), dbGet('outbox', 'f_' + id)]).then(function (r) {
+      if (!r[0]) { S.done = null; return; }
+      S.done = { s: r[0], photos: r[1].filter(function (p) { return p.sessionId === id; }), msg: r[2] || null };
+    });
+  }
+  /* 対ごとの感想を書き換える。撮影中の記録でも、おえた記録でもよい。
+     おえた記録の「撮影の終わり」がもう送られていたら、送り直す（受け取り口で pairs が上書きされる） */
+  var pkTimer = null, pkDirty = {};
+  function sessFor(sid) {
+    if (S.session && S.session.id === sid) return S.session;
+    if (S.done && S.done.s.id === sid) return S.done.s;
+    return null;
+  }
+  function setPairKansou(sid, no, val) {
+    var s = sessFor(sid); if (!s) return;
+    var pr = s.pairs.find(function (p) { return p.no === no; }); if (!pr) return;
+    if ((pr.kansou || '') === val) return;
+    pr.kansou = val; pr.kansouAt = new Date().toISOString();
+    pkDirty[sid] = s;
+    clearTimeout(pkTimer); pkTimer = setTimeout(flushPairKansou, 500);
+  }
+  function flushPairKansou() {
+    var list = Object.keys(pkDirty).map(function (k) { return pkDirty[k]; }); pkDirty = {};
+    return Promise.all(list.map(function (s) {
+      s.updatedAt = new Date().toISOString();
+      return dbPut('sessions', s).then(function () {
+        if (s.status !== 'done') return;
+        return dbGet('outbox', 'f_' + s.id).then(function (o) {
+          if (o && o.sent) { o.sent = false; o.resend = true; return dbPut('outbox', o); }
+        });
+      });
+    })).then(function () { if (list.length) refreshCounts(); });
   }
   // 1枚も撮らずにやめる（記録を残さない）
   function discardSession() {
@@ -571,6 +658,7 @@
   function errText(code) {
     if (code === 'wrong_passphrase') return '合言葉が受け取り口と違います。設定を確かめてください。';
     if (code === 'bad_response') return '受け取り口から思った返事が来ません。設定のURLと、公開の「アクセスできるユーザー：全員」を確かめてください。';
+    if (code === 'unknown_type') return '受け取り口が古い版です。Code.gs を第4版に入れ替えてください。';
     return '受け取り口でうまく保存できませんでした（' + code + '）。';
   }
   function tryResolve(s) {
@@ -585,9 +673,14 @@
     }).catch(function () {});
   }
 
-  function pump() {
-    if (DEMO || S.sending || !S.settings.url || !S.settings.pass || !online()) { renderStatus(); return; }
-    S.sending = true; renderStatus();
+  /* 送る。mode='all'（「送信する」を押したとき）は写真と撮影の終わりも送る。
+     それ以外（起動・電波が戻ったとき・感想を入れたときなど）は、設定の「撮ったらすぐ送る」が入っていなければ
+     感想・取り消し・投稿済みの知らせだけを送る */
+  function pump(mode) {
+    var all = mode === 'all' || !!S.settings.autoSend;
+    if (DEMO || !S.settings.url || !S.settings.pass || !online()) { renderStatus(); return; }
+    if (S.sending) { if (all) S.pendingAll = true; return; }
+    S.sending = true; S.sendingAll = all; renderStatus();
     var sessCache = {};
     function sess(id) {
       if (S.session && S.session.id === id) return Promise.resolve(S.session);
@@ -595,11 +688,12 @@
       return dbGet('sessions', id).then(function (s) { sessCache[id] = s; return s; });
     }
     var stop = false;
-    dbAll('photos').then(function (all) {
-      var queue = all.filter(function (p) { return !p.sent && !p.deleted && !p.hold; }).sort(function (a, b) { return a.takenAt < b.takenAt ? -1 : 1; });
+    dbAll('photos').then(function (photos) {
+      var queue = !all ? [] : photos.filter(function (p) { return !p.sent && !p.deleted && !p.hold; }).sort(function (a, b) { return a.takenAt < b.takenAt ? -1 : 1; });
       return queue.reduce(function (chain, p) {
         return chain.then(function () {
-          if (stop) return;
+          if (stop || S.cancelled[p.id]) return;
+          S.sendingId = p.id;
           return sess(p.sessionId).then(function (s) {
             if (!s) return;
             return tryResolve(s).then(function () {
@@ -618,6 +712,8 @@
                       takenAt: p.takenAt, takenLocation: p.location, width: sm.w, height: sm.h, mime: 'image/jpeg', data: b64
                     }
                   }).then(function (r) {
+                    // 送っている間に取り消された写真：記録を戻さない（取り消しの知らせは cancelPhoto が入れてある）
+                    if (S.cancelled[p.id]) return;
                     if (r && r.ok && r.id === p.id) {
                       p.sent = true; p.sentAt = new Date().toISOString(); p.lastError = ''; p.remote = { file: r.file, folder: r.folder };
                       S.sendError = '';
@@ -632,15 +728,18 @@
               });
             });
           }).then(function () {
-            var lp = S.photos.find(function (x) { return x.id === p.id; }); if (lp) Object.assign(lp, { sent: p.sent, sentAt: p.sentAt });
+            S.sendingId = null;
+            var lp = S.photos.find(function (x) { return x.id === p.id; }); if (lp) Object.assign(lp, { sent: p.sent, sentAt: p.sentAt, remote: p.remote });
+            if (S.done) { var dp = S.done.photos.find(function (x) { return x.id === p.id; }); if (dp) Object.assign(dp, { sent: p.sent, sentAt: p.sentAt, remote: p.remote }); }
             refreshCounts();
-          });
+          }, function (e) { S.sendingId = null; throw e; });
         });
       }, Promise.resolve());
     }).then(function () {
       if (stop) return;
       return dbAll('outbox').then(function (ob) {
-        var q = ob.filter(function (o) { return !o.sent; }).sort(function (a, b) { return a.createdAt < b.createdAt ? -1 : 1; });
+        // 撮影の終わり（session）は、写真と一緒に「送信する」で送る
+        var q = ob.filter(function (o) { return !o.sent && (all || o.kind !== 'session'); }).sort(function (a, b) { return a.createdAt < b.createdAt ? -1 : 1; });
         return q.reduce(function (chain, o) {
           return chain.then(function () {
             if (stop) return;
@@ -658,29 +757,42 @@
                   S.posts.posted[o.itemId] = { via: pv.via, at: pv.postedAt, already: !!r.already };
                   if (r.already && pv.via !== 'iphone') toast('この投稿は、先に' + viaLabel(pv.via) + 'で投稿済みでした');
                 }
-              } else { var code = (r && r.error) || 'unknown'; S.sendError = errText(code); if (code === 'wrong_passphrase' || code === 'bad_response') stop = true; }
+              } else {
+                var code = (r && r.error) || 'unknown';
+                S.sendError = (o.kind === 'delphoto' && code === 'unknown_type') ? '受け取り口が古い版のため、写真の取り消しを受信箱に伝えられません。Code.gs を第4版に入れ替えてください。' : errText(code);
+                if (code === 'wrong_passphrase' || code === 'bad_response') stop = true;
+              }
               return dbPut('outbox', o);
             });
           });
         }, Promise.resolve());
       });
     }).catch(function () {
-      S.sendError = 'つながりませんでした。電波のある所でアプリを開くと、続きを送ります。';
+      S.sendError = all ? 'つながりませんでした。電波のある所で、もう一度「送信する」を押してください。' : 'つながりませんでした。電波のある所でアプリを開くと、続きを送ります。';
     }).then(function () {
-      S.sending = false; refreshCounts();
+      S.sending = false; S.sendingAll = false; S.sendingId = null; refreshCounts();
       if (S.tab === 'kansou') renderKansou();
+      if (S.done) loadDone(S.done.s.id).then(function () { if (S.tab === 'shoot' && S.shootView === 'done') renderDoneStatus(); });
+      if (S.pendingAll) { S.pendingAll = false; pump('all'); }
     });
   }
 
   function refreshCounts() {
     return Promise.all([dbAll('photos'), dbAll('outbox')]).then(function (r) {
-      var c = { wait: 0, sent: 0, onDevice: 0, kwait: 0 };
-      r[0].forEach(function (p) { if (p.deleted) { c.sent++; return; } if (p.sent) { c.sent++; c.onDevice++; } else c.wait++; });
-      r[1].forEach(function (o) { if (!o.sent && o.kind === 'kansou') c.kwait++; });
+      var c = { wait: 0, sent: 0, onDevice: 0, kwait: 0, swait: 0, dwait: 0 };
+      r[0].forEach(function (p) { if (p.hold) return; if (p.deleted) { c.sent++; return; } if (p.sent) { c.sent++; c.onDevice++; } else c.wait++; });
+      r[1].forEach(function (o) {
+        if (o.sent) return;
+        if (o.kind === 'kansou' || o.kind === 'posted') c.kwait++;
+        else if (o.kind === 'session') c.swait++;
+        else if (o.kind === 'delphoto') c.dwait++;
+      });
       S.counts = c; renderStatus();
       if (S.tab === 'send') renderSend();
+      if (S.tab === 'shoot' && S.shootView === 'done') renderDoneStatus();
     }).catch(function () {});
   }
+  function anyToSend() { var c = S.counts; return !!(c.wait || c.swait || c.kwait || c.dwait); }
 
   function renderStatus() {
     var b = $('#status-band'), c = S.counts;
@@ -689,24 +801,29 @@
     if (DEMO) t = '見本：送信待ち <b>' + c.wait + '枚</b>（見本のため送信しません）';
     else if (!S.settings.url || !S.settings.pass) t = '送信待ち <b>' + c.wait + '枚</b>・受け取り口が未設定です（右上の設定から）';
     else if (S.sendError) t = S.sendError;
-    else if (S.sending) t = '送信中… 残り <b>' + c.wait + '枚</b>';
-    else if (!online()) t = '電波なし・送信待ち <b>' + c.wait + '枚</b>（つながったら自動で送ります）';
-    else t = c.wait ? '送信待ち <b>' + c.wait + '枚</b>' : 'すべて送信済み（' + c.sent + '枚）';
+    else if (S.sending) t = S.sendingAll ? '送信中… 残り <b>' + c.wait + '枚</b>' : '感想・取り消しの知らせを送っています…';
+    else if (!online()) t = '電波なし・送信待ち <b>' + c.wait + '枚</b>（' + (S.settings.autoSend ? 'つながったら自動で送ります' : '電波のある所で「送信する」を押します') + '）';
+    else if (c.wait) t = '送信待ち <b>' + c.wait + '枚</b>' + (S.settings.autoSend ? '' : '（「送信する」を押すと送ります）');
+    else if (c.swait) t = '撮影の終わりの記録が送信待ちです（「送信する」を押すと送ります）';
+    else t = 'すべて送信済み（' + c.sent + '枚）';
     b.innerHTML = '<span class="dot"></span><span>' + t + '</span>';
     var badge = document.querySelector('.tabs [data-tab="send"] .badge');
-    var n = c.wait + c.kwait;
+    var n = c.wait + c.kwait + c.swait + c.dwait;
     if (n) { if (!badge) { badge = document.createElement('span'); badge.className = 'badge'; document.querySelector('.tabs [data-tab="send"]').appendChild(badge); } badge.textContent = n; }
     else if (badge) badge.remove();
   }
 
   /* ---------- 画面の切り替え ---------- */
   function render() {
-    var views = { home: 'view-home', guide: 'view-guide', kansou: 'view-kansou', send: 'view-send', settings: 'view-settings' };
+    var views = { home: 'view-home', guide: 'view-guide', done: 'view-done', kansou: 'view-kansou', send: 'view-send', settings: 'view-settings' };
+    if (S.tab === 'shoot' && S.shootView === 'done' && !S.done) S.shootView = S.session ? 'guide' : 'home';
     var show = S.tab === 'shoot' ? S.shootView : S.tab;
+    if (show !== micViewOf()) micStop();
     Object.keys(views).forEach(function (k) { document.getElementById(views[k]).hidden = (k !== show); });
     document.querySelectorAll('.tabs [data-tab]').forEach(function (b) { if (b.dataset.tab === S.tab) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current'); });
     if (show === 'home') renderHome();
     else if (show === 'guide') renderGuide();
+    else if (show === 'done') renderDone();
     else if (show === 'kansou') renderKansou();
     else if (show === 'send') renderSend();
     else if (show === 'settings') renderSettings();
@@ -741,9 +858,10 @@
         return '<button type="button" class="chip" data-act="art-pair" data-no="' + q.no + '" aria-pressed="' + (d.pair === q.no) + '">' + esc(q.label) + '</button>';
       }).join('') + '</div></div>' +
       '<button type="button" class="btn primary wide" data-act="art-save">保存する</button>' +
-      '<div class="row">' + '<label class="btn ghost">撮り直す<input class="vh" type="file" accept="image/*" capture="environment" data-act="art-replace" data-id="' + esc(p.id) + '"></label>' +
-      (p.sent ? '' : '<button type="button" class="btn danger" data-act="art-delete">この写真を消す</button>') + '</div>' +
-      (p.sent ? '<p class="hint">送信済みの写真です。作品名や紐づけ先を変えると、同じ写真として送り直します。</p>' : '') +
+      (S.confirmPhoto === p.id ? cancelBtnHTML(p) :
+        '<div class="row">' + '<label class="btn ghost">撮り直す<input class="vh" type="file" accept="image/*" capture="environment" data-act="art-replace" data-id="' + esc(p.id) + '"></label>' +
+        cancelBtnHTML(p, 'btn danger') + '</div>') +
+      (wasSent(p) ? '<p class="hint">送信済みの写真です。作品名や紐づけ先を変えると、同じ写真として送り直します。取り消すと、受信箱からも消します。</p>' : '') +
       '</div></div>';
   }
 
@@ -805,9 +923,10 @@
       (h.status !== 'locating' && h.status !== 'searching' ? '<div class="row"><button type="button" class="link-btn" data-act="relocate">位置をとり直す</button></div>' : '') +
       '<div class="panel"><h2 class="h3">撮る順番</h2><ol class="order">' +
       '<li><b>神社</b>：境内の案内図、鳥居からの全景</li>' +
-      '<li><b>像の1対ごと</b>（狛犬・狐など）：場所と生き物 → 阿形 → 吽形 → 台座。1体だけのときは片方だけ</li>' +
-      '<li><b>任意</b>：一対が並ぶ写真・斜め45度・文字・由緒書きなど</li>' +
-      '</ol><p class="hint">どの手順も「とばす」で進めます。決めるのは対の場所だけです（生き物は初めは狛犬になっています）。いつでも右上の「作品として撮る」で、自由に作品写真を撮れます。</p></div>' +
+      '<li><b>像の1対ごと</b>（狛犬・狐など）：場所と生き物 → 阿形（正面・斜め45度・真横・顔・尾）→ 吽形（同じ）→ 台座。1体だけのときは片方だけ</li>' +
+      '<li><b>任意</b>：一対が並ぶ写真・文字・由緒書きなど</li>' +
+      '<li><b>感想</b>：対ごとに、その場で書けます（話して入力もできます）</li>' +
+      '</ol><p class="hint">どの手順も「とばす」で進めます。生き物は初めは狛犬になっています。いつでも右上の「作品として撮る」で、自由に作品写真を撮れます。写真は「送信する」を押したときにまとめて送ります。</p></div>' +
       '</div>';
   }
   function manualField(label) {
@@ -842,6 +961,8 @@
       case 'base_left': cam = { x: T.x - 48, y: T.y + 2 }; target = { x: T.x - 14, y: T.y + 2 }; baseOn = true; kOn = false; both = true; camLbl = '左'; break;
       case 'base_right': cam = { x: Math.min(228, T.x + 48), y: T.y + 2 }; target = { x: T.x + 14, y: T.y + 2 }; baseOn = true; kOn = false; both = true; camLbl = '右'; break;
       case 'base_back': cam = { x: T.x, y: T.y - 46 }; target = { x: T.x, y: T.y - 12 }; baseOn = true; kOn = false; both = true; camLbl = '後ろ'; break;
+      // 斜め前45度：正面と、外側の真横のあいだ
+      case 'diag': cam = { x: T.x + (side === 'u' ? -40 : 40), y: T.y + 46 }; target = { x: T.x, y: T.y + 4 }; camLbl = '斜め45度'; break;
       case 'place': cam = { x: 120, y: 178 }; target = { x: 120, y: 40 }; half = 40; camLbl = '引いて'; both = true; break;
       case 'zenkei': cam = { x: 120, y: 178 }; target = { x: 120, y: 14 }; half = 24; camLbl = '鳥居の手前'; kOn = false; break;
       case 'board': break;
@@ -868,6 +989,7 @@
       if (cam.y > H - 20) { ly = cam.y - 12; lx = cam.x + 34; anchor = 'start'; if (kind === 'place' || kind === 'zenkei') { lx = cam.x + 14; ly = cam.y + 4; } }
       if (cam.y < 60) { ly = cam.y - 11; }
       if (kind === 'side') { ly = cam.y + 22; lx = cam.x; anchor = side === 'u' ? 'start' : 'end'; lx = side === 'u' ? 4 : 236; }
+      if (kind === 'diag') { ly = cam.y + 22; anchor = side === 'u' ? 'start' : 'end'; lx = side === 'u' ? 4 : 236; }
       if (kind === 'board') { ly = cam.y - 14; lx = cam.x + 4; anchor = 'start'; }
       g += '<text class="d-cam-lbl" x="' + lx + '" y="' + ly + '" text-anchor="' + anchor + '">' + camLbl + '</text>';
     }
@@ -883,14 +1005,18 @@
   function captureLabel(cls, html, act, pair, shot, id) {
     return '<label class="' + cls + '">' + html + '<input class="vh" type="file" accept="image/*" capture="environment" data-act="' + act + '" data-pair="' + pair + '" data-shot="' + shot + '"' + (id ? ' data-id="' + id + '"' : '') + '></label>';
   }
-  function thumbsHTML(list, pair, shot) {
+  // withLabel：任意の写真の一覧では、何の写真かを下に出す
+  function thumbsHTML(list, pair, shot, withLabel) {
     thumbUrls.forEach(function (u) { URL.revokeObjectURL(u); }); thumbUrls = [];
     return '<div class="thumbs">' + list.map(function (p) {
       var b = photoBlob(p), src = '';
       if (b) { src = URL.createObjectURL(b); thumbUrls.push(src); }
-      return '<div class="thumb"><div class="ph">' + (src ? '<img src="' + src + '" alt="撮った写真">' : '') +
+      var conf = S.confirmPhoto === p.id;
+      return '<div class="thumb' + (conf ? ' asking' : '') + '"><div class="ph">' + (src ? '<img src="' + src + '" alt="撮った写真">' : '') +
         '<span class="st' + (p.sent ? ' sent' : '') + '">' + (p.sent ? '送信済み' : '送信待ち') + '</span></div>' +
-        captureLabel('btn ghost', '撮り直し', 'replace', pair, shot, p.id) + '</div>';
+        (withLabel ? '<span class="cap">' + esc(shotFor(pair, p.shot).label) + '</span>' : '') +
+        (conf ? '' : captureLabel('btn ghost', '撮り直し', 'replace', pair, shot || p.shot, p.id)) +
+        cancelBtnHTML(p, 'btn ghost') + '</div>';
     }).join('') + '</div>';
   }
   function progressHTML(pair, cur) {
@@ -1009,13 +1135,17 @@
   }
 
   function optHTML(pair) {
+    var keys = optShotsOf(pairOf(pair));
+    var taken = [];
+    keys.forEach(function (k) { taken = taken.concat(photosOf(pair, k)); });
     return progressHTML(pair, -1) + '<div class="guide-body">' +
       '<div class="stepno"><span class="k">対' + pair + '　任意</span></div>' +
       '<h2 class="h2">ほかに撮るもの</h2><p class="instr">あれば撮ります。なければそのまま「この対はおわり」。</p>' +
-      '<div class="opt-grid">' + optShotsOf(pairOf(pair)).map(function (k) {
+      '<div class="opt-grid">' + keys.map(function (k) {
         var n = photosOf(pair, k).length, sh = shotFor(pair, k);
         return captureLabel('opt-tile', '<span class="t">' + esc(sh.label) + '</span><span class="s">' + esc(sh.text) + '</span>' + (n ? '<span class="n">' + n + '枚 撮影済み</span>' : ''), 'more', pair, k);
       }).join('') + '</div>' +
+      (taken.length ? '<h3 class="h3">撮った写真</h3>' + thumbsHTML(taken, pair, null, true) : '') +
       '<p class="tip">' + ICON_TIP + '<span>' + esc(TEXT_TIP) + '</span></p>' +
       '</div><div class="guide-actions"><button type="button" class="btn primary big wide" data-act="next">この対はおわり</button>' +
       '<div class="row"><button type="button" class="btn ghost" data-act="prev">戻る</button></div></div>';
@@ -1038,6 +1168,7 @@
       var hint = st.noSide ? '<p class="tip">' + ICON_TIP + '<span>もし撮れそうなら、真横からの1枚があると構え型かどうかを見分けやすくなります。<button type="button" class="link-btn" data-act="jump" data-pair="' + pair + '" data-i="' + stepsOf(pair).indexOf(st.sideKey) + '">真横の手順へ</button></span></p>' : '';
       body = '<h2 class="h2">この対の撮影がおわりました</h2>' +
         '<p class="count-big"><b>' + st.photos + '</b>枚 撮れました' + (st.art ? '<span class="meta">（うち作品 ' + st.art + '枚）</span>' : '') + '</p>' + hint +
+        pairKansouHTML(S.session, p, 'この対の感想') +
         '<p class="instr">同じ神社にほかの像（狛犬・狐など）がいれば、次の対へ進みます。</p>';
     }
     var nextNo = st.photos ? S.session.pairs.length + 1 : pair;
@@ -1066,7 +1197,9 @@
       '<p class="eyebrow">最後の確認</p><h2 class="h2">' + esc(name) + 'の撮影をおえる</h2>' +
       '<p class="count-big"><b>' + total + '</b>枚 撮れました' + (art ? '<span class="meta">（うち作品 ' + art + '枚）</span>' : '') + '</p>' +
       '<p class="meta">' + pairs + '対' + (pairs ? '（' + esc(breakdown) + '）' : '') + '</p>' +
-      '<p class="hint">おえたあとも、写真は電波のある所で順に送ります。送った写真から、分類・調査・見取り図の下書きが進みます。</p>' +
+      (used.length ? '<section class="pk-list"><h3 class="h3">対ごとの感想</h3><p class="hint">送信する前なら、あとから直せます。</p>' +
+        used.map(function (p) { return pairKansouHTML(S.session, p); }).join('') + '</section>' : '') +
+      '<p class="hint">' + (S.settings.autoSend ? 'おえたあとも、写真は電波のある所で順に送ります。' : 'おえたあとの画面か「送信」の画面で「送信する」を押すと、写真と感想をまとめて送ります。') + '送った写真から、分類・調査・見取り図の下書きが進みます。</p>' +
       '</div><div class="guide-actions"><button type="button" class="btn primary big wide" data-act="finish">撮影をおえる</button>' +
       '<div class="row"><button type="button" class="btn ghost" data-act="prev">戻る</button></div></div>';
   }
@@ -1076,7 +1209,7 @@
       var n = photosOf(pair, k).length, sk = s.skips[skipKey(pair, k)];
       var cur = c.mode === 'step' && c.pair === pair && c.step === i;
       var lbl = k === '__opt' ? '任意の写真' : shotFor(pair, k).label;
-      var stt = k === '__opt' ? (OPT_SHOTS.reduce(function (m, o) { return m + photosOf(pair, o).length; }, 0) + '枚') : n ? n + '枚' : sk ? 'とばした' : '';
+      var stt = k === '__opt' ? (OPT_SHOTS.concat(LEGACY_OPT).reduce(function (m, o) { return m + photosOf(pair, o).length; }, 0) + '枚') : n ? n + '枚' : sk ? 'とばした' : '';
       return '<li><button type="button" data-act="jump" data-pair="' + pair + '" data-i="' + i + '"' + (cur ? ' aria-current="step"' : '') + '><span class="i">' + (k === '__opt' ? '任' : i + (pair === 0 ? 1 : 0)) + '</span><span>' + esc(lbl) + '</span><span class="s' + (n ? ' done' : '') + '">' + stt + '</span></button></li>';
     }
     out += '<li class="grp">神社</li>' + SHRINE_STEPS.map(function (k, i) { return item(0, i, k); }).join('');
@@ -1086,11 +1219,140 @@
     var arts = S.photos.filter(function (p) { return p.kind === 'art'; });
     if (arts.length) {
       out += '<li class="grp">作品写真</li>' + arts.map(function (p, i) {
-        return '<li><button type="button" data-act="art-open" data-id="' + esc(p.id) + '"><span class="i">' + (i + 1) + '</span><span>' + esc(p.title || '作品名なし') + '</span><span class="s">' + (p.pair ? '対' + p.pair : '神社全体') + '</span></button></li>';
+        return '<li class="art-li"><div class="art-row"><button type="button" data-act="art-open" data-id="' + esc(p.id) + '"><span class="i">' + (i + 1) + '</span><span>' + esc(p.title || '作品名なし') + '</span><span class="s">' + (p.pair ? '対' + p.pair : '神社全体') + '</span></button>' +
+          (S.confirmPhoto === p.id ? '' : cancelBtnHTML(p, 'link-btn')) + '</div>' + (S.confirmPhoto === p.id ? cancelBtnHTML(p) : '') + '</li>';
       }).join('');
     }
     return '<div class="sheet-backdrop" data-act="close-sheet"></div><div class="sheet" role="dialog" aria-label="手順の一覧"><div class="sheet-head"><h2 class="h3">手順の一覧</h2><button type="button" class="link-btn" data-act="close-sheet">閉じる</button></div>' +
       '<div class="sheet-body"><ul class="steplist">' + out + '</ul></div></div>';
+  }
+
+  /* ---------- 対ごとの感想の欄 ---------- */
+  function pairKansouHTML(s, p, label) {
+    var id = 'pk-' + s.id + '-' + p.no;
+    return '<div class="field pk"><div class="label-row"><label for="' + esc(id) + '">' + esc(label || (pairTitle(p) + ' の感想')) + '</label>' + micBtnHTML(id) + '</div>' +
+      '<textarea id="' + esc(id) + '" data-pk="1" data-sid="' + esc(s.id) + '" data-pair="' + p.no + '" placeholder="その場で感じたこと、いちばん印象に残ったところ（なくてもかまいません）">' + esc(p.kansou || '') + '</textarea>' +
+      micNoteHTML(id) + '</div>';
+  }
+
+  /* ---------- 音声入力（感想の欄の横のマイク） ----------
+     iPhone の Safari では、ボタンを押した操作の中で start() を呼ぶ必要がある（あとから呼ぶと止められる）。
+     確定した文は、欄のカーソルの位置（なければ末尾）に足す。途中経過は欄の下に小さく出す。 */
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+  var mic = { rec: null, target: null, view: null };
+  var caret = {};   // 欄ごとの最後のカーソル位置
+  var ICON_MIC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M6 11.5a6 6 0 0 0 12 0M12 17.5v3"/></svg>';
+  function micBtnHTML(id) {
+    if (!SR) return '';
+    var on = mic.rec && mic.target === id;
+    return '<button type="button" class="mic-btn' + (on ? ' on' : '') + '" data-act="mic" data-for="' + esc(id) + '" aria-pressed="' + !!on + '">' + ICON_MIC + '<span>' + (on ? '止める' : '話して入力') + '</span></button>';
+  }
+  function micNoteHTML(id) {
+    if (!SR) return '<p class="hint mic-note">キーボードのマイクのボタンでも音声入力できます。</p>';
+    return '<p class="mic-live" id="ml-' + esc(id) + '"' + (mic.rec && mic.target === id ? '' : ' hidden') + '>' + (mic.rec && mic.target === id ? '聞いています…' : '') + '</p>';
+  }
+  function micViewOf() { return mic.view; }
+  function micUI() {
+    document.querySelectorAll('.mic-btn').forEach(function (b) {
+      var on = !!mic.rec && b.dataset.for === mic.target;
+      b.classList.toggle('on', on); b.setAttribute('aria-pressed', on);
+      var sp = b.querySelector('span'); if (sp) sp.textContent = on ? '止める' : '話して入力';
+    });
+    document.querySelectorAll('.mic-live').forEach(function (l) {
+      var on = !!mic.rec && l.id === 'ml-' + mic.target;
+      l.hidden = !on; if (!on) l.textContent = '';
+    });
+  }
+  function micLive(text) {
+    var l = document.getElementById('ml-' + mic.target); if (!l) return;
+    l.hidden = false; l.textContent = text ? '聞き取り中：' + text : '聞いています…';
+  }
+  function micInsert(text) {
+    var ta = document.getElementById(mic.target);
+    text = (text || '').trim(); if (!ta || !text) return;
+    var v = ta.value, pos = caret[mic.target];
+    if (pos == null || pos > v.length) pos = v.length;
+    var before = v.slice(0, pos), after = v.slice(pos);
+    var sep = before && !/[\s。、！？!?]$/.test(before) ? '、' : '';
+    if (before && /\n$/.test(before)) sep = '';
+    ta.value = before + sep + text + after;
+    caret[mic.target] = (before + sep + text).length;
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  function micStop() {
+    var r = mic.rec; if (!r) return;
+    mic.rec = null;
+    try { r.stop(); } catch (e) { /* もう止まっている */ }
+    micUI();
+  }
+  function micStart(id) {
+    if (mic.rec) { var same = mic.target === id; micStop(); if (same) return; }
+    if (!SR) { toast('キーボードのマイクのボタンでも音声入力できます'); return; }
+    var r;
+    try { r = new SR(); } catch (e) { toast('音声入力を始められませんでした。キーボードのマイクのボタンでも音声入力できます'); return; }
+    r.lang = 'ja-JP'; r.interimResults = true; r.continuous = true; r.maxAlternatives = 1;
+    mic.rec = r; mic.target = id; mic.view = S.tab === 'shoot' ? S.shootView : S.tab;
+    r.onresult = function (e) {
+      if (mic.rec !== r) return;
+      var interim = '';
+      for (var i = e.resultIndex; i < e.results.length; i++) {
+        var res = e.results[i];
+        if (res.isFinal) micInsert(res[0].transcript); else interim += res[0].transcript;
+      }
+      micLive(interim);
+    };
+    r.onerror = function (e) {
+      var code = e && e.error;
+      if (code === 'not-allowed' || code === 'service-not-allowed') toast('マイクの利用が許可されていません。キーボードのマイクのボタンでも音声入力できます');
+      else if (code === 'no-speech') toast('声が聞き取れませんでした。もう一度押してください');
+      else if (code !== 'aborted') toast('音声入力が止まりました。キーボードのマイクのボタンでも音声入力できます');
+    };
+    r.onend = function () { if (mic.rec === r) { mic.rec = null; micUI(); } };
+    try { r.start(); } catch (e) { mic.rec = null; toast('音声入力を始められませんでした。もう一度押してください'); }
+    micUI(); if (mic.rec) micLive('');
+  }
+  ['keyup', 'click', 'select', 'input', 'focusout'].forEach(function (ev) {
+    document.addEventListener(ev, function (e) {
+      var t = e.target;
+      if (t && t.tagName === 'TEXTAREA' && t.id && typeof t.selectionEnd === 'number' && document.activeElement === t) caret[t.id] = t.selectionEnd;
+    }, true);
+  });
+
+  /* ---------- 撮影をおえたあとの画面 ---------- */
+  function doneCounts() {
+    var d = S.done; if (!d) return { wait: 0, sent: 0, n: 0 };
+    var c = { wait: 0, sent: 0, n: 0 };
+    d.photos.forEach(function (p) { if (p.hold) return; c.n++; if (p.sent || p.deleted) c.sent++; else c.wait++; });
+    c.msgWait = !!(d.msg && !d.msg.sent);
+    return c;
+  }
+  function doneStatusHTML() {
+    var c = doneCounts(), noSet = !S.settings.url || !S.settings.pass, all = S.counts;
+    var msg;
+    if (DEMO) msg = '<p class="msg">見本のため、送信はしません。</p>';
+    else if (noSet) msg = '<p class="msg">受け取り口のURLと合言葉がまだ設定されていないため、送信できません。<button type="button" class="link-btn" data-act="open-settings">設定を開く</button></p>';
+    else if (S.sending && S.sendingAll) msg = '<p class="meta"><span class="spinner"></span>送信中…</p>';
+    else if (!c.wait && !c.msgWait) msg = '<p class="msg ok">この神社の写真と感想は、すべて送信しました。</p>';
+    else msg = '<p class="meta">この神社：送信待ち <b>' + c.wait + '枚</b>' + (c.msgWait ? '・対ごとの感想と撮影の記録' : '') + '</p>';
+    var can = !DEMO && !noSet && !S.sending && anyToSend();
+    return msg + (S.sendError && !DEMO ? '<p class="msg bad">' + esc(S.sendError) + '</p>' : '') +
+      '<button type="button" class="btn primary big wide" data-act="pump"' + (can ? '' : ' disabled') + '>' + (S.sending && S.sendingAll ? '送信中…' : '送信する' + (all.wait ? '（' + all.wait + '枚）' : '')) + '</button>' +
+      '<p class="hint">' + (online() ? '' : '電波がありません。電波のある所で押してください。') + 'ほかの神社の送信待ちも一緒に送ります。</p>';
+  }
+  function renderDoneStatus() { var b = document.getElementById('done-status'); if (b) b.innerHTML = doneStatusHTML(); }
+  function renderDone() {
+    var v = $('#view-done'), d = S.done; if (!d) return;
+    var s = d.s, c = doneCounts();
+    var used = s.pairs.filter(function (p) { return d.photos.some(function (x) { return x.pair === p.no && !x.hold; }); });
+    var art = d.photos.filter(function (p) { return p.kind === 'art'; }).length;
+    v.innerHTML = '<div class="pad">' +
+      '<div class="here"><p class="eyebrow">撮影をおえました</p><div class="name">' + esc(s.shrine.name || '神社名はあとで調べます') + '</div>' +
+      '<div class="sub">' + esc(s.date) + '・写真 ' + c.n + '枚' + (art ? '（作品 ' + art + '枚）' : '') + '・' + used.length + '対</div></div>' +
+      '<div id="done-status" class="stack">' + doneStatusHTML() + '</div>' +
+      (used.length ? '<section class="pk-list"><h2 class="h3">対ごとの感想</h2><p class="hint">送信する前に直せます。送ったあとに直したときは、もう一度「送信する」を押すと送り直します。</p>' +
+        used.map(function (p) { return pairKansouHTML(s, p); }).join('') + '</section>' : '') +
+      (S.session ? '<button type="button" class="btn wide" data-act="resume">撮影中の神社に戻る</button>' : '<button type="button" class="btn wide" data-act="done-home">次の神社を撮る</button>') +
+      '</div>';
   }
 
   /* ---------- 送信の画面 ---------- */
@@ -1104,10 +1366,11 @@
       var noSet = !S.settings.url || !S.settings.pass;
       v.innerHTML = '<div class="pad">' +
         '<div class="counts"><div><b>' + c.wait + '</b><span>送信待ち</span></div><div><b>' + c.sent + '</b><span>送信済み</span></div><div><b>' + c.onDevice + '</b><span>送信済みで端末に残る</span></div></div>' +
-        (DEMO ? '<p class="msg">見本のため、送信はしません。</p>' : noSet ? '<p class="msg">受け取り口のURLと合言葉がまだです。<button type="button" class="link-btn" data-act="open-settings">設定を開く</button></p>' : '') +
+        (DEMO ? '<p class="msg">見本のため、送信はしません。</p>' : noSet ? '<p class="msg">受け取り口のURLと合言葉がまだ設定されていないため、送信できません。<button type="button" class="link-btn" data-act="open-settings">設定を開く</button></p>' : '') +
         (S.sendError && !DEMO ? '<p class="msg bad">' + esc(S.sendError) + '</p>' : '') +
-        '<button type="button" class="btn primary wide" data-act="pump"' + (DEMO || noSet || S.sending || !c.wait && !c.kwait ? ' disabled' : '') + '>' + (S.sending ? '送信中…' : '今すぐ送る') + '</button>' +
-        '<p class="hint">アプリを開いたときと、電波がつながったときに自動で送ります。写真は長辺2400pxに縮めて送り、端末には元の写真が残ります。</p>' +
+        '<button type="button" class="btn primary big wide" data-act="pump"' + (DEMO || noSet || S.sending || !anyToSend() ? ' disabled' : '') + '>' + (S.sending && S.sendingAll ? '送信中…' : '送信する' + (c.wait ? '（' + c.wait + '枚）' : '')) + '</button>' +
+        '<p class="hint">' + (S.settings.autoSend ? '設定で「撮ったらすぐ送る」になっています。電波があれば撮るたびに送ります。' : '写真と対ごとの感想は「送信する」を押したときにまとめて送ります（撮影の途中でも送れます）。') +
+        '感想タブの感想と、写真の取り消しの知らせは、電波があれば自動で送ります。写真は長辺2400pxに縮めて送り、端末には元の写真が残ります。</p>' +
         (S.confirmDelete ?
           '<div class="confirm"><p class="prose">受け取り口に届いたことを確かめた写真 ' + c.onDevice + '枚を、この端末から消します。送信待ちの写真は消しません。iPhoneの写真アプリには残りません（このアプリの中だけの写真です）。</p><div class="row"><button type="button" class="btn danger" data-act="delete-sent">消す</button><button type="button" class="btn ghost" data-act="cancel-delete">やめる</button></div></div>' :
           '<button type="button" class="btn wide" data-act="ask-delete"' + (c.onDevice ? '' : ' disabled') + '>送信済みの写真を端末から消す（' + c.onDevice + '枚）</button>') +
@@ -1115,7 +1378,10 @@
         (sessions.length ? '<ul class="sess">' + sessions.map(function (s) {
           var x = byS[s.id] || { n: 0, sent: 0, wait: 0 };
           var nm = s.shrine && s.shrine.name ? s.shrine.name : (s.location ? '位置のみ（' + s.location.lat.toFixed(4) + ', ' + s.location.lon.toFixed(4) + '）' : '名前なし');
-          return '<li><span class="nm">' + esc(nm) + (s.demo ? '<span class="sample-tag">見本</span>' : '') + '</span><span class="sub">' + esc(s.date) + '・' + s.pairs.length + '対・写真 ' + x.n + '枚（送信済み ' + x.sent + '・送信待ち ' + x.wait + '）' + (s.status === 'shooting' ? '・撮影中' : '') + '</span>' + sessDeleteHTML(s.id, nm) + '</li>';
+          var nk = (s.pairs || []).filter(function (p) { return (p.kansou || '').trim(); }).length;
+          return '<li><span class="nm">' + esc(nm) + (s.demo ? '<span class="sample-tag">見本</span>' : '') + '</span><span class="sub">' + esc(s.date) + '・' + s.pairs.length + '対・写真 ' + x.n + '枚（送信済み ' + x.sent + '・送信待ち ' + x.wait + '）' + (nk ? '・感想 ' + nk + '対' : '') + (s.status === 'shooting' ? '・撮影中' : '') + '</span>' +
+            (s.status === 'done' ? '<button type="button" class="link-btn" data-act="open-done" data-id="' + esc(s.id) + '">対ごとの感想を見る・直す</button>' : '') +
+            sessDeleteHTML(s.id, nm) + '</li>';
         }).join('') + '</ul>' : '<p class="meta">まだ撮影の記録はありません。</p>') +
         '</div>';
     });
@@ -1183,7 +1449,7 @@
       P.fetchedAt = new Date().toISOString(); P.error = '';
       kvSet('posts', { data: P.data, posted: P.posted, fetchedAt: P.fetchedAt });
     }).catch(function (e) {
-      P.error = e && e.message === 'unknown_type' ? '受け取り口が古い版です。Code.gs を第3版に入れ替えてください。' : '';
+      P.error = e && e.message === 'unknown_type' ? '受け取り口が古い版です。Code.gs を第4版に入れ替えてください。' : '';
     }).then(function () { P.loading = false; if (S.tab === 'kansou') renderKansou(); });
   }
   function postItem(id) { var d = S.posts.data; return d && (d.items || []).find(function (x) { return x.itemId === id; }); }
@@ -1330,9 +1596,9 @@
     }
     var dr = S.kdraft[it.id] || {};
     var form = (st || answered) ? '<button type="button" class="link-btn" data-act="k-again" data-id="' + esc(it.id) + '">もう一度送る</button>' :
-      '<div class="field"><label for="kt-' + esc(it.id) + '">感想（1〜3行）</label><textarea id="kt-' + esc(it.id) + '" data-k="kansou" data-id="' + esc(it.id) + '" placeholder="その場で感じたこと、いちばん印象に残ったところ">' + esc(dr.kansou || '') + '</textarea></div>' +
+      '<div class="field"><div class="label-row"><label for="kt-' + esc(it.id) + '">感想（1〜3行）</label>' + micBtnHTML('kt-' + it.id) + '</div><textarea id="kt-' + esc(it.id) + '" data-k="kansou" data-id="' + esc(it.id) + '" placeholder="その場で感じたこと、いちばん印象に残ったところ">' + esc(dr.kansou || '') + '</textarea>' + micNoteHTML('kt-' + it.id) + '</div>' +
       '<button type="button" class="btn primary wide" data-act="k-ok" data-id="' + esc(it.id) + '">公開してよい</button>' +
-      (dr.fixOpen ? '<div class="field"><label for="kf-' + esc(it.id) + '">直してほしいこと</label><textarea id="kf-' + esc(it.id) + '" data-k="fix" data-id="' + esc(it.id) + '" placeholder="例：場所は拝殿前ではなく随神門前です">' + esc(dr.fix || '') + '</textarea></div>' +
+      (dr.fixOpen ? '<div class="field"><div class="label-row"><label for="kf-' + esc(it.id) + '">直してほしいこと</label>' + micBtnHTML('kf-' + it.id) + '</div><textarea id="kf-' + esc(it.id) + '" data-k="fix" data-id="' + esc(it.id) + '" placeholder="例：場所は拝殿前ではなく随神門前です">' + esc(dr.fix || '') + '</textarea>' + micNoteHTML('kf-' + it.id) + '</div>' +
         '<button type="button" class="btn wide" data-act="k-fix" data-id="' + esc(it.id) + '">この内容で送る</button>' :
         '<button type="button" class="btn wide" data-act="k-fix-open" data-id="' + esc(it.id) + '">直してほしいことがある</button>');
     var shrine = it.shrine || {};
@@ -1372,13 +1638,17 @@
       '<div class="field"><label for="set-pass">合言葉</label><input id="set-pass" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" value="' + esc(S.settings.pass) + '"><p class="hint">Code.gs の AIKOTOBA の行（上から16行目あたり）に書いた合言葉と同じものを入れます。</p></div>' +
       '<div class="row"><button type="button" class="btn primary" data-act="save-settings">保存する</button><button type="button" class="btn" data-act="test-settings">つながるか確かめる</button></div>' +
       '<p class="meta" id="set-result"></p>' +
+      '<div class="panel"><h3 class="h3">撮ったらすぐ送る</h3><div class="chips" role="group" aria-label="撮ったらすぐ送るか">' +
+      '<button type="button" class="chip" data-act="auto-send" data-v="off" aria-pressed="' + !S.settings.autoSend + '">送らない（「送信する」で送る）</button>' +
+      '<button type="button" class="chip" data-act="auto-send" data-v="on" aria-pressed="' + !!S.settings.autoSend + '">すぐ送る</button></div>' +
+      '<p class="hint">「送らない」にすると、撮った写真は端末にためておき、撮影をおえたあとの画面か「送信」の画面で「送信する」を押したときにまとめて送ります。感想を書いてから送れます。</p></div>' +
       '<div class="panel"><h3 class="h3">このアプリについて</h3><p class="hint">版 ' + VERSION + '。写真はこの端末の中（アプリ専用の保存場所）に入り、送信が確かめられるまで消えません。神社の検索には OpenStreetMap のデータ（© OpenStreetMap contributors）を使います。</p></div>' +
       '</div>';
   }
   function saveSettings() {
     var u = ($('#set-url').value || '').trim(), p = ($('#set-pass').value || '').trim();
     if (u && !/^https:\/\/script\.google(usercontent)?\.com\//.test(u)) { $('#set-result').textContent = 'URLは https://script.google.com/macros/s/ で始まるものを貼ってください。'; return false; }
-    S.settings = { url: u, pass: p }; kvSet('settings', S.settings);
+    S.settings = { url: u, pass: p, autoSend: !!S.settings.autoSend }; kvSet('settings', S.settings);
     $('#set-result').textContent = '保存しました。';
     S.sendError = ''; renderStatus(); pump();
     return true;
@@ -1400,7 +1670,7 @@
     var t = e.target.closest('[data-act],[data-tab]'); if (!t) return;
     if (t.dataset.tab) {
       S.tab = t.dataset.tab;
-      if (S.tab === 'shoot' && S.shootView === 'settings') S.shootView = S.session ? 'guide' : 'home';
+      if (S.tab === 'shoot' && S.shootView === 'settings') S.shootView = S.session ? 'guide' : S.done ? 'done' : 'home';
       if (S.tab === 'kansou' && !S.kansou.fetchedAt) loadMachi();
       render(); return;
     }
@@ -1417,6 +1687,19 @@
       case 'art-save': saveArt(); break;
       case 'art-close': closeArt(); break;
       case 'art-delete': deleteArt(); break;
+      case 'ask-del-photo': case 'cancel-del-photo':
+        S.confirmPhoto = a === 'ask-del-photo' ? t.dataset.id : null;
+        if (S.tab === 'shoot' && S.shootView === 'guide') renderGuide(); renderOverlay();
+        break;
+      case 'del-photo': cancelPhoto(t.dataset.id); break;
+      case 'mic': micStart(t.dataset.for); break;   // 押した操作の中で start() を呼ぶ
+      case 'auto-send':
+        S.settings.autoSend = t.dataset.v === 'on'; kvSet('settings', S.settings);
+        renderSettings(); renderStatus(); toast(S.settings.autoSend ? '撮ったらすぐ送ります' : '「送信する」を押したときに送ります');
+        if (S.settings.autoSend) pump();
+        break;
+      case 'open-done': loadDone(t.dataset.id).then(function () { S.tab = 'shoot'; S.shootView = 'done'; render(); $('#view-done').scrollTop = 0; }); break;
+      case 'done-home': S.done = null; S.shootView = S.session ? 'guide' : 'home'; render(); break;
       case 'ask-discard': S.confirmDiscard = true; renderGuide(); break;
       case 'cancel-discard': S.confirmDiscard = false; renderGuide(); break;
       case 'discard': discardSession(); break;
@@ -1454,7 +1737,10 @@
       case 'animal': { var pa = pairOf(S.session.cursor.pair); if (pa) { pa.animal = t.dataset.v; saveSession(); renderGuide(); } break; }
       case 'pair-mode': { var pm = pairOf(S.session.cursor.pair); if (pm) applyPairKind(pm, t.dataset.v, null); break; }
       case 'single-side': { var ps2 = pairOf(S.session.cursor.pair); if (ps2) applyPairKind(ps2, 'side', t.dataset.v); break; }
-      case 'pump': S.sendError = ''; pump(); break;
+      case 'pump':
+        S.sendError = '';
+        flushPairKansou().then(function () { pump('all'); if (S.tab === 'shoot' && S.shootView === 'done') renderDoneStatus(); });
+        break;
       case 'ask-delete': S.confirmDelete = true; renderSend(); break;
       case 'ask-del-sess': S.confirmSess = t.dataset.id; render(); break;
       case 'cancel-del-sess': S.confirmSess = null; render(); break;
@@ -1466,7 +1752,7 @@
         }).then(function () { S.confirmDelete = false; return loadSessionPhotos(); }).then(function () { toast('端末から消しました'); refreshCounts(); });
         break;
       case 'open-settings': S.tab = 'shoot'; S.shootView = 'settings'; render(); break;
-      case 'close-settings': S.shootView = S.session ? 'guide' : 'home'; render(); break;
+      case 'close-settings': S.shootView = S.session ? 'guide' : S.done ? 'done' : 'home'; render(); break;
       case 'save-settings': saveSettings(); break;
       case 'test-settings': testSettings(); break;
       case 'reload-machi': loadMachi(); break;
@@ -1491,6 +1777,8 @@
       if (S.artDraft) S.artDraft.title = t.value;
     } else if (t.id === 'place-other' && S.session) {
       pairOf(S.session.cursor.pair).placeOther = t.value; saveSession();
+    } else if (t.dataset && t.dataset.pk) {
+      setPairKansou(t.dataset.sid, +t.dataset.pair, t.value);
     } else if (t.dataset && t.dataset.k) {
       var d = S.kdraft[t.dataset.id] || (S.kdraft[t.dataset.id] = {});
       d[t.dataset.k] = t.value;
@@ -1499,7 +1787,10 @@
   });
   window.addEventListener('online', function () { renderStatus(); pump(); });
   window.addEventListener('offline', renderStatus);
-  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') pump(); });
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') pump();
+    else { flushPairKansou(); micStop(); }
+  });
 
   /* ---------- 起動 ---------- */
   function boot() {

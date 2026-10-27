@@ -734,8 +734,8 @@
  },
  {
   "id": "togakushi",
-  "name": "戸隠神社",
-  "kana": "とがくしじんじゃ",
+  "name": "戸隠神社 奥社・九頭龍社",
+  "kana": "とがくしじんじゃ おくしゃ・くずりゅうしゃ",
   "prefecture": "長野県",
   "city": "長野市",
   "lat": 36.7518,
@@ -2016,7 +2016,7 @@
       "side": "吽"
      },
      {
-      "src": "images/moriya-1-08.jpg?v=6bb967bc",
+      "src": "images/moriya-1-08.jpg?v=79868d7f",
       "kind": "record",
       "side": "吽"
      }

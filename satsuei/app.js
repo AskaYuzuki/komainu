@@ -154,7 +154,7 @@
     settings: { url: '', pass: '', autoSend: false },  // autoSend：撮ったらすぐ送る(初期値は送らない)
     session: null,         // 撮影中の神社
     photos: [],            // 撮影中の神社の写真
-    here: { status: 'idle', pos: null, cands: [], sel: 0, manual: '', area: '', error: '' },
+    here: { status: 'idle', pos: null, cands: [], sel: 0, manual: '', area: (function () { try { return localStorage.getItem('komainu-area') || ''; } catch (e) { return ''; } })(), error: '' },
     lastFix: null,
     watchId: null,
     counts: { wait: 0, sent: 0, onDevice: 0, kwait: 0, swait: 0, dwait: 0 },
@@ -188,7 +188,9 @@
       }, rej, { enableHighAccuracy: true, timeout: timeout || 15000, maximumAge: 30000 });
     });
   }
+  var USE_GPS = false;  // あすかさん 10/27：位置情報は拾えない・時間がかかるので使わない。神社名と地名を入力して始める
   function startWatch() {
+    if (!USE_GPS) return;
     if (DEMO) { S.lastFix = { lat: DEMO_POS.lat, lon: DEMO_POS.lon, accuracy: DEMO_POS.accuracy, at: new Date().toISOString() }; return; }
     if (S.watchId != null || !navigator.geolocation) return;
     S.watchId = navigator.geolocation.watchPosition(function (p) {
@@ -197,6 +199,7 @@
   }
   function stopWatch() { if (S.watchId != null && navigator.geolocation) navigator.geolocation.clearWatch(S.watchId); S.watchId = null; }
   function freshFix() {
+    if (!USE_GPS) return null;
     if (DEMO) return { lat: DEMO_POS.lat, lon: DEMO_POS.lon, accuracy: DEMO_POS.accuracy, at: new Date().toISOString() };
     var f = S.lastFix; if (!f) return null;
     return (Date.now() - new Date(f.at).getTime() < 3 * 60 * 1000) ? f : null;
@@ -328,6 +331,7 @@
     if (how === 'manual') {
       var nm = (h.manual || '').trim();
       if (!nm) { toast('神社名を入れてください'); var mi = document.getElementById('manual-name'); if (mi) mi.focus(); return; }
+      if (!(h.area || '').trim()) { toast('地名を入れてください(例：奈良県天川村)'); var ai = document.getElementById('manual-area'); if (ai) ai.focus(); return; }
       shrine = { name: nm, source: 'manual' };
       if ((h.area || '').trim()) shrine.area = h.area.trim();  // 地名(同じ名前の神社を見分ける。後日まとめて送るときは位置より神社名と地名を使う)
     } else if (how === 'auto' || how === 'picked') {
@@ -349,6 +353,7 @@
     S.photos = [];
     kvSet('current', S.session.id);
     saveSession().then(function () {
+      S.here.manual = '';  // 地名は次の神社でも使えるように残す
       S.shootView = 'guide'; startWatch(); render();
       toast(how === 'later' ? '位置を保存しました。神社名はあとで調べます' : '「' + shrine.name + '」で撮影をはじめます');
     });
@@ -890,41 +895,12 @@
       return;
     }
     var h = S.here, body = '';
-    var pos = h.pos ? '位置の誤差 約' + h.pos.accuracy + 'm' : '';
-    var laterBtn = h.pos ? '<button type="button" class="btn wide" data-act="start-later">名前はあとで調べる(位置だけ保存して撮る)</button>' : '';
-    var manualBox = function (label, primary) {
-      return '<div class="panel"><h2 class="h3">' + esc(label) + '</h2>' + manualField('神社名') +
-        '<button type="button" class="btn' + (primary ? ' primary' : '') + ' wide" data-act="start-manual"' + (h.manual.trim() ? '' : ' disabled') + '>入力した名前で撮る</button></div>';
-    };
-    if (h.status === 'idle') { locate(); return; }
-    if (h.status === 'locating') body = '<p class="meta"><span class="spinner"></span>位置を調べています…</p>';
-    else if (h.status === 'searching') body = '<p class="meta"><span class="spinner"></span>近くの神社を探しています…</p>';
-    else if (h.status === 'found') {
-      var sel = h.cands[h.sel];
-      body = '<div class="ask"><p class="eyebrow">撮影の前に、神社名を確かめます</p>' +
-        '<div class="name">' + esc(sel.name) + '</div><p class="q">でよいですか？</p>' +
-        '<div class="sub">' + (h.sel === 0 ? '位置からいちばん近い神社' : '一覧から選んだ神社') + '・ここから ' + fmtDist(sel.dist) + '・' + pos + '</div></div>' +
-        '<button type="button" class="btn primary big wide" data-act="start-ok">' + ICON_CAM + 'はい、この神社で撮る</button>' +
-        (h.cands.length > 1 ? '<div class="panel"><h2 class="h3">ちがうときは選び直す(' + h.cands.length + '件)</h2><ul class="cands">' +
-          h.cands.map(function (c, i) { return '<li><button type="button" data-act="pick" data-i="' + i + '" aria-pressed="' + (i === h.sel) + '"><span class="nm">' + esc(c.name) + '</span><span class="d">' + fmtDist(c.dist) + '</span></button></li>'; }).join('') +
-          '</ul><p class="hint">選ぶと、上の名前が変わります。そのあと「はい」を押します。</p></div>' : '') +
-        manualBox('一覧にないときは入力', false) + laterBtn;
-    } else if (h.status === 'none') {
-      body = '<div class="ask"><p class="eyebrow">撮影の前に、神社名を確かめます</p><div class="name">近くに見つかりません</div>' +
-        '<div class="sub">半径500m以内に、地図に載った神社がありません。' + pos + '</div></div>' +
-        manualBox('神社名を入力', true) +
-        (h.pos ? '<div class="panel"><p class="prose">名前が分からないときは、位置だけ保存して撮れます。<b>神社名はあとで調べます。</b>よいですか？</p>' + laterBtn + '</div>' : '');
-    } else if (h.status === 'offline') {
-      body = '<div class="ask"><p class="eyebrow">撮影の前に、神社名を確かめます</p><div class="name">名前はあとで調べます</div>' +
-        '<p class="q">よいですか？</p><div class="sub">電波がないため、いまは神社名を調べられません。位置(' + pos + ')を保存し、電波のある所で調べます。</div></div>' +
-        '<button type="button" class="btn primary big wide" data-act="start-later">' + ICON_CAM + 'はい、位置だけ保存して撮る</button>' +
-        manualBox('名前が分かるときは入力', false);
-    } else if (h.status === 'noloc') {
-      body = '<div class="ask"><p class="eyebrow">撮影の前に、神社名を確かめます</p><div class="name">位置が取れません</div></div>' +
-        '<p class="msg">' + esc(h.error) + '</p>' + manualBox('神社名を入力してください', true);
-    }
+    var ready = h.manual.trim() && (h.area || '').trim();
+    body = '<div class="ask"><p class="eyebrow">撮影の前に</p><div class="name">神社名と地名を入れます</div>' +
+      '<div class="sub">同じ名前の神社が各地にあるため、地名もいっしょに入れます。後日まとめて送るときも、この名前と地名で場所を決めます。</div></div>' +
+      '<div class="panel">' + manualField('神社名') +
+      '<button type="button" class="btn primary big wide" data-act="start-manual"' + (ready ? '' : ' disabled') + '>' + ICON_CAM + 'この神社で撮る</button></div>';
     v.innerHTML = '<div class="pad">' + body +
-      (h.status !== 'locating' && h.status !== 'searching' ? '<div class="row"><button type="button" class="link-btn" data-act="relocate">位置をとり直す</button></div>' : '') +
       '<div class="panel"><h2 class="h3">撮る順番</h2><ol class="order">' +
       '<li><b>神社</b>：境内の案内図、鳥居からの全景</li>' +
       '<li><b>像の1対ごと</b>(狛犬・狐など)：場所と生き物 → 阿形(正面・斜め45度・真横・顔・尾)→ 吽形(同じ)→ 台座。1体だけのときは片方だけ</li>' +
@@ -935,7 +911,7 @@
   }
   function manualField(label) {
     return '<div class="field"><label for="manual-name">' + esc(label) + '</label><input id="manual-name" type="text" autocomplete="off" enterkeyhint="done" value="' + esc(S.here.manual) + '" placeholder="例：筑波山神社"></div>' +
-      '<div class="field"><label for="manual-area">地名(都道府県・市町村)</label><input id="manual-area" type="text" autocomplete="off" enterkeyhint="done" value="' + esc(S.here.area || '') + '" placeholder="例：長野県下諏訪町"><p class="hint">同じ名前の神社が各地にあるため、地名も入れておくと確実です。家に帰ってから写真を選んで送るときは、今いる場所ではなく神社名と地名で場所を決めます。</p></div>';
+      '<div class="field"><label for="manual-area">地名(都道府県と市町村など)</label><input id="manual-area" type="text" autocomplete="off" enterkeyhint="done" value="' + esc(S.here.area || '') + '" placeholder="例：奈良県天川村"></div>';
   }
 
   /* ---------- 見取り図(上から見た図) ---------- */
@@ -1736,7 +1712,7 @@
       case 'place': {
         var p = pairOf(S.session.cursor.pair); p.place = t.dataset.v; var fx = freshFix(); if (fx) p.location = fx;
         saveSession(); renderGuide();
-        if (!fx && !DEMO) getPos(10000).then(function (pos) { p.location = pos; saveSession(); }).catch(function () {});
+        if (!fx && !DEMO && USE_GPS) getPos(10000).then(function (pos) { p.location = pos; saveSession(); }).catch(function () {});
         break;
       }
       case 'animal': { var pa = pairOf(S.session.cursor.pair); if (pa) { pa.animal = t.dataset.v; saveSession(); renderGuide(); } break; }
@@ -1775,10 +1751,10 @@
   var draftTimer = null;
   document.addEventListener('input', function (e) {
     var t = e.target;
-    if (t.id === 'manual-area') { S.here.area = t.value; return; }
-    if (t.id === 'manual-name') {
-      S.here.manual = t.value;
-      var st = $('[data-act="start-manual"]'); if (st) st.disabled = !t.value.trim();
+    if (t.id === 'manual-area' || t.id === 'manual-name') {
+      if (t.id === 'manual-area') { S.here.area = t.value; try { localStorage.setItem('komainu-area', t.value); } catch (e2) { /* 無視 */ } }
+      else S.here.manual = t.value;
+      var st = $('[data-act="start-manual"]'); if (st) st.disabled = !(S.here.manual.trim() && (S.here.area || '').trim());
     } else if (t.id === 'art-title') {
       if (S.artDraft) S.artDraft.title = t.value;
     } else if (t.id === 'place-other' && S.session) {

@@ -3,7 +3,7 @@
    受け取り口（script.google.com）と神社の検索（overpass-api.de）は保存しない。
    中身を差し替えたら CACHE の番号を上げる。
    第4版（アプリ 4.0.0）：写真の取り消し・まとめて送信・対ごとの感想・斜め45度・音声入力。 */
-var CACHE = 'satsuei-v10';
+var CACHE = 'satsuei-v11';
 var CORE = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 

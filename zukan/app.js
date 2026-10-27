@@ -1,6 +1,6 @@
 /* 狛犬図鑑 app.js
-   データは window.KOMAINU_DATA（1ファイル版）か data/*.json（通常版）から読む。
-   下部タブ：さがす／地図／神社／ギャラリー（最初は神社）（狛犬の一覧は「さがす」の結果として出す）。 */
+   データは window.KOMAINU_DATA(1ファイル版)か data/*.json(通常版)から読む。
+   下部タブ：さがす／地図／神社／ギャラリー(最初は神社)(狛犬の一覧は「さがす」の結果として出す)。 */
 (function () {
   'use strict';
 
@@ -42,7 +42,7 @@
     return s.replace(/[\s・・　]/g, '');
   }
   function dict(name) { return (D.taxonomy && D.taxonomy[name]) || []; }
-  // 絞り込み用の辞書。「不明・その他」がなければ足す（分類が空の狛犬の行き先）
+  // 絞り込み用の辞書。「不明・その他」がなければ足す(分類が空の狛犬の行き先)
   function filterDict(f) {
     var d = dict(f.dict).slice(), u = UNKNOWN[f.key];
     if (!d.some(function (t) { return t.id === u; })) d.push({ id: u, name: f.key === 'sculptorId' ? '不明' : '不明・その他' });
@@ -67,12 +67,12 @@
   function yearText(y) {
     if (!y) return '';
     var w = has(y.wareki) ? y.wareki : '', s = has(y.seireki) ? String(y.seireki) : '';
-    if (w && s) return w + '（' + s + '年）';
+    if (w && s) return w + '(' + s + '年)';
     return w || (s ? s + '年' : '');
   }
 
-  /* ---------- 生き物（狛犬以外の神使など） ---------- */
-  // animal が無ければ狛犬。呼び名は括弧書きを外した短い形（「狛犬（獅子・狛犬）」→「狛犬」）
+  /* ---------- 生き物(狛犬以外の神使など) ---------- */
+  // animal が無ければ狛犬。呼び名は括弧書きを外した短い形(「狛犬(獅子・狛犬)」→「狛犬」)
   function animalId(k) { return has(k.animal) ? k.animal : 'komainu'; }
   function isKomainu(k) { return animalId(k) === 'komainu'; }
   function animalWord(k) {
@@ -80,9 +80,9 @@
     if (id === 'komainu') return '狛犬';
     if (id === 'other') return '像';
     var t = term('animals', id);
-    return t ? t.name.replace(/[（(].*$/, '') : '像';
+    return t ? t.name.replace(/[((].*$/, '') : '像';
   }
-  // 神社（や一覧）にいる生き物をまとめた呼び名：全部狛犬→狛犬、全部同じ→その名、まじる→狛犬・神使
+  // 神社(や一覧)にいる生き物をまとめた呼び名：全部狛犬→狛犬、全部同じ→その名、まじる→狛犬・神使
   function groupWord(ks) {
     var w = {}, list = [];
     ks.forEach(function (k) { var x = animalWord(k); if (!w[x]) { w[x] = 1; list.push(x); } });
@@ -91,12 +91,12 @@
     return w['狛犬'] ? '狛犬・神使' : '神使';
   }
 
-  /* ---------- 写真：記録（record）と作品（art） ---------- */
+  /* ---------- 写真：記録(record)と作品(art) ---------- */
   function photosOf(k) { return (k.photos || []).filter(function (p) { return p && has(p.src); }); }
   function isArt(p) { return p.kind === 'art'; }
   function artOf(k) {
     var a = photosOf(k).filter(isArt);
-    // 代表（cover）を先頭に
+    // 代表(cover)を先頭に
     return a.filter(function (p) { return p.cover; }).concat(a.filter(function (p) { return !p.cover; }));
   }
   function recordsOf(k) { return photosOf(k).filter(function (p) { return !isArt(p); }); }
@@ -111,7 +111,7 @@
   }
   function imgTag(p, alt, cls, lazy) {
     if (!p) return '<span class="noimg' + (cls ? ' ' + cls : '') + '" role="img" aria-label="写真は準備中">写真は準備中</span>';
-    // focus：四角く切るときに残す位置（左右%・上下%）。指定がなければ上寄せ（狛犬の顔が切れないように）
+    // focus：四角く切るときに残す位置(左右%・上下%)。指定がなければ上寄せ(狛犬の顔が切れないように)
     var fp = p.focus ? ' style="object-position:' + (+p.focus[0]) + '% ' + (+p.focus[1]) + '%"' : '';
     return '<img' + (cls ? ' class="' + cls + '"' : '') + (lazy ? ' loading="lazy"' : '') + ' src="' + esc(p.src) + '" alt="' + esc(alt) + '"' + fp + '>';
   }
@@ -149,7 +149,7 @@
   function rawStyles(k) {
     return Array.isArray(k.regionalTypes) ? k.regionalTypes.filter(Boolean) : (k.regionalType ? [k.regionalType] : []);
   }
-  // 様式は複数登録できる（regionalTypes 配列）。空なら「不明・その他」
+  // 様式は複数登録できる(regionalTypes 配列)。空なら「不明・その他」
   function styles(k) { var a = rawStyles(k); return a.length ? a : ['other']; }
   function vals(e, key) {
     var k = e.k;
@@ -236,7 +236,7 @@
     if (state.tab === 'map') renderMap();
   }
 
-  /* ---------- 神社の一覧（タブ） ---------- */
+  /* ---------- 神社の一覧(タブ) ---------- */
   function shrineRow(s) {
     var n = (s.komainu || []).length, art = 0;
     (s.komainu || []).forEach(function (k) { art += artOf(k).length; });
@@ -260,7 +260,7 @@
     v.innerHTML = html + aboutBlock() + '</div>';
   }
 
-  /* ---------- さがす（狛犬の一覧） ---------- */
+  /* ---------- さがす(狛犬の一覧) ---------- */
   function activeChips() {
     var out = '';
     FILTER_KEYS.forEach(function (f) {
@@ -284,7 +284,7 @@
     var v = $('#view-search');
     if (!$('#q', v)) {
       v.innerHTML = '<div class="pad"><label class="field" for="q"><span class="sr">神社・場所・作者でさがす</span>' + ICON.search +
-        '<input id="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="神社名・県名・作者（例：つくば、スワ）"></label>' +
+        '<input id="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="神社名・県名・作者(例：つくば、スワ)"></label>' +
         '<div id="s-body"></div>' + aboutBlock() + '</div>';
       var inp = $('#q', v);
       inp.value = state.query;
@@ -295,8 +295,8 @@
   }
   function drawSearch() {
     var list = searched(), n = activeCount(), narrowed = n || has(state.query.trim());
-    var html = '<div class="list-head"><div class="count"><b>' + list.length + '</b>対' + (narrowed ? '<span class="meta">（全' + ALL.length + '対のうち）</span>' : '') + '</div>' +
-      '<button class="btn' + (n ? ' primary' : '') + '" type="button" id="open-filter">' + ICON.filter + '分類で絞る' + (n ? '（' + n + '）' : '') + '</button></div>' +
+    var html = '<div class="list-head"><div class="count"><b>' + list.length + '</b>対' + (narrowed ? '<span class="meta">(全' + ALL.length + '対のうち)</span>' : '') + '</div>' +
+      '<button class="btn' + (n ? ' primary' : '') + '" type="button" id="open-filter">' + ICON.filter + '分類で絞る' + (n ? '(' + n + ')' : '') + '</button></div>' +
       '<div class="seg" role="group" aria-label="並べ方"><button type="button" data-group="komainu" aria-pressed="' + (state.group === 'komainu') + '">' + (ALL.every(function (e) { return isKomainu(e.k); }) ? '狛犬ごと' : '1対ずつ') + '</button>' +
       '<button type="button" data-group="shrine" aria-pressed="' + (state.group === 'shrine') + '">神社ごと</button></div>' + activeChips();
     if (!list.length) {
@@ -352,8 +352,8 @@
     var first = sh.querySelector('.chip'); if (first) first.focus();
   }
 
-  /* ---------- 見取り図（JSONからSVG） ---------- */
-  // opt.focus：強調する狛犬のid。opt.mini：狛犬の頁に出す小さな図（文字なし・押せない）
+  /* ---------- 見取り図(JSONからSVG) ---------- */
+  // opt.focus：強調する狛犬のid。opt.mini：狛犬の頁に出す小さな図(文字なし・押せない)
   function planSVG(s, opt) {
     opt = opt || {};
     var L = s.layout || {};
@@ -365,20 +365,20 @@
       switch (it.type) {
         case 'sando':
           if (Array.isArray(it.points) && it.points.length > 1) {
-            // 折れ線の参道（points：[[x,y],...]）
+            // 折れ線の参道(points：[[x,y],...])
             var d = 'M' + it.points.map(function (q) { return (+q[0] || 0) + ' ' + (+q[1] || 0); }).join(' L');
             out.push('<path class="p-sando-edge" d="' + d + '"/><path class="p-sando-line" d="' + d + '"/>');
             txt = null;
           } else out.push('<rect class="p-sando" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '"/>');
           break;
         case 'area':
-          // 図の中の区画（離れた場所を1枚にまとめるとき）。枠と見出し
+          // 図の中の区画(離れた場所を1枚にまとめるとき)。枠と見出し
           out.push('<rect class="p-area" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="6"/>');
           if (!opt.mini && lab) out.push('<text class="p-area-t" x="' + (x + 8) + '" y="' + (y + 15) + '">' + esc(lab) + '</text>');
           txt = null;
           break;
         case 'gap':
-          // 区画の間を省略した印（波線）
+          // 区画の間を省略した印(波線)
           var my = y + h / 2, wv = '';
           for (var gx = x + 6; gx < x + w - 6; gx += 12) wv += (wv ? ' ' : 'M' + gx + ' ' + my + ' ') + 'q3 -4 6 0 q3 4 6 0';
           out.push('<path class="p-gap" d="' + wv + '"/>');
@@ -386,7 +386,7 @@
           txt = null;
           break;
         case 'north':
-          // deg：北の向き（時計回りの角度。90＝北が右）。矢印を回す
+          // deg：北の向き(時計回りの角度。90＝北が右)。矢印を回す
           var nd = +it.deg || 0;
           out.push('<g class="p-north"' + (nd ? ' transform="rotate(' + nd + ' ' + x + ' ' + (y + 8) + ')"' : '') + '><path d="M' + x + ' ' + (y + 2) + ' l5 12 l-5 -3 l-5 3 z"/></g>');
           txt = opt.mini ? null : [x, y + 26, 'middle'];
@@ -504,7 +504,7 @@
     return out;
   }
 
-  /* ---------- ギャラリー（作品写真だけ） ---------- */
+  /* ---------- ギャラリー(作品写真だけ) ---------- */
   var galleryItems = [];
   function renderGallery() {
     var v = $('#view-gallery');
@@ -527,7 +527,7 @@
       ? '<div class="plan-wrap" id="plan">' + planSVG(s, { focus: focus }) + '<p class="plan-legend">番号を押すと、その場所の' + gw + 'が開きます。' +
         (placed < ks.length ? '位置が未登録の' + gw + 'は図に出ていません。' : '') + '</p></div>'
       : '<div class="plan-empty" id="plan"><b>見取り図は準備中</b><span>境内の配置がまとまったら、ここに' + gw + 'の場所を番号で示します。</span></div>';
-    // 写真一覧：その神社のすべての対の写真（作品も記録も）。対の番号順、各対の中はデータの並び順
+    // 写真一覧：その神社のすべての対の写真(作品も記録も)。対の番号順、各対の中はデータの並び順
     var all = [];
     ks.slice().sort(function (a, b) { return (+a.no || 0) - (+b.no || 0); }).forEach(function (k) {
       photosOf(k).forEach(function (p) {
@@ -586,7 +586,7 @@
         }).join('') + '</div></section>';
       }
     } else if (recs.length) {
-      // 作品写真がなければ記録写真を上に（1枚でも成り立つ）
+      // 作品写真がなければ記録写真を上に(1枚でも成り立つ)
       hero = '<div class="photos' + (recs.length === 1 ? ' single' : '') + '" id="photos">' + recs.map(function (p, i) {
         return '<figure><button type="button" data-rec="' + i + '" class="ph" aria-label="' + esc((p.caption || '記録写真') + 'を大きく見る') + '"><img src="' + esc(p.src) + '" alt="' + esc(p.caption || alt) + '"' + (i ? ' loading="lazy"' : '') + '>' +
           (p.side === '阿' || p.side === '吽' ? '<span class="side">' + esc(p.side) + '</span>' : '') + '</button>' +
@@ -609,7 +609,7 @@
       var t = esc(has(x.title) ? x.title : x.url);
       return has(x.url) && /^https?:\/\//.test(x.url) ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + t + '</a>' : t;
     }).join('、') + '</p>' : '';
-    // 来歴（lore）：段落ごとに「出典」「口伝による」「現地で確認」を付ける（あすかさん 10/27：確証のない話も載せ、見分けられるように）
+    // 来歴(lore)：段落ごとに「出典」「口伝による」「現地で確認」を付ける(あすかさん 10/27：確証のない話も載せ、見分けられるように)
     function refLinks(rs) {
       return (rs || []).filter(function (x) { return x && (has(x.title) || has(x.url)); }).map(function (x) {
         var t = esc(has(x.title) ? x.title : x.url);
@@ -624,10 +624,10 @@
       else if (x.basis === 'site') b = '<span class="bt site">現地で確認</span>';
       return '<div class="lore"><p class="prose">' + esc(x.text) + '</p>' + (b ? '<p class="basis">' + b + '</p>' : '') + '</div>';
     }).join('');
-    if (lore.length) loreHtml = '<p class="lore-key">「出典」は案内板・銘・公式の資料など確かなもの、「口伝による」は言い伝えやネットの情報など確かめられていない話です。</p>' + loreHtml;
+    if (lore.length) loreHtml = '<p class="lore-key">「出典」は案内板・銘・公式の資料など確かなものです。「口伝による」は言い伝えやネットの情報など、確かめられていない話です。</p>' + loreHtml;
     var hist = (facts ? '<dl class="facts">' + facts + '</dl>' : '') + (lore.length ? loreHtml : (has(k.history) ? '<p class="prose">' + esc(k.history) + '</p>' : '') + srcHtml);
 
-    // 分類：登録されている項目だけ（空は出さない）
+    // 分類：登録されている項目だけ(空は出さない)
     var tagPairs = (isKomainu(k) ? [] : [['animal', 'animals', animalId(k)]]).concat(rawStyles(k).map(function (id) { return ['regionalType', 'regionalTypes', id]; }))
       .concat([['pose', 'poses', k.pose], ['material', 'materials', k.material]]);
     var tags = tagPairs.map(function (p) {
@@ -675,7 +675,7 @@
 
   /* ---------- 地図 ---------- */
   var map = null, markers = [], mapMode = 'ofm', mapReady = false, fallbackTimer = null, focusShrine = null, focusPoint = null;
-  // 位置：狛犬に geo（lat/lng）があればそれ、無ければ神社の位置。同じ位置の狛犬は1つの印にまとめる
+  // 位置：狛犬に geo(lat/lng)があればそれ、無ければ神社の位置。同じ位置の狛犬は1つの印にまとめる
   function geoOf(e) {
     var g = e.k.geo;
     if (g && g.lat != null && g.lng != null) return { lat: +g.lat, lng: +g.lng, name: g.name || '', approx: !!g.approx };
@@ -713,7 +713,7 @@
     if (mode === 'gsi') watchGsi();
   }
   function watchGsi() {
-    // 地理院タイルも届かない環境（Artifactなど）では、印だけ出ていることを伝える
+    // 地理院タイルも届かない環境(Artifactなど)では、印だけ出ていることを伝える
     var loaded = false;
     function ok(ev) { if (ev && ev.sourceId === 'gsi' && ev.isSourceLoaded) loaded = true; }
     map.on('sourcedata', ok);
@@ -722,18 +722,18 @@
       if (!loaded && mapMode === 'gsi') setMapNote('背景地図を読み込めませんでした。神社の印だけ表示しています。');
     }, 7000);
   }
-  // 印の写真：その位置の狛犬（対）の代表写真（cover）。無ければ表紙用の写真
+  // 印の写真：その位置の狛犬(対)の代表写真(cover)。無ければ表紙用の写真
   function pointCover(x) {
     var cv = null;
     x.ks.forEach(function (k) { if (!cv) { var a = artOf(k)[0]; if (a && a.cover) cv = a; } });
     return cv || (x.ks[0] && heroOf(x.ks[0])) || shrineCover(x.s);
   }
   function pointLabel(x) { return x.s.name + (x.name ? ' ' + x.name : '') + '、' + x.n + '対'; }
-  // 写真の丸い印。members：まとめた位置の一覧（1つなら普通の印、2つ以上なら「写真＋件数」のまとまり）
+  // 写真の丸い印。members：まとめた位置の一覧(1つなら普通の印、2つ以上なら「写真＋件数」のまとまり)
   function pinEl(members) {
     var x = members[0], n = 0;
     members.forEach(function (m) { n += m.n; });
-    // 印は小さなサムネイル（thumb）。無ければ代表写真
+    // 印は小さなサムネイル(thumb)。無ければ代表写真
     var tk = null; members.forEach(function (m) { m.ks.forEach(function (k) { if (!tk && has(k.thumb)) tk = k; }); });
     var cv = tk ? { src: tk.thumb } : pointCover(x), el = document.createElement('button');
     el.type = 'button';
@@ -743,12 +743,12 @@
     el.innerHTML = (cv ? '<img src="' + esc(cv.src) + '" alt="" draggable="false">' : '<span class="pin-noimg" aria-hidden="true"></span>') +
       (n > 1 ? '<span class="cnt" aria-hidden="true">' + n + '</span>' : '');
     var lab = members.length > 1
-      ? members.length + 'か所・' + n + '対（' + members.map(function (m) { return m.s.name + (m.name ? ' ' + m.name : ''); }).join('、') + '）。押すと拡大します'
+      ? members.length + 'か所・' + n + '対(' + members.map(function (m) { return m.s.name + (m.name ? ' ' + m.name : ''); }).join('、') + ')。押すと拡大します'
       : pointLabel(x);
     el.setAttribute('aria-label', lab);
     return { el: el, label: lab };
   }
-  // 画面上で近い印をまとめる（拡大すると離れる）
+  // 画面上で近い印をまとめる(拡大すると離れる)
   var PIN_GAP = 50;
   function clusterPoints(list, toPx) {
     var groups = [];
@@ -783,7 +783,7 @@
       markers.push(new maplibregl.Marker({ element: pe.el }).setLngLat([c.lng, c.lat]).addTo(map));
       pe.el.setAttribute('aria-label', pe.label);   // MapLibre が上書きするので付け直す
     });
-    var cnt = $('#map-count'); if (cnt) cnt.textContent = shrineCount(list) + '社を表示' + (activeCount() ? '（絞り込み中）' : '');
+    var cnt = $('#map-count'); if (cnt) cnt.textContent = shrineCount(list) + '社を表示' + (activeCount() ? '(絞り込み中)' : '');
   }
   function shrineCount(list) { var o = {}; list.forEach(function (x) { o[x.s.id] = 1; }); return Object.keys(o).length; }
   function fitTo(list) {
@@ -839,10 +839,10 @@
     drawMarkers();
   }
   function drawFallbackMap(list) {
-    // MapLibre自体が読めないときの簡易図（経緯度をそのまま平面に）。印は写真。重なる印は輪に並べて離す
+    // MapLibre自体が読めないときの簡易図(経緯度をそのまま平面に)。印は写真。重なる印は輪に並べて離す
     var el = $('#map'); if (!el) return;
     var minLng = 128, maxLng = 146, minLat = 30, maxLat = 46;
-    if (list.length) {   // 印のある範囲に寄せる（周りに1度ずつ余白）
+    if (list.length) {   // 印のある範囲に寄せる(周りに1度ずつ余白)
       minLng = Math.min.apply(null, list.map(function (x) { return x.lng; })) - 1; maxLng = Math.max.apply(null, list.map(function (x) { return x.lng; })) + 1;
       minLat = Math.min.apply(null, list.map(function (x) { return x.lat; })) - 1; maxLat = Math.max.apply(null, list.map(function (x) { return x.lat; })) + 1;
     }

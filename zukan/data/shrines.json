@@ -2432,12 +2432,17 @@
      "x": 92.7,
      "y": 248.5
     },
-    "regionalTypes": [],
+    "regionalTypes": [
+     "daiho"
+    ],
     "pose": "osuwari",
     "material": "",
-    "sculptor": "",
-    "sculptorId": "",
-    "year": null,
+    "sculptor": "滝山善太郎",
+    "sculptorId": "takiyama-zentaro",
+    "year": {
+     "wareki": "昭和3年6月",
+     "seireki": 1928
+    },
     "donor": "",
     "history": "",
     "sources": [],
@@ -2511,8 +2516,36 @@
       "text": "通りに面した一の鳥居の手前、左右の台座の上にいる石の1対です。由緒書きはありません。",
       "basis": "site",
       "refs": []
+     },
+     {
+      "text": "昭和3年(1928年)6月に奉納され、彫ったのは石工・滝山善太郎といわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "東京狛犬倶楽部「乃木神社」",
+        "url": "https://www.tokyo-komainu-club.com/%E6%B8%AF%E5%8C%BA%E3%81%AE%E7%8B%9B%E7%8A%AC%E9%81%94/%E4%B9%83%E6%9C%A8%E7%A5%9E%E7%A4%BE/"
+       }
+      ]
+     },
+     {
+      "text": "筋骨たくましく、首がほとんどないほど胸が盛り上がった姿で「大宝神社型」と呼ばれる型といわれます。阿形の耳は伏せています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "ホトカミ「乃木神社」",
+        "url": "https://hotokami.jp/area/tokyo/Hkrta/Hkrtatk/Daara/132101/794515/"
+       },
+       {
+        "title": "ブログ「狛犬さんぽ」(guardianlions)",
+        "url": "http://guardianlions.blogspot.com/2013/06/blog-post_29.html"
+       }
+      ]
      }
     ],
+    "factBasis": {
+     "year": "kuden",
+     "sculptor": "kuden"
+    },
     "thumb": "images/thumbs/nogi-1.jpg?v=30440f5f"
    },
    {
@@ -2524,12 +2557,17 @@
      "x": 150.0,
      "y": 85.4
     },
-    "regionalTypes": [],
+    "regionalTypes": [
+     "gokoku"
+    ],
     "pose": "osuwari",
     "material": "",
     "sculptor": "",
     "sculptorId": "",
-    "year": null,
+    "year": {
+     "wareki": "昭和2年",
+     "seireki": 1927
+    },
     "donor": "",
     "history": "",
     "sources": [],
@@ -2598,8 +2636,35 @@
       "text": "拝殿の前の左右にいる石の1対です。由緒書きはありません。",
       "basis": "site",
       "refs": []
+     },
+     {
+      "text": "昭和2年(1927年)の奉納で、石工の名前は分かっていないといわれます。一の鳥居前の1対より1年早く納められたことになります。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "東京狛犬倶楽部「乃木神社」",
+        "url": "https://www.tokyo-komainu-club.com/%E6%B8%AF%E5%8C%BA%E3%81%AE%E7%8B%9B%E7%8A%AC%E9%81%94/%E4%B9%83%E6%9C%A8%E7%A5%9E%E7%A4%BE/"
+       },
+       {
+        "title": "ホトカミ「乃木神社」",
+        "url": "https://hotokami.jp/area/tokyo/Hkrta/Hkrtatk/Daara/132101/794515/"
+       }
+      ]
+     },
+     {
+      "text": "おかっぱ頭のようにまっすぐ垂れたたてがみが目を引く「護国型」と呼ばれる型といわれます。阿形は耳を伏せ、吽形は耳を立てています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "ホトカミ「乃木神社」",
+        "url": "https://hotokami.jp/area/tokyo/Hkrta/Hkrtatk/Daara/132101/794515/"
+       }
+      ]
      }
     ],
+    "factBasis": {
+     "year": "kuden"
+    },
     "thumb": "images/thumbs/nogi-2.jpg?v=58ea1d38"
    }
   ]

@@ -2287,5 +2287,321 @@
     "thumb": "images/thumbs/harumiya-1.jpg?v=fdd07f4d"
    }
   ]
+ },
+ {
+  "id": "nogi",
+  "name": "乃木神社",
+  "kana": "のぎじんじゃ",
+  "prefecture": "東京都",
+  "city": "港区",
+  "lat": 35.6693,
+  "lng": 139.7287,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 275,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       92.7,
+       271.0
+      ],
+      [
+       92.7,
+       222.8
+      ],
+      [
+       120.0,
+       204.9
+      ],
+      [
+       136.5,
+       183.7
+      ],
+      [
+       144.6,
+       135.5
+      ],
+      [
+       150.0,
+       75.3
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 120.6,
+     "y": 16.0,
+     "w": 48.0,
+     "h": 16.3,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 120.0,
+     "y": 56.6,
+     "w": 60.0,
+     "h": 19.0,
+     "label": "拝殿"
+    },
+    {
+     "type": "building",
+     "x": 174.4,
+     "y": 86.2,
+     "w": 22,
+     "h": 14,
+     "label": "宝物殿",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 174.4,
+     "y": 113.3,
+     "w": 22,
+     "h": 14,
+     "label": "授与所",
+     "labelSide": "right"
+    },
+    {
+     "type": "massha",
+     "x": 85.4,
+     "y": 128.5,
+     "w": 20,
+     "h": 14,
+     "label": "赤坂王子稲荷神社",
+     "labelSide": "left"
+    },
+    {
+     "type": "massha",
+     "x": 47.3,
+     "y": 149.6,
+     "w": 20,
+     "h": 14,
+     "label": "乃木家祖霊舎",
+     "labelSide": "left"
+    },
+    {
+     "type": "building",
+     "x": 31.0,
+     "y": 184.9,
+     "w": 22,
+     "h": 14,
+     "label": "旧乃木邸",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 123.5,
+     "y": 178.7,
+     "w": 26,
+     "h": 10,
+     "label": "二の鳥居"
+    },
+    {
+     "type": "chozuya",
+     "x": 119.8,
+     "y": 231.3,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 79.7,
+     "y": 217.8,
+     "w": 26,
+     "h": 10,
+     "label": "一の鳥居",
+     "labelSide": "left"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "nogi-1",
+    "no": 1,
+    "label": "一の鳥居の前・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 92.7,
+     "y": 248.5
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "手足ががっしりしていて、手足の筋肉の描き方がグラップラー刃牙っぽい笑\n\n胸毛？胸の筋肉が盛り上がりすぎているのか、首がなくなってしまっているのも興味深い。\n\n頭も平らで、獅子舞の獅子頭っぽいお顔立ち。\n\n勇猛果敢でちゃんと参拝者の素性を見ています。愛国心が試される感覚。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/nogi-1-01.jpg?v=5c819fdf",
+      "kind": "art",
+      "cover": true,
+      "icon": true,
+      "side": "阿",
+      "title": "乃木神社"
+     },
+     {
+      "src": "images/nogi-1-02.jpg?v=54777f33",
+      "kind": "art",
+      "side": "吽",
+      "title": "乃木神社"
+     },
+     {
+      "src": "images/nogi-1-03.jpg?v=3b058994",
+      "kind": "art",
+      "side": "阿",
+      "title": "乃木神社"
+     },
+     {
+      "src": "images/nogi-1-04.jpg?v=b1e43f4a",
+      "kind": "art",
+      "side": "吽",
+      "title": "乃木神社"
+     },
+     {
+      "src": "images/nogi-1-05.jpg?v=0ef38012",
+      "kind": "record",
+      "caption": "一の鳥居と1対"
+     },
+     {
+      "src": "images/nogi-1-a01.jpg?v=cd9a421c",
+      "kind": "record",
+      "side": "阿"
+     },
+     {
+      "src": "images/nogi-1-a02.jpg?v=a65bb6d4",
+      "kind": "record",
+      "side": "阿"
+     },
+     {
+      "src": "images/nogi-1-a03.jpg?v=bda8d622",
+      "kind": "record",
+      "side": "阿"
+     },
+     {
+      "src": "images/nogi-1-a04.jpg?v=e38f3a3f",
+      "kind": "record",
+      "side": "吽"
+     },
+     {
+      "src": "images/nogi-1-a05.jpg?v=5f189972",
+      "kind": "record",
+      "side": "吽"
+     },
+     {
+      "src": "images/nogi-1-a06.jpg?v=5d0ef4c9",
+      "kind": "record",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "通りに面した一の鳥居の手前、左右の台座の上にいる石の1対です。由緒書きはありません。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "thumb": "images/thumbs/nogi-1.jpg?v=30440f5f"
+   },
+   {
+    "id": "nogi-2",
+    "no": 2,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 150.0,
+     "y": 85.4
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "筋肉パーツの見せ方が独特。\n\n後ろから見ると、なんかエジプトっぽい感じがするのも不思議。尻尾の感じと、ヘアスタイル(？)がそう感じさせるのかも。\n\n顔立ちはわりとユーモラスで、鳥居前の1対に比べるとやわらかい印象を受ける。\n\n乃木神社の中でもっともよくおしゃべりしてくださるのは、拝殿前の阿形の子ですね。うん。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/nogi-2-01.jpg?v=b4fbae86",
+      "kind": "art",
+      "cover": true,
+      "icon": true,
+      "side": "阿",
+      "title": "乃木神社"
+     },
+     {
+      "src": "images/nogi-2-02.jpg?v=785a9ea9",
+      "kind": "art",
+      "side": "吽",
+      "title": "乃木神社"
+     },
+     {
+      "src": "images/nogi-2-03.jpg?v=af3c4d84",
+      "kind": "art",
+      "side": "阿",
+      "title": "乃木神社"
+     },
+     {
+      "src": "images/nogi-2-04.jpg?v=40ba0439",
+      "kind": "art",
+      "side": "吽",
+      "title": "乃木神社"
+     },
+     {
+      "src": "images/nogi-2-a01.jpg?v=32007f05",
+      "kind": "record",
+      "side": "阿"
+     },
+     {
+      "src": "images/nogi-2-a02.jpg?v=626bf890",
+      "kind": "record",
+      "side": "阿"
+     },
+     {
+      "src": "images/nogi-2-a03.jpg?v=39504a62",
+      "kind": "record",
+      "side": "阿"
+     },
+     {
+      "src": "images/nogi-2-a04.jpg?v=2c024a44",
+      "kind": "record",
+      "side": "吽"
+     },
+     {
+      "src": "images/nogi-2-a05.jpg?v=d1229230",
+      "kind": "record",
+      "side": "吽"
+     },
+     {
+      "src": "images/nogi-2-a06.jpg?v=436a83f6",
+      "kind": "record",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿の前の左右にいる石の1対です。由緒書きはありません。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "thumb": "images/thumbs/nogi-2.jpg?v=58ea1d38"
+   }
+  ]
  }
 ]

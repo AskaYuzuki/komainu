@@ -244,15 +244,14 @@
       '<span class="s-ph">' + imgTag(shrineCover(s), '', '', true) + '</span>' +
       '<span class="s-tx"><span class="kana">' + esc(s.kana) + '</span><span class="nm">' + esc(s.name) + '</span>' +
       '<span class="meta">' + esc((s.prefecture || '') + (s.city || '')) + '</span>' +
-      '<span class="s-facts"><span>' + n + '対</span>' + (art ? '<span>作品 ' + art + '枚</span>' : '') +
-      '<span class="' + (hasPlan(s) ? 'ok' : 'wait') + '">' + (hasPlan(s) ? '見取り図あり' : '見取り図は準備中') + '</span></span></span>' +
+      '<span class="s-facts"><span>' + n + '対</span>' + (art ? '<span>作品 ' + art + '枚</span>' : '') + '</span></span>' +
       '<span class="go" aria-hidden="true">' + ICON.next + '</span></button></li>';
   }
   function renderShrines() {
     var v = $('#view-shrines'), pref = [], by = {};
     D.shrines.forEach(function (s) { var p = s.prefecture || 'その他'; if (!by[p]) { by[p] = []; pref.push(p); } by[p].push(s); });
     var html = '<div class="pad"><div class="list-head"><div class="count"><b>' + D.shrines.length + '</b>社　<b>' + ALL.length + '</b>対</div>' +
-      '<span class="meta">神社を押すと見取り図が開きます</span></div>';
+      '<span class="meta">神社を押すと、その神社の写真が見られます</span></div>';
     pref.forEach(function (p) {
       html += '<section class="pref"><h2 class="pref-h">' + esc(p) + '</h2><ul class="s-list">' + by[p].map(shrineRow).join('') + '</ul></section>';
     });
@@ -305,7 +304,7 @@
       var order = [], by = {};
       list.forEach(function (e) { if (!by[e.s.id]) { by[e.s.id] = []; order.push(e.s); } by[e.s.id].push(e); });
       html += order.map(function (s) {
-        return '<section class="group"><button class="group-h" type="button" data-shrine="' + esc(s.id) + '"><span><span class="nm">' + esc(s.name) + '</span><span class="meta">' + esc(s.prefecture || '') + '　' + by[s.id].length + '対</span></span><span class="go">見取り図' + ICON.next + '</span></button>' +
+        return '<section class="group"><button class="group-h" type="button" data-shrine="' + esc(s.id) + '"><span><span class="nm">' + esc(s.name) + '</span><span class="meta">' + esc(s.prefecture || '') + '　' + by[s.id].length + '対</span></span><span class="go">神社の頁' + ICON.next + '</span></button>' +
           '<div class="grid">' + by[s.id].map(function (e) { return card(e, true); }).join('') + '</div></section>';
       }).join('');
     } else {
@@ -523,10 +522,7 @@
     if (!s) { v.innerHTML = '<div class="pad"><p>この神社は見つかりませんでした。</p></div>'; return; }
     var ks = s.komainu || [], gw = groupWord(ks);
     var placed = ks.filter(function (k) { return k.pos; }).length;
-    var plan = hasPlan(s)
-      ? '<div class="plan-wrap" id="plan">' + planSVG(s, { focus: focus }) + '<p class="plan-legend">番号を押すと、その場所の' + gw + 'が開きます。' +
-        (placed < ks.length ? '位置が未登録の' + gw + 'は図に出ていません。' : '') + '</p></div>'
-      : '<div class="plan-empty" id="plan"><b>見取り図は準備中</b><span>境内の配置がまとまったら、ここに' + gw + 'の場所を番号で示します。</span></div>';
+    // 見取り図は出さない(11/06 あすかさんの判断：写真のコレクションとして楽しんでもらう)
     // 写真一覧：その神社のすべての対の写真(作品も記録も)。対の番号順、各対の中はデータの並び順
     var all = [];
     ks.slice().sort(function (a, b) { return (+a.no || 0) - (+b.no || 0); }).forEach(function (k) {
@@ -537,8 +533,7 @@
     var html = '<div class="pad"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
       '<div class="shrine-head"><span class="kana">' + esc(s.kana) + '</span><h2 class="h2">' + esc(s.name) + '</h2>' +
       '<span class="meta">' + esc((s.prefecture || '') + (s.city || '')) + (has(s.visited) ? '　参拝 ' + esc(s.visited) : '') + '</span></div>' +
-      '<h3 class="h3">境内の見取り図</h3>' + plan +
-      '<section class="section"><h3 class="h3">この神社の' + gw + '　' + ks.length + '対</h3><div class="k-list">' +
+      '<section class="section first"><h3 class="h3">この神社の' + gw + '　' + ks.length + '対</h3><div class="k-list">' +
       ks.map(function (k) {
         var sub = [isKomainu(k) ? '' : animalWord(k), styleNames(k), termName('poses', k.pose), termName('materials', k.material)].filter(Boolean).join('、');
         return '<button class="k-row' + (focus === k.id ? ' on' : '') + '" type="button" data-k="' + esc(k.id) + '">' + imgTag(thumbOf(k), '', '', true) +
@@ -560,13 +555,14 @@
 
   /* ---------- 狛犬の頁 ---------- */
   function wherePlan(s, k) {
-    var ok = hasPlan(s) && k.pos;
+    // 見取り図のかわりに、神社の頁への入口(神社の表紙写真・名前・この対のいる場所)
+    var n = (s.komainu || []).length;
     return '<button class="where" type="button" data-shrine="' + esc(s.id) + '" data-focus="' + esc(k.id) + '">' +
-      '<span class="where-plan' + (ok ? '' : ' wait') + '">' + (ok ? planSVG(s, { focus: k.id, mini: true }) : '<span>見取り図は<br>準備中</span>') + '</span>' +
-      '<span class="where-tx"><span class="kana">境内のどこにいるか</span>' +
+      '<span class="where-plan">' + imgTag(shrineCover(s), '', '', true) + '</span>' +
+      '<span class="where-tx"><span class="kana">' + esc(s.kana) + '</span>' +
       '<span class="nm">' + esc(s.name) + '</span>' +
-      '<span class="meta">' + (ok ? '<span class="num">' + esc(k.no) + '</span>' + esc(k.label) : (hasPlan(s) ? 'この' + animalWord(k) + 'の位置は未登録です' : '神社の頁で' + groupWord(s.komainu || []) + 'の一覧が見られます')) + '</span>' +
-      '<span class="where-go">' + (hasPlan(s) ? '大きな見取り図へ' : '神社の頁へ') + ICON.next + '</span></span></button>';
+      '<span class="meta">' + esc(k.label) + '</span>' +
+      '<span class="where-go">' + (n > 1 ? 'この神社の' + groupWord(s.komainu || []) + '(' + n + '対)を見る' : '神社の写真をすべて見る') + ICON.next + '</span></span></button>';
   }
   function renderKomainu(v, e) {
     if (!e) { v.innerHTML = '<div class="pad"><p>この狛犬は見つかりませんでした。</p></div>'; return; }
@@ -651,8 +647,8 @@
       '<h2 class="h2"><span class="num">' + esc(k.no) + '</span>' + esc(k.label) + 'の' + esc(word) + '</h2></div>' +
       '<section class="section first">' + wherePlan(s, k) + '</section>' +
       (tags ? '<section class="section"><div class="tags">' + tags + '</div></section>' : '') +
-      (hist ? '<section class="section"><h3 class="h3">来歴</h3>' + hist + '</section>' : '') +
       (has(k.asukaNote) ? '<section class="section"><h3 class="h3">明日香の感想</h3><div class="note-box">' + esc(k.asukaNote) + '</div></section>' : '') +
+      (hist ? '<section class="section"><h3 class="h3">来歴</h3>' + hist + '</section>' : '') +
       recSection +
       '<section class="section"><div class="cta-row">' + ig + acct + '</div>' +
       (sib.length > 1 ? '<div class="pager">' +
@@ -802,7 +798,7 @@
     box.innerHTML = '<img src="' + esc(cv ? cv.src : '') + '" alt=""><div><span class="kana">' + esc(s.kana) + '</span><h3 class="h3">' + esc(s.name) + (x.name ? '<small class="sub"> ' + esc(x.name) + '</small>' : '') + '</h3>' +
       '<span class="meta">' + esc((s.prefecture || '') + (s.city || '')) + '　' + n + '対' + (x.approx ? '　位置はおおよそ' : '') + '</span><div class="row">' +
       (one ? '<button class="btn primary" type="button" data-k="' + esc(one.id) + '">' + esc(one.no + ' ' + one.label) + 'の' + animalWord(one) + 'を見る</button>' : '') +
-      '<button class="btn' + (one ? '' : ' primary') + '" type="button" data-shrine="' + esc(s.id) + '">見取り図' + (one ? '' : 'と' + groupWord(s.komainu || []) + 'を見る') + '</button></div></div>' +
+      '<button class="btn' + (one ? '' : ' primary') + '" type="button" data-shrine="' + esc(s.id) + '">' + (one ? '神社の頁へ' : 'この神社の' + groupWord(s.komainu || []) + 'を見る') + '</button></div></div>' +
       '<button class="close" type="button" aria-label="閉じる" data-closecard>' + '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button>';
     document.querySelectorAll('.pin').forEach(function (p) { p.classList.toggle('on', (p.dataset.pts || '').split('|').indexOf(x.key) >= 0); });
   }

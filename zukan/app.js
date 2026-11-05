@@ -109,11 +109,13 @@
     for (i = 0; i < ks.length; i++) { a = heroOf(ks[i]); if (a) return a; }
     return null;
   }
+  // 一覧・格子用の小さい写真(images/s/ に長辺480pxで置いてある)。大きく見るときだけ元の写真を使う
+  function small(src) { return String(src || '').replace(/^images\/(?!s\/|thumbs\/)/, 'images/s/'); }
   function imgTag(p, alt, cls, lazy) {
     if (!p) return '<span class="noimg' + (cls ? ' ' + cls : '') + '" role="img" aria-label="写真は準備中">写真は準備中</span>';
     // focus：四角く切るときに残す位置(左右%・上下%)。指定がなければ上寄せ(狛犬の顔が切れないように)
     var fp = p.focus ? ' style="object-position:' + (+p.focus[0]) + '% ' + (+p.focus[1]) + '%"' : '';
-    return '<img' + (cls ? ' class="' + cls + '"' : '') + (lazy ? ' loading="lazy"' : '') + ' src="' + esc(p.src) + '" alt="' + esc(alt) + '"' + fp + '>';
+    return '<img' + (cls ? ' class="' + cls + '"' : '') + (lazy ? ' loading="lazy"' : '') + ' src="' + esc(small(p.src)) + '" alt="' + esc(alt) + '"' + fp + ' decoding="async">';
   }
   function hasPlan(s) { return !!(s && s.layout && Array.isArray(s.layout.items) && s.layout.items.length); }
 
@@ -511,7 +513,7 @@
     var html = '<div class="pad gallery-pad"><div class="gal-head"><h2 class="h2">作品写真</h2><span class="meta">' + galleryItems.length + '枚　押すと大きく見られます</span></div>';
     if (!galleryItems.length) html += '<div class="empty"><p>作品写真はまだありません。写真の kind を "art" にすると、ここに並びます。</p></div>';
     else html += '<div class="masonry">' + galleryItems.map(function (it, i) {
-      return '<button class="g-item" type="button" data-gal="' + i + '"><img loading="lazy" src="' + esc(it.src) + '" alt="' + esc(it.title || it.meta) + '">' +
+      return '<button class="g-item" type="button" data-gal="' + i + '"><img loading="lazy" decoding="async" src="' + esc(small(it.src)) + '" alt="' + esc(it.title || it.meta) + '">' +
         '<span class="g-cap">' + (has(it.title) ? '<span class="g-t">' + esc(it.title) + '</span>' : '') + '<span class="g-s">' + esc(has(it.title) && it.title.indexOf(it.e.s.name) === 0 ? it.e.k.label : it.e.s.name) + '</span></span></button>';   // 題が神社名なので、下の行は場所
     }).join('') + '</div>';
     v.innerHTML = html + '</div>';
@@ -541,7 +543,7 @@
       }).join('') + '</div></section>';
     if (all.length) {
       html += '<section class="section"><h3 class="h3">写真一覧　' + all.length + '枚</h3><div class="thumbs">' + all.map(function (it, i) {
-        return '<button type="button" data-sart="' + i + '" aria-label="' + esc(it.title + 'を大きく見る') + '"><img loading="lazy" src="' + esc(it.src) + '" alt="">' +
+        return '<button type="button" data-sart="' + i + '" aria-label="' + esc(it.title + 'を大きく見る') + '"><img loading="lazy" decoding="async" src="' + esc(small(it.src)) + '" alt="">' +
           (it.side === '阿' || it.side === '吽' ? '<span class="side">' + esc(it.side) + '</span>' : '') + '</button>';
       }).join('') + '</div></section>';
     }
@@ -577,7 +579,7 @@
       }).join('') + '</div>';
       if (recs.length) {
         recSection = '<section class="section"><h3 class="h3">記録写真　' + recs.length + '枚</h3><div class="thumbs">' + recs.map(function (p, i) {
-          return '<button type="button" data-rec="' + i + '" aria-label="' + esc((p.caption || '記録写真') + 'を大きく見る') + '"><img loading="lazy" src="' + esc(p.src) + '" alt="">' +
+          return '<button type="button" data-rec="' + i + '" aria-label="' + esc((p.caption || '記録写真') + 'を大きく見る') + '"><img loading="lazy" decoding="async" src="' + esc(small(p.src)) + '" alt="">' +
             (p.side === '阿' || p.side === '吽' ? '<span class="side">' + esc(p.side) + '</span>' : '') + '</button>';
         }).join('') + '</div></section>';
       }
@@ -736,7 +738,7 @@
     el.className = 'pin' + (members.length > 1 ? ' cluster' : '') +
       (members.some(function (m) { return m.key === focusPoint; }) ? ' on' : '');
     el.dataset.pts = members.map(function (m) { return m.key; }).join('|');
-    el.innerHTML = (cv ? '<img src="' + esc(cv.src) + '" alt="" draggable="false">' : '<span class="pin-noimg" aria-hidden="true"></span>') +
+    el.innerHTML = (cv ? '<img src="' + esc(small(cv.src)) + '" alt="" draggable="false">' : '<span class="pin-noimg" aria-hidden="true"></span>') +
       (n > 1 ? '<span class="cnt" aria-hidden="true">' + n + '</span>' : '');
     var lab = members.length > 1
       ? members.length + 'か所・' + n + '対(' + members.map(function (m) { return m.s.name + (m.name ? ' ' + m.name : ''); }).join('、') + ')。押すと拡大します'
@@ -795,7 +797,7 @@
     var box = $('#map-card'), cv = pointCover(x);
     var one = x.ks.length === 1 && (s.komainu || []).length > 1 ? x.ks[0] : null;   // 神社の中の一部の狛犬だけの印
     box.hidden = false;
-    box.innerHTML = '<img src="' + esc(cv ? cv.src : '') + '" alt=""><div><span class="kana">' + esc(s.kana) + '</span><h3 class="h3">' + esc(s.name) + (x.name ? '<small class="sub"> ' + esc(x.name) + '</small>' : '') + '</h3>' +
+    box.innerHTML = '<img src="' + esc(cv ? small(cv.src) : '') + '" alt=""><div><span class="kana">' + esc(s.kana) + '</span><h3 class="h3">' + esc(s.name) + (x.name ? '<small class="sub"> ' + esc(x.name) + '</small>' : '') + '</h3>' +
       '<span class="meta">' + esc((s.prefecture || '') + (s.city || '')) + '　' + n + '対' + (x.approx ? '　位置はおおよそ' : '') + '</span><div class="row">' +
       (one ? '<button class="btn primary" type="button" data-k="' + esc(one.id) + '">' + esc(one.no + ' ' + one.label) + 'の' + animalWord(one) + 'を見る</button>' : '') +
       '<button class="btn' + (one ? '' : ' primary') + '" type="button" data-shrine="' + esc(s.id) + '">' + (one ? '神社の頁へ' : 'この神社の' + groupWord(s.komainu || []) + 'を見る') + '</button></div></div>' +

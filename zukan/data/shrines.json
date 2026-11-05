@@ -2668,5 +2668,2767 @@
     "thumb": "images/thumbs/nogi-2.jpg?v=58ea1d38"
    }
   ]
+ },
+ {
+  "id": "kono",
+  "name": "元伊勢籠神社",
+  "kana": "もといせこのじんじゃ",
+  "prefecture": "京都府",
+  "city": "宮津市",
+  "lat": 35.5875,
+  "lng": 135.1925,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       150.0,
+       300.0
+      ],
+      [
+       150.0,
+       252.0
+      ],
+      [
+       150.0,
+       186.0
+      ],
+      [
+       150.0,
+       120.0
+      ],
+      [
+       150.0,
+       90.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 126.0,
+     "y": 21.6,
+     "w": 48.0,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 121.2,
+     "y": 63.6,
+     "w": 57.6,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "gate",
+     "x": 130.0,
+     "y": 115.0,
+     "w": 40,
+     "h": 10,
+     "label": "神門",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 137.0,
+     "y": 181.0,
+     "w": 26,
+     "h": 10,
+     "label": "神明鳥居"
+    },
+    {
+     "type": "torii",
+     "x": 137.0,
+     "y": 247.0,
+     "w": 26,
+     "h": 10,
+     "label": "一の鳥居"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "kono-1",
+    "no": 1,
+    "label": "神明鳥居を入った神門の手前・左右(覆屋の中)",
+    "animal": "komainu",
+    "pos": {
+     "x": 150.0,
+     "y": 144.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "tuff",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "鎌倉時代と伝わる",
+     "seireki": null
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/kono-1-01.jpg?v=9aa69cc9",
+      "kind": "art",
+      "title": "元伊勢籠神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/kono-1-02.jpg?v=87de22bf",
+      "kind": "art",
+      "title": "元伊勢籠神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "神明鳥居をくぐると、神門の手前の左右、小さな屋根(覆屋)の下に1体ずつ置かれた石の1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "国の重要文化財で、鎌倉時代の作と伝えられています。どっしりとした胴と脚をもち、日本風に姿を変えた狛犬のなかでも最高の傑作といわれています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "籠神社の案内板「重文狛犬」",
+        "url": ""
+       }
+      ]
+     },
+     {
+      "text": "言い伝えでは、作り手が心を込めたあまり魂が入り、天正年間(1573〜1592年)に天橋立の松林へ夜な夜な現れて、元伊勢詣りの人や道行く人を驚かせていました。親の仇を討つために近くに身を隠していた岩見重太郎がこの話を聞き、ひと晩待ち伏せて物音のする方へ刀を振るうと、石の狛犬の前脚が切れ、それきり現れなくなったといいます。狛犬は社殿の前に戻され、それからは魔除けのご利益があると伝えられています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "籠神社の案内板「重文狛犬」",
+        "url": ""
+       }
+      ]
+     },
+     {
+      "text": "石は凝灰岩で、阿形の右の前脚は割れて鉄の輪がはめられているといわれます。作られた時代を安土桃山時代とみる説もあります。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「籠神社」",
+        "url": "https://ja.wikipedia.org/wiki/%E7%B1%A0%E7%A5%9E%E7%A4%BE"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "source"
+    },
+    "thumb": "images/thumbs/kono-1.jpg?v=467e112f"
+   }
+  ]
+ },
+ {
+  "id": "susa",
+  "name": "須佐神社(須佐大宮)",
+  "kana": "すさじんじゃ",
+  "prefecture": "島根県",
+  "city": "出雲市",
+  "lat": 35.2269,
+  "lng": 132.7039,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       276.0
+      ],
+      [
+       120.0,
+       168.0
+      ],
+      [
+       120.0,
+       90.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 93.6,
+     "y": 21.6,
+     "w": 52.8,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 91.2,
+     "y": 66.6,
+     "w": 57.6,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 151.0,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 194.0,
+     "w": 22,
+     "h": 14,
+     "label": "道路",
+     "labelSide": "right"
+    },
+    {
+     "type": "massha",
+     "x": 110.0,
+     "y": 269.0,
+     "w": 20,
+     "h": 14,
+     "label": "天照社(本社と向かい合う)",
+     "labelSide": "right"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "susa-1",
+    "no": 1,
+    "label": "天照社の社殿前・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 243.0
+    },
+    "regionalTypes": [],
+    "pose": "kamae",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/susa-1-01.jpg?v=360b8021",
+      "kind": "art",
+      "title": "須佐神社(須佐大宮)",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/susa-1-02.jpg?v=f4026d8b",
+      "kind": "art",
+      "title": "須佐神社(須佐大宮)",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "須佐神社の鳥居から道を挟んだ向かい、本社と向き合って建つ天照社の社殿前にいる1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "須佐神社は須佐之男命をまつり、古くは「須佐大宮」「出雲の大宮」とも呼ばれました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "島根県神社庁「須佐神社」",
+        "url": "https://www.shimane-jinjacho.or.jp/izumo/867c4e81718de61ec1603b6a55351c85a3bea4b1.html"
+       }
+      ]
+     },
+     {
+      "text": "お尻を高く上げて身構える姿は、出雲の石工が得意とした「出雲型」の構え獅子といわれます。出雲型は来待石で彫られ、北前船で日本海側の各地に広まったとされます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "狛犬ネット「分類3 出雲」",
+        "url": "https://komainu.net/bunrui3.html"
+       }
+      ]
+     },
+     {
+      "text": "天照社の前には2対の狛犬があり、そのうち1対は新しいものといわれます。古い構え獅子の年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "ホトカミ「天照社」",
+        "url": "https://hotokami.jp/area/shimane/Hrmtm/Hrmtmtk/Drzsy/145123/"
+       },
+       {
+        "title": "ブログ「hantubojinusi’s diary」須佐神社、天照社",
+        "url": "https://hantubojinusi.hatenablog.com/entry/20130603/1370262237"
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/susa-1.jpg?v=12b50e71"
+   }
+  ]
+ },
+ {
+  "id": "izanagi",
+  "name": "伊弉諾神宮",
+  "kana": "いざなぎじんぐう",
+  "prefecture": "兵庫県",
+  "city": "淡路市",
+  "lat": 34.46,
+  "lng": 134.8506,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 93.6,
+     "y": 21.6,
+     "w": 52.8,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 88.8,
+     "y": 69.6,
+     "w": 62.4,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 145.0,
+     "w": 40,
+     "h": 10,
+     "label": "正門"
+    },
+    {
+     "type": "chozuya",
+     "x": 157.0,
+     "y": 178.0,
+     "w": 22,
+     "h": 16,
+     "label": "手水鉢",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 215.0,
+     "w": 22,
+     "h": 14,
+     "label": "石橋",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 259.0,
+     "w": 26,
+     "h": 10,
+     "label": "二の鳥居"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "izanagi-1",
+    "no": 1,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 111.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "文政5年",
+     "seireki": 1822
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/izanagi-1-01.jpg?v=a14b81d4",
+      "kind": "art",
+      "title": "伊弉諾神宮",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/izanagi-1-02.jpg?v=b7e48a28",
+      "kind": "art",
+      "title": "伊弉諾神宮",
+      "side": "吽"
+     },
+     {
+      "src": "images/izanagi-1-03.jpg?v=6717c44c",
+      "kind": "art",
+      "title": "伊弉諾神宮",
+      "side": "阿"
+     },
+     {
+      "src": "images/izanagi-1-04.jpg?v=0d8d09e9",
+      "kind": "art",
+      "title": "伊弉諾神宮",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "二の鳥居から石橋を渡り、正門をくぐった先、拝殿の前にいる1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "伊弉諾神宮は、国生みを終えた伊弉諾尊が淡路の多賀に幽宮を構えて余生を過ごしたという記紀の伝えに始まるとされ、淡路国一宮です。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「伊弉諾神宮」",
+        "url": "https://ja.wikipedia.org/wiki/伊弉諾神宮"
+       }
+      ]
+     },
+     {
+      "text": "拝殿前の狛犬は、文政5年(1822)に寄進されたものといわれます。寄進者や石工の名はまだ確かめられていません。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "tabi-bito.net「伊弉諾神宮 part-1」",
+        "url": "https://tabi-bito.net/izanagi-shrine-awaji-city-hyogo-prefecture-part-1/"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "kuden"
+    },
+    "thumb": "images/thumbs/izanagi-1.jpg?v=5793f0e5"
+   }
+  ]
+ },
+ {
+  "id": "kunozan",
+  "name": "久能山東照宮",
+  "kana": "くのうざんとうしょうぐう",
+  "prefecture": "静岡県",
+  "city": "静岡市",
+  "lat": 34.9653,
+  "lng": 138.4683,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       90.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 93.6,
+     "y": 15.6,
+     "w": 52.8,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 88.8,
+     "y": 48.6,
+     "w": 62.4,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 91.0,
+     "w": 40,
+     "h": 10,
+     "label": "唐門"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 181.0,
+     "w": 40,
+     "h": 10,
+     "label": "楼門",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 175.0,
+     "y": 209.0,
+     "w": 22,
+     "h": 14,
+     "label": "社務所",
+     "labelSide": "right"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 253.0,
+     "w": 40,
+     "h": 10,
+     "label": "一ノ門",
+     "labelSide": "right"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "kunozan-1",
+    "no": 1,
+    "label": "楼門の裏側・左右の金剛柵の中",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 165.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/kunozan-1-01.jpg?v=c91772ca",
+      "kind": "art",
+      "title": "久能山東照宮",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/kunozan-1-02.jpg?v=d244f391",
+      "kind": "art",
+      "title": "久能山東照宮",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "重要文化財の楼門の裏側、左右の金剛柵の中に安置されている1対です。角のない方が獅子、1本の角がある方が狛犬とされます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "久能山東照宮 公式サイト「境内のご案内」",
+        "url": "https://www.toshogu.or.jp/worship/precincts.php"
+       }
+      ]
+     },
+     {
+      "text": "向かって右に口を開けた角のない獅子、左に口を閉じて角を立てた狛犬がいます。2体とも体は金色、巻き毛と尾は緑青色に塗り分けられています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "久能山東照宮は2代将軍秀忠の命で創建され、社殿は中井大和守正清を大工棟梁として、元和2年(1616)5月から元和3年12月までの1年7か月で造営されました。狛犬がいつ、誰の手で作られたかは確かめられていません。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "久能山東照宮 公式サイト「御社殿」",
+        "url": "https://www.toshogu.or.jp/about/vanerable.php"
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/kunozan-1.jpg?v=d2c09d25"
+   }
+  ]
+ },
+ {
+  "id": "kinkengu",
+  "name": "金劔宮",
+  "kana": "きんけんぐう",
+  "prefecture": "石川県",
+  "city": "白山市",
+  "lat": 36.4447,
+  "lng": 136.6311,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       108.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 93.6,
+     "y": 21.6,
+     "w": 52.8,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 88.8,
+     "y": 75.6,
+     "w": 62.4,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "chozuya",
+     "x": 169.0,
+     "y": 178.0,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 253.0,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "kinkengu-1",
+    "no": 1,
+    "label": "鳥居をくぐってすぐの両脇",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 234.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "bronze",
+    "sculptor": "原型 大塚秀之丞・鋳造 喜多□衛門",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和6年",
+     "seireki": 1931
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/kinkengu-1-01.jpg?v=7b58c356",
+      "kind": "art",
+      "title": "金劔宮",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/kinkengu-1-02.jpg?v=6eb167dc",
+      "kind": "art",
+      "title": "金劔宮",
+      "side": "吽"
+     },
+     {
+      "src": "images/kinkengu-1-03.jpg?v=30fe716c",
+      "kind": "art",
+      "title": "金劔宮",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "鳥居をくぐってすぐ、参道の両脇にいる青銅の1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "金劔宮は瓊々杵命をまつり、石川県で最も古い神社のひとつともいわれます。この狛犬は手水舎の前に立つ足の長い青銅の狛犬として紹介されています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "hapiwaku.com「金劔宮」",
+        "url": "https://hapiwaku.com/kinkengu/"
+       }
+      ]
+     },
+     {
+      "text": "昭和6年(1931)の建立で、原型は東京・田端の大塚秀之丞、鋳造は銅器の町として知られる富山県高岡市金屋町の喜多□衛門(1字は読めず)と伝えられます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "ブログ「御朱印散歩覚書」金劔宮(石川県白山市)①",
+        "url": "https://ameblo.jp/sen23ka/entry-12761236367.html"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "kuden",
+     "sculptor": "kuden"
+    },
+    "thumb": "images/thumbs/kinkengu-1.jpg?v=5fc32378"
+   },
+   {
+    "id": "kinkengu-2",
+    "no": 2,
+    "label": "拝殿の横",
+    "animal": "komainu",
+    "pos": {
+     "x": 186.0,
+     "y": 102.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/kinkengu-2-01.jpg?v=bd95765b",
+      "kind": "art",
+      "title": "金劔宮",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/kinkengu-2-02.jpg?v=15d90871",
+      "kind": "art",
+      "title": "金劔宮",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿の横にいる、軟らかい石を彫った小さな1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "金劔宮の由緒書きには「神が宿るとされている拝殿横の軟石製狛犬1対」と書かれているといわれます。作られた年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "縄合屋「御一日参り 金劔宮」",
+        "url": "https://nawawaseya.com/2018/05/01/post-1294/"
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/kinkengu-2.jpg?v=17e29d53"
+   }
+  ]
+ },
+ {
+  "id": "asuka",
+  "name": "阿須賀神社",
+  "kana": "あすかじんじゃ",
+  "prefecture": "和歌山県",
+  "city": "新宮市",
+  "lat": 33.7311,
+  "lng": 135.9964,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "tree",
+     "x": 113.0,
+     "y": 8.0,
+     "w": 14,
+     "h": 14,
+     "label": "蓬莱山",
+     "labelSide": "right"
+    },
+    {
+     "type": "honden",
+     "x": 93.6,
+     "y": 33.6,
+     "w": 52.8,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 88.8,
+     "y": 75.6,
+     "w": 62.4,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 139.0,
+     "w": 26,
+     "h": 10,
+     "label": "二の鳥居"
+    },
+    {
+     "type": "chozuya",
+     "x": 163.0,
+     "y": 178.0,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 259.0,
+     "w": 26,
+     "h": 10,
+     "label": "一の鳥居"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "asuka-1",
+    "no": 1,
+    "label": "一の鳥居と二の鳥居の間",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 228.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/asuka-1-01.jpg?v=044a02d5",
+      "kind": "art",
+      "title": "阿須賀神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/asuka-1-02.jpg?v=1864e1cd",
+      "kind": "art",
+      "title": "阿須賀神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "一の鳥居と二の鳥居の間、手水舎よりも一の鳥居寄りの参道にいる1対です。首にはしめ縄と紙垂が巻かれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "阿須賀神社は熊野川の河口近く、神奈備とされる蓬莱山の南麓にまつられ、事解男命を主祭神とします。中世の熊野詣では「阿須賀王子」として参拝され、蓬莱山は徐福が不老不死の薬を探した地とも伝えられます。この狛犬の年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「阿須賀神社」",
+        "url": "https://ja.wikipedia.org/wiki/阿須賀神社"
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/asuka-1.jpg?v=b539e7dd"
+   }
+  ]
+ },
+ {
+  "id": "hayatama",
+  "name": "熊野速玉大社",
+  "kana": "くまのはやたまたいしゃ",
+  "prefecture": "和歌山県",
+  "city": "新宮市",
+  "lat": 33.7322,
+  "lng": 135.9842,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 91.2,
+     "y": 27.6,
+     "w": 57.6,
+     "h": 16.8,
+     "label": "御社殿"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 97.0,
+     "w": 40,
+     "h": 10,
+     "label": "神門",
+     "labelSide": "right"
+    },
+    {
+     "type": "tree",
+     "x": 179.0,
+     "y": 143.0,
+     "w": 14,
+     "h": 14,
+     "label": "梛の大樹",
+     "labelSide": "right"
+    },
+    {
+     "type": "chozuya",
+     "x": 163.0,
+     "y": 178.0,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 259.0,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "hayatama-1",
+    "no": 1,
+    "label": "手水舎と神門の間・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 138.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hayatama-1-01.jpg?v=9a2e135a",
+      "kind": "art",
+      "title": "熊野速玉大社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/hayatama-1-02.jpg?v=68971d3e",
+      "kind": "art",
+      "title": "熊野速玉大社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "参道の手水舎を過ぎ、朱塗りの神門をくぐる手前の左右で、高い台座の上にいる1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "境内には平重盛が植えたと伝わる御神木の梛の大樹があり、狛犬は櫓台のような大きな台座の上から参道をにらんでいると紹介されています。作られた年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "tabi-bito.net「熊野速玉大社(2019年夏旅)」",
+        "url": "https://tabi-bito.net/kumano-hayatama-shrine-summer-travel-in-2019/"
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/hayatama-1.jpg?v=c10974bf"
+   }
+  ]
+ },
+ {
+  "id": "hongu",
+  "name": "熊野本宮大社",
+  "kana": "くまのほんぐうたいしゃ",
+  "prefecture": "和歌山県",
+  "city": "田辺市",
+  "lat": 33.8403,
+  "lng": 135.7733,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 91.2,
+     "y": 27.6,
+     "w": 57.6,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 79.2,
+     "y": 75.6,
+     "w": 81.6,
+     "h": 16.8,
+     "label": "拝殿(黎明殿)"
+    },
+    {
+     "type": "building",
+     "x": 181.0,
+     "y": 131.0,
+     "w": 22,
+     "h": 14,
+     "label": "社務所",
+     "labelSide": "right"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 175.0,
+     "w": 40,
+     "h": 10,
+     "label": "神門",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 245.0,
+     "w": 22,
+     "h": 14,
+     "label": "石段",
+     "labelSide": "right"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "hongu-1",
+    "no": 1,
+    "label": "石段を上った境内・拝殿(黎明殿)の前",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 132.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hongu-1-01.jpg?v=7108bf74",
+      "kind": "art",
+      "title": "熊野本宮大社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/hongu-1-02.jpg?v=05282500",
+      "kind": "art",
+      "title": "熊野本宮大社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "石段を上りきった先の境内、社務所や拝殿(黎明殿)の前にいる1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "作られた年代や石工など、詳しいことは分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/hongu-1.jpg?v=1e513a8b"
+   }
+  ]
+ },
+ {
+  "id": "nachi",
+  "name": "熊野那智大社",
+  "kana": "くまのなちたいしゃ",
+  "prefecture": "和歌山県",
+  "city": "那智勝浦町",
+  "lat": 33.6686,
+  "lng": 135.89,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 91.2,
+     "y": 21.6,
+     "w": 57.6,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 88.8,
+     "y": 63.6,
+     "w": 62.4,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 115.0,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 167.0,
+     "w": 22,
+     "h": 14,
+     "label": "最後の石段",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 257.0,
+     "w": 22,
+     "h": 14,
+     "label": "参道の石段",
+     "labelSide": "right"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "nachi-1",
+    "no": 1,
+    "label": "最後の石段のふもと・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 210.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/nachi-1-01.jpg?v=52f4b157",
+      "kind": "art",
+      "title": "熊野那智大社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/nachi-1-02.jpg?v=a1f4805b",
+      "kind": "art",
+      "title": "熊野那智大社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "境内へ続く最後の長い石段、社殿のある平地へ上がる直前の石段のふもとにいる1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "熊野那智大社は熊野三山のひとつで、熊野夫須美大神をまつります。那智の滝をあがめる信仰に始まり、はじめは滝の前に社殿があったと伝えられます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「熊野那智大社」",
+        "url": "https://ja.wikipedia.org/wiki/熊野那智大社"
+       }
+      ]
+     },
+     {
+      "text": "この狛犬は昭和期に作られたものとみられますが、奉納の年や奉納者、石工など詳しいことは分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/nachi-1.jpg?v=ee343177"
+   }
+  ]
+ },
+ {
+  "id": "kounouchi",
+  "name": "神内神社",
+  "kana": "こうのうちじんじゃ",
+  "prefecture": "三重県",
+  "city": "紀宝町",
+  "lat": 33.7533,
+  "lng": 135.9606,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "tree",
+     "x": 113.0,
+     "y": 17.0,
+     "w": 14,
+     "h": 14,
+     "label": "御神体の岩壁(磐座)",
+     "labelSide": "right"
+    },
+    {
+     "type": "haiden",
+     "x": 88.8,
+     "y": 63.6,
+     "w": 62.4,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 131.0,
+     "w": 22,
+     "h": 14,
+     "label": "石段",
+     "labelSide": "right"
+    },
+    {
+     "type": "chozuya",
+     "x": 169.0,
+     "y": 178.0,
+     "w": 22,
+     "h": 16,
+     "label": "手水舎",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 259.0,
+     "w": 26,
+     "h": 10,
+     "label": "一の鳥居"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "kounouchi-1",
+    "no": 1,
+    "label": "拝殿の下",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 102.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/kounouchi-1-01.jpg?v=e9d5135d",
+      "kind": "art",
+      "title": "神内神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/kounouchi-1-02.jpg?v=aecc9113",
+      "kind": "art",
+      "title": "神内神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/kounouchi-1-03.jpg?v=1cabb3a6",
+      "kind": "art",
+      "title": "神内神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/kounouchi-1-04.jpg?v=f02c8c99",
+      "kind": "art",
+      "title": "神内神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/kounouchi-1-05.jpg?v=7d7c954d",
+      "kind": "art",
+      "title": "神内神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "磐座を背にした拝殿の下にいる、小さな石造りの1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "神内神社は「子安の宮」とも呼ばれ、本殿を持たず、高さ約100mといわれる岩壁を御神体としてまつります。この狛犬は、南へ約100m離れた古神殿(奈良時代以前の神殿で、かつての本宮と伝わる場所)に、もとは置かれていたといわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "KVA(Kumano Visual Archive)「神内神社(子安の宮)」",
+        "url": "https://kumanokodo.net/kounouchi-jinja/"
+       }
+      ]
+     },
+     {
+      "text": "阿形が向かって左、吽形が向かって右と、一般的な狛犬とは左右が逆に置かれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "なぜ逆なのかは、はっきりしていません。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Yahoo!知恵袋「狛犬の配置について質問です」",
+        "url": "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13126812428"
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/kounouchi-1.jpg?v=9b65459a"
+   }
+  ]
+ },
+ {
+  "id": "tamaki",
+  "name": "玉置神社",
+  "kana": "たまきじんじゃ",
+  "prefecture": "奈良県",
+  "city": "十津川村",
+  "lat": 33.9269,
+  "lng": 135.8211,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 91.2,
+     "y": 33.6,
+     "w": 57.6,
+     "h": 16.8,
+     "label": "本社"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 83.0,
+     "w": 22,
+     "h": 14,
+     "label": "最後の石段",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 127.0,
+     "w": 26,
+     "h": 10,
+     "label": "本社前の鳥居"
+    },
+    {
+     "type": "tree",
+     "x": 185.0,
+     "y": 173.0,
+     "w": 14,
+     "h": 14,
+     "label": "神代杉",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 245.0,
+     "w": 22,
+     "h": 14,
+     "label": "参道",
+     "labelSide": "right"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "tamaki-1",
+    "no": 1,
+    "label": "本社前の鳥居の左右(石段の下)",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 156.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/tamaki-1-01.jpg?v=34759630",
+      "kind": "art",
+      "title": "玉置神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/tamaki-1-02.jpg?v=3b209f29",
+      "kind": "art",
+      "title": "玉置神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "本社へ続く最後の石段の下、本社前の鳥居の左右にいる1対です。2体とも白い前掛けをつけています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "玉置神社の本社は玉置山の頂上近く、標高1000m付近にまつられ、境内には樹齢3000年といわれる神代杉がそびえます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "玉置神社 公式サイト「境内のご案内」",
+        "url": "https://tamakijinja.or.jp/pre_sh/index.html"
+       }
+      ]
+     },
+     {
+      "text": "作られた年代や石工、寄進者は分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/tamaki-1.jpg?v=61adeaf9"
+   }
+  ]
+ },
+ {
+  "id": "shiogama",
+  "name": "鹽竈神社",
+  "kana": "しおがまじんじゃ",
+  "prefecture": "宮城県",
+  "city": "塩竈市",
+  "lat": 38.32,
+  "lng": 141.0136,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       210.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "haiden",
+     "x": 86.4,
+     "y": 51.6,
+     "w": 67.2,
+     "h": 16.8,
+     "label": "左右宮拝殿"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 103.0,
+     "w": 40,
+     "h": 10,
+     "label": "唐門",
+     "labelSide": "right"
+    },
+    {
+     "type": "haiden",
+     "x": 181.2,
+     "y": 130.8,
+     "w": 33.6,
+     "h": 14.4,
+     "label": "舞殿"
+    },
+    {
+     "type": "gate",
+     "x": 214.0,
+     "y": 163.0,
+     "w": 40,
+     "h": 10,
+     "label": "東神門",
+     "labelSide": "right"
+    },
+    {
+     "type": "massha",
+     "x": 38.0,
+     "y": 167.0,
+     "w": 20,
+     "h": 14,
+     "label": "末社4社",
+     "labelSide": "right"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 211.0,
+     "w": 40,
+     "h": 10,
+     "label": "随身門",
+     "labelSide": "right"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 257.0,
+     "w": 22,
+     "h": 14,
+     "label": "表坂(202段)",
+     "labelSide": "right"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "shiogama-1",
+    "no": 1,
+    "label": "唐門の前・左右",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 126.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "延享4年",
+     "seireki": 1747
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/shiogama-1-01.jpg?v=3b6d8402",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/shiogama-1-02.jpg?v=53166dde",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/shiogama-1-03.jpg?v=eb5e0ba8",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "唐門の前、左右にいる1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "延享4年(1747)の奉納で「東北でいちばん有名な狛犬」と紹介されています。ほかに似たものが見当たらない、独特の姿といわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "狛犬ネット「塩竃神社の狛犬1」",
+        "url": "https://komainu.net/shiogama1.htm"
+       },
+       {
+        "title": "ブログ「海月美紗のおでかけ日和」鹽竈神社と狛犬たち、ヒイラギと四季桜",
+        "url": "https://umitsuki-misa.hatenablog.com/entry/2025/12/05/053000"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "kuden"
+    },
+    "thumb": "images/thumbs/shiogama-1.jpg?v=5e978cf7"
+   },
+   {
+    "id": "shiogama-2",
+    "no": 2,
+    "label": "東神門をくぐってすぐ・舞殿との間",
+    "animal": "komainu",
+    "pos": {
+     "x": 210.0,
+     "y": 162.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "気仙沼の友輔",
+    "sculptorId": "",
+    "year": {
+     "wareki": "文久3年3月",
+     "seireki": 1863
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/shiogama-2-01.jpg?v=e0442a36",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/shiogama-2-02.jpg?v=80523a1e",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/shiogama-2-03.jpg?v=53939b1c",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/shiogama-2-04.jpg?v=45a48c31",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "東神門をくぐってすぐ、舞殿との間の参道にいる1対です。片方の頭の上には丸いくぼみがあります。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "文久3年(1863)3月の建立で、石工は気仙沼の友輔(友助とも書かれる)と台座に彫られているといわれます。東神門の外の石段脇にいる文久2年(1862)の狛犬も同じ石工の作で、1歳違いの兄弟狛犬と呼ばれています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "parallel.eek.jp「夏の狛犬巡り①塩竈神社」",
+        "url": "https://parallel.eek.jp/murabun/aruku/komainu/29_1siogama.html"
+       },
+       {
+        "title": "ブログ「海月美紗のおでかけ日和」鹽竈神社と狛犬たち、ヒイラギと四季桜",
+        "url": "https://umitsuki-misa.hatenablog.com/entry/2025/12/05/053000"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "kuden",
+     "sculptor": "kuden"
+    },
+    "thumb": "images/thumbs/shiogama-2.jpg?v=91f9f6a0"
+   },
+   {
+    "id": "shiogama-3",
+    "no": 3,
+    "label": "随身門を入って左手・末社4社の前",
+    "animal": "komainu",
+    "pos": {
+     "x": 72.0,
+     "y": 204.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/shiogama-3-01.jpg?v=21131eea",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/shiogama-3-02.jpg?v=da0126ab",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/shiogama-3-03.jpg?v=891688b1",
+      "kind": "record",
+      "caption": "随身門を入って左手・末社4社の前の様子"
+     }
+    ],
+    "lore": [
+     {
+      "text": "表参道の202段の石段を上り、随身門をくぐってすぐ左手、稲荷神社・住吉神社・八幡社・神明社の4つの末社が横一列に並ぶ建物の前の左右にいる1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "作られた年代や石工など、詳しいことは分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/shiogama-3.jpg?v=8f6aa306"
+   }
+  ]
+ },
+ {
+  "id": "shiwahiko",
+  "name": "志波彦神社",
+  "kana": "しわひこじんじゃ",
+  "prefecture": "宮城県",
+  "city": "塩竈市",
+  "lat": 38.3206,
+  "lng": 141.0128,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       102.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 91.2,
+     "y": 27.6,
+     "w": 57.6,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 88.8,
+     "y": 69.6,
+     "w": 62.4,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 245.0,
+     "w": 22,
+     "h": 14,
+     "label": "参道",
+     "labelSide": "right"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "shiwahiko-1",
+    "no": 1,
+    "label": "拝殿前・両脇",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 114.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "志賀曻(志賀石材店)",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和47年4月",
+     "seireki": 1972
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/shiwahiko-1-01.jpg?v=ba181b5a",
+      "kind": "art",
+      "title": "志波彦神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/shiwahiko-1-02.jpg?v=eb673848",
+      "kind": "art",
+      "title": "志波彦神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "志波彦神社の拝殿前、両脇にいる1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "昭和47年(1972)4月吉日の作で、石工は志賀石材店の志賀曻と伝えられます。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {
+     "year": "kuden",
+     "sculptor": "kuden"
+    },
+    "thumb": "images/thumbs/shiwahiko-1.jpg?v=4b5c3cc0"
+   }
+  ]
+ },
+ {
+  "id": "omika",
+  "name": "大甕神社",
+  "kana": "おおみかじんじゃ",
+  "prefecture": "茨城県",
+  "city": "日立市",
+  "lat": 36.5106,
+  "lng": 140.6278,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       285.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       120.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "tree",
+     "x": 191.0,
+     "y": 35.0,
+     "w": 14,
+     "h": 14,
+     "label": "宿魂石(上に本殿)",
+     "labelSide": "right"
+    },
+    {
+     "type": "haiden",
+     "x": 88.8,
+     "y": 75.6,
+     "w": 62.4,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "building",
+     "x": 109.0,
+     "y": 125.0,
+     "w": 22,
+     "h": 14,
+     "label": "石段",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 241.0,
+     "w": 26,
+     "h": 10,
+     "label": "鳥居"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "omika-1",
+    "no": 1,
+    "label": "拝殿へ上る石段の両脇",
+    "animal": "komainu",
+    "pos": {
+     "x": 120.0,
+     "y": 156.0
+    },
+    "regionalTypes": [],
+    "pose": "tamanori",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和8年",
+     "seireki": 1933
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/omika-1-01.jpg?v=34fe3c00",
+      "kind": "art",
+      "title": "大甕神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/omika-1-02.jpg?v=b8ec83ac",
+      "kind": "art",
+      "title": "大甕神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/omika-1-03.jpg?v=66431317",
+      "kind": "record",
+      "caption": "拝殿へ上る石段の両脇の様子"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿へ上る石段の両脇にいる1対です。阿形は前脚で玉を押さえ、吽形は子獅子を抱いています。台座には「奉献」の文字があります。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "大甕神社は建葉槌命をまつり、拝殿の右奥にそびえる宿魂石の上に本殿があります。元禄8年(1695)、水戸藩主徳川光圀の命で大甕山の山上から今の地に移されたと伝えられます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「大甕神社」",
+        "url": "https://ja.wikipedia.org/wiki/大甕神社"
+       }
+      ]
+     },
+     {
+      "text": "この狛犬は、昭和8年(1933)に拝殿と本殿を建て替えた際に作られ、奉納されたといわれます。作者は分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {
+     "year": "kuden"
+    },
+    "thumb": "images/thumbs/omika-1.jpg?v=3e182b2b"
+   }
+  ]
+ },
+ {
+  "id": "mitsumine",
+  "name": "三峯神社",
+  "kana": "みつみねじんじゃ",
+  "prefecture": "埼玉県",
+  "city": "秩父市",
+  "lat": 35.9253,
+  "lng": 138.9306,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "layout": {
+   "width": 300,
+   "height": 300,
+   "items": [
+    {
+     "type": "sando",
+     "points": [
+      [
+       120.0,
+       291.0
+      ],
+      [
+       120.0,
+       180.0
+      ],
+      [
+       120.0,
+       90.0
+      ]
+     ],
+     "label": ""
+    },
+    {
+     "type": "honden",
+     "x": 93.6,
+     "y": 21.6,
+     "w": 52.8,
+     "h": 16.8,
+     "label": "本殿"
+    },
+    {
+     "type": "haiden",
+     "x": 91.2,
+     "y": 57.6,
+     "w": 57.6,
+     "h": 16.8,
+     "label": "拝殿"
+    },
+    {
+     "type": "massha",
+     "x": 38.0,
+     "y": 107.0,
+     "w": 20,
+     "h": 14,
+     "label": "遠宮(御仮屋)",
+     "labelSide": "right"
+    },
+    {
+     "type": "massha",
+     "x": 212.0,
+     "y": 113.0,
+     "w": 20,
+     "h": 14,
+     "label": "大山祇神社",
+     "labelSide": "right"
+    },
+    {
+     "type": "gate",
+     "x": 100.0,
+     "y": 193.0,
+     "w": 40,
+     "h": 10,
+     "label": "随身門",
+     "labelSide": "right"
+    },
+    {
+     "type": "torii",
+     "x": 107.0,
+     "y": 235.0,
+     "w": 26,
+     "h": 10,
+     "label": "三ツ鳥居"
+    }
+   ]
+  },
+  "komainu": [
+   {
+    "id": "mitsumine-1",
+    "no": 1,
+    "label": "三ツ鳥居の前・左右",
+    "animal": "okami",
+    "pos": {
+     "x": 120.0,
+     "y": 270.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/mitsumine-1-01.jpg?v=806622fc",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/mitsumine-1-02.jpg?v=13e6a529",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/mitsumine-1-03.jpg?v=dc049199",
+      "kind": "record",
+      "caption": "三ツ鳥居の前・左右の様子"
+     }
+    ],
+    "lore": [
+     {
+      "text": "三ツ鳥居の前、左右にいる狼の1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "三峯神社では、狼は神の使い「御眷属様(お犬さま)」とされます。東征中の日本武尊が霧で道に迷ったとき、狼が現れて三峯の山まで導いたと伝えられ、享保5年(1720)には狼の御札を授ける「御眷属拝借」が始まったといわれます。この1対も狛犬ではなく、お犬さまの像とされます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "めぐりジャパン「狼信仰—自然への崇拝と畏怖 第2回・お犬さま信仰の三峯神社」",
+        "url": "https://meguri-japan.com/legacies/20210624_1348/"
+       }
+      ]
+     },
+     {
+      "text": "作られた年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/mitsumine-1.jpg?v=155e6bc3"
+   },
+   {
+    "id": "mitsumine-2",
+    "no": 2,
+    "label": "随身門の前・左右",
+    "animal": "okami",
+    "pos": {
+     "x": 120.0,
+     "y": 216.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/mitsumine-2-01.jpg?v=50b141b3",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/mitsumine-2-02.jpg?v=4fe52ed0",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/mitsumine-2-03.jpg?v=4b64736a",
+      "kind": "record",
+      "caption": "随身門の前・左右の様子"
+     }
+    ],
+    "lore": [
+     {
+      "text": "随身門の前、左右にいる狼の1対です。台座には「奉納」「三峯山」の文字があります。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "三峯神社では、狼は神の使い「御眷属様(お犬さま)」とされます。東征中の日本武尊が霧で道に迷ったとき、狼が現れて三峯の山まで導いたと伝えられ、享保5年(1720)には狼の御札を授ける「御眷属拝借」が始まったといわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "めぐりジャパン「狼信仰—自然への崇拝と畏怖 第2回・お犬さま信仰の三峯神社」",
+        "url": "https://meguri-japan.com/legacies/20210624_1348/"
+       }
+      ]
+     },
+     {
+      "text": "作られた年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/mitsumine-2.jpg?v=50200eec"
+   },
+   {
+    "id": "mitsumine-3",
+    "no": 3,
+    "label": "遠宮(御仮屋)の前・岩の塚の上",
+    "animal": "okami",
+    "pos": {
+     "x": 72.0,
+     "y": 96.0
+    },
+    "regionalTypes": [],
+    "pose": "other",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/mitsumine-3-01.jpg?v=39a5e686",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/mitsumine-3-02.jpg?v=1e5f3af7",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/mitsumine-3-03.jpg?v=953d6eea",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/mitsumine-3-04.jpg?v=48aaaa56",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/mitsumine-3-05.jpg?v=e8ee069a",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "遠宮(大口真神をまつる御仮屋)の前、岩を積んだ塚の上に何体もの狼が並んでいます。塚には「奉」の字の碑がはめこまれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "三峯神社では、狼は神の使い「御眷属様(お犬さま)」とされます。東征中の日本武尊が霧で道に迷ったとき、狼が現れて三峯の山まで導いたと伝えられ、享保5年(1720)には狼の御札を授ける「御眷属拝借」が始まったといわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "めぐりジャパン「狼信仰—自然への崇拝と畏怖 第2回・お犬さま信仰の三峯神社」",
+        "url": "https://meguri-japan.com/legacies/20210624_1348/"
+       }
+      ]
+     },
+     {
+      "text": "作られた年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/mitsumine-3.jpg?v=20454d2d"
+   },
+   {
+    "id": "mitsumine-4",
+    "no": 4,
+    "label": "本殿の縁側(手すり)",
+    "animal": "okami",
+    "pos": {
+     "x": 120.0,
+     "y": 45.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/mitsumine-4-01.jpg?v=34a8a649",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     }
+    ],
+    "lore": [
+     {
+      "text": "本殿の縁側、朱塗りの手すりのところに置かれた黒い狼の像です。御眷属の大口真神とされます。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "三峯神社では、狼は神の使い「御眷属様(お犬さま)」とされます。東征中の日本武尊が霧で道に迷ったとき、狼が現れて三峯の山まで導いたと伝えられ、享保5年(1720)には狼の御札を授ける「御眷属拝借」が始まったといわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "めぐりジャパン「狼信仰—自然への崇拝と畏怖 第2回・お犬さま信仰の三峯神社」",
+        "url": "https://meguri-japan.com/legacies/20210624_1348/"
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/mitsumine-4.jpg?v=f88f67a9"
+   },
+   {
+    "id": "mitsumine-5",
+    "no": 5,
+    "label": "御仮屋の手前の参道・左右",
+    "animal": "okami",
+    "pos": {
+     "x": 84.0,
+     "y": 150.0
+    },
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/mitsumine-5-01.jpg?v=482ced66",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/mitsumine-5-02.jpg?v=8afacbc3",
+      "kind": "art",
+      "title": "三峯神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "御仮屋の手前の参道、左右にいる狼の1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "三峯神社では、狼は神の使い「御眷属様(お犬さま)」とされます。東征中の日本武尊が霧で道に迷ったとき、狼が現れて三峯の山まで導いたと伝えられ、享保5年(1720)には狼の御札を授ける「御眷属拝借」が始まったといわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "めぐりジャパン「狼信仰—自然への崇拝と畏怖 第2回・お犬さま信仰の三峯神社」",
+        "url": "https://meguri-japan.com/legacies/20210624_1348/"
+       }
+      ]
+     },
+     {
+      "text": "作られた年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/mitsumine-5.jpg?v=fff4fffd"
+   },
+   {
+    "id": "mitsumine-6",
+    "no": 6,
+    "label": "大山祇神社の社殿前・左右",
+    "animal": "okami",
+    "pos": {
+     "x": 198.0,
+     "y": 144.0
+    },
+    "regionalTypes": [],
+    "pose": "other",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/mitsumine-6-01.jpg?v=90be4a2b",
+      "kind": "art",
+      "title": "三峯神社",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/mitsumine-6-02.jpg?v=1616feb2",
+      "kind": "art",
+      "title": "三峯神社"
+     }
+    ],
+    "lore": [
+     {
+      "text": "境内の大山祇神社の社殿のすぐ前、左右にいる狼の1対です。岩の上に身をかがめた姿をしています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "三峯神社では、狼は神の使い「御眷属様(お犬さま)」とされます。東征中の日本武尊が霧で道に迷ったとき、狼が現れて三峯の山まで導いたと伝えられ、享保5年(1720)には狼の御札を授ける「御眷属拝借」が始まったといわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "めぐりジャパン「狼信仰—自然への崇拝と畏怖 第2回・お犬さま信仰の三峯神社」",
+        "url": "https://meguri-japan.com/legacies/20210624_1348/"
+       }
+      ]
+     },
+     {
+      "text": "作られた年代や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/mitsumine-6.jpg?v=bd11d6f3"
+   }
+  ]
  }
 ]

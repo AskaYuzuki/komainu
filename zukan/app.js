@@ -530,7 +530,7 @@
       '<div class="cover-shade" aria-hidden="true"></div>' +
       '<div class="cover-top"><span class="cover-mast">KOMAINU</span><span class="cover-issue">No.' + (no < 10 ? '0' : '') + no + '<br>' + esc(s.prefecture || '') + '</span></div>' +
       '<div class="cover-sub">弓月明日香が出会った' + esc(gw) + 'たち</div>' +
-      '<h2 class="cover-name"><span class="cover-kana">' + esc(s.kana) + '</span>' + esc(name) + (sub ? '<small>' + esc(sub) + '</small>' : '') + '</h2>' +
+      '<h2 class="cover-name" style="font-size:' + Math.min(9.5, 62 / Math.max(name.length, 1) / 1.14).toFixed(2) + 'cqw"><span class="cover-kana">' + esc(s.kana) + '</span>' + esc(name) + (sub ? '<small>' + esc(sub) + '</small>' : '') + '</h2>' +
       '<div class="cover-foot"><span class="cover-tag">' + ks.length + '対の' + esc(gw) + '</span>' +
       (lines ? '<ul class="cover-lines">' + lines + '</ul>' : '') +
       '<span class="cover-place">' + esc((s.prefecture || '') + (s.city || '')) + (has(s.visited) ? '　参拝 ' + esc(s.visited) : '') + '</span></div>' +

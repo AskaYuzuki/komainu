@@ -433,9 +433,9 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 .cover-sub { position: absolute; left: 5%; top: 24%; font-size: 3.1cqw; letter-spacing: .18em; color: #81D4CA; font-weight: 700;
   text-shadow: 0 1px 6px rgba(0,0,0,.6); }
 .cover-name { position: absolute; right: 5%; top: 25%; margin: 0; writing-mode: vertical-rl; font-family: var(--font-display); font-weight: 700;
-  font-size: 9.5cqw; line-height: 1.15; letter-spacing: .14em; text-shadow: 0 2px 14px rgba(0,0,0,.55); max-height: 62%; }
+  font-size: 9.5cqw; line-height: 1.15; letter-spacing: .14em; text-shadow: 0 2px 14px rgba(0,0,0,.55); max-height: 64%; }
 .cover-name small { display: block; font-size: .42em; letter-spacing: .1em; margin-top: .6em; opacity: .95; }
-.cover-kana { font-size: .26em; letter-spacing: .3em; margin-left: .5em; font-weight: 500; opacity: .9; }
+.cover-kana { display: block; font-size: .26em; letter-spacing: .3em; margin-left: .4em; font-weight: 500; opacity: .9; }
 .cover-foot { position: absolute; left: 5%; right: 26%; bottom: 4.5%; display: flex; flex-direction: column; align-items: flex-start; gap: 1.6cqw; }
 .cover-tag { display: inline-block; background: #81D4CA; color: #10302b; font-family: var(--font-display); font-weight: 700; font-size: 3.6cqw;
   letter-spacing: .14em; padding: .5cqw 2.4cqw; }

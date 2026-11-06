@@ -520,6 +520,23 @@
   }
 
   /* ---------- 神社の頁 ---------- */
+  // 雑誌の表紙のような1枚(神社の表紙写真に、誌名・神社名・見出しを重ねる)
+  function coverHTML(s) {
+    var p = shrineCover(s), ks = s.komainu || [], no = D.shrines.indexOf(s) + 1;
+    var gw = groupWord(ks), name = s.name.replace(/[(（].*$/, ''), sub = s.name.length > name.length ? s.name.slice(name.length).replace(/[()（）]/g, '') : '';
+    var lines = ks.slice(0, 3).map(function (k) { return '<li>' + esc(k.label) + '</li>'; }).join('');
+    return '<figure class="cover">' +
+      (p ? '<img class="cover-img" src="' + esc(p.src) + '" alt="' + esc(s.name + 'の' + gw) + '"' + (p.focus ? ' style="object-position:' + (+p.focus[0]) + '% ' + (+p.focus[1]) + '%"' : '') + '>' : '<span class="cover-img noimg"></span>') +
+      '<div class="cover-shade" aria-hidden="true"></div>' +
+      '<div class="cover-top"><span class="cover-mast">KOMAINU</span><span class="cover-issue">No.' + (no < 10 ? '0' : '') + no + '<br>' + esc(s.prefecture || '') + '</span></div>' +
+      '<div class="cover-sub">弓月明日香が出会った' + esc(gw) + 'たち</div>' +
+      '<h2 class="cover-name"><span class="cover-kana">' + esc(s.kana) + '</span>' + esc(name) + (sub ? '<small>' + esc(sub) + '</small>' : '') + '</h2>' +
+      '<div class="cover-foot"><span class="cover-tag">' + ks.length + '対の' + esc(gw) + '</span>' +
+      (lines ? '<ul class="cover-lines">' + lines + '</ul>' : '') +
+      '<span class="cover-place">' + esc((s.prefecture || '') + (s.city || '')) + (has(s.visited) ? '　参拝 ' + esc(s.visited) : '') + '</span></div>' +
+      '</figure>';
+  }
+
   function renderShrine(v, s, focus) {
     if (!s) { v.innerHTML = '<div class="pad"><p>この神社は見つかりませんでした。</p></div>'; return; }
     var ks = s.komainu || [], gw = groupWord(ks);
@@ -533,8 +550,7 @@
       });
     });
     var html = '<div class="pad"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
-      '<div class="shrine-head"><span class="kana">' + esc(s.kana) + '</span><h2 class="h2">' + esc(s.name) + '</h2>' +
-      '<span class="meta">' + esc((s.prefecture || '') + (s.city || '')) + (has(s.visited) ? '　参拝 ' + esc(s.visited) : '') + '</span></div>' +
+      coverHTML(s) +
       '<section class="section first"><h3 class="h3">この神社の' + gw + '　' + ks.length + '対</h3><div class="k-list">' +
       ks.map(function (k) {
         var sub = [isKomainu(k) ? '' : animalWord(k), styleNames(k), termName('poses', k.pose), termName('materials', k.material)].filter(Boolean).join('、');

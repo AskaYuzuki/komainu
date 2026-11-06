@@ -418,3 +418,29 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 /* 神社への入口(見取り図のかわり)：表紙写真を正方形で */
 .where-plan img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 8%; }
 .where-plan { aspect-ratio: 1 / 1; }
+
+/* ---------- 神社の頁の表紙(雑誌の表紙ふう) ---------- */
+.cover { position: relative; margin: 0 0 22px; aspect-ratio: 4 / 5; border-radius: var(--r-s); overflow: hidden; background: #1d2522; color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.22); container-type: inline-size; }
+.cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; display: block; }
+.cover-shade { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.12) 24%, rgba(0,0,0,0) 45%, rgba(0,0,0,.08) 62%, rgba(0,0,0,.72) 100%); }
+.cover-top { position: absolute; left: 5%; right: 5%; top: 3.5%; display: flex; flex-direction: column; align-items: stretch; gap: 1.4cqw; }
+.cover-mast { font-family: var(--font-display); font-weight: 700; font-size: 15cqw; line-height: .9; letter-spacing: .05em; text-align: center; color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+.cover-issue { font-family: var(--font-display); font-size: 3.2cqw; line-height: 1.5; letter-spacing: .14em; text-align: right; padding-top: 1cqw;
+  border-top: 2px solid #81D4CA; text-shadow: 0 1px 6px rgba(0,0,0,.5); }
+.cover-sub { position: absolute; left: 5%; top: 24%; font-size: 3.1cqw; letter-spacing: .18em; color: #81D4CA; font-weight: 700;
+  text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.cover-name { position: absolute; right: 5%; top: 25%; margin: 0; writing-mode: vertical-rl; font-family: var(--font-display); font-weight: 700;
+  font-size: 9.5cqw; line-height: 1.15; letter-spacing: .14em; text-shadow: 0 2px 14px rgba(0,0,0,.55); max-height: 62%; }
+.cover-name small { display: block; font-size: .42em; letter-spacing: .1em; margin-top: .6em; opacity: .95; }
+.cover-kana { font-size: .26em; letter-spacing: .3em; margin-left: .5em; font-weight: 500; opacity: .9; }
+.cover-foot { position: absolute; left: 5%; right: 26%; bottom: 4.5%; display: flex; flex-direction: column; align-items: flex-start; gap: 1.6cqw; }
+.cover-tag { display: inline-block; background: #81D4CA; color: #10302b; font-family: var(--font-display); font-weight: 700; font-size: 3.6cqw;
+  letter-spacing: .14em; padding: .5cqw 2.4cqw; }
+.cover-lines { list-style: none; margin: 0; padding: 0; font-family: var(--font-display); font-size: 4.4cqw; line-height: 1.45; letter-spacing: .06em;
+  text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+.cover-lines li::before { content: ""; display: inline-block; width: 2.4cqw; height: 2px; background: #81D4CA; vertical-align: middle; margin-right: 1.6cqw; }
+.cover-place { font-size: 3cqw; letter-spacing: .14em; opacity: .9; }
+@media (min-width: 720px) { .cover { max-width: 520px; } }

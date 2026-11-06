@@ -420,7 +420,7 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 .where-plan { aspect-ratio: 1 / 1; }
 
 /* ---------- 神社の頁の表紙(雑誌の表紙ふう) ----------
-   画像は build/cover2/make3.py で作る(Instagram の1枚目と同じ)。images/covers/<最初の対のid>.jpg */
+   画像は build/cover2/make4.py で作る(Instagram の1枚目と同じ)。images/covers/<最初の対のid>.jpg */
 .cover { position: relative; margin: 0 0 22px; aspect-ratio: 4 / 5; border-radius: var(--r-s); overflow: hidden; background: #1d2522;
   box-shadow: 0 10px 30px rgba(0,0,0,.22); }
 .cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }

@@ -519,9 +519,9 @@
     v.innerHTML = html + '</div>';
   }
 
-  // 雑誌の表紙のような1枚。build/cover2/make3.py が作った画像(Instagram の1枚目と同じもの)をそのまま出す。
+  // 雑誌の表紙のような1枚。build/cover2/make4.py が作った画像(Instagram の1枚目と同じもの)をそのまま出す。
   // 狛犬を切り抜いて誌名の上に頭が重なる作りのため、画像で持つ。6種類を神社の並び順で回す
-  var COVER_V = '20261106c';
+  var COVER_V = '20261106d';
   function coverHTML(s) {
     var ks = s.komainu || [], gw = groupWord(ks);
     if (!ks[0]) return '';

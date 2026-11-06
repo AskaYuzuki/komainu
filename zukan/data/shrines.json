@@ -5430,5 +5430,160 @@
     "thumb": "images/thumbs/mitsumine-6.jpg?v=bd11d6f3"
    }
   ]
+ },
+ {
+  "id": "wara",
+  "name": "戸隠神社(郡上市和良町)",
+  "kana": "とがくしじんじゃ",
+  "prefecture": "岐阜県",
+  "city": "郡上市",
+  "lat": 35.744967,
+  "lng": 137.074257,
+  "geoApprox": false,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "wara-1",
+    "no": 1,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和3年",
+     "seireki": 1928
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "しっぽの先っちょがホイップクリームみたい。\n\n腕も、しゅっとしているのに、二の腕からむくっとしていてかわいい♡\n\n阿形の子はよくしゃべる。吽形の子はちょっと寡黙。\n\n木造の狛犬もいるらしいのだけど、発見できなかった。……残念。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/wara-1-01.jpg?v=ff148193",
+      "kind": "record",
+      "caption": "拝殿と1対の狛犬"
+     },
+     {
+      "src": "images/wara-1-02.jpg?v=e34cba9a",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "阿"
+     },
+     {
+      "src": "images/wara-1-03.jpg?v=50e1d5ff",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "阿"
+     },
+     {
+      "src": "images/wara-1-04.jpg?v=238c17bb",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/wara-1-05.jpg?v=4c2d3168",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "阿"
+     },
+     {
+      "src": "images/wara-1-06.jpg?v=aa37b4e6",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "阿"
+     },
+     {
+      "src": "images/wara-1-07.jpg?v=1966315e",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "阿"
+     },
+     {
+      "src": "images/wara-1-08.jpg?v=4797b07c",
+      "kind": "record",
+      "caption": "阿形の台座の銘(昭和3年 御即位記念)"
+     },
+     {
+      "src": "images/wara-1-09.jpg?v=ba593fda",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "吽"
+     },
+     {
+      "src": "images/wara-1-10.jpg?v=d4729b13",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "吽"
+     },
+     {
+      "src": "images/wara-1-11.jpg?v=fd544fd0",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "吽"
+     },
+     {
+      "src": "images/wara-1-12.jpg?v=a48898f2",
+      "kind": "art",
+      "title": "戸隠神社(郡上市和良町)",
+      "side": "吽"
+     },
+     {
+      "src": "images/wara-1-13.jpg?v=954a9eef",
+      "kind": "record",
+      "caption": "吽形の台座の銘(昭和57年 台座を更新)"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿の前、左右の台座の上にいる石造りの1対です。阿形が向かって右、吽形が向かって左にいます。台座には右に「奉」、左に「献」と刻まれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "阿形の台座の銘によると、昭和3年(1928)の御即位記念に、後藤藤一・酒井菊右衛門・大澤金次郎・長尾竹一の4人が寄進した狛犬です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "吽形の台座には「昭和五十七年九月吉日」の銘があり、このとき氏子中の寄進で台座が新しくされました。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "戸隠神社は手力男命をまつる社で、平安時代の美濃国神名帳に郡上の7社の1つとして名が見えます。信濃の戸隠神社から勧請されたと伝わり、明治7年(1874)に今の名に改められました。文禄3年(1594)の雷火で焼けた社殿は、慶長12年(1607)に郡上藩主の遠藤慶隆が建て直しています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜県神社庁「戸隠神社詳細」",
+        "url": "https://www.gifu-jinjacho.jp/syosai.php?shrno=1479"
+       }
+      ]
+     },
+     {
+      "text": "郡上市の文化財には、この神社の「山犬狛一対」が指定されています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜県神社庁「戸隠神社詳細」",
+        "url": "https://www.gifu-jinjacho.jp/syosai.php?shrno=1479"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "site"
+    },
+    "thumb": "images/thumbs/wara-1.jpg?v=85fafac1"
+   }
+  ]
  }
 ]

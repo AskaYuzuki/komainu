@@ -519,29 +519,13 @@
     v.innerHTML = html + '</div>';
   }
 
-  // 雑誌の表紙のような1枚(神社の表紙写真に、誌名・神社名・見出しを重ねる)。
-  // 雑誌ごとに雰囲気を変える4種類(和モダン・モード・ガーリー・きれいめ)を神社の並び順で回す。
-  // Instagram の1枚目は build/cover/make_covers.py が同じ形で作る(ここを変えたらあちらも合わせる)
-  var COVER_STYLES = ['wa', 'mode', 'sweet', 'clean'];
+  // 雑誌の表紙のような1枚。build/cover2/make.py が作った画像(Instagram の1枚目と同じもの)をそのまま出す。
+  // 狛犬を切り抜いて誌名の上に頭が重なる作りのため、画像で持つ。4種類(モード・ガーリー・きれいめ・和)を神社の並び順で回す
+  var COVER_V = '20261106b';
   function coverHTML(s) {
-    var p = shrineCover(s), ks = s.komainu || [], no = D.shrines.indexOf(s) + 1;
-    var st = COVER_STYLES[(no - 1) % COVER_STYLES.length];
-    var gw = groupWord(ks), name = s.name.replace(/[(（].*$/, ''), sub = s.name.length > name.length ? s.name.slice(name.length).replace(/[()（）]/g, '') : '';
-    var lines = ks.slice(0, 3).map(function (k) { return '<li>' + esc(k.label) + '</li>'; }).join('');
-    var mast = st === 'sweet' ? 'komainu' : 'KOMAINU';
-    var feat = { wa: '', mode: 'THE GUARDIANS', sweet: '会いに行きたい！', clean: "TODAY'S KOMAINU" }[st];
-    return '<figure class="cover v-' + st + '" style="--n:' + name.length + '">' +
-      (p ? '<img class="cover-img" src="' + esc(p.src) + '" alt="' + esc(s.name + 'の' + gw) + '"' + (p.focus ? ' style="object-position:' + (+p.focus[0]) + '% ' + (+p.focus[1]) + '%"' : '') + '>' : '<span class="cover-img noimg"></span>') +
-      '<div class="cover-shade" aria-hidden="true"></div>' +
-      '<div class="cover-top"><span class="cover-mast">' + mast + '</span><span class="cover-issue">No.' + (no < 10 ? '0' : '') + no + '　' + esc(s.prefecture || '') + '</span></div>' +
-      '<div class="cover-sub">弓月明日香が出会った' + esc(gw) + 'たち</div>' +
-      (feat ? '<div class="cover-feature">' + esc(feat) + '</div>' : '') +
-      '<h2 class="cover-name"><span class="cover-kana">' + esc(s.kana) + '</span><span class="cover-nm">' + esc(name) + '</span>' + (sub ? '<small>' + esc(sub) + '</small>' : '') + '</h2>' +
-      '<div class="cover-badge" aria-hidden="true"><b>' + ks.length + '</b>対</div>' +
-      '<div class="cover-foot"><span class="cover-pairs">' + ks.length + '対の' + esc(gw) + '</span>' +
-      (lines ? '<ul class="cover-lines">' + lines + '</ul>' : '') +
-      '<span class="cover-place">' + esc((s.prefecture || '') + (s.city || '')) + (has(s.visited) ? '　参拝 ' + esc(s.visited) : '') + '</span></div>' +
-      '</figure>';
+    var ks = s.komainu || [], gw = groupWord(ks);
+    if (!ks[0]) return '';
+    return '<figure class="cover cover-pic"><img class="cover-img" src="images/covers/' + esc(ks[0].id) + '.jpg?v=' + COVER_V + '" alt="' + esc(s.name + 'の' + gw + '(表紙)') + '"></figure>';
   }
 
   /* ---------- 神社の頁 ---------- */

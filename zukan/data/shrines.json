@@ -5652,7 +5652,7 @@
       "icon": true
      },
      {
-      "src": "images/minashi-1-06.jpg?v=88c43d3c",
+      "src": "images/minashi-1-06.jpg?v=f26698ad",
       "kind": "art",
       "title": "飛驒一宮水無神社",
       "side": "阿"
@@ -5664,7 +5664,7 @@
       "side": "阿"
      },
      {
-      "src": "images/minashi-1-08.jpg?v=dedb2dd0",
+      "src": "images/minashi-1-08.jpg?v=f68f8348",
       "kind": "art",
       "title": "飛驒一宮水無神社",
       "side": "阿"
@@ -5852,7 +5852,7 @@
       "side": "阿"
      },
      {
-      "src": "images/minashi-3-04.jpg?v=5c3e2208",
+      "src": "images/minashi-3-04.jpg?v=7c95857b",
       "kind": "art",
       "title": "飛驒一宮水無神社",
       "side": "阿"
@@ -5958,71 +5958,71 @@
       "caption": "一宮稲荷と1対の狐"
      },
      {
-      "src": "images/minashi-4-02.jpg?v=ea1e49b9",
-      "kind": "art",
-      "title": "飛驒一宮水無神社"
-     },
-     {
-      "src": "images/minashi-4-03.jpg?v=6a4bf11d",
-      "kind": "art",
-      "title": "飛驒一宮水無神社"
-     },
-     {
-      "src": "images/minashi-4-04.jpg?v=728dd8fb",
+      "src": "images/minashi-4-02.jpg?v=728dd8fb",
       "kind": "art",
       "title": "飛驒一宮水無神社",
+      "side": "左",
       "cover": true,
       "icon": true
      },
      {
-      "src": "images/minashi-4-05.jpg?v=08dd665a",
+      "src": "images/minashi-4-03.jpg?v=08dd665a",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "左"
      },
      {
-      "src": "images/minashi-4-06.jpg?v=79bbbbe8",
+      "src": "images/minashi-4-04.jpg?v=79bbbbe8",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "左"
      },
      {
-      "src": "images/minashi-4-07.jpg?v=f4c30c3b",
+      "src": "images/minashi-4-05.jpg?v=f4c30c3b",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "左"
      },
      {
-      "src": "images/minashi-4-08.jpg?v=5a464a94",
+      "src": "images/minashi-4-06.jpg?v=5a464a94",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "左"
      },
      {
-      "src": "images/minashi-4-09.jpg?v=e439c8a1",
+      "src": "images/minashi-4-07.jpg?v=e439c8a1",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "右"
      },
      {
-      "src": "images/minashi-4-10.jpg?v=db5a0e27",
+      "src": "images/minashi-4-08.jpg?v=db5a0e27",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "右"
      },
      {
-      "src": "images/minashi-4-11.jpg?v=3adfbcc0",
+      "src": "images/minashi-4-09.jpg?v=3adfbcc0",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "右"
      },
      {
-      "src": "images/minashi-4-12.jpg?v=164ce859",
+      "src": "images/minashi-4-10.jpg?v=164ce859",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "右"
      },
      {
-      "src": "images/minashi-4-13.jpg?v=6f169bd8",
+      "src": "images/minashi-4-11.jpg?v=6f169bd8",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "右"
      }
     ],
     "lore": [
      {
-      "text": "境内社の一宮稲荷の前、左右にいる石造りの1対の狐です。赤い前掛けをつけ、1体は巻物のようなものをくわえています。",
+      "text": "境内社の一宮稲荷の前、左右にいる石造りの1対の狐です。赤い前掛けをつけ、1体は巻物のようなものをくわえています。狛犬のような阿形・吽形の区別はありません。",
       "basis": "site",
       "refs": []
      },
@@ -6087,12 +6087,14 @@
      {
       "src": "images/minashi-5-06.jpg?v=e4fb2f70",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
      },
      {
       "src": "images/minashi-5-07.jpg?v=379e0e00",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
      },
      {
       "src": "images/minashi-5-08.jpg?v=37ec3256",
@@ -6121,7 +6123,8 @@
      {
       "src": "images/minashi-5-12.jpg?v=46628a1e",
       "kind": "art",
-      "title": "飛驒一宮水無神社"
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
      }
     ],
     "lore": [

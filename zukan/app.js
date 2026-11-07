@@ -522,7 +522,7 @@
 
   // 雑誌の表紙のような1枚。build/cover2/make4.py が作った画像(Instagram の1枚目と同じもの)をそのまま出す。
   // 狛犬を切り抜いて誌名の上に頭が重なる作りのため、画像で持つ。11種類を神社の並び順で回す
-  var COVER_V = '20261107a';
+  var COVER_V = '20261107b';
   function coverHTML(s) {
     var ks = s.komainu || [], gw = groupWord(ks);
     if (!ks[0]) return '';
@@ -553,7 +553,7 @@
     if (all.length) {
       html += '<section class="section"><h3 class="h3">写真一覧　' + all.length + '枚</h3><div class="thumbs">' + all.map(function (it, i) {
         return '<button type="button" data-sart="' + i + '" aria-label="' + esc(it.title + 'を大きく見る') + '"><img loading="lazy" decoding="async" src="' + esc(small(it.src)) + '" alt="">' +
-          (it.side === '阿' || it.side === '吽' ? '<span class="side">' + esc(it.side) + '</span>' : '') + '</button>';
+          (it.side ? '<span class="side">' + esc(it.side) + '</span>' : '') + '</button>';
       }).join('') + '</div></section>';
     }
     var links = '';
@@ -589,14 +589,14 @@
       if (recs.length) {
         recSection = '<section class="section"><h3 class="h3">記録写真　' + recs.length + '枚</h3><div class="thumbs">' + recs.map(function (p, i) {
           return '<button type="button" data-rec="' + i + '" aria-label="' + esc((p.caption || '記録写真') + 'を大きく見る') + '"><img loading="lazy" decoding="async" src="' + esc(small(p.src)) + '" alt="">' +
-            (p.side === '阿' || p.side === '吽' ? '<span class="side">' + esc(p.side) + '</span>' : '') + '</button>';
+            (p.side ? '<span class="side">' + esc(p.side) + '</span>' : '') + '</button>';
         }).join('') + '</div></section>';
       }
     } else if (recs.length) {
       // 作品写真がなければ記録写真を上に(1枚でも成り立つ)
       hero = '<div class="photos' + (recs.length === 1 ? ' single' : '') + '" id="photos">' + recs.map(function (p, i) {
         return '<figure><button type="button" data-rec="' + i + '" class="ph" aria-label="' + esc((p.caption || '記録写真') + 'を大きく見る') + '"><img src="' + esc(p.src) + '" alt="' + esc(p.caption || alt) + '"' + (i ? ' loading="lazy"' : '') + '>' +
-          (p.side === '阿' || p.side === '吽' ? '<span class="side">' + esc(p.side) + '</span>' : '') + '</button>' +
+          (p.side ? '<span class="side">' + esc(p.side) + '</span>' : '') + '</button>' +
           (has(p.caption) ? '<figcaption>' + esc(p.caption) + '</figcaption>' : '') + '</figure>';
       }).join('') + '</div>';
     } else {

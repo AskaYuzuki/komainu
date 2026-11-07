@@ -5585,5 +5585,560 @@
     "thumb": "images/thumbs/wara-1.jpg?v=85fafac1"
    }
   ]
+ },
+ {
+  "id": "minashi",
+  "name": "飛驒一宮水無神社",
+  "kana": "ひだいちのみやみなしじんじゃ",
+  "prefecture": "岐阜県",
+  "city": "高山市",
+  "lat": 36.0973,
+  "lng": 137.2531,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "minashi-1",
+    "no": 1,
+    "label": "神門の内側・左右",
+    "animal": "okami",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "wood",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "安永9年",
+     "seireki": 1780
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/minashi-1-01.jpg?v=b5bb1d6f",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-1-02.jpg?v=52c27e51",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-1-03.jpg?v=367759d3",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-1-04.jpg?v=6906ec8e",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-1-05.jpg?v=4b6da56c",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/minashi-1-06.jpg?v=88c43d3c",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-1-07.jpg?v=f349f2f0",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-1-08.jpg?v=dedb2dd0",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-1-09.jpg?v=8aab4df2",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-1-10.jpg?v=e22342e5",
+      "kind": "record",
+      "caption": "神門"
+     }
+    ],
+    "lore": [
+     {
+      "text": "神門の内側、左右に置かれた木彫りの1対です。狛犬ではなく山犬の姿をした「狛山犬」で、彩色がほどこされています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "この辺りには山岳信仰があり、三峯神社と同じように山犬をまつる信仰もあったことから、当社では狛犬のかわりに山犬の像が置かれています。",
+      "basis": "interview",
+      "refs": [
+       {
+        "title": "宮司さんのお話(あすかさんの聞き取り)",
+        "url": ""
+       }
+      ]
+     },
+     {
+      "text": "江戸時代の安永年間、飛騨で起きた大原騒動(百姓一揆)のときに、それまでの像は壊されてしまいました。そのあと社殿を改修した際に、狛山犬も新しく作られたといいます。宮司さんによると、安永9年(1780)のことです。",
+      "basis": "interview",
+      "refs": [
+       {
+        "title": "宮司さんのお話(あすかさんの聞き取り)",
+        "url": ""
+       }
+      ]
+     },
+     {
+      "text": "騒動に加わったとして当時の神職が処刑され、そのあと長野県のほうから新しい神職が迎えられました。",
+      "basis": "interview",
+      "refs": [
+       {
+        "title": "宮司さんのお話(あすかさんの聞き取り)",
+        "url": ""
+       }
+      ]
+     },
+     {
+      "text": "大原騒動は、飛騨郡代の大原彦四郎・亀五郎父子の時代に、明和8年(1771)から天明8年(1788)まで続いた百姓一揆です。安永2年(1773)の一揆では当社が農民の集まる場所となりました。安永7年(1778)に信濃から梶原家熊が迎えられ、境内の仏教の建物を取り払って社殿が改められています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「大原騒動」",
+        "url": "https://ja.wikipedia.org/wiki/大原騒動"
+       },
+       {
+        "title": "Wikipedia「飛騨一宮水無神社」",
+        "url": "https://ja.wikipedia.org/wiki/飛騨一宮水無神社"
+       },
+       {
+        "title": "紅葉葵「水無神社(高山市一之宮町)」",
+        "url": "https://momijiaoi.net/minashi/"
+       }
+      ]
+     },
+     {
+      "text": "拝殿前と鳥居の手前にいる石造りの狛山犬は、どちらもこの木彫りの1対を元に作られました。",
+      "basis": "interview",
+      "refs": [
+       {
+        "title": "宮司さんのお話(あすかさんの聞き取り)",
+        "url": ""
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "interview"
+    },
+    "thumb": "images/thumbs/minashi-1.jpg?v=32f3695f",
+    "animalLabel": "狛山犬"
+   },
+   {
+    "id": "minashi-2",
+    "no": 2,
+    "label": "拝殿前・左右",
+    "animal": "okami",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/minashi-2-01.jpg?v=e6146b9a",
+      "kind": "record",
+      "caption": "拝殿と1対の狛山犬"
+     },
+     {
+      "src": "images/minashi-2-02.jpg?v=14f6af4f",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/minashi-2-03.jpg?v=8f28aff3",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿の前、左右にいる石造りの1対です。阿形は左を向いて口を開き、吽形は右を向いて口を閉じています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "神門の内側にいる木彫りの狛山犬を元に、それを写して石で作られたものです。",
+      "basis": "interview",
+      "refs": [
+       {
+        "title": "宮司さんのお話(あすかさんの聞き取り)",
+        "url": ""
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/minashi-2.jpg?v=c1e60899",
+    "animalLabel": "狛山犬"
+   },
+   {
+    "id": "minashi-3",
+    "no": 3,
+    "label": "石鳥居の手前・左右",
+    "animal": "okami",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "平成29年5月",
+     "seireki": 2017
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/minashi-3-01.jpg?v=2c9780e2",
+      "kind": "record",
+      "caption": "石鳥居と1対の狛山犬"
+     },
+     {
+      "src": "images/minashi-3-02.jpg?v=12252495",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/minashi-3-03.jpg?v=ccbb42cf",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-3-04.jpg?v=5c3e2208",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-3-05.jpg?v=55bb4094",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-3-06.jpg?v=57822b6c",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-3-07.jpg?v=fef7f3c7",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-3-08.jpg?v=337e30fa",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-3-09.jpg?v=de0ea106",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-3-10.jpg?v=3ff9ceab",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-3-11.jpg?v=3e4fe22f",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "石鳥居の手前、左右にいる石造りの1対です。大きく丸い目と、炎のように広がるしっぽが目を引きます。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "平成29年(2017)の式年大祭の記念に寄進されたもので、神門の内側にいる木彫りの狛山犬を元に作られています。",
+      "basis": "interview",
+      "refs": [
+       {
+        "title": "宮司さんのお話(あすかさんの聞き取り)",
+        "url": ""
+       }
+      ]
+     },
+     {
+      "text": "このときの式年大祭は、昭和35年(1960)以来57年ぶりに行われたものでした。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "飛騨経済新聞「飛騨一宮水無神社で式年大祭 57年ぶり」",
+        "url": "https://hida.keizai.biz/headline/806/"
+       }
+      ]
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/minashi-3.jpg?v=07097239",
+    "animalLabel": "狛山犬"
+   },
+   {
+    "id": "minashi-4",
+    "no": 4,
+    "label": "一宮稲荷の社前・左右",
+    "animal": "fox",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "平成6年10月",
+     "seireki": 1994
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/minashi-4-01.jpg?v=f3d9bd14",
+      "kind": "record",
+      "caption": "一宮稲荷と1対の狐"
+     },
+     {
+      "src": "images/minashi-4-02.jpg?v=ea1e49b9",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-03.jpg?v=6a4bf11d",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-04.jpg?v=728dd8fb",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/minashi-4-05.jpg?v=08dd665a",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-06.jpg?v=79bbbbe8",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-07.jpg?v=f4c30c3b",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-08.jpg?v=5a464a94",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-09.jpg?v=e439c8a1",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-10.jpg?v=db5a0e27",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-11.jpg?v=3adfbcc0",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-12.jpg?v=164ce859",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-4-13.jpg?v=6f169bd8",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     }
+    ],
+    "lore": [
+     {
+      "text": "境内社の一宮稲荷の前、左右にいる石造りの1対の狐です。赤い前掛けをつけ、1体は巻物のようなものをくわえています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座の銘によると、平成6年(1994)10月に寄進されたものです。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/minashi-4.jpg?v=177b51c0"
+   },
+   {
+    "id": "minashi-5",
+    "no": 5,
+    "label": "白川神社の社前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/minashi-5-01.jpg?v=c0b76bbe",
+      "kind": "record",
+      "caption": "白川神社と1対の狛犬"
+     },
+     {
+      "src": "images/minashi-5-02.jpg?v=be89a5fd",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/minashi-5-03.jpg?v=d221dcac",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-5-04.jpg?v=7f70fd3d",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-5-05.jpg?v=721bd4d4",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/minashi-5-06.jpg?v=e4fb2f70",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-5-07.jpg?v=379e0e00",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     },
+     {
+      "src": "images/minashi-5-08.jpg?v=37ec3256",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-5-09.jpg?v=4363225c",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-5-10.jpg?v=b815d808",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-5-11.jpg?v=220423fc",
+      "kind": "art",
+      "title": "飛驒一宮水無神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/minashi-5-12.jpg?v=46628a1e",
+      "kind": "art",
+      "title": "飛驒一宮水無神社"
+     }
+    ],
+    "lore": [
+     {
+      "text": "境内社の白川神社の前、左右にいる石造りの1対です。高さ30cmほどの小さな狛犬で、台座の正面には「奉」「納」と刻まれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "奉納の年や作者は、調べがつきませんでした。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/minashi-5.jpg?v=c2ba5ef9"
+   }
+  ]
  }
 ]

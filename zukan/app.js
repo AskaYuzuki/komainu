@@ -76,6 +76,7 @@
   function animalId(k) { return has(k.animal) ? k.animal : 'komainu'; }
   function isKomainu(k) { return animalId(k) === 'komainu'; }
   function animalWord(k) {
+    if (k && k.animalLabel) return k.animalLabel;   // 狛山犬など(11/07)
     var id = animalId(k);
     if (id === 'komainu') return '狛犬';
     if (id === 'other') return '像';
@@ -606,7 +607,7 @@
 
     // 来歴：分かる項目だけ
     var facts = '';
-    var fb = k.factBasis || {}, kd = function (f) { return fb[f] === 'kuden' ? ' <span class="bt kuden">口伝</span>' : ''; };
+    var fb = k.factBasis || {}, kd = function (f) { return fb[f] === 'kuden' ? ' <span class="bt kuden">口伝</span>' : fb[f] === 'interview' ? ' <span class="bt site">宮司さんのお話</span>' : ''; };
     if (has(k.sculptor)) facts += '<dt>作者</dt><dd>' + (has(k.sculptorId) ? '<button type="button" data-bysculptor="' + esc(k.sculptorId) + '">' + esc(k.sculptor) + '</button>' : esc(k.sculptor)) + kd('sculptor') + '</dd>';
     var yt = yearText(k.year); if (yt) facts += '<dt>奉納年</dt><dd>' + esc(yt) + kd('year') + '</dd>';
     if (has(k.donor)) facts += '<dt>奉納者</dt><dd>' + esc(k.donor) + kd('donor') + '</dd>';
@@ -628,9 +629,10 @@
       if (x.basis === 'source') b = '<span class="bt">出典</span>' + (r || '');
       else if (x.basis === 'kuden') b = '<span class="bt kuden">口伝による</span>' + (r ? '<span class="ref">もとにした話：' + r + '</span>' : '');
       else if (x.basis === 'site') b = '<span class="bt site">現地で確認</span>';
+      else if (x.basis === 'interview') b = '<span class="bt site">宮司さんのお話</span>';   // 11/07 神社の方からの聞き取り
       return '<div class="lore"><p class="prose">' + esc(x.text) + '</p>' + (b ? '<p class="basis">' + b + '</p>' : '') + '</div>';
     }).join('');
-    if (lore.length) loreHtml = '<p class="lore-key">「出典」は案内板・銘・公式の資料など確かなものです。「口伝による」は言い伝えやネットの情報など、確かめられていない話です。</p>' + loreHtml;
+    if (lore.length) loreHtml = '<p class="lore-key">「出典」は案内板・銘・公式の資料など確かなものです。「口伝による」は言い伝えやネットの情報など、確かめられていない話です。「宮司さんのお話」は神社でうかがったお話です。</p>' + loreHtml;
     var hist = (facts ? '<dl class="facts">' + facts + '</dl>' : '') + (lore.length ? loreHtml : (has(k.history) ? '<p class="prose">' + esc(k.history) + '</p>' : '') + srcHtml);
 
     // 分類：登録されている項目だけ(空は出さない)

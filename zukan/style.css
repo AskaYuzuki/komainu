@@ -438,3 +438,6 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 .k-tile.on .cv { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
 .k-tile.on .t { color: var(--accent-ink); }
 .k-cover { margin-bottom: 14px; }
+
+/* 11/08 あすかさん：表紙の格子の上の注意書き */
+.k-hint { margin: -2px 0 14px; color: var(--muted); font-size: 12px; line-height: 1.5; }

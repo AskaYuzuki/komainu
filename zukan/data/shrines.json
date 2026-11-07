@@ -6143,5 +6143,172 @@
     "thumb": "images/thumbs/minashi-5.jpg?v=c2ba5ef9"
    }
   ]
+ },
+ {
+  "id": "hie",
+  "name": "飛驒山王宮日枝神社",
+  "kana": "ひださんのうぐうひえじんじゃ",
+  "prefecture": "岐阜県",
+  "city": "高山市",
+  "lat": 36.1338,
+  "lng": 137.2643,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "hie-1",
+    "no": 1,
+    "label": "二の鳥居の前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和4年1月",
+     "seireki": 1929
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "横から見ると特に顔の大きさが目立ちますが、真下から見ると今にも飛びかかってきそうな迫力に見える。遠近法をうまく使ってるなーという感じ。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hie-1-01.jpg?v=23e08c9f",
+      "kind": "record",
+      "caption": "二の鳥居と1対の狛犬"
+     },
+     {
+      "src": "images/hie-1-02.jpg?v=653d5291",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/hie-1-03.jpg?v=f2b38128",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/hie-1-04.jpg?v=e982c8ad",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/hie-1-05.jpg?v=495d000b",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-1-06.jpg?v=77a8d486",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-1-07.jpg?v=c06e2588",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-1-08.jpg?v=e9f8fd33",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-1-09.jpg?v=ebf1a71e",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-1-10.jpg?v=16fd5766",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-1-11.jpg?v=362b551c",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-1-12.jpg?v=4f526b6d",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-1-13.jpg?v=7a065850",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     }
+    ],
+    "lore": [
+     {
+      "text": "二の鳥居の前、左右の高い台座の上にいる石造りの1対です。阿形が向かって右、吽形が向かって左にいて、台座には「奉献」と刻まれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "吽形の頭には、角が1本あります。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座の裏の銘によると、昭和4年(1929)1月に還暦の記念として奉納されたものです。石工の名も刻まれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "この狛犬を昭和4年の建立、吽形を一角獣と紹介している参拝記もあります。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "緒花芽の神社･仏閣･御朱印紀行「飛騨山王宮 日枝神社」",
+        "url": "https://omairi44.livedoor.blog/archives/16665563.html"
+       }
+      ]
+     },
+     {
+      "text": "日枝神社は、永治元年(1141)に飛騨守の平時輔が近江坂本から日吉山王宮を迎えたのが始まりとされ、山王さまとして親しまれてきました。慶長5年(1600)に今の城山へ移され、高山城の守り神、高山の南半分の産土神と定められています。明治元年(1868)の神仏分離で、今の日枝神社の名になりました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "飛驒山王宮日枝神社 公式サイト「由緒」",
+        "url": "https://hiejinja.com/history/"
+       }
+      ]
+     },
+     {
+      "text": "春の高山祭では、祭り屋台や獅子舞などが町を彩ります。平成28年(2016)には「高山祭の屋台行事」がユネスコの無形文化遺産に登録されました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "飛驒山王宮日枝神社 公式サイト「由緒」",
+        "url": "https://hiejinja.com/history/"
+       },
+       {
+        "title": "飛驒山王宮日枝神社 公式サイト「春の高山祭」",
+        "url": "https://hiejinja.com/fes/"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "site"
+    },
+    "thumb": "images/thumbs/hie-1.jpg?v=c67b4d82"
+   }
+  ]
  }
 ]

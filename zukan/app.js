@@ -521,7 +521,7 @@
 
   // 雑誌の表紙のような1枚。build/cover2/make4.py が作った画像(Instagram の1枚目と同じもの)をそのまま出す。
   // 狛犬を切り抜いて誌名の上に頭が重なる作りのため、画像で持つ。11種類を神社の並び順で回す
-  var COVER_V = '20261108a';
+  var COVER_V = '20261108b';
   // 対ごとの表紙(Instagram の各投稿の1枚目)。一覧には小さい版(images/covers/s/)を使う
   function coverSrc(k, sm) { return 'images/covers/' + (sm ? 's/' : '') + encodeURIComponent(k.id) + '.jpg?v=' + COVER_V; }
   function coverImg(k, alt, lazy) {
@@ -549,7 +549,7 @@
     });
     var html = '<div class="pad"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
       coverHTML(s) +
-      '<section class="section first"><h3 class="h3">この神社の' + gw + '　' + ks.length + '対</h3><div class="k-grid">' +
+      '<section class="section first"><h3 class="h3">この神社の' + gw + '　' + ks.length + '対</h3><p class="k-hint">各マガジンをタップすると詳細が見られます</p><div class="k-grid">' +
       ks.map(function (k) {
         var sub = [isKomainu(k) ? '' : animalWord(k), styleNames(k), termName('poses', k.pose), termName('materials', k.material)].filter(Boolean).join('、');
         return '<button class="k-tile' + (focus === k.id ? ' on' : '') + '" type="button" data-k="' + esc(k.id) + '"><span class="cv">' + coverImg(k, s.name + ' ' + k.label + 'の' + animalWord(k) + '(表紙)', true) + '</span>' +

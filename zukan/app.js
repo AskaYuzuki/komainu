@@ -244,7 +244,7 @@
     var n = (s.komainu || []).length, art = 0;
     (s.komainu || []).forEach(function (k) { art += artOf(k).length; });
     return '<li><button class="s-row" type="button" data-shrine="' + esc(s.id) + '">' +
-      '<span class="s-ph">' + imgTag(shrineCover(s), '', '', true) + '</span>' +
+      '<span class="s-ph">' + ((s.komainu || [])[0] ? coverImg(s.komainu[0], '', true) : imgTag(shrineCover(s), '', '', true)) + '</span>' +
       '<span class="s-tx"><span class="kana">' + esc(s.kana) + '</span><span class="nm">' + esc(s.name) + '</span>' +
       '<span class="meta">' + esc((s.prefecture || '') + (s.city || '')) + '</span>' +
       '<span class="s-facts"><span>' + n + '対</span>' + (art ? '<span>作品 ' + art + '枚</span>' : '') + '</span></span>' +
@@ -277,8 +277,7 @@
     var k = e.k;
     var sub = [isKomainu(k) ? '' : animalWord(k), styleNames(k), termName('poses', k.pose)].filter(Boolean).join('、');
     return '<div class="card"><button class="card-main" type="button" data-k="' + esc(k.id) + '">' +
-      '<span class="ph">' + imgTag(thumbOf(k), e.s.name + ' ' + k.label + 'の' + animalWord(k), '', true) + '<span class="no">' + esc(k.no) + '</span>' +
-      (artOf(k).length ? '<span class="art-mark">作品</span>' : '') + '</span>' +
+      '<span class="ph">' + coverImg(k, e.s.name + ' ' + k.label + 'の' + animalWord(k), true) + '</span>' +
       '<span class="t">' + esc(k.label) + '</span>' + (sub ? '<span class="s">' + esc(sub) + '</span>' : '') + '</button>' +
       (hideShrine ? '' : '<button class="card-shrine" type="button" data-shrine="' + esc(e.s.id) + '">' + esc(e.s.name) + '</button>') + '</div>';
   }
@@ -522,7 +521,13 @@
 
   // 雑誌の表紙のような1枚。build/cover2/make4.py が作った画像(Instagram の1枚目と同じもの)をそのまま出す。
   // 狛犬を切り抜いて誌名の上に頭が重なる作りのため、画像で持つ。11種類を神社の並び順で回す
-  var COVER_V = '20261107b';
+  var COVER_V = '20261107c';
+  // 対ごとの表紙(Instagram の各投稿の1枚目)。一覧には小さい版(images/covers/s/)を使う
+  function coverSrc(k, sm) { return 'images/covers/' + (sm ? 's/' : '') + encodeURIComponent(k.id) + '.jpg?v=' + COVER_V; }
+  function coverImg(k, alt, lazy) {
+    return '<img class="cv-img" src="' + coverSrc(k, true) + '" alt="' + esc(alt || '') + '"' + (lazy ? ' loading="lazy"' : '') + ' decoding="async"' +
+      ' onerror="this.onerror=null;this.className=\'cv-img fallback\';this.src=this.dataset.fb" data-fb="' + esc(small((thumbOf(k) || {}).src || '')) + '">';
+  }
   function coverHTML(s) {
     var ks = s.komainu || [], gw = groupWord(ks);
     if (!ks[0]) return '';
@@ -544,11 +549,11 @@
     });
     var html = '<div class="pad"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
       coverHTML(s) +
-      '<section class="section first"><h3 class="h3">この神社の' + gw + '　' + ks.length + '対</h3><div class="k-list">' +
+      '<section class="section first"><h3 class="h3">この神社の' + gw + '　' + ks.length + '対</h3><div class="k-grid">' +
       ks.map(function (k) {
         var sub = [isKomainu(k) ? '' : animalWord(k), styleNames(k), termName('poses', k.pose), termName('materials', k.material)].filter(Boolean).join('、');
-        return '<button class="k-row' + (focus === k.id ? ' on' : '') + '" type="button" data-k="' + esc(k.id) + '">' + imgTag(thumbOf(k), '', '', true) +
-          '<span><span class="t"><span class="num">' + esc(k.no) + '</span>' + esc(k.label) + '</span>' + (sub ? '<br><span class="s">' + esc(sub) + '</span>' : '') + '</span></button>';
+        return '<button class="k-tile' + (focus === k.id ? ' on' : '') + '" type="button" data-k="' + esc(k.id) + '"><span class="cv">' + coverImg(k, s.name + ' ' + k.label + 'の' + animalWord(k) + '(表紙)', true) + '</span>' +
+          '<span class="t"><span class="num">' + esc(k.no) + '</span>' + esc(k.label) + '</span>' + (sub ? '<span class="s">' + esc(sub) + '</span>' : '') + '</button>';
       }).join('') + '</div></section>';
     if (all.length) {
       html += '<section class="section"><h3 class="h3">写真一覧　' + all.length + '枚</h3><div class="thumbs">' + all.map(function (it, i) {
@@ -654,6 +659,7 @@
     if (g0) acct += '<button class="btn" type="button" data-showmap="' + esc(s.id) + '" data-geo="' + esc(pointKey(g0, s)) + '">' + ICON.map + '地図で見る</button>';
 
     v.innerHTML = '<div class="pad"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
+      '<figure class="cover cover-pic k-cover"><img class="cover-img" src="' + coverSrc(k) + '" alt="' + esc(alt + '(表紙)') + '" onerror="this.parentNode.style.display=\'none\'"></figure>' +
       hero + dots +
       '<div class="k-title"><span class="meta"><button type="button" data-shrine="' + esc(s.id) + '">' + esc(s.name) + '</button>　' + esc(s.prefecture || '') + '</span>' +
       '<h2 class="h2"><span class="num">' + esc(k.no) + '</span>' + esc(k.label) + 'の' + esc(word) + '</h2></div>' +

@@ -6159,7 +6159,7 @@
    {
     "id": "hie-1",
     "no": 1,
-    "label": "二の鳥居の前・左右",
+    "label": "一の鳥居の前・左右",
     "animal": "komainu",
     "pos": null,
     "regionalTypes": [],
@@ -6180,7 +6180,7 @@
      {
       "src": "images/hie-1-01.jpg?v=23e08c9f",
       "kind": "record",
-      "caption": "二の鳥居と1対の狛犬"
+      "caption": "一の鳥居と1対の狛犬"
      },
      {
       "src": "images/hie-1-02.jpg?v=653d5291",
@@ -6205,12 +6205,14 @@
      {
       "src": "images/hie-1-05.jpg?v=495d000b",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
      },
      {
       "src": "images/hie-1-06.jpg?v=77a8d486",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
      },
      {
       "src": "images/hie-1-07.jpg?v=c06e2588",
@@ -6227,12 +6229,14 @@
      {
       "src": "images/hie-1-09.jpg?v=ebf1a71e",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      },
      {
       "src": "images/hie-1-10.jpg?v=16fd5766",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      },
      {
       "src": "images/hie-1-11.jpg?v=362b551c",
@@ -6255,7 +6259,7 @@
     ],
     "lore": [
      {
-      "text": "二の鳥居の前、左右の高い台座の上にいる石造りの1対です。阿形が向かって右、吽形が向かって左にいて、台座には「奉献」と刻まれています。",
+      "text": "一の鳥居の前、左右の高い台座の上にいる石造りの1対です。阿形が向かって右、吽形が向かって左にいて、台座には「奉献」と刻まれています。",
       "basis": "site",
       "refs": []
      },

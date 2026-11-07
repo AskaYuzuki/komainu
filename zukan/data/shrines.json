@@ -6165,7 +6165,7 @@
     "regionalTypes": [],
     "pose": "osuwari",
     "material": "stone",
-    "sculptor": "",
+    "sculptor": "宮原右次郎",
     "sculptorId": "",
     "year": {
      "wareki": "昭和4年1月",
@@ -6269,7 +6269,7 @@
       "refs": []
      },
      {
-      "text": "台座の裏の銘によると、昭和4年(1929)1月に還暦の記念として奉納されたものです。石工の名も刻まれています。",
+      "text": "台座の裏の銘によると、昭和4年(1929)1月に還暦の記念として奉納されたもので、石工は宮原右次郎です。",
       "basis": "site",
       "refs": []
      },
@@ -6309,7 +6309,8 @@
      }
     ],
     "factBasis": {
-     "year": "site"
+     "year": "site",
+     "sculptor": "site"
     },
     "thumb": "images/thumbs/hie-1.jpg?v=c67b4d82"
    }

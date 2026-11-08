@@ -521,7 +521,7 @@
 
   // 雑誌の表紙のような1枚。build/cover2/make4.py が作った画像(Instagram の1枚目と同じもの)をそのまま出す。
   // 狛犬を切り抜いて誌名の上に頭が重なる作りのため、画像で持つ。11種類を神社の並び順で回す
-  var COVER_V = '20261108i';
+  var COVER_V = '20261108j';
   // 対ごとの表紙(Instagram の各投稿の1枚目)。一覧には小さい版(images/covers/s/)を使う
   function coverSrc(k, sm) { return 'images/covers/' + (sm ? 's/' : '') + encodeURIComponent(k.id) + '.jpg?v=' + COVER_V; }
   function coverImg(k, alt, lazy) {

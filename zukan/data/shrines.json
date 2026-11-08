@@ -6399,6 +6399,122 @@
     ],
     "factBasis": {},
     "thumb": "images/thumbs/hie-2.jpg?v=1d9652f6"
+   },
+   {
+    "id": "hie-3",
+    "no": 3,
+    "label": "富士社の前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "現在の拝殿前には狛犬はおらず、移築された旧社殿(現在の富士社)の前には狛犬がいるという不思議？な配置。\n\n富士社前のこの狛犬は、おそらく移築の際に社殿と一緒に今の配置になったのだろう。\n\n吽形の子の、ツン！とした角と、丸みのあるフォルムがかわいらしい。直毛感も感じられる。スンッてお澄まししてるところもかわいくてツボ♡\n\n阿形の子は、目玉に中心点があるのがめずらしい。吽形には角がなく、巻き毛のカールも強め。「んがっ！」って言ってた笑",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hie-3-01.jpg?v=4ddb041a",
+      "kind": "record",
+      "caption": "富士社(旧本殿)と1対の狛犬"
+     },
+     {
+      "src": "images/hie-3-02.jpg?v=f22bc1e1",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-3-03.jpg?v=b0fa8bc8",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-3-04.jpg?v=92d47556",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-3-05.jpg?v=5a7db81d",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-3-06.jpg?v=e8b94f02",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-3-07.jpg?v=a8f447a3",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/hie-3-08.jpg?v=870f9b24",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/hie-3-09.jpg?v=1f8fae29",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/hie-3-10.jpg?v=6c3d3b9f",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/hie-3-11.jpg?v=ca60305c",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     }
+    ],
+    "lore": [
+     {
+      "text": "石段を上った富士社の前、左右の台座の上にいる石造りの1対です。阿形が向かって右、吽形が向かって左にいます。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "吽形の頭には角が1本あり、阿形の目玉には中心に小さな点が彫られています。阿形のたてがみは巻き毛が強く渦を巻いています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "富士社の社殿は、日枝神社のもとの本殿です。昭和13年(1938)に新しい本殿ができたとき、それまでの本殿が富士神社になりました。今の拝殿の前には狛犬はいません。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "飛驒山王宮日枝神社 公式サイト「由緒」",
+        "url": "https://hiejinja.com/history/"
+       }
+      ]
+     },
+     {
+      "text": "奉納の年や作者は、調べがつきませんでした。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/hie-3.jpg?v=bc3a1aed"
    }
   ]
  }

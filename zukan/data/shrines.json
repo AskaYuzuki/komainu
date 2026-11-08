@@ -6768,5 +6768,139 @@
     "thumb": "images/thumbs/hie-5.jpg?v=8301333c"
    }
   ]
+ },
+ {
+  "id": "chui",
+  "name": "白山中居神社",
+  "kana": "はくさんちゅうきょじんじゃ",
+  "prefecture": "岐阜県",
+  "city": "郡上市",
+  "lat": 35.9963,
+  "lng": 136.755,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "chui-1",
+    "no": 1,
+    "label": "鳥居の前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "ブロンズの鳥居と紅葉、黒みを帯びた狛犬とのコントラストがとても美しい。\n\n阿形の巻き毛のくりくりした感じと、吽形のストレートヘアの具合がよくわかる。どちらの狛犬も角はない。\n\n耳も吽形は立ち耳で、阿形の耳は寝てる。ぺたーっと寝てるところがかわいい。\n\n顔立ちではっきりと違う生き物であることがわかるようにつくられている。\n\n私の好きなタイプの狛犬♡",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/chui-1-01.jpg?v=22d2216e",
+      "kind": "record",
+      "caption": "鳥居と1対の狛犬"
+     },
+     {
+      "src": "images/chui-1-02.jpg?v=0587ef04",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/chui-1-03.jpg?v=15e82112",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/chui-1-04.jpg?v=025681fb",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/chui-1-05.jpg?v=0383d570",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/chui-1-06.jpg?v=9c4a0efe",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/chui-1-07.jpg?v=c3c29b37",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/chui-1-08.jpg?v=21b18fe7",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/chui-1-09.jpg?v=44e2aaf1",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/chui-1-10.jpg?v=7823b6e3",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     }
+    ],
+    "lore": [
+     {
+      "text": "鳥居の前、左右の台座の上にいる石造りの1対です。黒みを帯びた石で、両方とも角はありません。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "阿形は巻き毛がくりくりとして耳が寝ており、吽形はまっすぐな毛並みで耳が立っています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "白山中居神社は、景行天皇12年に本殿が設けられたと伝わる古社で、養老元年(717)に泰澄大師が白山を開いたとき、3年のあいだ当社にとどまって白山への参道と社を整えたとされます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜県神社庁「白山中居神社詳細」",
+        "url": "https://www.gifu-jinjacho.jp/syosai.php?shrno=1541"
+       }
+      ]
+     },
+     {
+      "text": "今の本殿は安政2年から3年(1855〜1856)にかけて建てられ、彫刻は後藤簾之助と諏訪の立川和四郎が手がけました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜県神社庁「白山中居神社詳細」",
+        "url": "https://www.gifu-jinjacho.jp/syosai.php?shrno=1541"
+       }
+      ]
+     },
+     {
+      "text": "狛犬の奉納の年や作者は、調べがつきませんでした。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/chui-1.jpg?v=22d433c4"
+   }
+  ]
  }
 ]

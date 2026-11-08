@@ -6313,6 +6313,92 @@
      "sculptor": "site"
     },
     "thumb": "images/thumbs/hie-1.jpg?v=c67b4d82"
+   },
+   {
+    "id": "hie-2",
+    "no": 2,
+    "label": "車御祓所の前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "wood",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "30cmくらいの小さな木彫りの狛犬。\n\n粗削りで素朴ながら、味のあるつくりで目を奪われます。\n\n車の御祓所に狛犬ってちょっとめずらしいですね。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hie-2-01.jpg?v=0bf3bfe8",
+      "kind": "record",
+      "caption": "車御祓所と1対の狛犬"
+     },
+     {
+      "src": "images/hie-2-02.jpg?v=e3b86b74",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-2-03.jpg?v=f42db6ac",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/hie-2-04.jpg?v=99ea3542",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-2-05.jpg?v=b2bfcd2c",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-2-06.jpg?v=6215e5bb",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-2-07.jpg?v=40bfd00f",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-2-08.jpg?v=5904737c",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-2-09.jpg?v=92d072ea",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     }
+    ],
+    "lore": [
+     {
+      "text": "境内の車御祓所(車のお祓いをする所)の前、左右の木の台にいる木彫りの1対です。高さは30cmほどです。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "のみの跡を残した粗削りのつくりで、尾は炎のように上へ立ち上がっています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "奉納の年や作者は、調べがつきませんでした。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/hie-2.jpg?v=1d9652f6"
    }
   ]
  }

@@ -246,7 +246,9 @@
   function shrineRow(s) {
     var n = (s.komainu || []).length, art = 0;
     (s.komainu || []).forEach(function (k) { art += artOf(k).length; });
-    return '<li><button class="s-row" type="button" data-shrine="' + esc(s.id) + '">' +
+    // 11/08 あすかさん：狛犬が1対だけの神社は、一覧から直接その狛犬の頁へ
+    var tgt = n === 1 ? 'data-k="' + esc(s.komainu[0].id) + '"' : 'data-shrine="' + esc(s.id) + '"';
+    return '<li><button class="s-row" type="button" ' + tgt + '>' +
       '<span class="s-ph">' + ((s.komainu || [])[0] ? coverImg(s.komainu[0], '', true) : imgTag(shrineCover(s), '', '', true)) + '</span>' +
       '<span class="s-tx"><span class="kana">' + esc(s.kana) + '</span><span class="nm">' + esc(s.name) + '</span>' +
       '<span class="meta">' + esc((s.prefecture || '') + (s.city || '')) + '</span>' +
@@ -513,7 +515,7 @@
   function renderGallery() {
     var v = $('#view-gallery');
     galleryItems = artItems(ALL);
-    var html = '<div class="pad gallery-pad"><div class="gal-head"><h2 class="h2">作品写真</h2><span class="meta">' + galleryItems.length + '枚　押すと大きく見られます</span></div>';
+    var html = '<div class="pad gallery-pad"><div class="gal-head"><h2 class="gal-title">Gallery</h2><span class="gal-sub">作品写真</span><span class="meta">' + galleryItems.length + '枚　押すと大きく見られます</span></div>';   // 11/08 あすかさん：上に「Gallery」
     if (!galleryItems.length) html += '<div class="empty"><p>作品写真はまだありません。写真の kind を "art" にすると、ここに並びます。</p></div>';
     else html += '<div class="masonry">' + galleryItems.map(function (it, i) {
       return '<button class="g-item" type="button" data-gal="' + i + '"><img loading="lazy" decoding="async" src="' + esc(small(it.src)) + '" alt="' + esc(it.title || it.meta) + '">' +

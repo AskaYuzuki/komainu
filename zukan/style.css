@@ -8,9 +8,11 @@
   --line: #cfd5cf;
   --moss: #56704f;        /* 苔 */
   --moss-soft: #dfe6d9;
-  --accent: #81d4ca;      /* PANTONE 1837 近似 */
-  --accent-ink: #1f6f66;  /* 明るい地の上で読める濃さ */
-  --on-accent: #12322e;
+  /* 11/08 23:24 あすかさん：ミントは #E6F6F4 ならよい(多用しない)。#81D4CA は色が強すぎるので使わない。ボタンの文字色は墨に */
+  --accent: #e6f6f4;      /* 淡いミント。面にだけ使う */
+  --accent-line: #c3e2dd; /* 淡いミントの面のふち */
+  --accent-ink: #35514c;  /* リンク・選択中の文字(墨に緑を少し) */
+  --on-accent: #22302b;   /* 淡いミントの面の上の文字＝墨 */
   --stone: #8f9c95;
   --stone-deep: #66746d;
   --sample: #e9e2c8;
@@ -26,7 +28,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #131917; --surface: #1b2320; --ink: #e2e8e4; --muted: #9daba5; --line: #2e3a36;
-    --moss: #8fae84; --moss-soft: #24302a; --accent: #81d4ca; --accent-ink: #81d4ca; --on-accent: #0f2a27;
+    --moss: #8fae84; --moss-soft: #24302a; --accent: #24403b; --accent-line: #3d5f58; --accent-ink: #cfe9e4; --on-accent: #e6f6f4;
     --stone: #56645e; --stone-deep: #7d8b85; --sample: #3a3522; --sample-ink: #e6d9a6;
     --shadow: 0 6px 24px rgba(0, 0, 0, .45);
     color-scheme: dark;
@@ -34,7 +36,7 @@
 }
 :root[data-theme="dark"] {
   --bg: #131917; --surface: #1b2320; --ink: #e2e8e4; --muted: #9daba5; --line: #2e3a36;
-  --moss: #8fae84; --moss-soft: #24302a; --accent: #81d4ca; --accent-ink: #81d4ca; --on-accent: #0f2a27;
+  --moss: #8fae84; --moss-soft: #24302a; --accent: #24403b; --accent-line: #3d5f58; --accent-ink: #cfe9e4; --on-accent: #e6f6f4;
   --stone: #56645e; --stone-deep: #7d8b85; --sample: #3a3522; --sample-ink: #e6d9a6;
   --shadow: 0 6px 24px rgba(0, 0, 0, .45);
   color-scheme: dark;
@@ -116,7 +118,7 @@ main { position: relative; overflow: hidden; min-height: 0; }
   text-decoration: none; font-size: 14px;
 }
 .btn svg { width: 18px; height: 18px; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 700; }
+.btn.primary { background: var(--accent); border-color: var(--accent-line); color: var(--on-accent); font-weight: 700; }
 .btn[disabled], .btn.is-off { opacity: .55; cursor: default; }
 .chips-active { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .chip {
@@ -125,7 +127,7 @@ main { position: relative; overflow: hidden; min-height: 0; }
   font-size: 13px; cursor: pointer; line-height: 1.3; text-align: left;
 }
 .chip .n { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent-line); color: var(--on-accent); }
 .chip[aria-pressed="true"] .n { color: var(--on-accent); }
 .chip.zero { opacity: .5; }
 .chip.removable::after { content: ""; width: 10px; height: 10px; margin-left: 2px;
@@ -169,11 +171,11 @@ main { position: relative; overflow: hidden; min-height: 0; }
 .pin img, .pin .pin-noimg { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; pointer-events: none; user-select: none; }
 .pin .cnt {
   position: absolute; top: -6px; right: -8px; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 11px;
-  display: grid; place-items: center; background: var(--accent); color: var(--on-accent); border: 2px solid var(--pin-rim);
+  display: grid; place-items: center; background: var(--ink); color: var(--surface); border: 2px solid var(--pin-rim);
   font: 700 12px/1 var(--font-body); font-variant-numeric: tabular-nums;
 }
 .pin.cluster { width: 52px; height: 52px; }
-.pin.on { z-index: 2; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-ink), 0 2px 10px rgba(0,0,0,.4); }
+.pin.on { z-index: 2; border-color: var(--pin-rim); box-shadow: 0 0 0 3px var(--accent-ink), 0 2px 10px rgba(0,0,0,.4); }
 .pin:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 2px; }
 .map-fallback .pin { position: absolute; transform: translate(-50%, -50%); }
 .map-card {
@@ -208,7 +210,7 @@ mark { background: none; color: var(--accent-ink); font-weight: 700; }
 
 /* 神社の頁 */
 .back { position: sticky; top: 10px; z-index: 6; display: inline-flex; align-items: center; gap: 6px; min-height: 44px;
-  background: var(--surface); border: 1.5px solid var(--accent); color: var(--accent-ink); border-radius: 999px;
+  background: var(--surface); border: 1.5px solid var(--accent-line); color: var(--ink); border-radius: 999px;
   padding: 8px 18px 8px 12px; margin-bottom: 14px; cursor: pointer; font-size: 15px; font-weight: 700; letter-spacing: .04em;
   box-shadow: 0 2px 10px rgba(0,0,0,.12); }
 .back:hover { background: var(--accent); color: var(--on-accent); }
@@ -226,7 +228,7 @@ mark { background: none; color: var(--accent-ink); font-weight: 700; }
 .plan .p-tree { fill: var(--moss); opacity: .45; stroke: var(--moss); }
 .plan text { fill: var(--muted); font-family: var(--font-body); font-size: 11px; }
 .plan .p-mk { cursor: pointer; }
-.plan .p-mk circle.d { fill: var(--accent); stroke: var(--surface); stroke-width: 2.5; }
+.plan .p-mk circle.d { fill: var(--accent); stroke: var(--accent-ink); stroke-width: 2.5; }
 .plan .p-mk text { fill: var(--on-accent); font-size: 12px; font-weight: 700; }
 .plan .p-mk:focus-visible circle.d, .plan .p-mk:hover circle.d { stroke: var(--ink); }
 .plan-legend { color: var(--muted); font-size: 12px; margin: 6px 4px 0; }
@@ -447,10 +449,10 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 .like { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; }
 .like svg { width: 18px; height: 18px; fill: none; stroke: var(--accent-ink); stroke-width: 2; }
 .like b { font-weight: 700; min-width: 1ch; }
-.like.on { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
-.like.on svg { fill: var(--on-accent); stroke: var(--on-accent); }
+.like.on { border-color: var(--accent-line); background: var(--accent); color: var(--on-accent); }
+.like.on svg { fill: #c4566a; stroke: #c4566a; }
 .c-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-.c-list li { border-left: 3px solid var(--accent); padding: 2px 0 2px 12px; }
+.c-list li { border-left: 3px solid var(--accent-line); padding: 2px 0 2px 12px; }
 .c-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 13px; color: var(--muted); }
 .c-name { font-family: var(--font-display); font-weight: 700; color: var(--ink); }
 .c-text { margin: 4px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--font-display); line-height: 1.7; }
@@ -467,3 +469,8 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 .c-state { font-size: 12px; }
 .c-state.hold { color: #a0522d; font-weight: 700; }
 .c-ops { display: flex; gap: 8px; margin-top: 6px; }
+
+/* Gallery の見出し(11/08) */
+.gal-title { font-family: "Cormorant Garamond", "Playfair Display", var(--font-display); font-weight: 600; font-size: 40px; line-height: 1; letter-spacing: .06em; margin: 4px 0 2px; color: var(--ink); }
+.gal-sub { font-family: var(--font-display); font-size: 14px; letter-spacing: .1em; color: var(--muted); }
+.gal-head { flex-direction: column; align-items: flex-start; gap: 4px; }

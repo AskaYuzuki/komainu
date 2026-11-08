@@ -455,12 +455,14 @@
       "src": "images/tsukubasan-2-01.jpg?v=ed12a036",
       "kind": "art",
       "cover": true,
-      "title": "筑波山神社 男体山本殿"
+      "title": "筑波山神社 男体山本殿",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-2-03.jpg?v=d247c808",
       "kind": "art",
-      "title": "筑波山神社 男体山本殿"
+      "title": "筑波山神社 男体山本殿",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-2-02.jpg?v=bf5ae782",
@@ -472,21 +474,25 @@
      {
       "src": "images/tsukubasan-2-04.jpg?v=439033b9",
       "kind": "record",
-      "caption": "賽銭箱の横に"
+      "caption": "賽銭箱の横に",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-2-05.jpg?v=69c4649b",
       "kind": "record",
-      "caption": "御本殿と狛犬の位置"
+      "caption": "御本殿と狛犬の位置",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-2-r1.jpg?v=908ea3bd",
       "kind": "record",
-      "caption": "御本殿の右前"
+      "caption": "御本殿の右前",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-2-a01.jpg?v=d9cbff63",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      }
     ],
     "geo": {

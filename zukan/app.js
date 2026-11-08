@@ -203,18 +203,20 @@
     state.tab = tab; state.detail = detail || null;
     if (push !== false) stack.push({ tab: tab, detail: state.detail });
     render();
-    setHash(detail ? (detail.type === 'shrine' ? 's-' : 'k-') + detail.id : tab);
+    setHash(hashOf(detail, tab));
   }
+  function hashOf(d, tab) { return d ? (d.type === 'kanri' ? 'kanri' : (d.type === 'shrine' ? 's-' : 'k-') + d.id) : tab; }
   function back() {
     stack.pop();
     var prev = stack[stack.length - 1];
-    if (prev) { state.tab = prev.tab; state.detail = prev.detail; render(); setHash(prev.detail ? (prev.detail.type === 'shrine' ? 's-' : 'k-') + prev.detail.id : prev.tab); }
+    if (prev) { state.tab = prev.tab; state.detail = prev.detail; render(); setHash(hashOf(prev.detail, prev.tab)); }
     else go(state.tab, null);
   }
   function fromHash() {
     var h = (location.hash || '').replace(/^#/, '');
     if (/^s-/.test(h) && shrineById(h.slice(2))) return { tab: 'shrines', detail: { type: 'shrine', id: h.slice(2) } };
     if (/^k-/.test(h) && BY_ID[h.slice(2)]) return { tab: 'search', detail: { type: 'komainu', id: h.slice(2) } };
+    if (h === 'kanri') return { tab: 'shrines', detail: { type: 'kanri' } };   // あすかさんの管理画面(コメントを消す)
     if (h === 'list') return { tab: 'search', detail: null };   // 旧版のリンク
     if (TABS.indexOf(h) >= 0) return { tab: h, detail: null };
     return null;
@@ -228,6 +230,7 @@
     if (state.detail) {
       var v = $('#view-detail'); v.hidden = false;
       if (state.detail.type === 'shrine') renderShrine(v, shrineById(state.detail.id), state.detail.focus);
+      else if (state.detail.type === 'kanri') renderKanri(v);
       else renderKomainu(v, BY_ID[state.detail.id]);
       v.scrollTop = 0;
       return;
@@ -663,17 +666,20 @@
       hero + dots +
       '<div class="k-title"><span class="meta"><button type="button" data-shrine="' + esc(s.id) + '">' + esc(s.name) + '</button>　' + esc(s.prefecture || '') + '</span>' +
       '<h2 class="h2"><span class="num">' + esc(k.no) + '</span>' + esc(k.label) + 'の' + esc(word) + '</h2></div>' +
+      '<div class="like-row" data-social-like hidden></div>' +
       '<section class="section first">' + wherePlan(s, k) + '</section>' +
       (tags ? '<section class="section"><div class="tags">' + tags + '</div></section>' : '') +
       (has(k.asukaNote) ? '<section class="section"><h3 class="h3">明日香の感想</h3><div class="note-box">' + esc(k.asukaNote) + '</div></section>' : '') +
       (hist ? '<section class="section"><h3 class="h3">来歴</h3>' + hist + '</section>' : '') +
       recSection +
+      '<section class="section comments" data-social-c hidden></section>' +
       '<section class="section"><div class="cta-row">' + ig + acct + '</div>' +
       (sib.length > 1 ? '<div class="pager">' +
         (prev ? '<button class="btn" type="button" data-k="' + esc(prev.id) + '">' + esc(prev.no) + ' ' + esc(prev.label) + '</button>' : '<span></span>') +
         (next ? '<button class="btn" type="button" data-k="' + esc(next.id) + '">' + esc(next.no) + ' ' + esc(next.label) + '</button>' : '<span></span>') + '</div>' : '') +
       '</section></div>';
 
+    loadSocial(v, k);
     v._art = art.map(function (p) { return { src: p.src, title: p.title, meta: s.name + '　' + k.no + ' ' + k.label }; });
     v._rec = recs.map(function (p) { return { src: p.src, title: p.caption || '記録写真', meta: s.name + '　' + k.no + ' ' + k.label }; });
 
@@ -685,6 +691,110 @@
       });
       v.querySelectorAll('.dots span').forEach(function (d, j) { d.classList.toggle('on', j === best); });
     }, { passive: true });
+  }
+
+  /* ---------- いいね・コメント(11/08 あすかさん) ----------
+     受け口は Google Apps Script(gas/social/Code.gs.txt)。site.json の social.url が空のあいだは何も出さない */
+  function socialUrl() { return D.site.social && has(D.site.social.url) ? D.site.social.url : ''; }
+  function deviceId() {
+    var d = lsGet('komainu.device');
+    if (!d) { d = 'd' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10); lsSet('komainu.device', d); }
+    return d;
+  }
+  function kanriKey() { return lsGet('komainu.kanri') || ''; }
+  function sGet(q) {
+    var qs = Object.keys(q).map(function (x) { return x + '=' + encodeURIComponent(q[x]); }).join('&');
+    return fetch(socialUrl() + '?' + qs, { cache: 'no-store' }).then(function (r) { return r.json(); });
+  }
+  function sPost(o) { return fetch(socialUrl(), { method: 'POST', body: JSON.stringify(o) }).then(function (r) { return r.json(); }); }
+  var HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>';
+  function likeHtml(n, on) {
+    return '<button type="button" class="like' + (on ? ' on' : '') + '" aria-pressed="' + (on ? 'true' : 'false') + '">' + HEART +
+      '<span>いいね！</span><b>' + n + '</b></button>';
+  }
+  function commentItem(c, admin) {
+    return '<li><div class="c-head"><span class="c-name">' + esc(c.name) + '</span><span class="c-time">' + esc(c.t) + '</span>' +
+      (admin ? '<button type="button" class="c-del" data-cdel="' + esc(c.id) + '">消す</button>' : '') + '</div><p class="c-text">' + esc(c.text) + '</p></li>';
+  }
+  function msgLine(root, t) { var m = root.querySelector('.c-msg'); if (m) m.textContent = t; }
+  function loadSocial(v, k) {
+    if (!socialUrl()) return;
+    var lb = v.querySelector('[data-social-like]'), cs = v.querySelector('[data-social-c]');
+    var admin = !!kanriKey(), st = { likes: 0, liked: false, comments: [] };
+    function drawLike() { lb.innerHTML = likeHtml(st.likes, st.liked); lb.hidden = false; }
+    function drawComments(msg) {
+      cs.innerHTML = '<h3 class="h3">コメント' + (st.comments.length ? '　' + st.comments.length + '件' : '') + '</h3>' +
+        (st.comments.length ? '<ul class="c-list">' + st.comments.map(function (c) { return commentItem(c, admin); }).join('') + '</ul>' : '<p class="meta">まだコメントはありません。</p>') +
+        '<form class="c-form"><input name="name" maxlength="20" placeholder="お名前(なくてもかまいません)" autocomplete="nickname" value="' + esc(lsGet('komainu.cname') || '') + '">' +
+        '<textarea name="text" maxlength="400" rows="3" required placeholder="この狛犬へのコメント"></textarea>' +
+        '<div class="c-foot"><span class="meta c-msg">' + esc(msg || 'コメントは誰でも見られます。内容によっては表示しないことがあります。') + '</span>' +
+        '<button class="btn primary" type="submit">送る</button></div></form>';
+      cs.hidden = false;
+    }
+    sGet({ a: 'get', k: k.id, d: deviceId() }).then(function (r) {
+      if (!r || !r.ok) return;
+      st.likes = r.likes || 0; st.liked = !!r.liked; st.comments = r.comments || [];
+      drawLike(); drawComments();
+    }).catch(function () { /* 通信できないときは出さない */ });
+    lb.addEventListener('click', function (ev) {
+      if (!ev.target.closest('.like')) return;
+      st.liked = !st.liked; st.likes = Math.max(0, st.likes + (st.liked ? 1 : -1)); drawLike();
+      sPost({ a: 'like', k: k.id, d: deviceId() }).then(function (r) { if (r && r.ok) { st.likes = r.likes; st.liked = r.liked; drawLike(); } }).catch(function () {});
+    });
+    cs.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var f = ev.target, text = f.elements.text.value.trim(), name = f.elements.name.value.trim(), btn = f.querySelector('button[type=submit]');
+      if (!text) return;
+      btn.disabled = true; msgLine(cs, '送っています…');
+      lsSet('komainu.cname', name);
+      sPost({ a: 'comment', k: k.id, d: deviceId(), name: name, text: text }).then(function (r) {
+        if (r && r.ok && r.comment) { st.comments.push(r.comment); drawComments('コメントを送りました。ありがとうございます。'); }
+        else if (r && r.ok && r.held) drawComments('コメントを送りました。確認してから表示します。');
+        else { btn.disabled = false; msgLine(cs, r && r.error === 'toomany' ? '続けて送れるのは3件までです。しばらくしてからお願いします。' : '送れませんでした。もう一度お試しください。'); }
+      }).catch(function () { btn.disabled = false; msgLine(cs, '送れませんでした。通信の状態を確かめてください。'); });
+    });
+    cs.addEventListener('click', function (ev) {
+      var b = ev.target.closest('[data-cdel]'); if (!b) return;
+      var id = b.dataset.cdel; b.disabled = true;
+      sPost({ a: 'admin', key: kanriKey(), op: 'delete', id: id }).then(function (r) {
+        if (r && r.ok) { st.comments = st.comments.filter(function (c) { return c.id !== id; }); drawComments('コメントを消しました。'); }
+        else { b.disabled = false; msgLine(cs, r && r.error === 'key' ? '管理用の合言葉が違います。管理画面で入れ直してください。' : '消せませんでした。'); }
+      }).catch(function () { b.disabled = false; });
+    });
+  }
+
+  // 管理画面：…/zukan/#kanri をブックマークして使う(ほかの画面からはリンクしない)
+  function renderKanri(v) {
+    v.innerHTML = '<div class="pad kanri"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
+      '<h2 class="h2">コメントの管理</h2>' +
+      (socialUrl() ? '' : '<p class="meta">いいね・コメントの受け口がまだつながっていません。</p>') +
+      '<form class="c-form k-key"><input name="key" type="password" placeholder="管理用の合言葉" value="' + esc(kanriKey()) + '" autocomplete="current-password">' +
+      '<div class="c-foot"><span class="meta">この端末に合言葉を覚えさせると、狛犬のページのコメントにも「消す」が出ます。</span><button class="btn primary" type="submit">読み込む</button></div></form>' +
+      '<div class="k-list"></div></div>';
+    var list = v.querySelector('.k-list');
+    function load() {
+      if (!socialUrl() || !kanriKey()) return;
+      list.innerHTML = '<p class="meta">読み込んでいます…</p>';
+      sPost({ a: 'admin', key: kanriKey(), op: 'list' }).then(function (r) {
+        if (!r || !r.ok) { list.innerHTML = '<p class="meta">' + (r && r.error === 'key' ? '合言葉が違います。' : '読み込めませんでした。') + '</p>'; return; }
+        if (!r.comments.length) { list.innerHTML = '<p class="meta">コメントはまだありません。</p>'; return; }
+        list.innerHTML = '<ul class="c-list">' + r.comments.map(function (c) {
+          var e = BY_ID[c.k], where = e ? e.s.name + '　' + e.k.label : c.k, on = c.status === '表示';
+          return '<li><div class="c-head"><button type="button" class="c-where" data-k="' + esc(c.k) + '">' + esc(where) + '</button>' +
+            '<span class="c-state' + (on ? '' : ' hold') + '">' + (on ? '表示中' : '保留(表示していません)') + '</span></div>' +
+            '<div class="c-head"><span class="c-name">' + esc(c.name) + '</span><span class="c-time">' + esc(c.t) + '</span></div><p class="c-text">' + esc(c.text) + '</p>' +
+            '<div class="c-ops">' + (on ? '' : '<button type="button" class="btn" data-op="show" data-id="' + esc(c.id) + '">表示する</button>') +
+            '<button type="button" class="btn" data-op="delete" data-id="' + esc(c.id) + '">消す</button></div></li>';
+        }).join('') + '</ul>';
+      }).catch(function () { list.innerHTML = '<p class="meta">読み込めませんでした。</p>'; });
+    }
+    v.querySelector('.k-key').addEventListener('submit', function (ev) { ev.preventDefault(); lsSet('komainu.kanri', ev.target.elements.key.value.trim()); load(); });
+    list.addEventListener('click', function (ev) {
+      var b = ev.target.closest('[data-op]'); if (!b) return;
+      b.disabled = true;
+      sPost({ a: 'admin', key: kanriKey(), op: b.dataset.op, id: b.dataset.id }).then(function (r) { if (r && r.ok) load(); else b.disabled = false; }).catch(function () { b.disabled = false; });
+    });
+    load();
   }
 
   /* ---------- 地図 ---------- */
@@ -944,6 +1054,7 @@
       $('#view-shrines').innerHTML = '<div class="pad"><p>データを読み込めませんでした。data/ フォルダに shrines.json と taxonomy.json があるか確かめてください。</p><p class="meta">' + esc(err && err.message) + '</p></div>';
     });
     document.addEventListener('click', onClick);
+    window.addEventListener('hashchange', function () { if (location.hash === '#kanri' && !(state.detail && state.detail.type === 'kanri')) go('shrines', { type: 'kanri' }); });
     document.addEventListener('keydown', onKey);
     if ('serviceWorker' in navigator && !window.KOMAINU_DATA && /^https?:$/.test(location.protocol)) {
       navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(function (reg) {

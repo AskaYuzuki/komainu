@@ -1,0 +1,147 @@
+/**
+ * 狛犬図鑑の「いいね」とコメントの受け口（Google Apps Script）
+ *
+ * ・スプレッドシート「狛犬図鑑 いいね・コメント」に付けたスクリプトとして使う
+ * ・シート「いいね」「コメント」「NGワード」は、最初に動いたときに自動で作る
+ * ・コメントは書かれたらすぐ表示する。NGワードを含むもの・リンク(http)を含むものは「保留」にして表示しない
+ * ・管理画面(図鑑の #kanri)から、合言葉を入れてコメントを消す・表示に戻すことができる
+ *   シートの「状態」の欄を「削除」に書き換えても消える(行ごと消してもよい)
+ * 第1版（2026-11-08）
+ * 書き換えるのは下の KANRI_AIKOTOBA（管理用の合言葉）の1か所だけ。
+ */
+
+const KANRI_AIKOTOBA = 'ここに管理用の合言葉を書く';
+
+const SH_LIKE = 'いいね';
+const SH_COMMENT = 'コメント';
+const SH_NG = 'NGワード';
+const MAX_TEXT = 400;
+const MAX_NAME = 20;
+const DEFAULT_NG = ['死ね', 'しね', '殺す', 'ころす', 'きもい', 'キモい', 'キモイ', 'うざい', 'ウザい', 'ブス', 'バカ', 'ばか', '馬鹿', 'アホ', 'クソ', 'くそ', 'カス', 'ゴミ', '消えろ', '詐欺', 'エセ', '気持ち悪い'];
+
+function sheet_(name, head) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sh = ss.getSheetByName(name);
+  if (!sh) {
+    sh = ss.insertSheet(name);
+    sh.appendRow(head);
+    sh.setFrozenRows(1);
+    if (name === SH_NG) DEFAULT_NG.forEach(function (w) { sh.appendRow([w]); });
+  }
+  return sh;
+}
+function likeSheet_() { return sheet_(SH_LIKE, ['狛犬id', '端末id', '日時']); }
+function commentSheet_() { return sheet_(SH_COMMENT, ['コメントid', '狛犬id', '日時', '名前', 'コメント', '状態', '端末id']); }
+function ngSheet_() { return sheet_(SH_NG, ['NGワード(1行に1つ。ここにある言葉を含むコメントは「保留」になり、表示されません)']); }
+
+function rows_(sh) {
+  const n = sh.getLastRow();
+  if (n < 2) return [];
+  return sh.getRange(2, 1, n - 1, sh.getLastColumn()).getValues();
+}
+function json_(o) {
+  return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
+}
+function clean_(s, max) {
+  s = String(s == null ? '' : s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '').trim();
+  if (s.length > max) s = s.slice(0, max);
+  if (/^[=+\-@]/.test(s)) s = "'" + s;   // スプレッドシートの式として読まれないように
+  return s;
+}
+function okId_(s) { return /^[a-z0-9\-_]{1,40}$/i.test(String(s || '')); }
+function fmt_(d) { return Utilities.formatDate(new Date(d), 'Asia/Tokyo', 'yyyy-MM-dd HH:mm'); }
+function shown_(r) { return r[5] === '表示'; }
+function pub_(r) { return { id: String(r[0]), t: fmt_(r[2]), name: String(r[3] || '').replace(/^'/, ''), text: String(r[4] || '').replace(/^'/, '') }; }
+
+function likesOf_(k, d) {
+  const rs = rows_(likeSheet_()).filter(function (r) { return r[0] === k; });
+  return { likes: rs.length, liked: !!d && rs.some(function (r) { return r[1] === d; }) };
+}
+
+function doGet(e) {
+  const p = (e && e.parameter) || {};
+  if (p.a === 'get' && okId_(p.k)) {
+    const l = likesOf_(p.k, okId_(p.d) ? p.d : '');
+    const cs = rows_(commentSheet_()).filter(function (r) { return r[1] === p.k && shown_(r); }).map(pub_);
+    return json_({ ok: true, likes: l.likes, liked: l.liked, comments: cs });
+  }
+  if (p.a === 'counts') {
+    const likes = {}, comments = {};
+    rows_(likeSheet_()).forEach(function (r) { likes[r[0]] = (likes[r[0]] || 0) + 1; });
+    rows_(commentSheet_()).forEach(function (r) { if (shown_(r)) comments[r[1]] = (comments[r[1]] || 0) + 1; });
+    return json_({ ok: true, likes: likes, comments: comments });
+  }
+  return json_({ ok: true, name: 'komainu-social/1' });
+}
+
+function doPost(e) {
+  let p = {};
+  try { p = JSON.parse(e.postData.contents); } catch (err) { return json_({ ok: false, error: 'bad' }); }
+  const lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    if (p.a === 'like') return like_(p);
+    if (p.a === 'comment') return comment_(p);
+    if (p.a === 'admin') return admin_(p);
+    return json_({ ok: false, error: 'bad' });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function like_(p) {
+  if (!okId_(p.k) || !okId_(p.d)) return json_({ ok: false, error: 'bad' });
+  const sh = likeSheet_();
+  const rs = rows_(sh);
+  for (let i = rs.length - 1; i >= 0; i--) {
+    if (rs[i][0] === p.k && rs[i][1] === p.d) {
+      sh.deleteRow(i + 2);   // もう一度押したら取り消し
+      return json_(Object.assign({ ok: true }, likesOf_(p.k, p.d)));
+    }
+  }
+  sh.appendRow([p.k, p.d, new Date()]);
+  return json_(Object.assign({ ok: true }, likesOf_(p.k, p.d)));
+}
+
+function comment_(p) {
+  if (!okId_(p.k) || !okId_(p.d)) return json_({ ok: false, error: 'bad' });
+  const text = clean_(p.text, MAX_TEXT);
+  const name = clean_(p.name, MAX_NAME) || '名無しさん';
+  if (!text) return json_({ ok: false, error: 'empty' });
+  // 同じ端末から10分に3件まで
+  const cache = CacheService.getScriptCache();
+  const ck = 'c_' + p.d;
+  const n = +(cache.get(ck) || 0);
+  if (n >= 3) return json_({ ok: false, error: 'toomany' });
+  cache.put(ck, String(n + 1), 600);
+
+  const ng = rows_(ngSheet_()).map(function (r) { return String(r[0] || '').trim(); }).filter(String);
+  const all = (name + ' ' + text).toLowerCase();
+  const hold = /https?:|www\./i.test(all) || ng.some(function (w) { return all.indexOf(w.toLowerCase()) >= 0; });
+  const id = Utilities.getUuid().slice(0, 8);
+  const row = [id, p.k, new Date(), name, text, hold ? '保留' : '表示', p.d];
+  commentSheet_().appendRow(row);
+  return json_({ ok: true, held: hold, comment: hold ? null : pub_(row) });
+}
+
+function admin_(p) {
+  if (!KANRI_AIKOTOBA || KANRI_AIKOTOBA === 'ここに管理用の合言葉を書く' || p.key !== KANRI_AIKOTOBA) return json_({ ok: false, error: 'key' });
+  const sh = commentSheet_();
+  if (p.op === 'list') {
+    const cs = rows_(sh).filter(function (r) { return r[5] !== '削除'; }).map(function (r) {
+      return Object.assign(pub_(r), { k: r[1], status: r[5] });
+    }).reverse();
+    return json_({ ok: true, comments: cs });
+  }
+  if ((p.op === 'delete' || p.op === 'show') && p.id) {
+    const rs = rows_(sh);
+    for (let i = 0; i < rs.length; i++) {
+      if (String(rs[i][0]) === String(p.id)) {
+        sh.getRange(i + 2, 6).setValue(p.op === 'delete' ? '削除' : '表示');
+        return json_({ ok: true });
+      }
+    }
+    return json_({ ok: false, error: 'notfound' });
+  }
+  return json_({ ok: false, error: 'bad' });
+}

@@ -441,3 +441,29 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 
 /* 11/08 あすかさん：表紙の格子の上の注意書き */
 .k-hint { margin: -2px 0 14px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+/* いいね・コメント(11/08) */
+.like-row { margin: 10px 0 0; }
+.like { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; }
+.like svg { width: 18px; height: 18px; fill: none; stroke: var(--accent-ink); stroke-width: 2; }
+.like b { font-weight: 700; min-width: 1ch; }
+.like.on { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+.like.on svg { fill: var(--on-accent); stroke: var(--on-accent); }
+.c-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.c-list li { border-left: 3px solid var(--accent); padding: 2px 0 2px 12px; }
+.c-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 13px; color: var(--muted); }
+.c-name { font-family: var(--font-display); font-weight: 700; color: var(--ink); }
+.c-text { margin: 4px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--font-display); line-height: 1.7; }
+.c-del { margin-left: auto; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: var(--r-s); font: inherit; font-size: 12px; padding: 2px 10px; cursor: pointer; }
+.c-form { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+.c-form input, .c-form textarea { font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-s); padding: 10px 12px; width: 100%; box-sizing: border-box; }
+.c-form textarea { resize: vertical; min-height: 84px; }
+.c-foot { display: flex; align-items: center; gap: 12px; justify-content: space-between; }
+.c-foot .meta { font-size: 12px; }
+.c-foot .btn { flex: none; }
+.kanri .h2 { margin: 8px 0 12px; }
+.kanri .k-list { margin-top: 20px; }
+.c-where { border: 0; background: none; padding: 0; font: inherit; color: var(--accent-ink); text-decoration: underline; cursor: pointer; }
+.c-state { font-size: 12px; }
+.c-state.hold { color: #a0522d; font-weight: 700; }
+.c-ops { display: flex; gap: 8px; margin-top: 6px; }

@@ -6340,44 +6340,52 @@
      {
       "src": "images/hie-2-02.jpg?v=e3b86b74",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
      },
      {
       "src": "images/hie-2-03.jpg?v=f42db6ac",
       "kind": "art",
       "title": "飛驒山王宮日枝神社",
+      "side": "阿",
       "cover": true,
       "icon": true
      },
      {
       "src": "images/hie-2-04.jpg?v=99ea3542",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
      },
      {
       "src": "images/hie-2-05.jpg?v=b2bfcd2c",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
      },
      {
       "src": "images/hie-2-06.jpg?v=6215e5bb",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      },
      {
       "src": "images/hie-2-07.jpg?v=40bfd00f",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      },
      {
       "src": "images/hie-2-08.jpg?v=5904737c",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      },
      {
       "src": "images/hie-2-09.jpg?v=92d072ea",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      }
     ],
     "lore": [
@@ -6415,7 +6423,7 @@
     "donor": "",
     "history": "",
     "sources": [],
-    "asukaNote": "現在の拝殿前には狛犬はおらず、移築された旧社殿(現在の富士社)の前には狛犬がいるという不思議？な配置。\n\n富士社前のこの狛犬は、おそらく移築の際に社殿と一緒に今の配置になったのだろう。\n\n吽形の子の、ツン！とした角と、丸みのあるフォルムがかわいらしい。直毛感も感じられる。スンッてお澄まししてるところもかわいくてツボ♡\n\n阿形の子は、目玉に中心点があるのがめずらしい。吽形には角がなく、巻き毛のカールも強め。「んがっ！」って言ってた笑",
+    "asukaNote": "現在の拝殿前には狛犬はおらず、移築された旧社殿(現在の富士社)の前には狛犬がいるという不思議？な配置。\n\n富士社前のこの狛犬は、おそらく移築の際に社殿と一緒に今の配置になったのだろう。\n\n吽形の子の、ツン！とした角と、丸みのあるフォルムがかわいらしい。直毛感も感じられる。スンッてお澄まししてるところもかわいくてツボ♡\n\n阿形の子は、目玉に中心点があるのがめずらしい。阿形には角がなく、巻き毛のカールも強め。「んがっ！」って言ってた笑",
     "instagramUrl": "",
     "photos": [
      {
@@ -6527,7 +6535,10 @@
     "material": "stone",
     "sculptor": "",
     "sculptorId": "",
-    "year": null,
+    "year": {
+     "wareki": "昭和6年4月",
+     "seireki": 1931
+    },
     "donor": "",
     "history": "",
     "sources": [],
@@ -6556,12 +6567,14 @@
      {
       "src": "images/hie-4-04.jpg?v=16ba83e3",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
      },
      {
       "src": "images/hie-4-05.jpg?v=b62099b9",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
      },
      {
       "src": "images/hie-4-06.jpg?v=9bc3e080",
@@ -6584,22 +6597,25 @@
      {
       "src": "images/hie-4-09.jpg?v=17a11beb",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      },
      {
       "src": "images/hie-4-10.jpg?v=02b26566",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      },
      {
       "src": "images/hie-4-11.jpg?v=b36bf709",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
      },
      {
-      "src": "images/hie-4-12.jpg?v=3259998c",
+      "src": "images/hie-4-13.jpg?v=fa389524",
       "kind": "record",
-      "caption": "台座の刻字"
+      "caption": "吽形のそばから見渡す富士社と産霊社"
      }
     ],
     "lore": [
@@ -6624,12 +6640,14 @@
       "refs": []
      },
      {
-      "text": "奉納の年や作者は、調べがつきませんでした。",
+      "text": "台座の銘によると、昭和6年(1931)4月に奉納されたものです。作者は調べがつきませんでした。",
       "basis": "site",
       "refs": []
      }
     ],
-    "factBasis": {},
+    "factBasis": {
+     "year": "site"
+    },
     "thumb": "images/thumbs/hie-4.jpg?v=da926852"
    },
    {
@@ -6640,7 +6658,7 @@
     "animalLabel": "狛牛",
     "pos": null,
     "regionalTypes": [],
-    "pose": "",
+    "pose": "other",
     "material": "stone",
     "sculptor": "",
     "sculptorId": "",
@@ -6660,53 +6678,63 @@
       "src": "images/hie-5-02.jpg?v=1225ba62",
       "kind": "art",
       "title": "飛驒山王宮日枝神社",
+      "side": "左",
       "cover": true,
       "icon": true
      },
      {
       "src": "images/hie-5-03.jpg?v=64036c2d",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "左"
      },
      {
       "src": "images/hie-5-04.jpg?v=87bbc121",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "左"
      },
      {
       "src": "images/hie-5-05.jpg?v=10538097",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "左"
      },
      {
       "src": "images/hie-5-06.jpg?v=9988bb4a",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "左"
      },
      {
       "src": "images/hie-5-07.jpg?v=465de9cc",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "右"
      },
      {
       "src": "images/hie-5-08.jpg?v=06de8d9e",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "右"
      },
      {
       "src": "images/hie-5-09.jpg?v=296bf5ab",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "右"
      },
      {
       "src": "images/hie-5-10.jpg?v=9944a055",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "右"
      },
      {
       "src": "images/hie-5-11.jpg?v=4eeb0183",
       "kind": "art",
-      "title": "飛驒山王宮日枝神社"
+      "title": "飛驒山王宮日枝神社",
+      "side": "右"
      }
     ],
     "lore": [

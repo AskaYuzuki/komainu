@@ -515,7 +515,7 @@
   function renderGallery() {
     var v = $('#view-gallery');
     galleryItems = artItems(ALL);
-    var html = '<div class="pad gallery-pad"><div class="gal-head"><h2 class="gal-title">Gallery</h2><span class="gal-sub">作品写真</span><span class="meta">' + galleryItems.length + '枚　押すと大きく見られます</span></div>';   // 11/08 あすかさん：上に「Gallery」
+    var html = '<div class="pad gallery-pad"><div class="gal-head"><h2 class="h2">作品写真</h2><span class="meta">' + galleryItems.length + '枚　押すと大きく見られます</span></div>';
     if (!galleryItems.length) html += '<div class="empty"><p>作品写真はまだありません。写真の kind を "art" にすると、ここに並びます。</p></div>';
     else html += '<div class="masonry">' + galleryItems.map(function (it, i) {
       return '<button class="g-item" type="button" data-gal="' + i + '"><img loading="lazy" decoding="async" src="' + esc(small(it.src)) + '" alt="' + esc(it.title || it.meta) + '">' +
@@ -593,7 +593,8 @@
 
     if (art.length) {
       hero = '<div class="art-strip' + (art.length === 1 ? ' single' : '') + '" id="photos">' + art.map(function (p, i) {
-        return '<figure><button type="button" data-hero="' + i + '" aria-label="' + esc((p.title || '作品写真') + 'を全画面で見る') + '"><img src="' + esc(p.src) + '" alt="' + esc(p.title || alt) + '"' + (i ? ' loading="lazy"' : '') + '></button>' +
+        return '<figure><button type="button" data-hero="' + i + '" aria-label="' + esc((p.title || '作品写真') + 'を全画面で見る') + '"><img src="' + esc(p.src) + '" alt="' + esc(p.title || alt) + '"' + (i ? ' loading="lazy"' : '') + '>' +
+          (p.side ? '<span class="side">' + esc(p.side) + '</span>' : '') + '</button>' +   // 11/08 あすかさん：作品写真にも阿・吽(左・右)の印
           (has(p.title) || p.cover ? '<figcaption>' + (has(p.title) ? esc(p.title) : '') + (p.cover ? '<span class="cover-tag">代表</span>' : '') + '</figcaption>' : '') + '</figure>';
       }).join('') + '</div>';
       if (recs.length) {
@@ -665,7 +666,7 @@
 
     v.innerHTML = '<div class="pad"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
       '<figure class="cover cover-pic k-cover"><img class="cover-img" src="' + coverSrc(k) + '" alt="' + esc(alt + '(表紙)') + '" onerror="this.parentNode.style.display=\'none\'"></figure>' +
-      hero + dots +
+      (nHero ? '<h3 class="k-gal">Gallery</h3>' : '') + hero + dots +   // 11/08 あすかさん：表紙と写真の間に「Gallery」
       '<div class="k-title"><span class="meta"><button type="button" data-shrine="' + esc(s.id) + '">' + esc(s.name) + '</button>　' + esc(s.prefecture || '') + '</span>' +
       '<h2 class="h2"><span class="num">' + esc(k.no) + '</span>' + esc(k.label) + 'の' + esc(word) + '</h2></div>' +
       '<div class="like-row" data-social-like hidden></div>' +

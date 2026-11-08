@@ -470,7 +470,8 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 .c-state.hold { color: #a0522d; font-weight: 700; }
 .c-ops { display: flex; gap: 8px; margin-top: 6px; }
 
-/* Gallery の見出し(11/08) */
-.gal-title { font-family: "Cormorant Garamond", "Playfair Display", var(--font-display); font-weight: 600; font-size: 40px; line-height: 1; letter-spacing: .06em; margin: 4px 0 2px; color: var(--ink); }
-.gal-sub { font-family: var(--font-display); font-size: 14px; letter-spacing: .1em; color: var(--muted); }
-.gal-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+/* 狛犬の頁：表紙と写真の間の「Gallery」(11/08) と、作品写真の阿・吽の印 */
+.k-gal { font-family: "Cormorant Garamond", "Playfair Display", var(--font-display); font-weight: 600; font-size: 30px; line-height: 1; letter-spacing: .08em; margin: 22px 0 12px; color: var(--ink); }
+.art-strip button { position: relative; }
+.art-strip .side { position: absolute; left: 10px; top: 10px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--surface); color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 15px; box-shadow: 0 1px 4px rgba(0,0,0,.25); }

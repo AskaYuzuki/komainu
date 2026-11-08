@@ -6515,6 +6515,122 @@
     ],
     "factBasis": {},
     "thumb": "images/thumbs/hie-3.jpg?v=bc3a1aed"
+   },
+   {
+    "id": "hie-4",
+    "no": 4,
+    "label": "産霊社の前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "富士社の前の狛犬たちに比べると、ちょっと丸みが少なく四角っぽいデザイン。\n\n耳とお手々の感じがかわいいですね。\n\n産霊社は祀っている神様(高皇産霊神、神産巣日神)が尊さバツグンな神様なだけに、富士社よりも高台に建てられており、吽形の子のところに立つと富士社・産霊社の4頭の狛犬をいっぺんに見渡すことができます。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hie-4-01.jpg?v=6d0a2bfb",
+      "kind": "record",
+      "caption": "産霊社と1対の狛犬"
+     },
+     {
+      "src": "images/hie-4-02.jpg?v=51313b99",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/hie-4-03.jpg?v=80f8c5a1",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/hie-4-04.jpg?v=16ba83e3",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-4-05.jpg?v=b62099b9",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-4-06.jpg?v=9bc3e080",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/hie-4-07.jpg?v=2c888c79",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-4-08.jpg?v=02a44e0f",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/hie-4-09.jpg?v=17a11beb",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-4-10.jpg?v=02b26566",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-4-11.jpg?v=b36bf709",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-4-12.jpg?v=3259998c",
+      "kind": "record",
+      "caption": "台座の刻字"
+     }
+    ],
+    "lore": [
+     {
+      "text": "富士社よりさらに高いところに建つ産霊社の前、左右の台座の上にいる石造りの1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "産霊社は、高皇産霊尊と神皇産霊尊をまつる社で、今の社殿は昭和16年(1941)にできました。神社の境内案内では、社前の狛犬は「由緒あると伝えられる狛犬」と紹介されています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "飛驒山王宮日枝神社 公式サイト「境内のご案内」",
+        "url": "https://hiejinja.com/map/"
+       }
+      ]
+     },
+     {
+      "text": "吽形のそばに立つと、富士社と産霊社の2対、あわせて4体の狛犬をいっぺんに見渡せます。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "奉納の年や作者は、調べがつきませんでした。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/hie-4.jpg?v=da926852"
    }
   ]
  }

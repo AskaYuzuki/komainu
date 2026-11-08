@@ -8,11 +8,11 @@
   --line: #cfd5cf;
   --moss: #56704f;        /* 苔 */
   --moss-soft: #dfe6d9;
-  /* 11/08 23:24 あすかさん：ミントは #E6F6F4 ならよい(多用しない)。#81D4CA は色が強すぎるので使わない。ボタンの文字色は墨に */
-  --accent: #e6f6f4;      /* 淡いミント。面にだけ使う */
-  --accent-line: #c3e2dd; /* 淡いミントの面のふち */
-  --accent-ink: #35514c;  /* リンク・選択中の文字(墨に緑を少し) */
-  --on-accent: #22302b;   /* 淡いミントの面の上の文字＝墨 */
+  /* 11/08 23:48 あすかさん：ミントグリーンにこだわらない。丸数字などの印は墨の地に白い文字(淡いミントは地に溶けて見にくい) */
+  --accent: #22302b;      /* 印・選んだボタンの面＝墨 */
+  --accent-line: #22302b;
+  --accent-ink: #35514c;  /* リンク・選択中の文字 */
+  --on-accent: #ffffff;   /* 墨の面の上の文字＝白 */
   --stone: #8f9c95;
   --stone-deep: #66746d;
   --sample: #e9e2c8;
@@ -28,7 +28,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #131917; --surface: #1b2320; --ink: #e2e8e4; --muted: #9daba5; --line: #2e3a36;
-    --moss: #8fae84; --moss-soft: #24302a; --accent: #24403b; --accent-line: #3d5f58; --accent-ink: #cfe9e4; --on-accent: #e6f6f4;
+    --moss: #8fae84; --moss-soft: #24302a; --accent: #e2e8e4; --accent-line: #e2e8e4; --accent-ink: #c9d6d1; --on-accent: #131917;
     --stone: #56645e; --stone-deep: #7d8b85; --sample: #3a3522; --sample-ink: #e6d9a6;
     --shadow: 0 6px 24px rgba(0, 0, 0, .45);
     color-scheme: dark;
@@ -36,7 +36,7 @@
 }
 :root[data-theme="dark"] {
   --bg: #131917; --surface: #1b2320; --ink: #e2e8e4; --muted: #9daba5; --line: #2e3a36;
-  --moss: #8fae84; --moss-soft: #24302a; --accent: #24403b; --accent-line: #3d5f58; --accent-ink: #cfe9e4; --on-accent: #e6f6f4;
+  --moss: #8fae84; --moss-soft: #24302a; --accent: #e2e8e4; --accent-line: #e2e8e4; --accent-ink: #c9d6d1; --on-accent: #131917;
   --stone: #56645e; --stone-deep: #7d8b85; --sample: #3a3522; --sample-ink: #e6d9a6;
   --shadow: 0 6px 24px rgba(0, 0, 0, .45);
   color-scheme: dark;
@@ -450,7 +450,7 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 .like svg { width: 18px; height: 18px; fill: none; stroke: var(--accent-ink); stroke-width: 2; }
 .like b { font-weight: 700; min-width: 1ch; }
 .like.on { border-color: var(--accent-line); background: var(--accent); color: var(--on-accent); }
-.like.on svg { fill: #c4566a; stroke: #c4566a; }
+.like.on svg { fill: #e58a9b; stroke: #e58a9b; }
 .c-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
 .c-list li { border-left: 3px solid var(--accent-line); padding: 2px 0 2px 12px; }
 .c-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 13px; color: var(--muted); }

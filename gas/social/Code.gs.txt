@@ -7,9 +7,11 @@
  * ・管理画面(図鑑の #kanri)から、合言葉を入れてコメントを消す・表示に戻すことができる
  *   シートの「状態」の欄を「削除」に書き換えても消える(行ごと消してもよい)
  * 第1版（2026-11-08）
- * 書き換えるのは下の KANRI_AIKOTOBA（管理用の合言葉）の1か所だけ。
+ * 11/08 12:13 あすかさん：まずは「いいね！」だけ使う。コメントは COMMENTS_ON を true にして、
+ *   KANRI_AIKOTOBA（管理用の合言葉）を書いたときだけ受け付ける。いいねだけなら、どこも書き換えなくてよい。
  */
 
+const COMMENTS_ON = false;
 const KANRI_AIKOTOBA = 'ここに管理用の合言葉を書く';
 
 const SH_LIKE = 'いいね';
@@ -62,13 +64,13 @@ function doGet(e) {
   const p = (e && e.parameter) || {};
   if (p.a === 'get' && okId_(p.k)) {
     const l = likesOf_(p.k, okId_(p.d) ? p.d : '');
-    const cs = rows_(commentSheet_()).filter(function (r) { return r[1] === p.k && shown_(r); }).map(pub_);
+    const cs = !COMMENTS_ON ? [] : rows_(commentSheet_()).filter(function (r) { return r[1] === p.k && shown_(r); }).map(pub_);
     return json_({ ok: true, likes: l.likes, liked: l.liked, comments: cs });
   }
   if (p.a === 'counts') {
     const likes = {}, comments = {};
     rows_(likeSheet_()).forEach(function (r) { likes[r[0]] = (likes[r[0]] || 0) + 1; });
-    rows_(commentSheet_()).forEach(function (r) { if (shown_(r)) comments[r[1]] = (comments[r[1]] || 0) + 1; });
+    if (COMMENTS_ON) rows_(commentSheet_()).forEach(function (r) { if (shown_(r)) comments[r[1]] = (comments[r[1]] || 0) + 1; });
     return json_({ ok: true, likes: likes, comments: comments });
   }
   return json_({ ok: true, name: 'komainu-social/1' });
@@ -81,8 +83,8 @@ function doPost(e) {
   lock.waitLock(20000);
   try {
     if (p.a === 'like') return like_(p);
-    if (p.a === 'comment') return comment_(p);
-    if (p.a === 'admin') return admin_(p);
+    if (p.a === 'comment' && COMMENTS_ON) return comment_(p);
+    if (p.a === 'admin' && COMMENTS_ON) return admin_(p);
     return json_({ ok: false, error: 'bad' });
   } finally {
     lock.releaseLock();

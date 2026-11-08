@@ -696,6 +696,7 @@
   /* ---------- いいね・コメント(11/08 あすかさん) ----------
      受け口は Google Apps Script(gas/social/Code.gs.txt)。site.json の social.url が空のあいだは何も出さない */
   function socialUrl() { return D.site.social && has(D.site.social.url) ? D.site.social.url : ''; }
+  function commentsOn() { return !!(D.site.social && D.site.social.comments); }   // 11/08 12:13 あすかさん：まずは「いいね！」だけ。コメントは site.json の social.comments を true にしたときだけ出す
   function deviceId() {
     var d = lsGet('komainu.device');
     if (!d) { d = 'd' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10); lsSet('komainu.device', d); }
@@ -734,7 +735,7 @@
     sGet({ a: 'get', k: k.id, d: deviceId() }).then(function (r) {
       if (!r || !r.ok) return;
       st.likes = r.likes || 0; st.liked = !!r.liked; st.comments = r.comments || [];
-      drawLike(); drawComments();
+      drawLike(); if (commentsOn()) drawComments();
     }).catch(function () { /* 通信できないときは出さない */ });
     lb.addEventListener('click', function (ev) {
       if (!ev.target.closest('.like')) return;

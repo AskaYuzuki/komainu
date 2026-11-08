@@ -295,7 +295,7 @@
      {
       "src": "images/tsukubasan-1-02.jpg?v=ddc256a3",
       "kind": "record",
-      "side": "阿",
+      "side": "吽",
       "caption": "玉を持つ阿形"
      },
      {
@@ -307,107 +307,132 @@
      {
       "src": "images/tsukubasan-1-05.jpg?v=63f35d44",
       "kind": "record",
-      "caption": "拝殿を背にした姿"
+      "caption": "拝殿を背にした姿",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-09.jpg?v=e88ac219",
       "kind": "record",
-      "caption": "拝殿の前、溶岩の築山の上"
+      "caption": "拝殿の前、溶岩の築山の上",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-r1.jpg?v=8ba72356",
       "kind": "record",
-      "caption": "拝殿と狛犬の位置"
+      "caption": "拝殿と狛犬の位置",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-r2.jpg?v=51c3fb9f",
       "kind": "record",
-      "caption": "正面から"
+      "caption": "正面から",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-r3.jpg?v=75f9f328",
       "kind": "record",
-      "caption": "苔むした築山と体の線"
+      "caption": "苔むした築山と体の線",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a01.jpg?v=183a8b88",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a02.jpg?v=1b0e719a",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a03.jpg?v=0a4aadc4",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a04.jpg?v=e2669817",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a05.jpg?v=35ddab8a",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a06.jpg?v=1a3a1c2c",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a07.jpg?v=ebdf2868",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a08.jpg?v=954e6c86",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a09.jpg?v=0ceeda87",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a10.jpg?v=2cf7cd24",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a11.jpg?v=45d84a3f",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a12.jpg?v=f937354e",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a13.jpg?v=0ffa3a0a",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a14.jpg?v=c97502a3",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a15.jpg?v=f421bf44",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a16.jpg?v=0708d325",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a17.jpg?v=a2d22c67",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a18.jpg?v=42ae0d1f",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/tsukubasan-1-a19.jpg?v=18c4ee18",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/tsukubasan-1-a20.jpg?v=ff03d9fd",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      }
     ],
     "lore": [
@@ -860,22 +885,26 @@
       "src": "images/togakushi-1-01.jpg?v=f5624b4f",
       "kind": "art",
       "cover": true,
-      "title": "戸隠神社 奥社・九頭龍社"
+      "title": "戸隠神社 奥社・九頭龍社",
+      "side": "阿"
      },
      {
       "src": "images/togakushi-1-03.jpg?v=41d8ad6e",
       "kind": "art",
-      "title": "戸隠神社 奥社・九頭龍社"
+      "title": "戸隠神社 奥社・九頭龍社",
+      "side": "阿"
      },
      {
       "src": "images/togakushi-1-04.jpg?v=85d0a8d5",
       "kind": "art",
-      "title": "戸隠神社 奥社・九頭龍社"
+      "title": "戸隠神社 奥社・九頭龍社",
+      "side": "吽"
      },
      {
       "src": "images/togakushi-1-02.jpg?v=9a5c78ed",
-      "kind": "record",
-      "caption": "角と大きな尾"
+      "kind": "art",
+      "side": "吽",
+      "title": "戸隠神社 奥社・九頭龍社"
      }
     ],
     "thumb": "images/thumbs/togakushi-1.jpg?v=307e2f9c"
@@ -1563,25 +1592,30 @@
       "src": "images/suwa-1-01.jpg?v=f60b676b",
       "kind": "art",
       "cover": true,
-      "title": "諏訪大社 上社前宮"
+      "title": "諏訪大社 上社前宮",
+      "side": "吽"
      },
      {
       "src": "images/suwa-1-02.jpg?v=62b544b6",
       "kind": "art",
       "icon": true,
-      "title": "諏訪大社 上社前宮"
+      "title": "諏訪大社 上社前宮",
+      "side": "阿"
      },
      {
       "src": "images/suwa-1-03.jpg?v=62f9f6e4",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      },
      {
       "src": "images/suwa-1-04.jpg?v=3147de1c",
-      "kind": "record"
+      "kind": "record",
+      "side": "阿"
      },
      {
       "src": "images/suwa-1-05.jpg?v=2efc8be9",
-      "kind": "record"
+      "kind": "record",
+      "side": "吽"
      }
     ],
     "lore": [
@@ -2783,7 +2817,7 @@
     "donor": "",
     "history": "",
     "sources": [],
-    "asukaNote": "",
+    "asukaNote": "材質もつくりもめずらしいタイプの狛犬。\n\n体つきががっしりしていて、なんとなく埴輪っぽいというか。\n\n古い狛犬なだけあって、阿形は獅子のような風情で巻き毛がきちんと表現されており、吽形は頭が小さくて角があり、胸元の毛も巻いていない。顔つきがどことなく鬼のような爬虫類っぽいというか。\n\n阿形の子のほうが饒舌。吽形の子はなんとなく「スーンッ」としてる。",
     "instagramUrl": "",
     "photos": [
      {
@@ -4917,7 +4951,7 @@
     "donor": "",
     "history": "",
     "sources": [],
-    "asukaNote": "",
+    "asukaNote": "彫りが丁寧で、綺麗な狛犬。\n筋肉のポコポコと、巻き毛が美しい。\n\n耳の形がかわいい。\n\n吽形の抱えている、狛犬の子どもが一生懸命威嚇してきているのがなんともかわいらしいではないの♡\n子どもは親に比べて筋肉がないので、身体がつるっとしているのも面白い。",
     "instagramUrl": "",
     "photos": [
      {
@@ -5404,12 +5438,14 @@
       "kind": "art",
       "title": "三峯神社",
       "cover": true,
-      "icon": true
+      "icon": true,
+      "side": "左"
      },
      {
       "src": "images/mitsumine-6-02.jpg?v=1616feb2",
       "kind": "art",
-      "title": "三峯神社"
+      "title": "三峯神社",
+      "side": "右"
      }
     ],
     "lore": [

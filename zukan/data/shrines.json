@@ -6863,7 +6863,7 @@
     ],
     "lore": [
      {
-      "text": "鳥居の前、左右の台座の上にいる石造りの1対です。黒みを帯びた石で、両方とも角はありません。",
+      "text": "鳥居の前、左右の台座の上にいる石造りの1対です。阿形が向かって右、吽形が向かって左にいます。黒みを帯びた石で、両方とも角はありません。",
       "basis": "site",
       "refs": []
      },
@@ -6900,6 +6900,116 @@
     ],
     "factBasis": {},
     "thumb": "images/thumbs/chui-1.jpg?v=22d433c4"
+   },
+   {
+    "id": "chui-2",
+    "no": 2,
+    "label": "磐座の前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "阿形の子は玉を咥えているめずらしいタイプ。\n\n吽形の子が抱えているちびっこたちもかわいい♡\n\n筋肉の盛り上がりがしっかり表現されていて、美しい。\n\n白山中居神社は、狛犬だけでなく、鳥居・石段・社殿・磐座・御神木に至るまですべてのしつらえがたいへん美しく、芸術作品の中にいるような心地になります。\n\n「この美しさの中に自分が在る」という幸せな気持ちに……。\n\n一方で、磐座・御本殿裏の御神木のご神気が凄まじく「人としてきちんと在ること」を、神様にものすごく見られているような身が引き締まる場所でもあります。\n\n色んな意味で「今、ここに在ること」の幸せを噛みしめることができる稀有な神社です。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/chui-2-01.jpg?v=975d8649",
+      "kind": "record",
+      "caption": "磐座の前の1対の狛犬"
+     },
+     {
+      "src": "images/chui-2-02.jpg?v=9dbe2a74",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/chui-2-03.jpg?v=ea72fc51",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/chui-2-04.jpg?v=1889e157",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/chui-2-05.jpg?v=e90997bf",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/chui-2-06.jpg?v=97f0db72",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/chui-2-07.jpg?v=a034e375",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/chui-2-08.jpg?v=4564fca6",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/chui-2-09.jpg?v=779f7de9",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/chui-2-10.jpg?v=77d5d079",
+      "kind": "art",
+      "title": "白山中居神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "磐座の前、左右の台座の上にいる石造りの1対です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "阿形は口に玉をくわえ、前足でも玉をおさえています。吽形は子どもの狛犬を抱えています。体の筋肉の盛り上がりまでくっきりと彫られています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "境内の磐境(磐座)では、縄文時代から祭祀が行われてきたとされます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜県神社庁「白山中居神社詳細」",
+        "url": "https://www.gifu-jinjacho.jp/syosai.php?shrno=1541"
+       }
+      ]
+     },
+     {
+      "text": "奉納の年や作者は、調べがつきませんでした。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/chui-2.jpg?v=dddab7c9"
    }
   ]
  }

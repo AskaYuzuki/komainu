@@ -690,12 +690,14 @@
       "src": "images/katori-1-01.jpg?v=c99a71ee",
       "kind": "art",
       "cover": true,
-      "title": "香取神宮"
+      "title": "香取神宮",
+      "side": "阿"
      },
      {
       "src": "images/katori-1-02.jpg?v=526af04d",
       "kind": "art",
-      "title": "香取神宮"
+      "title": "香取神宮",
+      "side": "吽"
      }
     ],
     "lore": [

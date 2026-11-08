@@ -667,10 +667,10 @@
     v.innerHTML = '<div class="pad"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
       '<figure class="cover cover-pic k-cover"><img class="cover-img" src="' + coverSrc(k) + '" alt="' + esc(alt + '(表紙)') + '" onerror="this.parentNode.style.display=\'none\'"></figure>' +
       (nHero ? '<h3 class="k-gal">Gallery</h3>' : '') + hero + dots +   // 11/08 あすかさん：表紙と写真の間に「Gallery」
-      '<div class="k-title"><span class="meta"><button type="button" data-shrine="' + esc(s.id) + '">' + esc(s.name) + '</button>　' + esc(s.prefecture || '') + '</span>' +
+      '<div class="k-title"><span class="meta">' + ((s.komainu || []).length > 1 ? '<button type="button" data-shrine="' + esc(s.id) + '">' + esc(s.name) + '</button>' : esc(s.name)) + '　' + esc(s.prefecture || '') + '</span>' +
       '<h2 class="h2"><span class="num">' + esc(k.no) + '</span>' + esc(k.label) + 'の' + esc(word) + '</h2></div>' +
       '<div class="like-row" data-social-like hidden></div>' +
-      '<section class="section first">' + wherePlan(s, k) + '</section>' +
+      ((s.komainu || []).length > 1 ? '<section class="section first">' + wherePlan(s, k) + '</section>' : '') +   // 11/09 あすかさん：1対だけの神社は神社の頁への入口を出さない
       (tags ? '<section class="section"><div class="tags">' + tags + '</div></section>' : '') +
       (has(k.asukaNote) ? '<section class="section"><h3 class="h3">明日香の感想</h3><div class="note-box">' + esc(k.asukaNote) + '</div></section>' : '') +
       (hist ? '<section class="section"><h3 class="h3">来歴</h3>' + hist + '</section>' : '') +

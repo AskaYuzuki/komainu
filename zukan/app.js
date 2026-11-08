@@ -531,7 +531,7 @@
   function coverHTML(s) {
     var ks = s.komainu || [], gw = groupWord(ks);
     if (!ks[0]) return '';
-    return '<figure class="cover cover-pic"><img class="cover-img" src="images/covers/' + esc(ks[0].id) + '.jpg?v=' + COVER_V + '" alt="' + esc(s.name + 'の' + gw + '(表紙)') + '"></figure>';
+    return '<figure class="cover cover-pic"><img class="cover-img" src="images/covers/' + esc(ks[0].id) + '.jpg?v=' + COVER_V + '" alt="' + esc(s.name + 'の' + gw + '(表紙)') + '" onerror="this.parentNode.style.display=\'none\'"></figure>';   // 11/08 表紙がまだない(確認待ち)ときは枠ごと隠す
   }
 
   /* ---------- 神社の頁 ---------- */

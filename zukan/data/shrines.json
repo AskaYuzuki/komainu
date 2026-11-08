@@ -6631,6 +6631,113 @@
     ],
     "factBasis": {},
     "thumb": "images/thumbs/hie-4.jpg?v=da926852"
+   },
+   {
+    "id": "hie-5",
+    "no": 5,
+    "label": "天満社の前・左右",
+    "animal": "ushi",
+    "animalLabel": "狛牛",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "狛犬図鑑初の「狛牛」！\n\nこの狛牛さんのポーズを見ていると、どうもミル姉さんを彷彿としてしまって……(わかる人は同年代)。けだるさがたまらん♡",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/hie-5-01.jpg?v=2b81dbee",
+      "kind": "record",
+      "caption": "天満社と1対の狛牛"
+     },
+     {
+      "src": "images/hie-5-02.jpg?v=1225ba62",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/hie-5-03.jpg?v=64036c2d",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-5-04.jpg?v=87bbc121",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-5-05.jpg?v=10538097",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-5-06.jpg?v=9988bb4a",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-5-07.jpg?v=465de9cc",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-5-08.jpg?v=06de8d9e",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-5-09.jpg?v=296bf5ab",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-5-10.jpg?v=9944a055",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     },
+     {
+      "src": "images/hie-5-11.jpg?v=4eeb0183",
+      "kind": "art",
+      "title": "飛驒山王宮日枝神社"
+     }
+    ],
+    "lore": [
+     {
+      "text": "天満社の前、左右の台座の上にいる石造りの1対の牛です。図鑑で初めての「狛牛」です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "2頭とも脚を折って寝そべった姿で、角には綱が巻かれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "天満社は日枝神社の境内社で、拝殿の左手にあり、菅原道真公をまつっています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "飛驒山王宮日枝神社 公式サイト「境内のご案内」",
+        "url": "https://hiejinja.com/map/"
+       }
+      ]
+     },
+     {
+      "text": "奉納の年や作者は、調べがつきませんでした。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {},
+    "thumb": "images/thumbs/hie-5.jpg?v=8301333c"
    }
   ]
  }

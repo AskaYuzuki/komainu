@@ -1,0 +1,345 @@
+{
+ "note": "感想のある対を先に、1日1対(11/09 あすかさん)。投稿したら posted に入れる",
+ "queue": [
+  {
+   "id": "harumiya-1",
+   "folder": "harumiya",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.png"
+   ],
+   "dir": "01_harumiya"
+  },
+  {
+   "id": "nogi-1",
+   "folder": "nogi",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.png"
+   ],
+   "dir": "02_nogi"
+  },
+  {
+   "id": "nogi-2",
+   "folder": "nogi_haiden",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.png"
+   ],
+   "dir": "03_nogi_haiden"
+  },
+  {
+   "id": "kono-1",
+   "folder": "kono",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.png"
+   ],
+   "dir": "04_kono"
+  },
+  {
+   "id": "kounouchi-1",
+   "folder": "kounouchi",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.png"
+   ],
+   "dir": "05_kounouchi"
+  },
+  {
+   "id": "omika-1",
+   "folder": "omika",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.png"
+   ],
+   "dir": "06_omika"
+  },
+  {
+   "id": "wara-1",
+   "folder": "wara",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.jpg",
+    "14.jpg",
+    "15.png"
+   ],
+   "dir": "07_wara"
+  },
+  {
+   "id": "minashi-1",
+   "folder": "minashi",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.png"
+   ],
+   "dir": "08_minashi"
+  },
+  {
+   "id": "minashi-2",
+   "folder": "minashi_haiden",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.png"
+   ],
+   "dir": "09_minashi_haiden"
+  },
+  {
+   "id": "minashi-3",
+   "folder": "minashi_torii",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.png"
+   ],
+   "dir": "10_minashi_torii"
+  },
+  {
+   "id": "minashi-4",
+   "folder": "minashi_inari",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.png"
+   ],
+   "dir": "11_minashi_inari"
+  },
+  {
+   "id": "minashi-5",
+   "folder": "minashi_shirakawa",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.jpg",
+    "14.png"
+   ],
+   "dir": "12_minashi_shirakawa"
+  },
+  {
+   "id": "hie-1",
+   "folder": "hie",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.jpg",
+    "14.jpg",
+    "15.png"
+   ],
+   "dir": "13_hie"
+  },
+  {
+   "id": "hie-2",
+   "folder": "hie_kuruma",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.png"
+   ],
+   "dir": "14_hie_kuruma"
+  },
+  {
+   "id": "hie-3",
+   "folder": "hie_fuji",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.png"
+   ],
+   "dir": "15_hie_fuji"
+  },
+  {
+   "id": "hie-4",
+   "folder": "hie_musubi",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.jpg",
+    "14.png"
+   ],
+   "dir": "16_hie_musubi"
+  },
+  {
+   "id": "hie-5",
+   "folder": "hie_tenman",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.png"
+   ],
+   "dir": "17_hie_tenman"
+  },
+  {
+   "id": "chui-1",
+   "folder": "chui",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.png"
+   ],
+   "dir": "18_chui"
+  },
+  {
+   "id": "chui-2",
+   "folder": "chui_iwakura",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.png"
+   ],
+   "dir": "19_chui_iwakura"
+  }
+ ],
+ "posted": []
+}

@@ -7059,5 +7059,162 @@
     "thumb": "images/thumbs/chui-2.jpg?v=dddab7c9"
    }
   ]
+ },
+ {
+  "id": "ena",
+  "name": "恵那神社",
+  "kana": "えなじんじゃ",
+  "prefecture": "岐阜県",
+  "city": "中津川市",
+  "lat": 35.476,
+  "lng": 137.5385,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "ena-1",
+    "no": 1,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和11年9月",
+     "seireki": 1936
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "奉納から90年経過しているのにとても美しく保たれている。\n\n社殿立替中なので、後ろがブルーシートになってしまっていて残念💦\nでも、120年ぶりの改修の瞬間に立ち会っているって、貴重な経験だよね。\n紅葉と相まって美しかったです。\n\n胸板がしっかりとした、わりとがっしりタイプなのに、前足がころん……と丸みを帯びていてかわいらしい♡\n\n梅村宮司さまから、改修の件や神社の由来などお伺いすることができました。……すごく面白かった。親しみやすいお人柄で、わかりやすく恵那神社と神様のお話を教えてくださり感謝です✨️",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/ena-1-01.jpg?v=ff2dbd44",
+      "kind": "record",
+      "caption": "拝殿前の1対の狛犬と夫婦杉"
+     },
+     {
+      "src": "images/ena-1-02.jpg?v=f0b3e865",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ena-1-03.jpg?v=faad9676",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ena-1-04.jpg?v=f709cc69",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ena-1-05.jpg?v=dc1395fb",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ena-1-06.jpg?v=ea7400d8",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ena-1-07.jpg?v=3c3b0b1b",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/ena-1-08.jpg?v=99707679",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ena-1-09.jpg?v=e8ced565",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ena-1-10.jpg?v=71d7de74",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ena-1-11.jpg?v=40d1d094",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ena-1-12.jpg?v=52c38060",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ena-1-13.jpg?v=775a8001",
+      "kind": "art",
+      "title": "恵那神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿へ上る石段の手前、左右の高い台座の上にいる石造りの1対です。台座には「奉献」と刻まれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座の銘によると、昭和11年(1936)9月に奉納されたものです。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "狛犬のうしろには、夫杉・婦杉と呼ばれる2本の大杉が並んでいます。昭和41年(1966)に岐阜県の天然記念物に指定され、樹齢は600〜800年と推定されています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「恵那神社」",
+        "url": "https://ja.wikipedia.org/wiki/恵那神社"
+       }
+      ]
+     },
+     {
+      "text": "恵那山は、伊弉冉命が天照大神を産んだときの胞衣(えな)を納めた山とされ、かつては山そのものが御神体だったと伝わります。神仏習合の時代には恵那権現とも呼ばれました。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「恵那神社」",
+        "url": "https://ja.wikipedia.org/wiki/恵那神社"
+       }
+      ]
+     },
+     {
+      "text": "訪れた2026年11月は、社殿の改修工事が行われていました。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "factBasis": {
+     "year": "site"
+    },
+    "thumb": "images/thumbs/ena-1.jpg?v=4c5cb1ad"
+   }
+  ]
  }
 ]

@@ -7216,5 +7216,172 @@
     "thumb": "images/thumbs/ena-1.jpg?v=4c5cb1ad"
    }
   ]
+ },
+ {
+  "id": "masumida",
+  "name": "真清田神社",
+  "kana": "ますみだじんじゃ",
+  "prefecture": "愛知県",
+  "city": "一宮市",
+  "lat": 35.3043,
+  "lng": 136.8014,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "masumida-1",
+    "no": 1,
+    "label": "境内社 三末社・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "明治42年4月",
+     "seireki": 1909
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "吽形の狛犬が子どもを連れていることは多いけど、足に絡みついてるバージョン(しかもこの甘え方っっっ！)は珍しいかも。\n\nとにかく子狛犬の戯れ方がかわいすぎるっ♡\n\n顔つきもおだやかな狛犬さんたち。\n\n砂岩でできているので、崩れかかっていて、なんとか補修してほしいなーと思いました。\n\nそれにしても、三末社に祀られている神様のラインナップが素晴らしすぎた！\n\n天神社\n・天神七代神\n・伊弉冉命\n・速玉男神\n・事解男神\n・軻遇突智神\n・市杵島姫神\n\n犬飼社\n・犬飼神\n・底筒男神\n・中筒男神\n・表筒男神\n・神功皇后\n・猿田彦神\n・真神田曽根連\n・本宮荒魂\n・菊理姫命\n\n愛鷹社\n・愛鷹神\n・瀬織津姫神\n・速秋津姫神\n・速佐須良姫神\n・気吹戸主命\n・木花咲屋姫神\n\nここ一社をお詣りしたら、なんでも叶うじゃんっ！！(神社にご利益ばかり求めて行ってはだめーっ！)\n\nいや、それにしてもすごいわ！",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/masumida-1-01.jpg?v=c9d0d6e4",
+      "kind": "record",
+      "caption": "三末社の鳥居の前の1対の狛犬"
+     },
+     {
+      "src": "images/masumida-1-02.jpg?v=ec2b3b23",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/masumida-1-03.jpg?v=9a4df24a",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/masumida-1-04.jpg?v=0bbafb74",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/masumida-1-05.jpg?v=1adb6549",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/masumida-1-06.jpg?v=fb011fc7",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/masumida-1-07.jpg?v=942127b4",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "吽",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/masumida-1-08.jpg?v=b6ae0580",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/masumida-1-09.jpg?v=1c16ff6e",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/masumida-1-10.jpg?v=e34d7e84",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/masumida-1-11.jpg?v=a5c4e102",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/masumida-1-12.jpg?v=b1dd7607",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/masumida-1-13.jpg?v=d78fed89",
+      "kind": "art",
+      "title": "真清田神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "境内社「三末社」の石の鳥居の前、左右の台座の上にいる1対です。台座には「奉納」と刻まれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座の銘によると、明治42年(1909)4月に奉納されたものです。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "砂岩でできていて、ところどころ表面がはがれ落ちています。阿形は前足で玉を押さえ、吽形は足もとに子狛犬を連れています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "三末社は、天神社・犬飼社・愛鷹社の3社をまとめたお社です。明治の終わりから大正元年(1912)にかけて、境内のほかの小さなお社をそれぞれに合わせ祀ったといわれます。天神社には愛宕社・熊野社・厳島社など、犬飼社には住吉社・白山社など、愛鷹社には祓戸社・浅間社が合わせ祀られました。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "ブログ「真清田神社 (境内社・史跡等)」",
+        "url": "https://ameblo.jp/keith4862/entry-12859933009.html"
+       }
+      ]
+     },
+     {
+      "text": "真清田神社は尾張国の一宮で、天火明命をお祀りしています。平安時代の延喜式に名神大社として載り、一宮市という地名のもとにもなりました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "コトバンク「真清田神社」",
+        "url": "https://kotobank.jp/word/真清田神社"
+       }
+      ]
+     },
+     {
+      "text": "子どもを連れた獅子の姿は古くからあり、鎌倉時代ごろの作とされる岡山県赤磐市・熊野神社の石の獅子も、子獅子を抱いています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 144・248頁",
+        "url": ""
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "site"
+    },
+    "thumb": "images/thumbs/masumida-1.jpg?v=407cdb35"
+   }
+  ]
  }
 ]

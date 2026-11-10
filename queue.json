@@ -2,6 +2,27 @@
  "note": "感想のある対を先に、1日1対(11/09 あすかさん)。投稿したら posted に入れる",
  "queue": [
   {
+   "id": "nangu-1",
+   "folder": "nangu",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.png"
+   ],
+   "dir": "00_nangu",
+   "follow": "nangutaishiya"
+  },
+  {
    "id": "harumiya-1",
    "folder": "harumiya",
    "files": [
@@ -339,6 +360,20 @@
     "12.png"
    ],
    "dir": "19_chui_iwakura"
+  },
+  {
+   "id": "ibukiyama-1",
+   "folder": "ibukiyama",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.png"
+   ],
+   "dir": "20_ibukiyama"
   }
  ],
  "posted": []

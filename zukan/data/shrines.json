@@ -7484,5 +7484,174 @@
     "thumb": "images/thumbs/masumida-1.jpg?v=407cdb35"
    }
   ]
+ },
+ {
+  "id": "nangu",
+  "name": "南宮大社",
+  "kana": "なんぐうたいしゃ",
+  "prefecture": "岐阜県",
+  "city": "垂井町",
+  "lat": 35.3651,
+  "lng": 136.5381,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "nangu-1",
+    "no": 1,
+    "label": "楼門内・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "wood",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "寛永19年ごろ",
+     "seireki": 1642
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/nangu-1-01.jpg?v=55c9a63d",
+      "kind": "art",
+      "title": "南宮大社",
+      "side": "阿"
+     },
+     {
+      "src": "images/nangu-1-02.jpg?v=9fa6b2b8",
+      "kind": "art",
+      "title": "南宮大社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/nangu-1-03.jpg?v=560cd7ce",
+      "kind": "art",
+      "title": "南宮大社",
+      "side": "阿"
+     },
+     {
+      "src": "images/nangu-1-04.jpg?v=e4966160",
+      "kind": "art",
+      "title": "南宮大社",
+      "side": "阿"
+     },
+     {
+      "src": "images/nangu-1-05.jpg?v=6e8d6b7f",
+      "kind": "art",
+      "title": "南宮大社",
+      "side": "吽"
+     },
+     {
+      "src": "images/nangu-1-06.jpg?v=636fd039",
+      "kind": "art",
+      "title": "南宮大社",
+      "side": "吽"
+     },
+     {
+      "src": "images/nangu-1-07.jpg?v=fa6650fb",
+      "kind": "art",
+      "title": "南宮大社",
+      "side": "吽"
+     },
+     {
+      "src": "images/nangu-1-08.jpg?v=259d105b",
+      "kind": "record",
+      "caption": "石の橋越しに見る楼門"
+     },
+     {
+      "src": "images/nangu-1-09.jpg?v=c9488b89",
+      "kind": "record",
+      "caption": "楼門(国の重要文化財)"
+     },
+     {
+      "src": "images/nangu-1-10.jpg?v=4e9c338d",
+      "kind": "record",
+      "caption": "社殿の軒下の彫刻"
+     },
+     {
+      "src": "images/nangu-1-11.jpg?v=47265ef7",
+      "kind": "record",
+      "caption": "東京南宮会が奉納した、刀を鍛える道具の額(昭和34年11月8日)"
+     }
+    ],
+    "lore": [
+     {
+      "text": "楼門の内側、左右に置かれた木造の1対です。白と黒の彩色が残り、目には玉眼(水晶などをはめた目)が入っています。吽形は頭に1本の角があり、阿形は巻き毛のたてがみです。ひびを鉄のかすがいで留めた修理のあとも見えます。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "関ケ原の合戦のあと、寛永19年(1642)に社殿が再建されたころに奉納されたものだろう、とのことです。およそ400年前の像になります。",
+      "basis": "interview",
+      "refs": [],
+      "by": "禰宜さん"
+     },
+     {
+      "text": "屋内に置かれた木造の狛犬は数が少なく、間近で見られるのは貴重だそうです。",
+      "basis": "interview",
+      "refs": [],
+      "by": "禰宜さん"
+     },
+     {
+      "text": "楼門の狛犬の姿は日光東照宮の狛犬に似ています。再建には日光東照宮や左甚五郎の流れをくむ人々がかかわっていたので、それを意識したのではないか、とのことです。",
+      "basis": "interview",
+      "refs": [],
+      "by": "禰宜さん"
+     },
+     {
+      "text": "以前は本殿の近くに、この1対よりひとまわり大きな狛犬がいましたが、傷みが進んだため宝物殿に移されました。いま本殿の前に狛犬はおらず、真榊が立っています。宝物殿は毎月1日と土日・祝日(元日を除く)に開いていて有料、11月3日にも毎年公開されるそうです。",
+      "basis": "interview",
+      "refs": [],
+      "by": "禰宜さん"
+     },
+     {
+      "text": "南宮大社は美濃国の一宮で、鉱山・金属の神の金山彦命をお祀りしています。関ケ原の合戦で社殿をすべて焼失し、寛永19年(1642)に徳川家光が再建しました。楼門をはじめ建物18棟が国の重要文化財です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜の旅ガイド「南宮大社」",
+        "url": "https://www.kankou-gifu.jp/spot/6870/"
+       }
+      ]
+     },
+     {
+      "text": "戦乱で焼けた社寺が復興していくなかで、多くの狛犬が造られました。織田信長の焼き討ちのあと再建された滋賀県の日吉大社でも、各社殿に大きな狛犬が造られています。関ケ原の合戦のあとに再建された南宮大社のこの1対も、そうした復興の流れの中で造られた可能性があります。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 174・254頁",
+        "url": ""
+       }
+      ],
+      "zuroku": true
+     },
+     {
+      "text": "水晶などをはめた玉眼の木造の獅子・狛犬は鎌倉時代から作例があり、滋賀県の金剛輪寺の1対(14世紀ごろ)もその1つです。この1対にも同じ玉眼が使われています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 140・248頁",
+        "url": ""
+       }
+      ],
+      "zuroku": true
+     }
+    ],
+    "factBasis": {
+     "year": "interview"
+    },
+    "interviewBy": "禰宜さん",
+    "thumb": "images/thumbs/nangu-1.jpg?v=1bb9e072"
+   }
+  ]
  }
 ]

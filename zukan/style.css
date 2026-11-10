@@ -260,8 +260,8 @@ mark { background: none; color: var(--accent-ink); font-weight: 700; }
 .facts dd { margin: 0; }
 .facts dd button { background: none; border: 0; padding: 0; color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; text-align: left; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-/* 感想の文字は来歴の本文（.prose）と同じ大きさ・行間・色 */
-.note-box { border-left: 3px solid var(--moss); padding: 2px 0 2px 14px; font-family: var(--font-display); font-size: 15px; line-height: 1.7; color: var(--ink); max-width: 36em; }
+/* 感想の文字は来歴の本文（.prose）と同じ書体・大きさ・行間・色(11/11 あすかさん：明朝だと大きく見えたので本文と同じ書体に) */
+.note-box { border-left: 3px solid var(--moss); padding: 2px 0 2px 14px; font-family: var(--font-body); font-size: 15px; line-height: 1.7; color: var(--ink); max-width: 36em; }
 .note-sign { color: var(--muted); font-size: 12px; margin-top: 4px; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }

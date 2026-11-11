@@ -475,3 +475,49 @@ dd .bt { margin: 0 0 0 6px; vertical-align: 1px; }
 .art-strip button { position: relative; }
 .art-strip .side { position: absolute; left: 10px; top: 10px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
   background: var(--surface); color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 15px; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+
+/* 11/11 あすかさん：PC(画面幅1024px以上)で見たときだけの体裁。案B(左にメニュー)を採用 */
+@media (min-width: 1024px) {
+  .pad { max-width: 1240px; margin-inline: auto; padding-inline: 40px; }
+  /* 神社の一覧：表紙を大きくカードで並べる */
+  #view-shrines .pad { display: grid; grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); gap: 32px 24px; align-items: start; }
+  #view-shrines .list-head { grid-column: 1 / -1; margin-bottom: 0; }
+  #view-shrines .pref, #view-shrines .s-list, #view-shrines .s-list li { display: contents; }
+  #view-shrines .pref-h { display: none; }   /* 県名は各カードの住所に出ているので、PCでは見出しで区切らず続けて並べる */
+  .s-list li + li { border-top: 0; }
+  .s-row { grid-template-columns: 1fr; gap: 10px; padding: 0; align-items: start; }
+  .s-ph { width: 100%; height: auto; aspect-ratio: 4 / 5; border-radius: 4px; box-shadow: 0 6px 18px rgba(30,45,40,.14); transition: transform .2s; }
+  .s-row:hover .s-ph { transform: translateY(-3px); }
+  .s-row > :last-child { display: none; }
+  .s-tx .nm { font-size: 18px; }
+  .pref-h { font-size: 15px; margin: 28px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  /* 狛犬の頁：左に表紙と写真、右に文章 */
+  .k-cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 48px; align-items: start; }
+  .k-left { position: sticky; top: 12px; }
+  .k-left .k-cover img { width: 100%; }
+  .k-left .art-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0; padding: 0; overflow: visible; }
+  .k-left .art-strip figure { max-width: none; }
+  .k-left .art-strip button { width: 100%; aspect-ratio: 4 / 5; }
+  .k-left .art-strip img { width: 100%; height: 100%; max-height: none; object-fit: cover; }
+  .k-left .art-strip figcaption { display: none; }
+  .k-left .dots { display: none; }
+  .k-right .k-title { margin-top: 0; }
+  .k-right .k-title .h2 { font-size: 30px; }
+  .k-right .prose, .k-right .note-box { max-width: none; }
+  .masonry { columns: 5; }
+}
+
+/* 案B：左にメニューを縦に並べる(本の目次ふう) */
+@media (min-width: 1024px) {
+  .app { grid-template-columns: 232px 1fr; grid-template-rows: auto 1fr; grid-template-areas: "top main" "tabs main"; }
+  .app > .top { grid-area: top; flex-direction: column; align-items: flex-start; gap: 18px; padding: 36px 24px 20px; border-bottom: 0; border-right: 1px solid var(--line); }
+  .brand h1 { font-size: 28px; letter-spacing: .18em; }
+  .sample-band { display: none; }
+  .app > main { grid-area: main; }
+  .app > .tabs { grid-area: tabs; display: flex; flex-direction: column; justify-content: flex-start; gap: 4px; border-top: 0; border-right: 1px solid var(--line); padding: 0 16px 24px; }
+  .tabs button { flex-direction: row; justify-content: flex-start; gap: 12px; min-height: 0; padding: 12px 14px; font-size: 15px; border-radius: 10px; }
+  .tabs svg { width: 22px; height: 22px; }
+  .tabs button[aria-current="page"] { background: var(--accent); color: var(--on-accent); }
+  #view-shrines .pad { --cols: 4; }
+  .masonry { columns: 4; }
+}

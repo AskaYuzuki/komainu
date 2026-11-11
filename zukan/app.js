@@ -667,8 +667,10 @@
     if (g0) acct += '<button class="btn" type="button" data-showmap="' + esc(s.id) + '" data-geo="' + esc(pointKey(g0, s)) + '">' + ICON.map + '地図で見る</button>';
 
     v.innerHTML = '<div class="pad"><button class="back" type="button" data-back>' + ICON.back + 'もどる</button>' +
+      '<div class="k-cols"><div class="k-left">' +   // 11/11 PC で左(表紙・写真)と右(文章)の2列にするための箱。スマホでは何も変わらない
       '<figure class="cover cover-pic k-cover"><img class="cover-img" src="' + coverSrc(k) + '" alt="' + esc(alt + '(表紙)') + '" onerror="this.parentNode.style.display=\'none\'"></figure>' +
       (nHero ? '<h3 class="k-gal">Gallery</h3>' : '') + hero + dots +   // 11/08 あすかさん：表紙と写真の間に「Gallery」
+      '</div><div class="k-right">' +
       '<div class="k-title"><span class="meta">' + ((s.komainu || []).length > 1 ? '<button type="button" data-shrine="' + esc(s.id) + '">' + esc(s.name) + '</button>' : esc(s.name)) + '　' + esc(s.prefecture || '') + '</span>' +
       '<h2 class="h2"><span class="num">' + esc(k.no) + '</span>' + esc(k.label) + 'の' + esc(word) + '</h2></div>' +
       '<div class="like-row" data-social-like hidden></div>' +
@@ -682,7 +684,7 @@
       (sib.length > 1 ? '<div class="pager">' +
         (prev ? '<button class="btn" type="button" data-k="' + esc(prev.id) + '">' + esc(prev.no) + ' ' + esc(prev.label) + '</button>' : '<span></span>') +
         (next ? '<button class="btn" type="button" data-k="' + esc(next.id) + '">' + esc(next.no) + ' ' + esc(next.label) + '</button>' : '<span></span>') + '</div>' : '') +
-      '</section></div>';
+      '</section></div></div></div>';
 
     loadSocial(v, k);
     v._art = art.map(function (p) { return { src: p.src, title: p.title, meta: s.name + '　' + k.no + ' ' + k.label }; });

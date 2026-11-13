@@ -7788,5 +7788,286 @@
     "thumb": "images/thumbs/ibukiyama-1.jpg?v=38abca0a"
    }
   ]
+ },
+ {
+  "id": "ibuki",
+  "name": "伊富岐神社",
+  "kana": "いぶきじんじゃ",
+  "prefecture": "岐阜県",
+  "city": "垂井町",
+  "lat": 35.3888,
+  "lng": 136.5146,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "ibuki-1",
+    "no": 1,
+    "label": "拝殿前・手前の左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "明治43年3月",
+     "seireki": 1910
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "拝殿前に二重に狛犬が配置されているのがめずらしい。\n\n手前側にある方が古くて、明治時代に奉納されたもの。野外にあるのに、比較的保存状態が良いです。\n\nくるくるした巻き毛の感じと、平べったい頭、垂れた耳、身体のバランス……どれをとってもたいへんかわいい♡\n\n拝殿の後ろ側から本殿に近づいて行くと、ものすごい御神氣。\n\n本殿も、本殿向かって右側の境内社も、木造りで彩色こそ施されていないけど、彫刻が美しかったです。\n\n御祭神は多多美彦命(たたみひこのみこと：伊吹山の神)ということでしたが、本当に力のある神様なのだなということがよくわかります。\n\n多多美彦命の神名の「多多(たた)」は「鑪(たたら：製鉄炉のこと)」に通じるとされ、別名の「気吹雄命(いぶきおのみこと)」や「伊吹山」の名はという名前は、ふいご(吹子)で火に風を吹き込む様子(息吹・火吹)に由来しているとも言われています。\n\nつまり、古来、ここは製鉄や鍛冶を行う技術者集団である伊福氏が住んでいたってことみたい。\n\n日本武尊(ヤマトタケルノミコト)が伊吹山の神と戦って敗れたという話は、実は製鉄権をめぐる争いに大和朝廷が負けたってことなのかもしれないね。おもしろー。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/ibuki-1-01.jpg?v=daad31ab",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ibuki-1-02.jpg?v=5c17d580",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ibuki-1-03.jpg?v=00214814",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ibuki-1-04.jpg?v=b9ffaed1",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ibuki-1-05.jpg?v=2a97efd8",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ibuki-1-06.jpg?v=dff75349",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ibuki-1-07.jpg?v=0bb04f02",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ibuki-1-08.jpg?v=dba85351",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ibuki-1-09.jpg?v=b94cb0b6",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/ibuki-1-10.jpg?v=0d46d689",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿前の狛犬の10mほど手前、参道の左右にいる石の1対です。拝殿前の1対と合わせて、狛犬が二重に並んでいます。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座の銘によると、明治43年(1910)3月に奉納されたものです。拝殿前の1対(大正7年)より8年早く納められています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "伊吹山を背にした古い神社で、美濃国の二宮です。仁寿2年(852)に国の官社となりました。関ケ原の合戦(1600)で社殿を焼失し、寛永13年(1636)に再建されています。御神体は木の幹の分かれ目に置かれていて無事だったと伝わります。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜の旅ガイド「伊富岐神社」",
+        "url": "https://www.kankou-gifu.jp/spot/7042/"
+       }
+      ]
+     },
+     {
+      "text": "御祭神は多多美比古命(伊吹山の神)とされますが諸説あり、この地を治めた伊福氏の祖神ともいわれます。延喜式に不破郡の「伊富岐神社」として載る古社です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "コトバンク「伊富岐神社」",
+        "url": "https://kotobank.jp/word/伊富岐神社-1716064"
+       }
+      ]
+     },
+     {
+      "text": "拝殿のわきの大杉は御神木で、岐阜県の天然記念物です。根回り約9.6m・高さ約30mで、地上5mほどのところで4本に分かれています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜の旅ガイド「伊富岐神社」",
+        "url": "https://www.kankou-gifu.jp/spot/7042/"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "site"
+    },
+    "thumb": "images/thumbs/ibuki-1.jpg?v=9ec23d13"
+   },
+   {
+    "id": "ibuki-2",
+    "no": 2,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "大正7年6月",
+     "seireki": 1918
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "大正時代に奉納されているということで、すでに100年以上が経過しているにもかかわらず、保存状態がとてもいいだけでなく、デザインもなんか今っぽい。\n\n足のある台座に載っている姿もちょっとめずらしい。\n\nそれにしても、この神社は謎が多い。拝殿・本殿の他に3つのお社があるのだけど、境内図が無いので、何という神様がどのお社に祀られているのかさっぱりわからない。\n\n本殿に祀られているのは多多美彦命(タタミヒコノミコト)。どのお社に祀られているかわからないけど、お祀りされているのが、この辺を治めていた伊福氏一族の9代にわたる神様たちとのこと。\n\nお社の立派さからして、本殿に向かって右側が九御子明神(くみこみょうじん：伊福氏の祖霊9代)なんだろうけど、左側のお社と、入口の石橋を渡ったところにあるお社は1体どなたが祀られているのだろうか……。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/ibuki-2-01.jpg?v=76030f62",
+      "kind": "record",
+      "caption": "伊富岐神社の拝殿"
+     },
+     {
+      "src": "images/ibuki-2-02.jpg?v=ced05923",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ibuki-2-03.jpg?v=e9d0370c",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ibuki-2-04.jpg?v=6a86c61b",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ibuki-2-05.jpg?v=54090d64",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/ibuki-2-06.jpg?v=91c81e0a",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ibuki-2-07.jpg?v=4adfd035",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ibuki-2-08.jpg?v=1a5e183f",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ibuki-2-09.jpg?v=04acd7bd",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/ibuki-2-10.jpg?v=972ffc61",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/ibuki-2-11.jpg?v=db00caab",
+      "kind": "art",
+      "title": "伊富岐神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿の前の左右、足のついた台座の上にいる石の1対です。(10mほど手前には、明治の1対もいます。)",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座の銘によると、大正7年(1918)6月に奉納されたものです。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "伊吹山を背にした古い神社で、美濃国の二宮です。仁寿2年(852)に国の官社となりました。関ケ原の合戦(1600)で社殿を焼失し、寛永13年(1636)に再建されています。御神体は木の幹の分かれ目に置かれていて無事だったと伝わります。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜の旅ガイド「伊富岐神社」",
+        "url": "https://www.kankou-gifu.jp/spot/7042/"
+       }
+      ]
+     },
+     {
+      "text": "御祭神は多多美比古命(伊吹山の神)とされますが諸説あり、この地を治めた伊福氏の祖神ともいわれます。延喜式に不破郡の「伊富岐神社」として載る古社です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "コトバンク「伊富岐神社」",
+        "url": "https://kotobank.jp/word/伊富岐神社-1716064"
+       }
+      ]
+     },
+     {
+      "text": "拝殿のわきの大杉は御神木で、岐阜県の天然記念物です。根回り約9.6m・高さ約30mで、地上5mほどのところで4本に分かれています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "岐阜の旅ガイド「伊富岐神社」",
+        "url": "https://www.kankou-gifu.jp/spot/7042/"
+       }
+      ]
+     }
+    ],
+    "factBasis": {
+     "year": "site"
+    },
+    "thumb": "images/thumbs/ibuki-2.jpg?v=2c296702"
+   }
+  ]
  }
 ]

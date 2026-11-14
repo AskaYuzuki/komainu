@@ -8069,5 +8069,120 @@
     "thumb": "images/thumbs/ibuki-2.jpg?v=2c296702"
    }
   ]
+ },
+ {
+  "id": "sakaki",
+  "name": "第六天榊神社",
+  "kana": "だいろくてんさかきじんじゃ",
+  "prefecture": "東京都",
+  "city": "台東区",
+  "lat": 35.7003,
+  "lng": 139.7912,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "sakaki-1",
+    "no": 1,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "以前から気になっていた、第六天榊神社へ。\n\nここは、ホツマツタエに登場する面足尊(おもだるのみこと)と惶根尊(かしこねのみこと)が祀られているとても珍しい神社。\n\nとても氣が良くて、大きくて温かい感じがしました。井戸水も出るので(飲用不可)、いただいてきましたよ♡\n\n狛犬さんは、筋骨隆々のめちゃマッチョタイプ。\n\n狛犬って、想像上の生き物なので、性別もふんわりしてることが多いのですが……(ry",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/sakaki-1-01.jpg?v=7481733d",
+      "kind": "art",
+      "title": "第六天榊神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/sakaki-1-02.jpg?v=420665fd",
+      "kind": "art",
+      "title": "第六天榊神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/sakaki-1-03.jpg?v=c00d18d1",
+      "kind": "art",
+      "title": "第六天榊神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/sakaki-1-04.jpg?v=74fc3d52",
+      "kind": "art",
+      "title": "第六天榊神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/sakaki-1-05.jpg?v=1b2de8a9",
+      "kind": "record",
+      "caption": "拝殿と、その前の左右に置かれた狛犬(色づいた銀杏の下)"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿の前の左右に置かれた1対です。黒みを帯びた石で、胸と前脚の筋肉が大きく盛り上がり、前脚をまっすぐ立てて座っています。吽形は口を閉じ、阿形は口を開けています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "景行天皇40年(110)、日本武尊が東国を平定に向かう際にこの地に皇祖の二柱の神をまつり、自ら持っていた白銅の鏡を納めたのが始まりと伝わります。古くは「第六天神宮」とよばれました。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "神社ファン「第六天榊神社」",
+        "url": "https://jinjafan.jp/1300041/"
+       },
+       {
+        "title": "猫の足あと「第六天榊神社」",
+        "url": "https://tesshow.jp/taito/shrine_kuramae_sakaki.html"
+       }
+      ]
+     },
+     {
+      "text": "御祭神は天神第六代坐榊皇大御神・面足尊(おもだるのみこと)・惶根尊(かしこねのみこと)です。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "神社ファン「第六天榊神社」",
+        "url": "https://jinjafan.jp/1300041/"
+       },
+       {
+        "title": "猫の足あと「第六天榊神社」",
+        "url": "https://tesshow.jp/taito/shrine_kuramae_sakaki.html"
+       }
+      ]
+     },
+     {
+      "text": "江戸時代には、幕府の米蔵「浅草御蔵」の総鎮守とされました。もとは森田町(いまの蔵前3丁目あたり)にあり、享保4年(1719)に柳橋へ移りました。明治6年(1873)に「榊神社」と改め、昭和3年(1928)に、官立の図書館「浅草文庫」の跡地であるいまの場所へ移っています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "猫の足あと「第六天榊神社」",
+        "url": "https://tesshow.jp/taito/shrine_kuramae_sakaki.html"
+       },
+       {
+        "title": "神社ファン「第六天榊神社」",
+        "url": "https://jinjafan.jp/1300041/"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/sakaki-1.jpg?v=ed865727"
+   }
+  ]
  }
 ]

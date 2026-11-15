@@ -47,3 +47,6 @@ URL：1ページ目 https://www.434-magazineworld.com/SHOP/357704/list.html ／2
 - moody-dark：暗い写真に細い誌名を薄く(roast・Barista)
 - white-minimal：白地に小さな写真、誌名と短い見出しだけ(dwell・The Atlantic)
 - craft-lines：見出しを色を変えて何行も(手芸誌・料理誌)※狛犬には向かない
+
+## 2026-11-15 Adobe Express から学んだ型
+- 今回は一覧を読めず、新しい型なし(定例タスクで magazine・magazine/fashion のページ取得の許可が得られず、Chrome にもつながらなかった)。次回 12/1 に見直す

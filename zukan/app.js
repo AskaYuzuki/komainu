@@ -191,6 +191,14 @@
       var f = JSON.parse(lsGet('komainu.filters') || 'null');
       if (f) FILTER_KEYS.forEach(function (x) { if (Array.isArray(f[x.key])) state.filters[x.key] = f[x.key]; });
     } catch (e) { /* 無視 */ }
+    // 前に保存した絞り込みのうち、今のデータにない値は捨てる。それでも1件も出ないなら解除する(地図にピンが出なくなるのを防ぐ)
+    FILTER_KEYS.forEach(function (x) {
+      state.filters[x.key] = state.filters[x.key].filter(function (v) {
+        return ALL.some(function (e) { return vals(e, x.key).indexOf(v) >= 0; });
+      });
+    });
+    if (activeCount() && !filtered().length) FILTER_KEYS.forEach(function (x) { state.filters[x.key] = []; });
+    saveFilters();
     if (lsGet('komainu.group') === 'shrine') state.group = 'shrine';
   }
 
@@ -915,7 +923,14 @@
       markers.push(new maplibregl.Marker({ element: pe.el }).setLngLat([c.lng, c.lat]).addTo(map));
       pe.el.setAttribute('aria-label', pe.label);   // MapLibre が上書きするので付け直す
     });
-    var cnt = $('#map-count'); if (cnt) cnt.textContent = shrineCount(list) + '社を表示' + (activeCount() ? '(絞り込み中)' : '');
+    var cnt = $('#map-count');
+    if (cnt) {
+      var zero = activeCount() && !list.length;
+      cnt.textContent = zero ? '0社(絞り込みを解除する)' : shrineCount(list) + '社を表示' + (activeCount() ? '(絞り込み中)' : '');
+      cnt.classList.toggle('is-off', !zero);
+      cnt.onclick = zero ? function () { clearFilters(); render(); } : null;
+      cnt.style.cursor = zero ? 'pointer' : '';
+    }
   }
   function shrineCount(list) { var o = {}; list.forEach(function (x) { o[x.s.id] = 1; }); return Object.keys(o).length; }
   function fitTo(list) {

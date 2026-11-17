@@ -8277,49 +8277,51 @@
     ],
     "lore": [
      {
-      "text": "鳥居をくぐった先、石段の手前の左右に置かれた1対です。阿形は前脚の下に子獅子を連れ、吽形は前脚で玉を押さえています。巻き毛と、渦を巻いて大きく広がる尾が彫られています。",
+      "text": "参道の両脇に置かれた1対で、向かって右の阿形は子取り、向かって左の吽形は玉取りの姿です。側面の彫刻により、嘉永4年(1851)に奉納されたものと確かめられています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "六本木天祖神社 公式サイト「境内のご案内」",
+        "url": "http://tensojinja.tokyo-jinjacho.or.jp/keidai00.html"
+       }
+      ]
+     },
+     {
+      "text": "阿形は前脚の下に子獅子を連れ、吽形は前脚で玉を押さえています。巻き毛と、渦を巻いて大きく広がる尾が彫られています。",
       "basis": "site",
       "refs": []
      },
      {
-      "text": "台座の側面に刻まれた文字から、嘉永4年(1851)に奉納された狛犬とされています。",
-      "basis": "kuden",
+      "text": "境内を囲む瑞垣と石垣は天保10年(1839)に奉納されたもので、参道の階段の両脇の石にも狛犬が彫られています。",
+      "basis": "source",
       "refs": [
        {
-        "title": "神社メモ「六本木天祖神社(龍土神明宮)」",
-        "url": "https://jinjamemo.com/archives/roppongitensojinja.html"
-       },
-       {
-        "title": "御朱印.net「天祖神社(龍土神明宮)」",
-        "url": "https://goshuin.net/tenso-ryudo/"
+        "title": "六本木天祖神社 公式サイト「境内のご案内」",
+        "url": "http://tensojinja.tokyo-jinjacho.or.jp/keidai00.html"
        }
       ]
      },
      {
-      "text": "社伝では至徳元年(1384)の創建です。もとは飯倉の城山(いまの虎ノ門4丁目あたり)にまつられ、室町時代に太田道灌が社殿を建て直し、祭田を寄進したと伝わります。元和年間(1615〜1624)、江戸城の改築に伴って、いまの場所へ移りました。",
-      "basis": "kuden",
+      "text": "創建は南北朝時代の至徳元年(1384)。毎夜、品川沖から龍が灯明をささげたという言い伝えから「龍灯」とよばれ、それがなまって地名が「龍土」となり、神社も「龍土神明宮」とよばれるようになりました。",
+      "basis": "source",
       "refs": [
        {
-        "title": "神社メモ「六本木天祖神社(龍土神明宮)」",
-        "url": "https://jinjamemo.com/archives/roppongitensojinja.html"
-       },
-       {
-        "title": "御朱印.net「天祖神社(龍土神明宮)」",
-        "url": "https://goshuin.net/tenso-ryudo/"
+        "title": "六本木天祖神社 公式サイト「天祖神社のご紹介」",
+        "url": "http://tensojinja.tokyo-jinjacho.or.jp/syoukai00.html"
        }
       ]
      },
      {
-      "text": "毎夜、品川沖から龍が灯明をささげたので「龍燈山」とよばれ、それがなまってこのあたりが「龍土」とよばれるようになったと伝わります。そのため「龍土神明宮」とも称されます。御祭神は天照大神・伊邪那岐命・伊邪那美命です。",
+      "text": "もとは飯倉の城山(いまの虎ノ門4丁目あたり)にまつられ、室町時代に太田道灌が社殿を建て直し、祭田を寄進したと伝わります。元和年間(1615〜1624)、江戸城の改築に伴って、いまの場所へ移りました。御祭神は天照大神・伊邪那岐命・伊邪那美命です。",
       "basis": "kuden",
       "refs": [
        {
-        "title": "御朱印.net「天祖神社(龍土神明宮)」",
-        "url": "https://goshuin.net/tenso-ryudo/"
-       },
-       {
         "title": "神社メモ「六本木天祖神社(龍土神明宮)」",
         "url": "https://jinjamemo.com/archives/roppongitensojinja.html"
+       },
+       {
+        "title": "御朱印.net「天祖神社(龍土神明宮)」",
+        "url": "https://goshuin.net/tenso-ryudo/"
        }
       ]
      },
@@ -8336,7 +8338,7 @@
      }
     ],
     "factBasis": {
-     "year": "kuden"
+     "year": "source"
     },
     "thumb": "images/thumbs/tenso-1.jpg?v=de77e7f5"
    }

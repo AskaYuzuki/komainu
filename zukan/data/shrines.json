@@ -8184,5 +8184,162 @@
     "thumb": "images/thumbs/sakaki-1.jpg?v=ed865727"
    }
   ]
+ },
+ {
+  "id": "tenso",
+  "name": "六本木天祖神社(龍土神明宮)",
+  "kana": "ろっぽんぎてんそじんじゃ(りゅうどしんめいぐう)",
+  "prefecture": "東京都",
+  "city": "港区",
+  "lat": 35.6649,
+  "lng": 139.7268,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "tenso-1",
+    "no": 1,
+    "label": "鳥居をくぐった先・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "嘉永4年",
+     "seireki": 1851
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "阿形の子の顔がとにかく優しい。\n……子どもが足元にじゃれているのだけど、お乳を吸っているのかな？\nだからか、母の顔なんだね。\n\n阿形も吽形も、いつもとても優しく迎え入れてくれるような雰囲気があります。\n\n参道の階段の両脇には、狛犬が彫られているらしいのですが、見そびれたー！次に行ったら確認せねば。\n\n六本木天祖神社(龍土神明宮)はとにかく立地がすごくて、住所がなんと「東京都港区六本木7-7-7」。スリーセブンなのです！縁起が良さそうとのことで、地元でも人気の神社なのだとか。\n\n鳥居の前には清龍の井戸があって、今も清らかな水をたたえ、手を洗い清めると人生のお導きを得られ、足を洗い清めると良くない縁や習慣を絶つことができると言われています。\n\n手を洗ったので、期待大だわ♡",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/tenso-1-01.jpg?v=e044bfd1",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/tenso-1-02.jpg?v=ab9eb905",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "阿"
+     },
+     {
+      "src": "images/tenso-1-03.jpg?v=6bdf7b53",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "阿"
+     },
+     {
+      "src": "images/tenso-1-04.jpg?v=941a0dd2",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "阿"
+     },
+     {
+      "src": "images/tenso-1-05.jpg?v=2d386a69",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     },
+     {
+      "src": "images/tenso-1-06.jpg?v=ee75f43c",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     },
+     {
+      "src": "images/tenso-1-07.jpg?v=b3c78c0a",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     },
+     {
+      "src": "images/tenso-1-08.jpg?v=af85dcf9",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     },
+     {
+      "src": "images/tenso-1-09.jpg?v=727417e9",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "鳥居をくぐった先、石段の手前の左右に置かれた1対です。阿形は前脚の下に子獅子を連れ、吽形は前脚で玉を押さえています。巻き毛と、渦を巻いて大きく広がる尾が彫られています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座の側面に刻まれた文字から、嘉永4年(1851)に奉納された狛犬とされています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "神社メモ「六本木天祖神社(龍土神明宮)」",
+        "url": "https://jinjamemo.com/archives/roppongitensojinja.html"
+       },
+       {
+        "title": "御朱印.net「天祖神社(龍土神明宮)」",
+        "url": "https://goshuin.net/tenso-ryudo/"
+       }
+      ]
+     },
+     {
+      "text": "社伝では至徳元年(1384)の創建です。もとは飯倉の城山(いまの虎ノ門4丁目あたり)にまつられ、室町時代に太田道灌が社殿を建て直し、祭田を寄進したと伝わります。元和年間(1615〜1624)、江戸城の改築に伴って、いまの場所へ移りました。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "神社メモ「六本木天祖神社(龍土神明宮)」",
+        "url": "https://jinjamemo.com/archives/roppongitensojinja.html"
+       },
+       {
+        "title": "御朱印.net「天祖神社(龍土神明宮)」",
+        "url": "https://goshuin.net/tenso-ryudo/"
+       }
+      ]
+     },
+     {
+      "text": "毎夜、品川沖から龍が灯明をささげたので「龍燈山」とよばれ、それがなまってこのあたりが「龍土」とよばれるようになったと伝わります。そのため「龍土神明宮」とも称されます。御祭神は天照大神・伊邪那岐命・伊邪那美命です。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "御朱印.net「天祖神社(龍土神明宮)」",
+        "url": "https://goshuin.net/tenso-ryudo/"
+       },
+       {
+        "title": "神社メモ「六本木天祖神社(龍土神明宮)」",
+        "url": "https://jinjamemo.com/archives/roppongitensojinja.html"
+       }
+      ]
+     },
+     {
+      "text": "子獅子を連れた獅子の姿は古くからあり、鎌倉時代のはじめごろ(12世紀末〜13世紀初め)とされる岡山県赤磐市・熊野神社の石造の獅子にも、子獅子を抱く形が見られます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 144・248頁",
+        "url": ""
+       }
+      ],
+      "zuroku": true
+     }
+    ],
+    "factBasis": {
+     "year": "kuden"
+    },
+    "thumb": "images/thumbs/tenso-1.jpg?v=de77e7f5"
+   }
+  ]
  }
 ]

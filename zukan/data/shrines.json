@@ -8341,6 +8341,130 @@
      "year": "source"
     },
     "thumb": "images/thumbs/tenso-1.jpg?v=de77e7f5"
+   },
+   {
+    "id": "tenso-2",
+    "no": 2,
+    "label": "満福稲荷神社の社前・左右",
+    "animal": "fox",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和8年",
+     "seireki": 1933
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "六本木天祖神社(龍土神明宮)の境内にある、満福稲荷神社。小さいお宮ではあるけれど、氣が澄んでいてりんとした佇まい。\n\nしなやかな躯体に、シュッとした顔立ちのお狐さん。子どもの顔がめちゃくちゃ人懐っこくてかわいい。\n\n六本木は氣がガチャガチャしているところが多いのだけど、この境内はいつも氣がよい。すぅっと整う。\n\nおそらく、清龍の井戸がこの土地の清浄化に一役買っている。龍脈がある。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/tenso-2-01.jpg?v=a1d17be6",
+      "kind": "record",
+      "caption": "満福稲荷神社と1対の狐"
+     },
+     {
+      "src": "images/tenso-2-02.jpg?v=09c88ee4",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/tenso-2-03.jpg?v=bfb1c964",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "阿"
+     },
+     {
+      "src": "images/tenso-2-04.jpg?v=1b84742c",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "阿"
+     },
+     {
+      "src": "images/tenso-2-05.jpg?v=d5bc415e",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "阿"
+     },
+     {
+      "src": "images/tenso-2-06.jpg?v=8b8040c9",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     },
+     {
+      "src": "images/tenso-2-07.jpg?v=887c05ee",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     },
+     {
+      "src": "images/tenso-2-08.jpg?v=2e2bc7be",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     },
+     {
+      "src": "images/tenso-2-09.jpg?v=ab09fc74",
+      "kind": "art",
+      "title": "六本木天祖神社(龍土神明宮)",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "境内社の満福稲荷神社の前、左右に置かれた狐の1対です。阿形は前脚で玉を押さえ、足もとに赤い前掛けをつけた子狐を連れています。吽形は前脚で玉を押さえています。2体とも赤い前掛けをつけています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "稲荷の神使である狐の像で、昭和8年(1933)に奉納されたものです。崇敬する人たちによる前掛けの奉納が、いまも続いています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "六本木天祖神社 公式サイト「境内のご案内」",
+        "url": "http://tensojinja.tokyo-jinjacho.or.jp/keidai00.html"
+       }
+      ]
+     },
+     {
+      "text": "満福稲荷神社は、御社殿へ上る石段の右手にある境内社です。もとは「孫太郎稲荷」とよばれていましたが、近くの稲荷社をあわせまつって今の名になりました。商売繁盛・事業繁栄の神として信仰され、港七福神の福禄寿もまつられています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "六本木天祖神社 公式サイト「境内のご案内」",
+        "url": "http://tensojinja.tokyo-jinjacho.or.jp/keidai00.html"
+       },
+       {
+        "title": "六本木天祖神社 公式サイト「天祖神社のご紹介」",
+        "url": "http://tensojinja.tokyo-jinjacho.or.jp/syoukai00.html"
+       }
+      ]
+     },
+     {
+      "text": "稲荷の神前に置かれる狐の像も、獅子・狛犬の形にならって作られてきたとされます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 208・209頁",
+        "url": ""
+       }
+      ],
+      "zuroku": true
+     }
+    ],
+    "factBasis": {
+     "year": "source"
+    },
+    "thumb": "images/thumbs/tenso-2.jpg?v=1451213f"
    }
   ]
  }

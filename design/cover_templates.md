@@ -3,7 +3,7 @@
 
 ## 使った型(同じものを2度使わない)
 photo / frame / flambay / travel / steer / pale / oshi / sweets / nordic / curve / band / expose / minimalw / grayside / letter / couture / esteem /
-coverlines / circlewin / vertname / framewin / collage / duotone / stacked / repeat / sun(南宮) / arch(伊吹山) / tate(伊富岐 明治) / time-frame(伊富岐2対) / natgeo-frame(第六天榊) / ticket(六本木天祖2対・色違い) / painting-frame(金華山黄金山神社 随神門・11/21 案)
+coverlines / circlewin / vertname / framewin / collage / duotone / stacked / repeat / sun(南宮) / arch(伊吹山) / tate(伊富岐 明治) / time-frame(伊富岐2対) / natgeo-frame(第六天榊) / ticket(六本木天祖2対・色違い) / painting-frame(金華山黄金山神社 随神門・11/21 案) / white-minimal(釣石神社・11/22 案)
 使わない：contents(大きな数字)・splitband(上下分けで下半身が隠れる)・sideband(縦帯)・pair2(アーチ2つ・ポラロイドは11/13 不採用案)
 
 ## 今回足した型

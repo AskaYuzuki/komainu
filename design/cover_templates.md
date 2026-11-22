@@ -3,7 +3,7 @@
 
 ## 使った型(同じものを2度使わない)
 photo / frame / flambay / travel / steer / pale / oshi / sweets / nordic / curve / band / expose / minimalw / grayside / letter / couture / esteem /
-coverlines / circlewin / vertname / framewin / collage / duotone / stacked / repeat / sun(南宮) / arch(伊吹山) / tate(伊富岐 明治) / time-frame(伊富岐2対) / natgeo-frame(第六天榊) / ticket(六本木天祖2対・色違い) / painting-frame(金華山黄金山神社 随神門・11/21 案) / white-minimal(釣石神社・11/22 案)
+coverlines / circlewin / vertname / framewin / collage / duotone / stacked / repeat / sun(南宮) / arch(伊吹山) / tate(伊富岐 明治) / time-frame(伊富岐2対) / natgeo-frame(第六天榊) / ticket(六本木天祖2対・色違い) / painting-frame(金華山 11/21 案・不採用) / white-minimal(釣石 11/22 案・不採用) / mast-vertical(金華山黄金山神社 11/22 案) / flat-object(釣石神社 案A) / bw-script(釣石神社 案B)
 使わない：contents(大きな数字)・splitband(上下分けで下半身が隠れる)・sideband(縦帯)・pair2(アーチ2つ・ポラロイドは11/13 不採用案)
 
 ## 今回足した型
@@ -54,3 +54,11 @@ URL：1ページ目 https://www.434-magazineworld.com/SHOP/357704/list.html ／2
 
 ## 2026-11-15 Adobe Express から学んだ型
 - 今回は一覧を読めず、新しい型なし(定例タスクで magazine・magazine/fashion のページ取得の許可が得られず、Chrome にもつながらなかった)。次回 12/1 に見直す
+
+## ★11/22 あすかさん「同じようなデザインが続いているので、テンプレートを見て、デザインを刷新して」
+- 続いていたのは「明るい地に写真を四角い窓や額で置く」形(natgeo-frame・ticket・painting-frame・white-minimal)。型の名前が違っても、組み立てが同じだと同じに見える
+- 次に作るときは、直前の3つの表紙と「組み立て」(写真の置き方＝全面/窓/切り抜き、地の色＝明/暗、誌名の位置と向き)を比べ、2つ以上が違うものにする
+- 11/22 に作った案：
+  - flat-object：濃い紺の無地に、切り抜いた像を1体だけ大きく置く。誌名は極太(Anton)で上に(釣石 案A)
+  - bw-script：写真を全面の白黒にし、赤い筆記体の誌名と赤い見出し(Esquire)(釣石 案B)
+  - mast-vertical：写真を全面に、誌名を左端に縦に大きく、神社名は右上に縦書き(金華山)

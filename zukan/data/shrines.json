@@ -5274,6 +5274,140 @@
      }
     ],
     "thumb": "images/thumbs/shiogama-6.jpg?v=b09f5c44"
+   },
+   {
+    "id": "shiogama-7",
+    "no": 7,
+    "label": "東参道の石段の途中",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "日野友輔(気仙沼の石工)",
+    "sculptorId": "",
+    "year": {
+     "wareki": "文久2年11月",
+     "seireki": 1862
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true,
+      "src": "images/shiogama-7-01.jpg?v=458fecbf"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-7-02.jpg?v=553dac68"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-7-03.jpg?v=db05f4c6"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-7-04.jpg?v=9915b6e1"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-7-05.jpg?v=84be4f92"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-7-06.jpg?v=8f4276ed"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-7-07.jpg?v=c7cc994a"
+     },
+     {
+      "kind": "record",
+      "caption": "東参道の石段と、途中の左右に置かれた1対",
+      "src": "images/shiogama-7-08.jpg?v=23400d9d"
+     }
+    ],
+    "lore": [
+     {
+      "text": "東参道の石段の途中、東神門の手前の左右に置かれた1対です。阿形の頭の上には宝珠がのっています。前脚が太く、どっしりとした体つきで、台座は角を丸めて飾りを彫っています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "文久2年(1862)11月の建立と伝わります。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "ブログ「海月美紗のおでかけ日和」鹽竈神社と狛犬たち、ヒイラギと四季桜",
+        "url": "https://umitsuki-misa.hatenablog.com/entry/2025/12/05/053000"
+       },
+       {
+        "title": "parallel.eek.jp「夏の狛犬巡り①塩竈神社」",
+        "url": "https://parallel.eek.jp/murabun/aruku/komainu/29_1siogama.html"
+       }
+      ]
+     },
+     {
+      "text": "日本に残る狛犬は江戸時代のものが圧倒的に多く、太平の世で社寺の復興が進むなかで、多くの狛犬が造られました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 174・175頁"
+       }
+      ],
+      "zuroku": true
+     },
+     {
+      "text": "頭に宝珠をのせる表し方は古く、平安時代の法隆寺の獅子頭(保延4年=1138)では、頭の上の宝珠と角が獅子と狛犬の目印になっています(いまの宝珠と角は後の時代に補われたもの)。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 204・205頁"
+       }
+      ],
+      "zuroku": true
+     },
+     {
+      "text": "江戸の狛犬の「尾流れ」の作りを取り入れながら、独自の形に仕上げた狛犬で、阿形の突き出したあごに迫力があります。東神門の文久3年の対より彫りがていねいだとも評されています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」56頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
+     },
+     {
+      "text": "作ったのは気仙沼の石工・日野友輔(1809〜1883)です。鹽竈神社は友輔に2度狛犬の制作を頼み、境内には友輔の狛犬が2対あります。もう1対は東神門をくぐってすぐの、文久3年(1863)の狛犬です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "気仙沼市観光サイト「初詣で会いたい！可愛い狛犬めぐり」",
+        "url": "https://kesennuma-kanko.jp/kesennuma_komainu/"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/shiogama-7.jpg?v=ea485ebf"
    }
   ]
  },

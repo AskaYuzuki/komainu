@@ -5156,6 +5156,124 @@
      }
     ],
     "thumb": "images/thumbs/shiogama-5.jpg?v=4559bf60"
+   },
+   {
+    "id": "shiogama-6",
+    "no": 6,
+    "label": "表参道の石段の途中の踊り場",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "安永4年4月",
+     "seireki": 1775
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true,
+      "src": "images/shiogama-6-01.jpg?v=f3598747"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-6-02.jpg?v=f77a068c"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-6-03.jpg?v=25317333"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-6-04.jpg?v=07c4068d"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-6-05.jpg?v=27e82d0c"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-6-06.jpg?v=7b7f3dda"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-6-07.jpg?v=8fcd031b"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-6-08.jpg?v=1c4c43e8"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-6-09.jpg?v=a9e8a8b4"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-6-10.jpg?v=070f1b11"
+     },
+     {
+      "kind": "record",
+      "caption": "表参道の石段と、踊り場の左右に置かれた1対",
+      "src": "images/shiogama-6-11.jpg?v=298dd147"
+     }
+    ],
+    "lore": [
+     {
+      "text": "表参道の石段の途中、踊り場の左右に置かれた1対です。阿形は黒っぽく、吽形は白っぽい石肌で、どちらもたてがみがこぶのように盛り上がり、前脚をそろえて背筋を伸ばして座っています。高い台座の側面には、草花の模様が彫られています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "安永4年(1775)4月の建立で、拝殿へ続く202段の急な石段の途中にいます。平らな顔、まっすぐ伸びた前脚、細い足首、前後にずれた前脚と、仙台に多い「仙台狛犬」の特徴をそなえています。200年以上たっても傷みの少ない、素朴な味わいの1対です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」52頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
+     },
+     {
+      "text": "正面を向いて座る姿は、平安時代に獅子と狛犬の1対が広まってから、各地で正面向きの形にそろっていった、獅子・狛犬の基本の姿です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 206・207頁"
+       }
+      ],
+      "zuroku": true
+     }
+    ],
+    "thumb": "images/thumbs/shiogama-6.jpg?v=b09f5c44"
    }
   ]
  },

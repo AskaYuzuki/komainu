@@ -17,7 +17,7 @@
 ## Adobe Express(A001〜A918)
 | 番号 | 一覧画像(Drive のファイル名) | 状態 |
 |---|---|---|
-| A001 | A001-A024.jpg | 未使用 |
+| A001 | A001-A024.jpg | 見送り(11/24) |
 | A002 | A001-A024.jpg | 未使用 |
 | A003 | A001-A024.jpg | 未使用 |
 | A004 | A001-A024.jpg | 未使用 |
@@ -939,7 +939,7 @@
 ## Canva(C001〜C240)
 | 番号 | 一覧画像(Drive のファイル名) | 画像のURL | 状態 |
 |---|---|---|---|
-| C001 | C001-C024.jpg | https://template.canva.com/EAGUQu8FA0Q/1/0/1131w-9idNLTrk3vc.jpg | 未使用 |
+| C001 | C001-C024.jpg | https://template.canva.com/EAGUQu8FA0Q/1/0/1131w-9idNLTrk3vc.jpg | 使用(案)：志波彦神社 shiwahiko-2(11/24) |
 | C002 | C001-C024.jpg | https://template.canva.com/EAF8TdE1uk8/2/0/1131w-35HGSWjY7N8.jpg | 未使用 |
 | C003 | C001-C024.jpg | https://template.canva.com/EAF_D_Mu6XE/2/0/1131w-SdJc3_y1aHM.jpg | 未使用 |
 | C004 | C001-C024.jpg | https://template.canva.com/EAD-nKtOHvY/1/0/1236w-EnD5TRNNiys.jpg | 未使用 |
@@ -1186,7 +1186,7 @@
 | M001 | list.html | READERS-DIGEST-US-FEB-2024 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/READERS-DIGEST-US-FEB-2024.jpg?t=20240223113037 | 使用(案)：鹽竈神社 shiogama-7(11/24) |
 | M002 | list.html | Time202502 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/Time202502.png?t=20250515081201 | 見送り(11/24・赤い額縁は time-frame で使用済み) |
 | M003 | list.html | People_2021_1 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/People_2021_1.jpg?t=20240419081820 | 見送り(11/24) |
-| M004 | list.html | forbes201912 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/forbes201912.JPG?t=20191216074427 | 未使用 |
+| M004 | list.html | forbes201912 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/forbes201912.JPG?t=20191216074427 | 見送り(11/24) |
 | M005 | list.html | HB2020 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/HB2020.JPG?t=20200316021606 | 未使用 |
 | M006 | list.html | 2013countryliving | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/2013countryliving.jpg?t=20130131075130 | 未使用 |
 | M007 | list.html | bhg20231 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/bhg20231.jpg?t=20230925145115 | 未使用 |

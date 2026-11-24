@@ -106,5 +106,56 @@
 | M092 | list3.html | GQ20231 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/GQ20231.jpg?t=20231221073605 | 未使用 |
 | M093 | list3.html | dwell20174 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/dwell20174.JPG?t=20171117100122 | 未使用 |
 
-## Adobe Express 無料テンプレート(PDF・約915点)
-- 11/24 時点、PDF(無料テンプレート_Adobe-Express-11-08-2026_09_44_AM.pdf)がどこにも保存されておらず、読めない。あすかさんにもう一度もらい、Drive に置いて A001〜 の番号で一覧にする(最高司令官が対応)。
+## Adobe Express 無料テンプレート(PDF・915点)
+- 11/24 18:0x 司令官(会話)：PDF はこの会話の作業環境にあった(/mnt/user-data/uploads/無料テンプレート_Adobe-Express-11-08-2026_09_44_AM.pdf・110MB で Drive に上げられない)。5頁を画像にして Drive handover/「表紙テンプレート_AdobeExpress_PDF画像」(フォルダID 1IjbKWKDe9VrDh9K6O0G7iowkUtwqlv7u)に adobe_p1〜p5.jpg として置いた。
+- 5頁すべてを見て、組み立ての違いで45の型(A01〜A45)に分けた。中身は cover_templates.md の「Adobe Express 無料テンプレートPDF(915点)を全部見直して足した型」の1〜45。番号の対応：A01＝1 mast-split-letters … A45＝45 magazine-jp-classic
+| 番号 | 型 | 状態 |
+|---|---|---|
+| A01 | mast-split-letters | 未使用 |
+| A02 | mast-cutout-fill | 未使用 |
+| A03 | mast-stacked-two-weights | 未使用 |
+| A04 | mast-vertical-right-thin | 未使用 |
+| A05 | mast-bottom-huge | 未使用 |
+| A06 | mast-overprint | 未使用 |
+| A07 | mast-outline | 未使用 |
+| A08 | mast-script-over-serif | 未使用 |
+| A09 | mast-circle-text | 未使用 |
+| A10 | mast-japanese-tategaki-big | 未使用 |
+| A11 | mast-repeat-rows | 未使用 |
+| A12 | question-headline | 未使用 |
+| A13 | arch-window | 未使用 |
+| A14 | oval-window | 未使用 |
+| A15 | circle-badge-photo | 未使用 |
+| A16 | torn-paper | 未使用 |
+| A17 | polaroid-tilt | 未使用 |
+| A18 | film-strip | 未使用 |
+| A19 | collage-grid | 未使用 |
+| A20 | diagonal-split | 未使用 |
+| A21 | offset-frame | 未使用 |
+| A22 | double-exposure | 未使用 |
+| A23 | duotone-bold | 未使用 |
+| A24 | halftone-dots | 未使用 |
+| A25 | cutout-over-shape | 未使用 |
+| A26 | cutout-breaks-frame | 未使用 |
+| A27 | small-photo-big-space | 未使用 |
+| A28 | full-bleed-bottom-gradient | 未使用 |
+| A29 | paper-texture | 未使用 |
+| A30 | pattern-bg | 未使用 |
+| A31 | color-block-quarters | 未使用 |
+| A32 | sticker-badges | 未使用 |
+| A33 | hand-drawn-marks | 未使用 |
+| A34 | stamp-postage | 未使用 |
+| A35 | ticket-stub | 未使用 |
+| A36 | ornament-frame | 未使用 |
+| A37 | stars-sparkle | 未使用 |
+| A38 | barcode-issue | 未使用 |
+| A39 | toc-left-column | 未使用 |
+| A40 | numbered-tips | 未使用 |
+| A41 | issue-date-stamp | 未使用 |
+| A42 | quote-mark | 未使用 |
+| A43 | wide-letterspace-japanese | 未使用 |
+| A44 | vertical-japanese-small-photo | 未使用 |
+| A45 | magazine-jp-classic | 未使用 |
+
+## Canva(https://www.canva.com/ja_jp/magazine-covers/templates/)
+- 11/24：この作業環境からは入れない(Cloudflare の確認で止まる)。あすかさんのパソコンの Chrome で開いて見る必要あり(未着手)

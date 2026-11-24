@@ -4940,6 +4940,222 @@
     ],
     "factBasis": {},
     "thumb": "images/thumbs/shiogama-3.jpg?v=8f6aa306"
+   },
+   {
+    "id": "shiogama-4",
+    "no": 4,
+    "label": "左右宮 拝殿内",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "wood",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true,
+      "src": "images/shiogama-4-01.jpg?v=bb3c1e5d"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-4-02.jpg?v=653f0b4c"
+     },
+     {
+      "kind": "record",
+      "caption": "左右宮の拝殿の中と、左右に置かれた1対",
+      "src": "images/shiogama-4-03.jpg?v=d4b923ec"
+     }
+    ],
+    "lore": [
+     {
+      "text": "左右宮の拝殿の中、奥の左右に向かい合って置かれた木造の1対です。体は金色で、渦を巻くたてがみと尾は、吽形が黒、阿形が緑に塗られています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "参道の石の狛犬とは違い、神前を守るために社殿の中に置かれる「神殿狛犬」です。岡山・吉備津神社の獅子・狛犬のように、本殿の内陣に安置された古い例も伝わります。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 208・209・248・249頁"
+       }
+      ],
+      "zuroku": true
+     },
+     {
+      "text": "獅子と狛犬を1対の守護獣とする決まりは、日本では平安時代前期(9世紀)に始まったと考えられています。平安時代には宮中の儀礼や暮らしの場でも守護獣の役割が大きくなり、古い作例では角のない獅子と角のある狛犬を組にしました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 110・111・204・205頁"
+       }
+      ],
+      "zuroku": true
+     },
+     {
+      "text": "社殿の中の古い狛犬には、色や箔で飾ったものもあります。滋賀・大宝神社の鎌倉時代の狛犬は阿形に金箔、吽形に銀箔を用い、滋賀・白髭神社の1対(1227年作とされる)は白地に彩色し、たてがみを緑に塗っています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 246・247頁"
+       }
+      ],
+      "zuroku": true
+     },
+     {
+      "text": "金色の体に青と緑のたてがみをもつ豪華な神殿狛犬で、唐門前の仙台狛犬と同じく、左右の前脚が少し前後にずれています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」54頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
+     },
+     {
+      "text": "いまの鹽竈神社の社殿は、仙台藩4代藩主の伊達綱村が元禄8年(1695)に工事を始め、5代藩主吉村のときの宝永元年(1704)に完成しました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "宮城県「宮城県の文化財 鹽竈神社」",
+        "url": "https://www.pref.miyagi.jp/soshiki/bunkazai/19siogama.html"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/shiogama-4.jpg?v=1e42d3eb"
+   },
+   {
+    "id": "shiogama-5",
+    "no": 5,
+    "label": "石鳥居をくぐったところ",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "kamae",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true,
+      "src": "images/shiogama-5-01.jpg?v=87108470"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-5-02.jpg?v=febbaa1d"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-5-03.jpg?v=18b908e5"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-5-04.jpg?v=01318ddc"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "src": "images/shiogama-5-05.jpg?v=5d9efe07"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-5-06.jpg?v=7f8e531f"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-5-07.jpg?v=20f0e38c"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-5-08.jpg?v=e99da824"
+     },
+     {
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "src": "images/shiogama-5-09.jpg?v=82b8e9a8"
+     },
+     {
+      "kind": "record",
+      "caption": "石鳥居と、その先の左右に置かれた1対",
+      "src": "images/shiogama-5-10.jpg?v=43a3f0b1"
+     }
+    ],
+    "lore": [
+     {
+      "text": "石鳥居をくぐった先、参道の左右に置かれた1対です。砂岩でできていて、頭を低く下げて腰を高く上げ、尾は背中の上に大きく立ち上がっています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "島根で採れる来待石(きまちいし)で彫られた「出雲かまえ獅子」です。出雲で作られ、船で鹽竈まで運ばれてきたと考えられています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」58頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
+     },
+     {
+      "text": "出雲のものと違うのは、阿形と吽形の左右が逆になっていることです。奥州の習わしに合わせて、出雲の石工に左右を逆に彫ってもらったのではないかとみられています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」58頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
+     },
+     {
+      "text": "頭を低くして腰を高く上げた構え型は、出雲型の構え獅子が代表で、北前船で日本海側から東北の太平洋側まで広まったとされます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "明治大学人文科学研究所紀要「岩手県の石造狛犬」",
+        "url": "https://meiji.repo.nii.ac.jp/record/17623/files/jinbunkagakukiyo_90_425.pdf"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/shiogama-5.jpg?v=4559bf60"
    }
   ]
  },

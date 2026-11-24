@@ -4608,7 +4608,7 @@
     "sculptor": "",
     "sculptorId": "",
     "year": {
-     "wareki": "延享4年",
+     "wareki": "延享4年8月",
      "seireki": 1747
     },
     "donor": "",
@@ -4734,6 +4734,16 @@
         "url": "https://umitsuki-misa.hatenablog.com/entry/2025/12/05/053000"
        }
       ]
+     },
+     {
+      "text": "延享4年(1747)8月の建立で、宮城県内でもかなり古い狛犬です。県内の狛犬はこの1対を手本に彫られたとみられ、「仙台狛犬」の祖とされます。仙台狛犬は参拝者を正面から見据える姿が多く、体の横を見せる関東の狛犬とは、見せ方の考え方が違うといわれます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」53頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
      }
     ],
     "factBasis": {
@@ -4756,7 +4766,7 @@
     "sculptor": "日野友輔(気仙沼の石工)",
     "sculptorId": "",
     "year": {
-     "wareki": "文久3年",
+     "wareki": "文久3年3月",
      "seireki": 1863
     },
     "donor": "",
@@ -4877,6 +4887,16 @@
         "url": "https://kesennuma-kanko.jp/kesennuma_komainu/"
        }
       ]
+     },
+     {
+      "text": "江戸の狛犬「江戸流れ」をまねて仙台で広まった「仙台江戸流れ」の1対です。顔のまわりの巻き毛や流れるたてがみは江戸流れのものですが、尾が台座にかからないところが、江戸のものと違います。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」57頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
      }
     ],
     "factBasis": {
@@ -4933,9 +4953,24 @@
       "refs": []
      },
      {
-      "text": "作られた年代や石工など、詳しいことは分かっていません。",
-      "basis": "kuden",
-      "refs": []
+      "text": "江戸の狛犬「江戸流れ」の要点をほぼそろえた小さな1対で、江戸の石工が彫ったものと考えられています。彫りは控えめですが、全体の釣り合いがよく、すっきりした顔つきです。奉納の年は分かっていません。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」55頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
+     },
+     {
+      "text": "鹽竈神社には、江戸流れ・出雲かまえ獅子・出雲来待蹲踞・仙台江戸流れ・仙台狛犬など、さまざまな型の狛犬がいます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」55頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
      }
     ],
     "factBasis": {},
@@ -5588,13 +5623,23 @@
       "refs": []
      },
      {
-      "text": "昭和47年(1972)4月吉日の作で、石工は志賀石材店の志賀曻と伝えられます。",
-      "basis": "kuden",
+      "text": "台座の銘板に「昭和四十七年四月吉日 塩釜市 志賀石材店」とあり、地元の石材店が建てた狛犬です。",
+      "basis": "site",
       "refs": []
+     },
+     {
+      "text": "ライオンを手本にしたようなたてがみと、たくましい体つきの、昭和の蹲踞(そんきょ)狛犬です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 宮城県狛犬図鑑②」50頁",
+        "url": "https://komainuzukan.amebaownd.com/posts/8097847"
+       }
+      ]
      }
     ],
     "factBasis": {
-     "year": "kuden",
+     "year": "site",
      "sculptor": "kuden"
     },
     "thumb": "images/thumbs/shiwahiko-1.jpg?v=4b5c3cc0"

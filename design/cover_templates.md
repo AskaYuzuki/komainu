@@ -94,3 +94,59 @@ URL：1ページ目 https://www.434-magazineworld.com/SHOP/357704/list.html ／2
 - 鹽竈 石鳥居(corner-logo・案)：写真全面／全面／右上に小さく横／セリフ(Bodoni)小／金
 - 鹽竈 東参道(lowercase-band・案)：白い帯＋写真／帯の下に横いっぱい／左上に小文字の極太／サンセリフ(Montserrat)／黒
 - 鹽竈 表参道の踊り場(tonal-mono・案)：セピアの1色／写真全面／下に中央・横・字間を広げた細字／サンセリフ細(Montserrat 300)／なし(セピア)
+
+## 2026-11-24 Adobe Express 無料テンプレートPDF(915点)を全部見直して足した型
+11/24 17:53 あすかさん「434 magazine world、Adobe Express の無料テンプレートPDF、Canvaを合わせたら1000以上のテンプレートがあると思いますが、なぜ追加できるのが8個だけなのですか？」
+→ 5頁すべてを見直した。似た組み立てを1つにまとめすぎていたので、組み立て(写真の置き方・誌名の扱い・地・飾り)が違えば別の型として細かく分けて控える。( )は参考にしたテンプレートの見た目。
+### 誌名・文字の扱い
+1. mast-split-letters：誌名を1文字ずつ大小・位置をずらして散らす(STY MAGAZINE / VEL VET)
+2. mast-cutout-fill：誌名の文字の中に写真がのぞく(NEW ISSUE・SOUND)
+3. mast-stacked-two-weights：太字と細字の2行で誌名を積む(The Good FASHION BRAND)
+4. mast-vertical-right-thin：右端に細い縦書きの英字、左に写真(NEW COLLECTION 縦)
+5. mast-bottom-huge：誌名を一番下に、紙からはみ出すほど大きく(FASHION WEEK・OUTFIT IDEAS)
+6. mast-overprint：誌名を半透明で写真の上に重ねる(VINTAGE Look・SOON)
+7. mast-outline：誌名を輪郭線だけの文字にする(FASHION 中抜き・SEAMS)
+8. mast-script-over-serif：細い筆記体とセリフ体を重ねる(Waves・Formal Style)
+9. mast-circle-text：誌名や見出しを円に沿って回す(STYLE IS EVERYTHING・NEW COLLECTION VOL.02)
+10. mast-japanese-tategaki-big：和文の大きな縦書きを主役にする(キャンバス・大人の着回しレッスン)
+11. mast-repeat-rows：同じ語を何行も繰り返す(FASHION FASHION FASHION・LOOKBOOK LOOKBOOK)
+12. question-headline：問いかけの見出しを大きく(WANT TO LOOK STYLISH?・THIS OR THAT)
+### 写真の置き方
+13. arch-window：上が丸いアーチ形の窓に写真(NEW STYLE・Fashion Club)※伊吹山 arch と組み立てを変える
+14. oval-window：縦長の楕円の窓(NEW ARRIVAL TREND FASHION・Mary Smith)
+15. circle-badge-photo：写真を円で抜き、周りに小さな文字(Fashion Student・Nico Ildase)
+16. torn-paper：紙を破ったような縁の写真(Fashion all new arrivals・GLAMOUR)
+17. polaroid-tilt：少し傾けたポラロイド写真を1〜2枚(NEW FASHION trend alert・Do it with STYLE)
+18. film-strip：フィルムの帯に写真を並べる(TABLE OF CONTENT)
+19. collage-grid：同じ像の別角度を3〜4枚の格子に(TRENDSETTER NEW WAVE・FRESH FASHION)
+20. diagonal-split：斜めの線で写真と色面を分ける(DENIM・ELEGANT FASHION)
+21. offset-frame：写真と額縁をずらして重ねる(New Arrivals・Fashion Corner)
+22. double-exposure：写真を2枚重ねて透かす(Timeless LOOKS・Style for comfort)
+23. duotone-bold：写真を2色だけで刷る(SOUNDWAVE・Fashion Finesse)※duotone は使用済み、色と組み立てを変える
+24. halftone-dots：写真を網点にする(FRESH NEW OUTFIT・Unique Style)
+25. cutout-over-shape：切り抜いた像を色の図形(円・アーチ・四角)の上に(FASHION New Trends の赤い円・AWAKE)
+26. cutout-breaks-frame：切り抜いた像が枠からはみ出す(OOTD・MADE FOR YOU)
+27. small-photo-big-space：小さな写真と大きな余白(Modern Magazine・MINIMAL MAGAZINE)
+28. full-bleed-bottom-gradient：写真全面＋下だけ濃い色のグラデーションに大見出し(Exclusive Preview)
+### 地・飾り
+29. paper-texture：紙の質感の地に写真を置く(LIFE STYLE BOOK・Namae Magazine)
+30. pattern-bg：市松・ストライプ・水玉の地(TRENDS・HOW TO STYLE)
+31. color-block-quarters：地を2〜4色の四角に分ける(BLOOM・ANVIL FASHION)
+32. sticker-badges：丸いシール風の小さな囲み(No.・年号)を散らす(GLOW・Style 50)
+33. hand-drawn-marks：手書きの矢印・丸・線を写真に足す(Level Up Your Style・Show Your Best Outfit)
+34. stamp-postage：切手の縁取りの中に写真(WANT TO LOOK STYLISH? の切手)
+35. ticket-stub：入場券の半券(使用済みの ticket と組み立てを変える)
+36. ornament-frame：西洋の飾り罫で囲む(LUXURY DRESS・THE BEST GOTHIC)
+37. stars-sparkle：小さな星・きらめきを散らす(SPRING SEASON COLLECTION)
+38. barcode-issue：バーコード・号数・価格を雑誌らしく(GLOW・NEWBEAUTY)
+### 文字の並べ方
+39. toc-left-column：左に小さな見出しを縦に並べ、右に写真(Fashion Week newsletter)
+40. numbered-tips：1〜5の番号付きの見どころ(Table of Contents 黄)※大きな数字は使わない
+41. issue-date-stamp：日付・号を大きく四角で囲む(FEB 12・NOV 22)
+42. quote-mark：大きな引用符と一言(The Good Fashion)
+43. wide-letterspace-japanese：和文を字間を大きく空けて1行(EVERYDAY STYLE・Namae Fashion)
+44. vertical-japanese-small-photo：和文の縦書き見出し＋小さな写真(映える コーデ術・沖縄 移住ハウツー)
+45. magazine-jp-classic：上に誌名、右に号数と年、左下に特集の和文(bokunoF・NAMAE MAGAZINE)
+
+## Canva(https://www.canva.com/ja_jp/magazine-covers/templates/)
+- 11/24：この作業環境からはサイトに入れなかった(Cloudflare の確認画面で止まる)。あすかさんのパソコンの Chrome で開いて見る必要がある。定例タスク「表紙の型の学習」に Canva を足すか、会話で Chrome を使って見る

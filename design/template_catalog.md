@@ -12,9 +12,9 @@
 ## 434 magazine world(3ページ・93誌)
 | 番号 | ページ | 雑誌(画像のファイル名) | 画像 | 状態 |
 |---|---|---|---|---|
-| M001 | list.html | READERS-DIGEST-US-FEB-2024 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/READERS-DIGEST-US-FEB-2024.jpg?t=20240223113037 | 未使用 |
-| M002 | list.html | Time202502 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/Time202502.png?t=20250515081201 | 未使用 |
-| M003 | list.html | People_2021_1 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/People_2021_1.jpg?t=20240419081820 | 未使用 |
+| M001 | list.html | READERS-DIGEST-US-FEB-2024 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/READERS-DIGEST-US-FEB-2024.jpg?t=20240223113037 | 使用(案)：鹽竈神社 shiogama-7(11/24) |
+| M002 | list.html | Time202502 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/Time202502.png?t=20250515081201 | 見送り(11/24・赤い額縁は time-frame で使用済み) |
+| M003 | list.html | People_2021_1 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/People_2021_1.jpg?t=20240419081820 | 見送り(11/24) |
 | M004 | list.html | forbes201912 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/forbes201912.JPG?t=20191216074427 | 未使用 |
 | M005 | list.html | HB2020 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/HB2020.JPG?t=20200316021606 | 未使用 |
 | M006 | list.html | 2013countryliving | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/2013countryliving.jpg?t=20130131075130 | 未使用 |

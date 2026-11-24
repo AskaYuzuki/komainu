@@ -92,7 +92,7 @@ URL：1ページ目 https://www.434-magazineworld.com/SHOP/357704/list.html ／2
 - 金華山 裏参道：写真左＋右に赤茶の帯／帯／右に縦・白／セリフ(Playfair)／赤茶
 - 鹽竈 左右宮(red-box-logo)：生成りの地／窓／左上の赤い四角に横／セリフ(Bodoni)／赤
 - 鹽竈 石鳥居(corner-logo・案)：写真全面／全面／右上に小さく横／セリフ(Bodoni)小／金
-- 鹽竈 東参道(lowercase-band・案)：白い帯＋写真／帯の下に横いっぱい／左上に小文字の極太／サンセリフ(Montserrat)／黒
+- 鹽竈 東参道(lowercase-band・案)→ 11/24 18:09 あすかさん「作り直す」で不採用
 - 鹽竈 表参道の踊り場(tonal-mono・案)：セピアの1色／写真全面／下に中央・横・字間を広げた細字／サンセリフ細(Montserrat 300)／なし(セピア)
 
 ## 2026-11-24 Adobe Express 無料テンプレートPDF(915点)を全部見直して足した型
@@ -150,3 +150,4 @@ URL：1ページ目 https://www.434-magazineworld.com/SHOP/357704/list.html ／2
 
 ## Canva(https://www.canva.com/ja_jp/magazine-covers/templates/)
 - 11/24：この作業環境からはサイトに入れなかった(Cloudflare の確認画面で止まる)。あすかさんのパソコンの Chrome で開いて見る必要がある。定例タスク「表紙の型の学習」に Canva を足すか、会話で Chrome を使って見る
+- 鹽竈 東参道(M001 Reader's Digest・案)：水色の地／白縁の写真を右に／上に黄色の大きなセリフの誌名＋神社名／セリフ(Bodoni)＋極太サンセリフの見出し／黄・赤の丸

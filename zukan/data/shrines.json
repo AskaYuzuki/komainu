@@ -8467,5 +8467,322 @@
     "thumb": "images/thumbs/tenso-2.jpg?v=1451213f"
    }
   ]
+ },
+ {
+  "id": "koganeyama",
+  "name": "金華山黄金山神社",
+  "kana": "きんかさんこがねやまじんじゃ",
+  "prefecture": "宮城県",
+  "city": "石巻市",
+  "lat": 38.2961,
+  "lng": 141.564,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "koganeyama-1",
+    "no": 1,
+    "label": "表参道降口",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": 2013,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "東日本大震災では、大鳥居や石燈籠の崩落などの被害があった黄金山神社。この狛犬は、その2年後2013年の巳歳御縁年大祭第63日目に奉納されたもの。\n\n黄金山神社は「3年連続でお参りすると、一生お金に困らない(不自由させまい)」という言い伝えで知られる金運・開運の神社です。\n\n父がこの言い伝えを知り、3年連続で家族で行こうとしていたのですが、昨年亡くなり、遺された家族だけで3年目の結願のお詣りに行ってきたのです。\n\n昨年までは身体の悪い父を優先して、奥宮に参拝できずにいたのですが、今年は1時間登山をして奥宮にお詣りしてきました(なかなかハードです)。\n\n※奥宮には狛犬はおりませんでした。\n\n8合目から頂上までの景色が本当に素晴らしく(スマホを落としたので撮影できず)、平らで水の湧き出るこの島を、海を渡る昔の人が中継地として選んだわけがよくわかりました。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/koganeyama-1-01.jpg?v=7f9cc308",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/koganeyama-1-02.jpg?v=0e2b9de0",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-1-03.jpg?v=2675cf08",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-1-04.jpg?v=4e0cb418",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-1-05.jpg?v=764b8582",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-1-06.jpg?v=ddf094cf",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-1-07.jpg?v=3608c943",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-1-08.jpg?v=aeb3a520",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-1-09.jpg?v=b253300c",
+      "kind": "record",
+      "caption": "表参道降口の石段と、その下の左右に置かれた1対"
+     }
+    ],
+    "lore": [
+     {
+      "text": "表参道降口、長い石段の下の左右に置かれた1対です。白っぽい花崗岩の像で、たてがみと腰の毛は渦を巻き、尾は炎のように高く立ち上がっています。前脚の筋が細かく刻まれ、背中から見ると尾の毛筋が1本ずつ彫り分けられています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "天平21年(749)、陸奥国守の百済王敬福が朝廷に黄金を献上しました。大仏建立のための黄金を得た聖武天皇は喜び、年号を天平勝宝と改めました。日本で最初の産金として知られます。翌天平勝宝2年(750)、牡鹿連宮麿らの願いにより、金華山に神社が創建されました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "金華山黄金山神社 公式サイト「由緒」",
+        "url": "https://kinkasan.jp/about/yuisyo/"
+       }
+      ]
+     },
+     {
+      "text": "御祭神は、金を司る神とされる金山毘古神(かなやまひこのかみ)・金山毘賣神(かなやまひめのかみ)の二柱です。神仏習合の時代には弁財天を守護神とし、別当寺「金華山大金寺」が置かれました。出羽三山・恐山と並ぶ東奥の三大霊場のひとつで、明治2年(1869)の神仏分離で「黄金山神社」に戻りました。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "金華山黄金山神社 公式サイト「由緒」",
+        "url": "https://kinkasan.jp/about/yuisyo/"
+       }
+      ]
+     },
+     {
+      "text": "いまの社殿は、明治30年(1897)の火災のあとおよそ30年をかけて建て直されたもので、拝殿は大正5年(1916)に完成しました。島には神の使いとして保護されている鹿が暮らしています。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「黄金山神社 (石巻市)」",
+        "url": "https://ja.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%B1%B1%E7%A5%9E%E7%A4%BE_(%E7%9F%B3%E5%B7%BB%E5%B8%82)"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/koganeyama-1.jpg?v=01c6f3cc"
+   },
+   {
+    "id": "koganeyama-2",
+    "no": 2,
+    "label": "拝殿と本殿の間にある唐門前",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "髙橋良◯(仙臺市土橋通)",
+    "sculptorId": "",
+    "year": 1917,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "東日本大震災でも被害をまぬがれた、明治期建立の御社殿と唐門は彫刻がとても美しく、近くにいるだけで御神氣が感じられるほどの圧倒的な存在感。\n\nここを護る狛犬は、大正6年奉納で、なんと17歳の石工が彫ったという驚きのクオリティ。重厚感があり、迫力がすごい。\n\n訪れた日はちょうど新嘗祭の準備を行っており、渡りに緋毛氈、階に畳表が敷かれ、紅葉でお化粧した狛犬たちは大変な美しさだった。\n\n昨年の巳歳御縁年大祭の際は、宿泊者は通常の朝拝の他に、神楽舞の奉納を拝見することができるのだが、ご開帳されている中で拝見した御神楽奉納は総毛立つほどの御神氣だった。あれはすごかった……。\n\nご開帳はされていないものの、毎年5月の初巳大祭(はつみたいさい)の際は、宿泊者は朝拝の際に神楽舞を拝見することができるそうなので、ぜひ。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/koganeyama-2-01.jpg?v=55871fc2",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-2-02.jpg?v=afab3219",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-2-03.jpg?v=004d0008",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/koganeyama-2-04.jpg?v=af51cf5f",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-2-05.jpg?v=9a95ce52",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-2-06.jpg?v=c656832b",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-2-07.jpg?v=4cd7a4fe",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-2-08.jpg?v=c3454932",
+      "kind": "record",
+      "caption": "唐門と、その前の石段の左右に置かれた1対"
+     },
+     {
+      "src": "images/koganeyama-2-09.jpg?v=217eb455",
+      "kind": "record",
+      "caption": "紅葉の中の唐門と1対"
+     },
+     {
+      "src": "images/koganeyama-2-10.jpg?v=93eacc52",
+      "kind": "record",
+      "caption": "石灯籠と並ぶ狛犬と、唐門の脇の塀"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿と本殿の間にある唐門前の左右に置かれた1対です。台座の正面に「奉獻」と刻まれ、奉納した人の住所として「仙臺市立町一丁目」(いまの仙台市青葉区立町)とあります。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座には「大正六丁巳年記念 六月吉祥日」とあり、大正6年(1917)の6月に奉納されました。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "彫ったのは「仙臺市土橋通」の石工で「石工 髙橋良◯ 十七歳」と刻まれています。最後の1字は風化で読めません。この石工についての記録は見つかっていません。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "いまの社殿は、明治30年(1897)の火災のあとおよそ30年をかけて建て直されたもので、拝殿は大正5年(1916)に完成しました。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「黄金山神社 (石巻市)」",
+        "url": "https://ja.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%B1%B1%E7%A5%9E%E7%A4%BE_(%E7%9F%B3%E5%B7%BB%E5%B8%82)"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/koganeyama-2.jpg?v=9fa95548"
+   },
+   {
+    "id": "koganeyama-3",
+    "no": 3,
+    "label": "裏参道",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": 2013,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "昔は急勾配で人が登るための表参道しかなかったが、日用品などの物資輸送および、参拝者の車による送迎のため、なだらかで舗装された裏参道が新しく整備された。\n\nその整備の際に奉納されたのが、この狛犬とのこと。\n\n真新しくていかつい顔をしていますね。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/koganeyama-3-01.jpg?v=6fdd1570",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/koganeyama-3-02.jpg?v=90645588",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-3-03.jpg?v=4f8d6915",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-3-04.jpg?v=75d803d3",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/koganeyama-3-05.jpg?v=a28c4e8d",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-3-06.jpg?v=89031622",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-3-07.jpg?v=7eb8b818",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/koganeyama-3-08.jpg?v=3fdbbd15",
+      "kind": "art",
+      "title": "金華山黄金山神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "裏参道の左右に置かれた1対です。阿形は前脚で玉を押さえ、吽形は前脚の下に子獅子を抱いています。尾は扇のように大きく広がり、背中には渦を巻く毛が深く彫られています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "台座には「平成25年5月吉日」と刻まれ、平成25年(2013)5月に奉納されました。",
+      "basis": "site",
+      "refs": []
+     }
+    ],
+    "thumb": "images/thumbs/koganeyama-3.jpg?v=e6d7fe75"
+   }
+  ]
  }
 ]

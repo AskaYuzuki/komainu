@@ -4753,10 +4753,10 @@
     "regionalTypes": [],
     "pose": "osuwari",
     "material": "",
-    "sculptor": "気仙沼の友輔",
+    "sculptor": "日野友輔(気仙沼の石工)",
     "sculptorId": "",
     "year": {
-     "wareki": "文久3年3月",
+     "wareki": "文久2〜3年",
      "seireki": 1863
     },
     "donor": "",
@@ -4786,10 +4786,80 @@
       "side": "阿"
      },
      {
+      "src": "images/shiogama-2-05.jpg?v=e7c4959e",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "add": "20261124"
+     },
+     {
+      "src": "images/shiogama-2-06.jpg?v=5ea011a3",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "add": "20261124"
+     },
+     {
+      "src": "images/shiogama-2-07.jpg?v=969912c1",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "add": "20261124"
+     },
+     {
+      "src": "images/shiogama-2-14.jpg?v=fd0a4a8b",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "add": "20261124"
+     },
+     {
+      "src": "images/shiogama-2-08.jpg?v=25a7c246",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "阿",
+      "add": "20261124"
+     },
+     {
       "src": "images/shiogama-2-04.jpg?v=45a48c31",
       "kind": "art",
       "title": "鹽竈神社",
       "side": "吽"
+     },
+     {
+      "src": "images/shiogama-2-09.jpg?v=cd6d49ec",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "add": "20261124"
+     },
+     {
+      "src": "images/shiogama-2-10.jpg?v=38226eb0",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "add": "20261124"
+     },
+     {
+      "src": "images/shiogama-2-11.jpg?v=0fbd9b74",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "add": "20261124"
+     },
+     {
+      "src": "images/shiogama-2-13.jpg?v=24751fd0",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "add": "20261124"
+     },
+     {
+      "src": "images/shiogama-2-12.jpg?v=815e173e",
+      "kind": "art",
+      "title": "鹽竈神社",
+      "side": "吽",
+      "add": "20261124"
      }
     ],
     "lore": [
@@ -4799,23 +4869,19 @@
       "refs": []
      },
      {
-      "text": "文久3年(1863)3月の建立で、石工は気仙沼の友輔(友助とも書かれる)と台座に彫られているといわれます。東神門の外の石段脇にいる文久2年(1862)の狛犬も同じ石工の作で、1歳違いの兄弟狛犬と呼ばれています。",
-      "basis": "kuden",
+      "text": "文久2年(1862)から文久3年(1863)にかけて、気仙沼の石工・日野友輔(1809〜1883)が制作した狛犬です。鹽竈神社は友輔に2度狛犬の制作を頼み、境内には友輔の狛犬が2対あります。",
+      "basis": "source",
       "refs": [
        {
-        "title": "parallel.eek.jp「夏の狛犬巡り①塩竈神社」",
-        "url": "https://parallel.eek.jp/murabun/aruku/komainu/29_1siogama.html"
-       },
-       {
-        "title": "ブログ「海月美紗のおでかけ日和」鹽竈神社と狛犬たち、ヒイラギと四季桜",
-        "url": "https://umitsuki-misa.hatenablog.com/entry/2025/12/05/053000"
+        "title": "気仙沼市観光サイト「初詣で会いたい！可愛い狛犬めぐり」",
+        "url": "https://kesennuma-kanko.jp/kesennuma_komainu/"
        }
       ]
      }
     ],
     "factBasis": {
-     "year": "kuden",
-     "sculptor": "kuden"
+     "year": "source",
+     "sculptor": "source"
     },
     "thumb": "images/thumbs/shiogama-2.jpg?v=91f9f6a0"
    },

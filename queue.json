@@ -464,6 +464,60 @@
     "11.png"
    ],
    "dir": "25_tenso_inari"
+  },
+  {
+   "id": "koganeyama-1",
+   "folder": "koganeyama",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.png"
+   ],
+   "dir": "26_koganeyama"
+  },
+  {
+   "id": "koganeyama-2",
+   "folder": "koganeyama2",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.png"
+   ],
+   "dir": "27_koganeyama2"
+  },
+  {
+   "id": "koganeyama-3",
+   "folder": "koganeyama3",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.png"
+   ],
+   "dir": "28_koganeyama3"
   }
  ],
  "posted": []

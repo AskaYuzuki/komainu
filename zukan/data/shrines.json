@@ -5643,6 +5643,81 @@
      "sculptor": "kuden"
     },
     "thumb": "images/thumbs/shiwahiko-1.jpg?v=4b5c3cc0"
+   },
+   {
+    "id": "shiwahiko-2",
+    "no": 2,
+    "label": "拝殿内",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "wood",
+    "sculptor": "佐藤允了",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和59年",
+     "seireki": 1984
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "拝殿内の木製の狛犬。\nとても凛々しいです。\n\n彩色は施されていないシンプルな木製。\n近くで見てみたいな……",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "kind": "art",
+      "title": "志波彦神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true,
+      "src": "images/shiwahiko-2-01.jpg?v=e0933dd1"
+     },
+     {
+      "kind": "art",
+      "title": "志波彦神社",
+      "side": "吽",
+      "src": "images/shiwahiko-2-02.jpg?v=4daff126"
+     },
+     {
+      "kind": "record",
+      "caption": "拝殿の中と、奥の左右に置かれた1対",
+      "src": "images/shiwahiko-2-03.jpg?v=2be444c6"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿の中、奥の左右に置かれた木造の1対です。耳を高く立て、首から背にかけてたてがみを段々に重ねて彫っています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "いちばんの見どころは後ろ姿です。尾は背から台の後ろへ大きく巻き上がり、雲のようにふくらんだ板状の尾に2つの丸い穴をくり抜いた、ほかではあまり見ない形をしています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "獅子と狛犬は、吽形の狛犬の頭に角を付けて見分けるのが古くからの決まりですが、この神殿狛犬は阿形・吽形ともに角のない姿で彫られています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "『獅子と狛犬 神獣が来たはるかな道』MIHO MUSEUM編・青幻舎・2014年 110・111・204・205頁"
+       }
+      ],
+      "zuroku": true
+     },
+     {
+      "text": "昭和59年(1984)に、佐藤允了(さとう いんりょう)が楠で彫った木彫の狛犬です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "文化の港 シオーモ「志波彦神社狛犬」",
+        "url": "https://shiomo.jp/archives/12625"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/shiwahiko-2.jpg?v=5a18dbf2"
    }
   ]
  },
@@ -9508,6 +9583,146 @@
      }
     ],
     "thumb": "images/thumbs/koganeyama-3.jpg?v=e6d7fe75"
+   }
+  ]
+ },
+ {
+  "id": "tsuriishi",
+  "name": "釣石神社",
+  "kana": "つりいしじんじゃ",
+  "prefecture": "宮城県",
+  "city": "石巻市",
+  "lat": 38.5947,
+  "lng": 141.458,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "tsuriishi-1",
+    "no": 1,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "高さ30cmほどの大きさの狛犬像。\n\n小さくても古い神社ほど素敵な狛犬がいると気づかせてくれた一対。\n\n阿形の子も、吽形の子もよくおしゃべりしてくれます(笑)。阿形の子の方が前のめりでお話してくれるかも。\n\n阿形の子も吽形の子も、お手々をきゅっと揃えている姿がなんとも愛らしい。\n\n頭上に角らしき突起があるのだけど、おそらく角じゃなくて宝珠なんだろうなと思う。\n\n釣石神社は落ちそうで落ちない巨石(東日本大震災の際も落ちなかった)で有名で、全国から受験生とか試験などを控えている方が合格祈願に訪れるらしい。\n\n母は、この巨石は押すとグラグラするのに落ちない石だと勘違いしており、期待して行ったわけだけど、触ることができず、ただなんか浮いている感じに見える巨石でした(笑)。\n\n拝殿に向かう階段は174段あり、東日本大震災の際は35段目のところまで津波が来たそうで、その記録が生々しく階段に刻まれている。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/tsuriishi-1-01.jpg?v=7491cce6",
+      "kind": "art",
+      "title": "釣石神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/tsuriishi-1-02.jpg?v=2b9fa17f",
+      "kind": "art",
+      "title": "釣石神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/tsuriishi-1-03.jpg?v=f76f6a8a",
+      "kind": "art",
+      "title": "釣石神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/tsuriishi-1-04.jpg?v=0d733bc2",
+      "kind": "art",
+      "title": "釣石神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/tsuriishi-1-05.jpg?v=5c1aea5b",
+      "kind": "art",
+      "title": "釣石神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/tsuriishi-1-06.jpg?v=d8987290",
+      "kind": "art",
+      "title": "釣石神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/tsuriishi-1-07.jpg?v=2a0ceb07",
+      "kind": "art",
+      "title": "釣石神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/tsuriishi-1-08.jpg?v=b536b7b8",
+      "kind": "art",
+      "title": "釣石神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/tsuriishi-1-09.jpg?v=e1dffd87",
+      "kind": "record",
+      "caption": "拝殿"
+     },
+     {
+      "src": "images/tsuriishi-1-10.jpg?v=8ee00678",
+      "kind": "record",
+      "caption": "御神体の釣石(巨石)"
+     },
+     {
+      "src": "images/tsuriishi-1-11.jpg?v=cc5ace0d",
+      "kind": "record",
+      "caption": "釣石と、拝殿へ上る174段の石段"
+     },
+     {
+      "src": "images/tsuriishi-1-12.jpg?v=e5a9ebf2",
+      "kind": "record",
+      "caption": "石段に残る東日本大震災の津波浸水深の表示"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿の前の左右に置かれた、高さ30cmほどの小さな1対です。体の角がすっかり取れて丸みを帯び、阿形・吽形とも前脚をきゅっとそろえて座っています。顔には歯並びと眉の皺、首まわりには巻き毛が浅く刻まれ、頭の上には角のような小さな突起があります。白っぽい地衣類と苔におおわれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "前脚と胴の間をくり抜かず、ひとかたまりの石の形を残す作りは、各地の素朴な古い狛犬や、宮城の「仙台狛犬」に見られる特徴です。奉納の年や石工は分かっていません。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "狛犬ネット「分類2」",
+        "url": "https://komainu.net/bunrui2.html"
+       },
+       {
+        "title": "北海道狛犬研究所「狛犬の基礎知識③ 狛犬のタイプ③」",
+        "url": "https://note.com/kitanokomainu/n/na2d3dc8d30ee"
+       }
+      ]
+     },
+     {
+      "text": "釣石神社は、元和4年(1618)に今の地へ遷ったと伝わる、天児屋根命(あめのこやねのみこと)をまつる社です。崖から突き出た周囲約14mの巨石が、昭和53年(1978)の宮城県沖地震と2011年の東日本大震災にも落ちなかったことから「落ちそうで落ちない受験の神」として知られます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "釣石神社 公式サイト「由緒・ご祭神」",
+        "url": "https://1380.jp/yuisho/index.html"
+       },
+       {
+        "title": "釣石神社 公式サイト「境内案内」",
+        "url": "https://1380.jp/keidai/index.html"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/tsuriishi-1.jpg?v=d0f17749"
    }
   ]
  }

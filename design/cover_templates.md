@@ -1,6 +1,12 @@
 # 表紙の型の控え(11/13 あすかさん「似たようなデザインの使い回しになっていないか。テンプレートを読み直して新しいものを学習して」)
 参考：Adobe Express の無料テンプレート PDF(/mnt/user-data/uploads/無料テンプレート_Adobe-Express-11-08-2026_09_44_AM.pdf・5頁・約915点)。レイアウトの考え方だけを借りる。
 
+## ★★最初に読む(11/24 最高司令官)：表紙はかならず design/template_catalog.md の番号つき一覧から選ぶ
+11/24 あすかさん「テンプレートをちゃんと読みに行かず、同じようなデザインの使い回しをしたり、テンプレートを1000種類以上渡しているにも関わらず、プロジェクト内で保持しているテンプレートが9種類ほどしかなくてそれを使いまわしています。なんど指示しても、改善されません。」
+- この下の「型」の名前の一覧から選ぶのはやめる。毎回 template_catalog.md の「未使用」をいちばん小さい番号から3つ開いて見て、1つ選ぶ(手順は template_catalog.md の「使い方」)
+- 画像を開いて見ていないテンプレートを「参考にした」と書かない
+- 使ったテンプレートの番号を、表紙の記録とあすかさんへの報告に必ず書く(例：M014 を参考)
+
 ## 使った型(同じものを2度使わない)
 photo / frame / flambay / travel / steer / pale / oshi / sweets / nordic / curve / band / expose / minimalw / grayside / letter / couture / esteem /
 coverlines / circlewin / vertname / framewin / collage / duotone / stacked / repeat / sun(南宮) / arch(伊吹山) / tate(伊富岐 明治) / time-frame(伊富岐2対) / natgeo-frame(第六天榊) / ticket(六本木天祖2対・色違い) / painting-frame(金華山 11/21 案・不採用) / white-minimal(釣石 11/22 案・不採用) / mast-vertical(金華山黄金山神社 11/22 案) / flat-object(釣石神社 案A・不採用・未使用扱い) / bw-script(釣石神社 採用 11/23)

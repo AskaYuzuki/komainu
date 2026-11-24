@@ -73,7 +73,7 @@ URL：1ページ目 https://www.434-magazineworld.com/SHOP/357704/list.html ／2
 - sky-space：空や地面の広い余白を残し、像は小さめ、斜体の太い誌名(Flying)
 - red-disc：像の後ろに大きな色の円(Sports Illustrated)※切り抜きは丁寧に
 - headline-stack-left：左に色を変えた見出しを積み、右に像(Prevention)
-- 使った型：red-box-logo(鹽竈神社 左右宮 shiogama-4・11/24 OK)。newsstand-lines・satin-dark は鹽竈の案で作ったが、窓と上の誌名が続いたため作り直し(不採用・未使用扱い)
+- 使った型：red-box-logo(鹽竈神社 左右宮 shiogama-4・11/24 OK)、tonal-mono(鹽竈 踊り場 shiogama-6 案)。newsstand-lines・satin-dark は鹽竈の案で作ったが、窓と上の誌名が続いたため作り直し(不採用・未使用扱い)
 
 ## ★単調にしないための決まり(11/24)
 - 表紙を作る前に、下の「直近の表紙の記録」の最後の5つと、次の5項目を比べる：(1)地の明暗 (2)写真の置き方(全面・窓・帯の下・切り抜き) (3)誌名の位置と向き (4)誌名の書体(セリフ・サンセリフ・筆記体・極太) (5)差し色
@@ -87,3 +87,4 @@ URL：1ページ目 https://www.434-magazineworld.com/SHOP/357704/list.html ／2
 - 鹽竈 左右宮(red-box-logo)：生成りの地／窓／左上の赤い四角に横／セリフ(Bodoni)／赤
 - 鹽竈 石鳥居(corner-logo・案)：写真全面／全面／右上に小さく横／セリフ(Bodoni)小／金
 - 鹽竈 東参道(lowercase-band・案)：白い帯＋写真／帯の下に横いっぱい／左上に小文字の極太／サンセリフ(Montserrat)／黒
+- 鹽竈 表参道の踊り場(tonal-mono・案)：セピアの1色／写真全面／下に中央・横・字間を広げた細字／サンセリフ細(Montserrat 300)／なし(セピア)

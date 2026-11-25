@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>狛犬 投稿キット</title>
+<style>
+:root{--bg:#f7f4ee;--fg:#2b2620;--sub:#7a7066;--card:#fff;--line:#e3ddd3;--acc:#8a5a2b}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1916;--fg:#eee7dc;--sub:#a99e90;--card:#28231f;--line:#3a332c;--acc:#d9a46b}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,"Hiragino Sans",sans-serif}
+main{max-width:640px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:4px 0 2px}.sub{color:var(--sub);font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:14px 0}
+h2{font-size:16px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;background:var(--line)}
+button,select{font:inherit;width:100%;padding:13px;border-radius:12px;border:0;background:var(--acc);color:#fff;font-weight:600;margin-top:8px}
+button.sec{background:transparent;color:var(--acc);border:1.5px solid var(--acc)}
+select{background:var(--card);color:var(--fg);border:1px solid var(--line);font-weight:400}
+pre{white-space:pre-wrap;font:14px/1.6 inherit;background:var(--bg);border-radius:8px;padding:10px;max-height:220px;overflow:auto;margin:0}
+ol{padding-left:20px;margin:6px 0}.ok{color:#2e7d32}.ng{color:#c62828}
+#msg{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#000c;color:#fff;padding:8px 14px;border-radius:20px;font-size:14px;display:none}
+</style>
+</head>
+<body>
+<main>
+<h1>狛犬 投稿キット</h1>
+<div class="sub">@aska_komainu にスマホから出すためのページ。パソコンが閉じていて自動投稿ができなかった日に使います。</div>
+
+<div class="card">
+<h2>出す対</h2>
+<div id="status" class="sub">読み込み中…</div>
+<select id="pick"></select>
+</div>
+
+<div class="card">
+<h2>① 写真(<span id="n">0</span>枚・この順番で)</h2>
+<div class="grid" id="grid"></div>
+<button id="share">写真をまとめて共有 → Instagram</button>
+<button class="sec" id="save">写真を1枚ずつ保存する</button>
+<div class="sub" style="margin-top:6px">共有で Instagram が出ないときは「保存」→ Instagram アプリの＋から、写真を番号順に選んでください。比率は4:5。</div>
+</div>
+
+<div class="card">
+<h2>② キャプション</h2>
+<pre id="cap"></pre>
+<button id="copycap">キャプションをコピー</button>
+<div class="sub" style="margin-top:6px">位置情報は「<span id="loc"></span>」で検索して選びます。</div>
+</div>
+
+<div class="card">
+<h2>③ Threads の告知(@aska_yuzuki・トピック「狛犬」)</h2>
+<div class="sub">1つ目(写真は①の1枚目の表紙を1枚だけ)</div>
+<pre id="th1"></pre>
+<button id="copyth1">1つ目をコピー</button>
+<div class="sub" style="margin-top:10px">2つ目(「スレッドに追加」)。Instagram の URL は投稿後に差し替えます</div>
+<pre id="th2"></pre>
+<button class="sec" id="copyth2">2つ目をコピー</button>
+</div>
+
+<div class="card">
+<h2>④ 出したら</h2>
+<ol>
+<li>このチャットの最高司令官に「狛犬、スマホで出した」と送ってください。図鑑に Instagram のリンクを入れます。</li>
+<li>送らなくても、次の自動投稿の回が、今日の投稿を見つけて図鑑に反映します(同じ対を二度出しません)。</li>
+</ol>
+</div>
+<div class="sub">写真と文は insta-queue(投稿待ち)から毎回読み込みます。</div>
+</main>
+<div id="msg"></div>
+<script>
+const RAW='https://raw.githubusercontent.com/AskaYuzuki/komainu/';
+const Q=RAW+'insta-queue/', M=RAW+'main/';
+let queue=[],urls={},cur=null,cap='';
+const $=id=>document.getElementById(id);
+function toast(t){const m=$('msg');m.textContent=t;m.style.display='block';clearTimeout(m._t);m._t=setTimeout(()=>m.style.display='none',1800)}
+async function copy(t){try{await navigator.clipboard.writeText(t);toast('コピーしました')}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();toast('コピーしました')}}
+function filesOf(it){return (it.files||[]).filter(f=>/\.(jpe?g|png)$/i.test(f))}
+async function load(){
+  const nc='?t='+Date.now();
+  const [q,s]=await Promise.all([fetch(Q+'queue.json'+nc).then(r=>r.json()),fetch(M+'zukan/data/shrines.json'+nc).then(r=>r.json())]);
+  queue=q.queue||[];
+  (s||[]).forEach(sh=>(sh.komainu||[]).forEach(k=>urls[k.id]=k.instagramUrl||''));
+  const pick=$('pick');pick.innerHTML='';
+  let first=-1;
+  queue.forEach((it,i)=>{const done=!!urls[it.id];if(!done&&first<0)first=i;
+    const o=document.createElement('option');o.value=i;o.textContent=(done?'済 ':'　 ')+it.dir;pick.appendChild(o)});
+  if(first<0){$('status').innerHTML='<span class="ok">投稿待ちはありません(全部出ています)</span>';return}
+  pick.value=first;pick.onchange=()=>show(+pick.value);show(first);
+}
+async function show(i){
+  cur=queue[i];const done=!!urls[cur.id];
+  $('status').innerHTML=done?'<span class="ng">この対はもう出ています：</span><a href="'+urls[cur.id]+'">'+urls[cur.id]+'</a>':'<span class="ok">次に出す対です</span>';
+  const fs=filesOf(cur);$('n').textContent=fs.length;
+  $('grid').innerHTML=fs.map(f=>'<img loading="lazy" src="'+Q+cur.dir+'/'+f+'">').join('');
+  cap=await fetch(Q+cur.dir+'/caption.txt?t='+Date.now()).then(r=>r.text());cap=cap.replace(/\s+$/,'');
+  $('cap').textContent=cap;
+  const L=cap.split('\n'),head=L[0]||'',[nm,mid]=head.split('｜');
+  const addr=(L[1]||'').match(/^(.+?[都道府県])(.+?[市区町村郡])/);
+  const place=addr?addr[1]+addr[2].replace(/郡.+?[町村]$/,m=>m):'';
+  const shrine=nm.replace(/\s.*$/,''),spot=nm.slice(shrine.length).trim();
+  $('loc').textContent=shrine;
+  let kan=[];for(let j=3;j<L.length;j++){if(!L[j].trim())break;kan.push(L[j])}
+  const lead=/^【番外編】/.test(head)?'狛犬図鑑とInstagramに、番外編として'+head.replace(/^【番外編】/,'').split('｜')[0]+'を加えました。':'狛犬図鑑とInstagramに、'+shrine+(place?'('+place+')':'')+spot+'を加えました。';
+  const t1=lead+'\n'+(mid||'')+'です。\n\n'+kan.join('\n');
+  $('th1').textContent=t1;
+  $('th2').textContent='狛犬図鑑(ほかの写真と地図)\nhttps://askayuzuki.github.io/komainu/zukan/#k-'+cur.id+'\n\nInstagram\n(投稿した URL)';
+}
+async function blobs(){const fs=filesOf(cur);return Promise.all(fs.map(async f=>{const b=await fetch(Q+cur.dir+'/'+f).then(r=>r.blob());return new File([b],cur.id+'_'+f,{type:b.type||'image/jpeg'})}))}
+$('share').onclick=async()=>{try{toast('写真を用意しています…');const files=await blobs();
+  if(navigator.canShare&&navigator.canShare({files})){await copy(cap);await navigator.share({files});}else{toast('この端末ではまとめて共有できません。保存を使ってください')}}catch(e){if(e.name!=='AbortError')toast('共有できませんでした：'+e.message)}};
+$('save').onclick=async()=>{const files=await blobs();for(const f of files){
+  if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f]})}catch(e){if(e.name==='AbortError')break}}
+  else{const a=document.createElement('a');a.href=URL.createObjectURL(f);a.download=f.name;a.click();await new Promise(r=>setTimeout(r,400))}}};
+$('copycap').onclick=()=>copy(cap);$('copyth1').onclick=()=>copy($('th1').textContent);$('copyth2').onclick=()=>copy($('th2').textContent);
+load().catch(e=>$('status').textContent='読み込めませんでした：'+e.message);
+</script>
+</body>
+</html>

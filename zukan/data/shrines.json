@@ -9871,5 +9871,174 @@
     "thumb": "images/thumbs/muraya-1.jpg?v=40085db4"
    }
   ]
+ },
+ {
+  "id": "sarumaru",
+  "name": "猿丸神社",
+  "kana": "さるまるじんじゃ",
+  "prefecture": "京都府",
+  "city": "綴喜郡宇治田原町",
+  "lat": 34.8865,
+  "lng": 135.8796,
+  "geoApprox": true,
+  "visited": "2026-11-25",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "sarumaru-1",
+    "no": 1,
+    "label": "拝殿前・左右",
+    "animal": "saru",
+    "animalLabel": "狛猿",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": null,
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "私が狛犬が好きだということを知って、連れてきていただいた“猿丸神社”。\n\nここは御祭神の猿丸大夫にちなんで、狛犬ならぬ……なんと狛猿(神猿)！\n\n烏帽子を被って、手には御幣と宝珠を持っているというスタイルも、また珍しいですね。\n\n本物の猿のように背中を丸めて座っている姿と、ユーモラスな顔つき、ちょこんと内股に揃えられた足がとってもかわいらしい♡\n\nさておき。\n猿丸神社は、境内へと続く階(きざはし)からして、しつらえの美しい神社。特にこの時期は(参拝時は2026/11/25)紅葉と相まって、得も言われぬ美しさでした。\n\n小さいお宮さんながらも、隅々まで心を込めてお掃除されていらっしゃるのが伝わってくる気持ちの良い神社だからこそ、神様(三十六歌仙の一人である歌人の猿丸大夫：さるまるだゆう)のお力がものすごく強い。\n\n拝殿入口には、こぶ取り・癌封じの御利益があるとされる御神水が置かれ、自由にいただくことができるようになっていました。\n\nこの御神水は、近くの山中で湧き出している霊水を汲んで、しばらくの間神前に安置されて神様の御神気が込められたもので、口に含むとまるでお酒のようなまろやかさでした。\n\nとても心地のよい神社です。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/sarumaru-1-02.jpg?v=3fa3c52c",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/sarumaru-1-01.jpg?v=35f0c5d3",
+      "kind": "art",
+      "title": "猿丸神社",
+      "caption": "拝殿前の1対"
+     },
+     {
+      "src": "images/sarumaru-1-03.jpg?v=126b7dc3",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/sarumaru-1-04.jpg?v=7a622ab7",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/sarumaru-1-05.jpg?v=57a9c81d",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/sarumaru-1-06.jpg?v=82da6ec4",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/sarumaru-1-07.jpg?v=6b1509ce",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/sarumaru-1-08.jpg?v=25765044",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/sarumaru-1-09.jpg?v=71fe1336",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/sarumaru-1-10.jpg?v=62d4fa4d",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/sarumaru-1-11.jpg?v=09529e33",
+      "kind": "art",
+      "title": "猿丸神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/sarumaru-1-12.jpg?v=38cb9784",
+      "kind": "record",
+      "caption": "紅葉の中の拝殿"
+     },
+     {
+      "src": "images/sarumaru-1-13.jpg?v=fa5760cc",
+      "kind": "record",
+      "caption": "拝殿入口の御神水"
+     },
+     {
+      "src": "images/sarumaru-1-14.jpg?v=e5ee8807",
+      "kind": "record",
+      "caption": "拝殿の中(お礼に納められた木のこぶ)"
+     },
+     {
+      "src": "images/sarumaru-1-15.jpg?v=72d9f6a6",
+      "kind": "record",
+      "caption": "社号標と表参道の石段"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿前の左右にいる、狛犬のかわりの石造りの猿の1対です。どちらも烏帽子をかぶり、あごの下で烏帽子の紐を結んでいます。阿形は宝珠(ほうじゅ)、吽形は御幣(ごへい)を手にしています。背中を丸めて座り、両足をそろえています。御幣は神前に供え、祓い清めにも使う神具で、宝珠は願いをかなえるとされる珠です。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "この狛猿をなでた手で自分の体の悪いところをなでると、病気にかかりにくくなる、治ると言われています。御祭神・猿丸大夫の「猿」を「去る」にかけて、こぶや腫れ物を取り去る「こぶ取りの神」として信仰され、境内には病が治った人がお礼に納めた木のこぶが並びます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "やんまあ「祭神・猿丸大夫「猿丸神社」狛猿をさする」",
+        "url": "https://note.com/yanma_travel/n/n684185ad2722"
+       },
+       {
+        "title": "パワースポット神社「猿丸神社」",
+        "url": "https://powerspot-jinja.jp/sarumaru-jinja/"
+       }
+      ]
+     },
+     {
+      "text": "獅子・狛犬の1対の形は、ほかの動物の像にも取り入れられてきました。図録『獅子と狛犬』は、京都・高山寺の鹿の1対や、稲荷の神前の狐も、獅子・狛犬の形にならって置かれたと説明しています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "MIHO MUSEUM編『獅子と狛犬 神獣が来たはるかな道』(青幻舎・2014年)208・209頁",
+        "url": ""
+       }
+      ]
+     },
+     {
+      "text": "猿丸神社は、三十六歌仙の一人で、百人一首の「奥山に紅葉ふみわけ鳴く鹿の」の歌の作者と伝わる猿丸大夫をまつる神社です。江戸時代の初めに創建されたと伝わり、毎月13日が縁日です。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "宇治田原町の観光案内",
+        "url": "https://www.ochanokyoto.jp/img_data/broi123_1.pdf"
+       },
+       {
+        "title": "猿丸神社の御朱印(神社紹介ブログ)",
+        "url": "https://goshuin.138shinsekai.com/2020/05/19/sarumaru-kyoto/"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/sarumaru-1.jpg?v=883361ab"
+   }
+  ]
  }
 ]

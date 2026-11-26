@@ -20,7 +20,7 @@
 | A001 | A001-A024.jpg | 見送り(11/24) |
 | A002 | A001-A024.jpg | 未使用(11/26 村屋の案に作ったが「写真が暗いのでダークトーンに」で差し替え。あすかさん：このデザインは別の機会に使ってよい) |
 | A003 | A001-A024.jpg | 使用：村屋坐弥冨都比売神社 muraya-1(11/26) |
-| A004 | A001-A024.jpg | 未使用 |
+| A004 | A001-A024.jpg | 見送り(11/27・余白の多い型) |
 | A005 | A001-A024.jpg | 未使用 |
 | A006 | A001-A024.jpg | 未使用 |
 | A007 | A001-A024.jpg | 未使用 |
@@ -941,8 +941,8 @@
 |---|---|---|---|
 | C001 | C001-C024.jpg | https://template.canva.com/EAGUQu8FA0Q/1/0/1131w-9idNLTrk3vc.jpg | 使用(案)：志波彦神社 shiwahiko-2(11/24) |
 | C002 | C001-C024.jpg | https://template.canva.com/EAF8TdE1uk8/2/0/1131w-35HGSWjY7N8.jpg | 見送り(11/26) |
-| C003 | C001-C024.jpg | https://template.canva.com/EAF_D_Mu6XE/2/0/1131w-SdJc3_y1aHM.jpg | 未使用 |
-| C004 | C001-C024.jpg | https://template.canva.com/EAD-nKtOHvY/1/0/1236w-EnD5TRNNiys.jpg | 未使用 |
+| C003 | C001-C024.jpg | https://template.canva.com/EAF_D_Mu6XE/2/0/1131w-SdJc3_y1aHM.jpg | 見送り(11/27 案に作ったが、あすかさん「余白の多いデザインはしばらく使わない」) |
+| C004 | C001-C024.jpg | https://template.canva.com/EAD-nKtOHvY/1/0/1236w-EnD5TRNNiys.jpg | 見送り(11/27) |
 | C005 | C001-C024.jpg | https://template.canva.com/EAFiIyHs2uc/2/0/1131w-AXslOazBBrs.jpg | 未使用 |
 | C006 | C001-C024.jpg | https://template.canva.com/EADkgAMNc5s/1/0/1131w-1zjYzg1UlS8.jpg | 未使用 |
 | C007 | C001-C024.jpg | https://template.canva.com/EAD--oloUIw/1/0/1236w-m2w-jqQ4RQY.jpg | 未使用 |
@@ -1188,8 +1188,8 @@
 | M003 | list.html | People_2021_1 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/People_2021_1.jpg?t=20240419081820 | 見送り(11/24) |
 | M004 | list.html | forbes201912 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/forbes201912.JPG?t=20191216074427 | 見送り(11/24) |
 | M005 | list.html | HB2020 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/HB2020.JPG?t=20200316021606 | 見送り(11/26) |
-| M006 | list.html | 2013countryliving | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/2013countryliving.jpg?t=20130131075130 | 未使用 |
-| M007 | list.html | bhg20231 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/bhg20231.jpg?t=20230925145115 | 未使用 |
+| M006 | list.html | 2013countryliving | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/2013countryliving.jpg?t=20130131075130 | 見送り(11/27) |
+| M007 | list.html | bhg20231 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/bhg20231.jpg?t=20230925145115 | 使用：猿丸神社 sarumaru-1(11/27) |
 | M008 | list.html | VICOTIRA201705 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/VICOTIRA201705.JPG?t=20180423034818 | 未使用 |
 | M009 | list.html | VERANDA20181 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/VERANDA20181.JPG?t=20180425070623 | 未使用 |
 | M010 | list.html | AR20185 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/AR20185.JPG?t=20180425072757 | 未使用 |

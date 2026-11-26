@@ -9725,5 +9725,151 @@
     "thumb": "images/thumbs/tsuriishi-1.jpg?v=d0f17749"
    }
   ]
+ },
+ {
+  "id": "muraya",
+  "name": "村屋坐弥冨都比売神社",
+  "kana": "むらやにいますみふつひめじんじゃ",
+  "prefecture": "奈良県",
+  "city": "磯城郡田原本町",
+  "lat": 34.5588,
+  "lng": 135.8136,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "muraya-1",
+    "no": 1,
+    "label": "拝殿前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [
+     "naniwa"
+    ],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "天保11年9月",
+     "seireki": 1840
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "日が暮れてからの訪問。\n真っ暗な中、懐中電灯で照らしながら撮影していたら。突如、灯籠が一斉に灯り、境内はなんとも言えない幻想的な雰囲気に。\n\nまるで、千と千尋の神隠しのワンシーンに迷い込んでしまったかのような錯覚を覚えました。\n\n御祭神は三穂津姫命(弥冨都比売命)と大物主命。氣のやわらかい、素敵な神社でした。\n\nこちらの神社は境内社がたくさんあり、どれもこれも私とご縁の深い神様たちを祀っていて、初めての訪問にも関わらず、ホームのような雰囲気があったのですが、その中でも特に印象に残ったのが“物部神社”でした。\n\nここは御神氣がとても強くて、総毛立ちました。\n\n明るい時間に再訪したいです。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/muraya-1-02.jpg?v=f7ca0e27",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/muraya-1-01.jpg?v=3fb1558c",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/muraya-1-03.jpg?v=ca926f74",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/muraya-1-04.jpg?v=1171783a",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/muraya-1-05.jpg?v=5c152739",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/muraya-1-06.jpg?v=e3cfd9e6",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/muraya-1-07.jpg?v=a23ce74b",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/muraya-1-08.jpg?v=d5519cb6",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/muraya-1-09.jpg?v=40322d45",
+      "kind": "art",
+      "title": "村屋坐弥冨都比売神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/muraya-1-10.jpg?v=71ceb557",
+      "kind": "record",
+      "caption": "拝殿"
+     },
+     {
+      "src": "images/muraya-1-11.jpg?v=b9178601",
+      "kind": "record",
+      "caption": "灯籠が並ぶ参道"
+     },
+     {
+      "src": "images/muraya-1-12.jpg?v=327666a6",
+      "kind": "record",
+      "caption": "境内社の物部神社"
+     }
+    ],
+    "lore": [
+     {
+      "text": "拝殿前の左右にいる石造りの1対です。首まわりに大きな渦巻きの巻き毛が並び、前脚のひじにも渦巻きが彫られています。後ろ脚の太ももは丸く大きく張り出し、尾は背中に沿って炎のように立ち上がっています。全体が白っぽい地衣類におおわれています。台座には「天保十一庚子年 九月吉日」と刻まれています。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "背中に沿って立つうちわ形の尾や首まわりの渦巻きは、大坂の石工が手がけて畿内に広まった「浪花狛犬」に見られる特徴です。狛犬千万無量の奈良県の図鑑でも、同じ天保年間の植槻八幡神社(大和郡山市)や漢國神社(奈良市)の狛犬を浪花狛犬としています。この1対の石工の名は確かめられていません。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 奈良県狛犬図鑑③奈良市」2頁(漢國神社)",
+        "url": "https://komainuzukan.amebaownd.com/"
+       },
+       {
+        "title": "狛犬千万無量「全国参道狛犬図鑑 奈良県狛犬図鑑④大和郡山市」19頁(植槻八幡神社)",
+        "url": "https://komainuzukan.amebaownd.com/"
+       }
+      ]
+     },
+     {
+      "text": "村屋坐弥冨都比売神社は、大物主命の妃神である三穂津姫命をまつることから、大神神社の別宮とも呼ばれる延喜式の大社です。『日本書紀』には、壬申の乱のとき「村屋神」が神託を下したことが記されています。境内には、物部氏の祖神と物部守屋をまつる物部神社などの境内社が並びます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "Wikipedia「村屋坐弥冨都比売神社」",
+        "url": "https://ja.wikipedia.org/wiki/%E6%9D%91%E5%B1%8B%E5%9D%90%E5%BC%A5%E5%86%A8%E9%83%BD%E6%AF%94%E5%A3%B2%E7%A5%9E%E7%A4%BE"
+       },
+       {
+        "title": "Guidoor「村屋坐弥冨都比売神社」",
+        "url": "https://www.guidoor.jp/places/3900"
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/muraya-1.jpg?v=40085db4"
+   }
+  ]
  }
 ]

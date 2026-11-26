@@ -67,7 +67,10 @@
   function yearText(y) {
     if (!y) return '';
     var w = has(y.wareki) ? y.wareki : '', s = has(y.seireki) ? String(y.seireki) : '';
-    if (w && s) return w + '(' + s + '年)';
+    if (w && s) {   // 11/26 あすかさん：西暦を先、()内に和暦。例 1840年(天保11年)9月
+      var m = w.match(/^(.+?年)(.*)$/);
+      return m ? s + '年(' + m[1] + ')' + m[2] : s + '年(' + w + ')';
+    }
     return w || (s ? s + '年' : '');
   }
 
@@ -534,7 +537,7 @@
 
   // 雑誌の表紙のような1枚。build/cover2/make4.py が作った画像(Instagram の1枚目と同じもの)をそのまま出す。
   // 狛犬を切り抜いて誌名の上に頭が重なる作りのため、画像で持つ。11種類を神社の並び順で回す
-  var COVER_V = '20261124f';
+  var COVER_V = '20261126a';
   // 対ごとの表紙(Instagram の各投稿の1枚目)。一覧には小さい版(images/covers/s/)を使う
   function coverSrc(k, sm) { return 'images/covers/' + (sm ? 's/' : '') + encodeURIComponent(k.id) + '.jpg?v=' + COVER_V; }
   function coverImg(k, alt, lazy) {

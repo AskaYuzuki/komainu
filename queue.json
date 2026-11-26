@@ -183,6 +183,28 @@
    "dir": "10_minashi_torii"
   },
   {
+   "id": "muraya-1",
+   "folder": "muraya",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.jpg",
+    "14.jpg"
+   ],
+   "dir": "10b_muraya",
+   "note": "11/26 会話から投稿済み(あすかさんの指示で一宮稲荷と入れ替え)"
+  },
+  {
    "id": "minashi-4",
    "folder": "minashi_inari",
    "files": [

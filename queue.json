@@ -205,6 +205,31 @@
    "note": "11/26 会話から投稿済み(あすかさんの指示で一宮稲荷と入れ替え)"
   },
   {
+   "id": "sarumaru-1",
+   "folder": "sarumaru",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.jpg",
+    "14.jpg",
+    "15.jpg",
+    "16.jpg",
+    "17.jpg"
+   ],
+   "dir": "10c_sarumaru",
+   "note": "11/27 あすかさん：今晩公開。一宮稲荷(minashi-4)は明日、以降1日ずつ繰り下げ"
+  },
+  {
    "id": "minashi-4",
    "folder": "minashi_inari",
    "files": [

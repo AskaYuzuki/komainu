@@ -230,6 +230,27 @@
    "note": "11/27 21:0x 会話から投稿済み(定例タスクの 18:43・20:43 は Mac が眠っていて動かず)"
   },
   {
+   "id": "tomi-1",
+   "folder": "tomi",
+   "files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg"
+   ],
+   "dir": "10d_tomi",
+   "follow": "tomijinja_sakurai",
+   "note": "11/28 あすかさん：今日は等彌神社。場所のピンと @tomijinja_sakurai のタグ付け。一宮稲荷(minashi-4)は 11/29 に繰り下げ"
+  },
+  {
    "id": "minashi-4",
    "folder": "minashi_inari",
    "files": [

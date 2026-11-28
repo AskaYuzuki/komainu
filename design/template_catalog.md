@@ -22,7 +22,7 @@
 | A003 | A001-A024.jpg | 使用：村屋坐弥冨都比売神社 muraya-1(11/26) |
 | A004 | A001-A024.jpg | 見送り(11/27・余白の多い型) |
 | A005 | A001-A024.jpg | 見送り(11/28・白地の多い型) |
-| A006 | A001-A024.jpg | 未使用 |
+| A006 | A001-A024.jpg | 見送り(11/28・白地の多い型) |
 | A007 | A001-A024.jpg | 未使用 |
 | A008 | A001-A024.jpg | 未使用 |
 | A009 | A001-A024.jpg | 未使用 |
@@ -944,7 +944,7 @@
 | C003 | C001-C024.jpg | https://template.canva.com/EAF_D_Mu6XE/2/0/1131w-SdJc3_y1aHM.jpg | 見送り(11/27 案に作ったが、あすかさん「余白の多いデザインはしばらく使わない」) |
 | C004 | C001-C024.jpg | https://template.canva.com/EAD-nKtOHvY/1/0/1236w-EnD5TRNNiys.jpg | 見送り(11/27) |
 | C005 | C001-C024.jpg | https://template.canva.com/EAFiIyHs2uc/2/0/1131w-AXslOazBBrs.jpg | 見送り(11/28・地の余白が多い型) |
-| C006 | C001-C024.jpg | https://template.canva.com/EADkgAMNc5s/1/0/1131w-1zjYzg1UlS8.jpg | 未使用 |
+| C006 | C001-C024.jpg | https://template.canva.com/EADkgAMNc5s/1/0/1131w-1zjYzg1UlS8.jpg | 見送り(11/28・地の余白に写真の窓) |
 | C007 | C001-C024.jpg | https://template.canva.com/EAD--oloUIw/1/0/1236w-m2w-jqQ4RQY.jpg | 未使用 |
 | C008 | C001-C024.jpg | https://template.canva.com/EADlP_KHSuQ/1/0/1131w-agQSIJbl33o.jpg | 未使用 |
 | C009 | C001-C024.jpg | https://template.canva.com/EAGJrPtlgFM/1/0/1131w-UlofJzAOn3I.jpg | 未使用 |
@@ -1191,7 +1191,7 @@
 | M006 | list.html | 2013countryliving | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/2013countryliving.jpg?t=20130131075130 | 見送り(11/27) |
 | M007 | list.html | bhg20231 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/bhg20231.jpg?t=20230925145115 | 使用：猿丸神社 sarumaru-1(11/27) |
 | M008 | list.html | VICOTIRA201705 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/VICOTIRA201705.JPG?t=20180423034818 | 使用：等彌神社 tomi-1(11/28) |
-| M009 | list.html | VERANDA20181 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/VERANDA20181.JPG?t=20180425070623 | 未使用 |
+| M009 | list.html | VERANDA20181 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/VERANDA20181.JPG?t=20180425070623 | 使用：飛鳥坐神社 asukaniimasu-1(11/28) |
 | M010 | list.html | AR20185 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/AR20185.JPG?t=20180425072757 | 未使用 |
 | M011 | list.html | AD2018 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/AD2018.JPG?t=20180425073738 | 未使用 |
 | M012 | list.html | elle_decor2018 | https://image1.shopserve.jp/434-magazineworld.com/pic-labo/llimg/elle_decor2018.JPG?t=20180426000442 | 未使用 |

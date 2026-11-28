@@ -10173,5 +10173,112 @@
     "thumb": "images/thumbs/tomi-1.jpg?v=7318643f"
    }
   ]
+ },
+ {
+  "id": "asukaniimasu",
+  "name": "飛鳥坐神社",
+  "kana": "あすかにいますじんじゃ",
+  "prefecture": "奈良県",
+  "city": "高市郡明日香村",
+  "lat": 34.4806,
+  "lng": 135.8213,
+  "geoApprox": true,
+  "visited": "",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "asukaniimasu-1",
+    "no": 1,
+    "label": "境内社 八幡社の前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "明治26年旧8月",
+     "seireki": 1893
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "友人が飛鳥坐神社に、琉球古典音楽の演奏奉納をするというので、同行する形でお詣りさせていただきました。\n\n紅葉が美しい神社で、夜にはライトアップされて幻想的な雰囲気(毎晩20:00頃まで)。本殿・拝殿・神楽殿の佇まいの美しさもさることながら、境内社がたくさんあり、これがまたとても良い雰囲気。\n\n神様の気配をそこかしこに感じることができます。\n\n奉納に際して、飛鳥弘文名誉宮司にさまざまなお話を伺いました。\n\n飛鳥坐神社の成り立ち、飛鳥井という井戸にまつわるお話、日本最大の青銅鏡(鏡面径122cm・重量260kg)とその台座を作成した時の話、御祭神の八重事代主命さまのこと。八咫烏について。出雲国造神賀詞にしか出てこない女神：賀夜奈留美さまのこと、神様とお話するには……などなど。\n\nお話が面白すぎて永遠に聞いていたかった……。\n\nまた、飛鳥名誉宮司の祝詞が素敵だった……。お声が倍音になっていて、心地よいのなんの。途中から声のトーンが変わると、その瞬間に八重事代主さまの御神氣がさらに強くなって、総毛立ちました。\n\n……と同時に、名誉宮司の後ろ姿を拝見しながら、神様に愛されるってこういうことなんだなと魂がふるえました。日本の宝だなって思う。\n\n早くも再訪したくなっている神社さんです。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/asukaniimasu-1-03.jpg?v=8f4f2699",
+      "kind": "art",
+      "title": "飛鳥坐神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/asukaniimasu-1-01.jpg?v=e19cd306",
+      "kind": "art",
+      "title": "飛鳥坐神社",
+      "caption": "境内社 八幡社の前の1対"
+     },
+     {
+      "src": "images/asukaniimasu-1-02.jpg?v=68fec0c5",
+      "kind": "art",
+      "title": "飛鳥坐神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/asukaniimasu-1-04.jpg?v=0865227a",
+      "kind": "art",
+      "title": "飛鳥坐神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/asukaniimasu-1-05.jpg?v=bbea7b52",
+      "kind": "art",
+      "title": "飛鳥坐神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "境内社の八幡社の前、左右にいる石造りの1対です。台座には「奉獻」と彫られています。頭から首まわりに渦巻きの巻き毛を重ね、前脚をまっすぐ立てて座っています。口を開けた阿形と、口を閉じた吽形です。台座の銘によると、1893年(明治26年)旧8月に奉納されたものです。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "飛鳥坐神社の境内には、八幡社のほかにもたくさんの境内社があります。瀬織津比賣神など祓戸の4柱をまつる祓戸神社、白髭神社、八阪神社(須佐之男神)と金比羅神社(大物主神)からなる中の社、皇太神社(天照皇大神)をまつる奥の社、式内社の飛鳥山口神社、八十萬神社などが並ぶといわれます。",
+      "basis": "kuden",
+      "refs": [
+       {
+        "title": "Wikipedia「飛鳥坐神社」",
+        "url": "https://ja.wikipedia.org/wiki/%E9%A3%9B%E9%B3%A5%E5%9D%90%E7%A5%9E%E7%A4%BE"
+       }
+      ]
+     },
+     {
+      "text": "本殿と拝殿は、吉野の丹生川上神社上社から移築されたものです。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "奈良県観光公式サイト なら旅ネット「飛鳥坐神社」",
+        "url": "https://yamatoji.nara-kankou.or.jp/009enmusubi/asukaniimasujinja/ql4jfr98zb/"
+       }
+      ]
+     },
+     {
+      "text": "図録『獅子と狛犬』によると、獅子と狛犬を1対の守護獣とする形は、日本では平安時代前期(9世紀)に始まったと考えられています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "MIHO MUSEUM編『獅子と狛犬 神獣が来たはるかな道』(青幻舎・2014年)202・203頁",
+        "url": ""
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/asukaniimasu-1.jpg?v=7e1075e4"
+   }
+  ]
  }
 ]

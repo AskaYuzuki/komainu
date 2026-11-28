@@ -10046,5 +10046,132 @@
     "thumb": "images/thumbs/sarumaru-1.jpg?v=883361ab"
    }
   ]
+ },
+ {
+  "id": "tomi",
+  "name": "等彌神社",
+  "kana": "とみじんじゃ",
+  "prefecture": "奈良県",
+  "city": "桜井市",
+  "lat": 34.5125,
+  "lng": 135.8505,
+  "geoApprox": true,
+  "visited": "2026-11-28",
+  "noteUrl": "",
+  "komainu": [
+   {
+    "id": "tomi-1",
+    "no": 1,
+    "label": "本殿前・左右",
+    "animal": "komainu",
+    "pos": null,
+    "regionalTypes": [],
+    "pose": "osuwari",
+    "material": "stone",
+    "sculptor": "",
+    "sculptorId": "",
+    "year": {
+     "wareki": "昭和8年6月",
+     "seireki": 1933
+    },
+    "donor": "",
+    "history": "",
+    "sources": [],
+    "asukaNote": "朝拝時におうかがいしたところ、本殿に上げていただき、急遽正式参拝していただきました。\n\n狛犬及び御本殿の撮影についても特別な許可をいただきました。佐藤宮司、ありがとうございます。\n\n昇殿したら、天照大神さまの御神氣が素晴らしかったです✨\n\n佐藤宮司の日供祭詞(にっくさいし)が素晴らしくて泣きそうでした。私たちは神様にとって「大御宝(おおみたから)」なんだなーと。知識としては知ってたけど、佐藤宮司の声で、等彌神社の御神氣を浴びながら聴く日供祭詞は改めてそれを噛み締めることができる幸せなひとときです。",
+    "instagramUrl": "",
+    "photos": [
+     {
+      "src": "images/tomi-1-05.jpg?v=7421f357",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "阿",
+      "cover": true,
+      "icon": true
+     },
+     {
+      "src": "images/tomi-1-01.jpg?v=ecd62793",
+      "kind": "art",
+      "title": "等彌神社",
+      "caption": "本殿前の1対(左右の扉の前)"
+     },
+     {
+      "src": "images/tomi-1-02.jpg?v=1deda739",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/tomi-1-03.jpg?v=a606252c",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/tomi-1-04.jpg?v=b3536d56",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "阿"
+     },
+     {
+      "src": "images/tomi-1-06.jpg?v=dfc00161",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/tomi-1-07.jpg?v=8c9f893a",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/tomi-1-08.jpg?v=ebf151be",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/tomi-1-09.jpg?v=f8c85823",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "吽"
+     },
+     {
+      "src": "images/tomi-1-10.jpg?v=1f0c876c",
+      "kind": "art",
+      "title": "等彌神社",
+      "side": "吽"
+     }
+    ],
+    "lore": [
+     {
+      "text": "本殿の前、左右にいる石造りの小さな1対です。どちらも赤い前掛けをつけています。向かって右の阿形は大きく口を開け、向かって左の吽形は口を閉じて笑っているような顔です。目は丸く、瞳を彫っています。吽形の台座の上には、白い蛇の置物が供えられていました。台座の銘によると、1933年(昭和8年)6月に奉納されたものです。",
+      "basis": "site",
+      "refs": []
+     },
+     {
+      "text": "等彌神社は、鳥見山の西のふもとにある神社です。上ツ尾社(上ノ宮)と下ツ尾社(下ノ宮)があり、本社の上ツ尾社に大日孁貴命(おおひるめむちのみこと)をまつります。神武天皇が橿原宮で即位したあと、鳥見山に祭りの場「霊畤(れいじ)」を設けたと伝わり、大嘗会のはじまりの場ともいわれます。もとは鳥見山の中にあり、1112年(天永3年)5月の大雨による山崩れで、いまの場所に移ったとされます。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "奈良県立図書情報館「等彌神社(とみじんじゃ)」",
+        "url": "https://www.library.pref.nara.jp/nara_2010/0596.html"
+       }
+      ]
+     },
+     {
+      "text": "図録『獅子と狛犬』は、日本に残る獅子・狛犬は江戸時代のもの、さらに近代以降のものが圧倒的に多いと説明しています。",
+      "basis": "source",
+      "refs": [
+       {
+        "title": "MIHO MUSEUM編『獅子と狛犬 神獣が来たはるかな道』(青幻舎・2014年)174・175頁",
+        "url": ""
+       }
+      ]
+     }
+    ],
+    "thumb": "images/thumbs/tomi-1.jpg?v=7318643f"
+   }
+  ]
  }
 ]
